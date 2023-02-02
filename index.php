@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Logistica - Shipping Company Website Template</title>
+    <title>Department of Ship Technology | CUSAT</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,7 +46,7 @@
     <!-- HEADER END  -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
+    <div class="container-fluid p-0 pb-">
         <div class="owl-carousel header-carousel position-relative mb-5">
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/carousel-1.jpg" alt="">
@@ -55,17 +55,10 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics
-                                    Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span
-                                        class="text-primary">Logistics</span> Solution</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor
-                                    at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea
-                                    elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
-                                    More</a>
-                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free
-                                    Quote</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Department of </h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Ship Technolgy </h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Kochin University of Science &amp;
+                                    Technology</p>
                             </div>
                         </div>
                     </div>
@@ -99,10 +92,40 @@
     <!-- Carousel End -->
 
 
+    <!-- SCROLL NEWS START  -->
+    <div class="container-xxl  wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
+                        <div
+                            class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+                            <span class="d-flex align-items-center">&nbsp;Announcements </span>
+                        </div>
+                        <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();"
+                            onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
+                            &nbsp;&nbsp;
+                            <a class="news-scroll text-white" href="#" target="_blank">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. In, labore. Distinctio sunt provident aliquid debitis
+                                voluptatibus minima velit eaque iusto quia facilis! Obcaecati rerum tempora soluta hic
+                                perferendis voluptate libero.</a>
+                            &nbsp;&nbsp;
+                            <b class="text-white">|</b>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SCROLL NEWS END  -->
+
+
+
+
     <!-- About Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
-        <div class="container about py-5 px-lg-0">
-            <div class="row g-5 mx-lg-0">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
@@ -110,12 +133,27 @@
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
-                    <h1 class="mb-5">Quick Transport and Logistics Solutions</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    <h6 class="text-secondary text-uppercase mb-3">Shiptech CUSAT</h6>
+                    <h1 class="mb-5">Vision</h1>
+                    <p class="mb-5">To evolve into a globally recognized department in the frontier areas of Naval
+                        Architecture and Ship Building.</p>
+                    <h1 class="mb-5">Mission</h1>
+                    <p class="mb-5">
+                    <ul>
+                        <li>We are committed to achieve academic excellence in the field of Naval
+                            Architecture and ShipBuilding through innovative teaching and learning
+                            processes</li>
+                        <li>To prepare the students to be professionally competent to face the
+                            challenges in academics, the industry and research.</li>
+                        <li>Promote inter-disciplinary research among the faculty and the students to
+                            create state of art research facilities.
+                        </li>
+                        <li>To promote quality and ethics among the students</li>
+                        <li>Motivate the students to acquire entrepreneurial skills to become global
+                            leaders.</li>
+                    </ul>
                     </p>
-                    <div class="row g-4 mb-5">
+                    <!-- <div class="row g-4 mb-5">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
                             <i class="fa fa-globe fa-3x text-primary mb-3"></i>
                             <h5>Global Coverage</h5>
@@ -128,8 +166,8 @@
                             <p class="m-0">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam justo.
                             </p>
                         </div>
-                    </div>
-                    <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
+                    </div> -->
+                    <!-- <a href="" class="btn btn-primary py-3 px-5">Explore More</a> -->
                 </div>
             </div>
         </div>
@@ -137,59 +175,83 @@
     <!-- About End -->
 
 
-    <!-- Fact Start -->
+
+    <!-- ABOUT 2 -->
     <div class="container-xxl py-5">
-        <div class="container py-5">
+        <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
-                    <h1 class="mb-5">#1 Place To Manage All Of Your Shipments</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                    </p>
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                        <div class="ps-4">
-                            <h6>Call for any query!</h6>
-                            <h3 class="text-primary m-0">+012 345 6789</h3>
-                        </div>
+                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">ABOUT US</h6>
+                    <h1 class="mb-5">Surging ahead since 1975</h1>
+                    <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <p class="mb-0 justify-para">This Department is one of the pioneers in the field of Naval
+                            Architecture
+                            education in this country and was established in 1975 with an aim to create a new and
+                            dynamic generation of Naval Architects to meet the requirements of the Indian
+                            Shipbuilding Industry, Ship Classification Societies, R&D organizations, Indian Navy,
+                            and related organisations. This Department maintains active collaboration and
+                            interaction with IITs, foreign Universities, shipyards and other industries. These
+                            organizations have been generous in extending their facilities and expertise to impart
+                            training to our students. The fruitful collaboration of this Department with Rostock
+                            University, Germany dates back to 1978 and remains as an important milestone in the
+                            development of this Department. The curriculum was drawn up and updated in consultation
+                            with experts from various academic institutions and industries. This has brought the
+                            course curriculum in conformity with international standards. The quality of education
+                            imparted and the resulting professional competence of the graduates enabled the
+                            Department to achieve a unique record of 100 percent placement of its graduates in India
+                            and abroad.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-sm-6">
-                            <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
-                                <i class="fa fa-users fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                <p class="text-white mb-0">Happy Clients</p>
-                            </div>
-                            <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
-                                <i class="fa fa-ship fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                <p class="text-white mb-0">Complete Shipments</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
-                                <i class="fa fa-star fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                <p class="text-white mb-0">Customer Reviews</p>
-                            </div>
-                        </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Fact End -->
+    <!-- ABOUT End -->
+
+    <!-- HOS MESSAGE  Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
+                            style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+                    <p class="mb-5 justify-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+                        numquam atque,
+                        sit voluptatum labore dolor, qui voluptatem debitis maxime praesentium officiis totam maiores
+                        sunt ea quidem facilis officia, a vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ipsa, perspiciatis. Repellat iste nam quos ab illum adipisci cumque. Quo dolorum quod odit qui
+                        quos non quasi nisi consectetur consequatur beatae dolores atque rerum incidunt commodi, maxime
+                        iusto optio mollitia. Quisquam magnam, a, vitae rem inventore similique molestias repellat
+                        cumque quasi libero saepe enim non repellendus impedit labore nostrum, aperiam quibusdam
+                        dolorum. Rerum suscipit culpa nam sint beatae deserunt cum maiores architecto nulla similique
+                        modi necessitatibus a fugiat sequi vel unde delectus, quasi tempore amet ullam labore eveniet!
+                        Natus exercitationem suscipit eligendi qui quod itaque quam assumenda et esse. Libero, ad?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HOD MESSAGE  End -->
+
 
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Our Services</h6>
-                <h1 class="mb-5">Explore Our Services</h1>
+                <h6 class="text-secondary text-uppercase">Courses</h6>
+                <h1 class="mb-5">Courses Offered</h1>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -197,9 +259,10 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/service-1.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Air Freight</h4>
+                        <h4 class="mb-3">Course 1</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -207,9 +270,10 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/service-2.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Ocean Freight</h4>
+                        <h4 class="mb-3">Course 2</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
@@ -217,9 +281,10 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/service-3.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Road Freight</h4>
+                        <h4 class="mb-3">Course 3</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -227,9 +292,10 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/service-4.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Train Freight</h4>
+                        <h4 class="mb-3">Course 4</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -237,9 +303,10 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/service-5.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Customs Clearance</h4>
+                        <h4 class="mb-3">Course 5</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
@@ -247,9 +314,10 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/service-6.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Warehouse Solutions</h4>
+                        <h4 class="mb-3">Course 6</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
                     </div>
                 </div>
             </div>
@@ -258,8 +326,80 @@
     <!-- Service End -->
 
 
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">Testimonial</h6>
+                <h1 class="mb-0">Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                        eos.
+                        Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                        eos.
+                        Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                        eos.
+                        Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                        eos.
+                        Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
     <!-- Feature Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+    <!-- <div class="container-fluid overflow-hidden py-5 px-lg-0">
         <div class="container feature py-5 px-lg-0">
             <div class="row g-5 mx-lg-0">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
@@ -269,7 +409,8 @@
                         <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
                         <div class="ms-4">
                             <h5>Worldwide Service</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo
+                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
+                                duo
                                 justo magna erat amet</p>
                         </div>
                     </div>
@@ -277,7 +418,8 @@
                         <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
                         <div class="ms-4">
                             <h5>On Time Delivery</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo
+                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
+                                duo
                                 justo magna erat amet</p>
                         </div>
                     </div>
@@ -285,7 +427,8 @@
                         <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
                         <div class="ms-4">
                             <h5>24/7 Telephone Support</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo
+                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
+                                duo
                                 justo magna erat amet</p>
                         </div>
                     </div>
@@ -298,12 +441,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Feature End -->
 
 
     <!-- Pricing Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Pricing Plan</h6>
@@ -375,18 +518,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Pricing End -->
 
 
     <!-- Quote Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
                     <h1 class="mb-5">Request A Free Qoute!</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
+                        diam et
                         eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
                     <div class="d-flex align-items-center">
                         <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
@@ -432,12 +576,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Quote End -->
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Our Team</h6>
@@ -514,136 +658,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Testimonial</h6>
-                <h1 class="mb-0">Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s"
-        style="margin-top: 6rem;">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Air Freight</a>
-                    <a class="btn btn-link" href="">Sea Freight</a>
-                    <a class="btn btn-link" href="">Road Freight</a>
-                    <a class="btn btn-link" href="">Logistic Solutions</a>
-                    <a class="btn btn-link" href="">Industry solutions</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </br>Distributed By <a class="border-bottom" href="https://themewagon.com"
-                            target="_blank">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include('partials/footer.php') ?>
     <!-- Footer End -->
 
 

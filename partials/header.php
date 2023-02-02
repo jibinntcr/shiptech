@@ -28,7 +28,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow  sticky-top p-0">
-    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <!-- <h2 class="mb-2 text-white">Logistica</h2> -->
         <img class="mb-2" src="img/logo.webp" style="width:300px;">
     </a>
@@ -37,25 +37,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link active">Academics</a>
+            <a href="#" class="nav-item nav-link active">Academics</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
                 <div class="dropdown-menu fade-up m-0">
-                    <a href="price.html" class="dropdown-item">Faculty</a>
-                    <a href="feature.html" class="dropdown-item">Technical Staff</a>
+                    <a href="faculty.php" class="dropdown-item">Faculty</a>
+                    <a href="#" class="dropdown-item">Technical Staff</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp; Facilities</a>
                 <div class="dropdown-menu fade-up m-0">
-                    <a href="price.html" class="dropdown-item">Department Library</a>
-                    <a href="feature.html" class="dropdown-item">University Library</a>
+                    <a href="#" class="dropdown-item">Department Library</a>
+                    <a href="#" class="dropdown-item">University Library</a>
                 </div>
             </div>
-            <a href="about.html" class="nav-item nav-link">Events</a>
-            <a href="service.html" class="nav-item nav-link">Gallery</a>
-            <a href="service.html" class="nav-item nav-link">Connect</a>
-            <a href="service.html" class="nav-item nav-link">Contact</a>
+            <a href="#" class="nav-item nav-link">Events</a>
+            <a href="#" class="nav-item nav-link">Gallery</a>
+            <a href="#" class="nav-item nav-link">Connect</a>
+            <a href="#" class="nav-item nav-link">Contact</a>
         </div>
     </div>
 </nav>
