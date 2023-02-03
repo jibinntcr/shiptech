@@ -77,58 +77,7 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
                         </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
                         <p>Designation</p>
                         <div class="btn-slide mt-1">
                             <i class="fa fa-share"></i>
@@ -145,7 +94,7 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-2.jpg" alt="">
                         </div>
-                        <h5 class="mb-0">Full Name</h5>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
                         <p>Designation</p>
                         <div class="btn-slide mt-1">
                             <i class="fa fa-share"></i>
@@ -157,12 +106,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-3.jpg" alt="">
                         </div>
-                        <h5 class="mb-0">Full Name</h5>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
                         <p>Designation</p>
                         <div class="btn-slide mt-1">
                             <i class="fa fa-share"></i>
@@ -174,12 +123,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-4.jpg" alt="">
                         </div>
-                        <h5 class="mb-0">Full Name</h5>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
                         <p>Designation</p>
                         <div class="btn-slide mt-1">
                             <i class="fa fa-share"></i>
@@ -191,12 +140,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
                         </div>
-                        <h5 class="mb-0">Full Name</h5>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
                         <p>Designation</p>
                         <div class="btn-slide mt-1">
                             <i class="fa fa-share"></i>
@@ -208,6 +174,41 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

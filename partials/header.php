@@ -1,12 +1,12 @@
-<div class="wrap">
+<div class="wrap upper-header">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col d-flex">
                 <p class="mt-2 mb-2 d-flex">
-                <p class="mb-0 me-4 "><span class="fa fa-envelope"></span>
+                <p class="mb-0 me-4 "><span style="color: #007a9b;" class="fa fa-envelope"></span>
                     <a href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
                 </p>
-                <p class="mb-0"><span class="fa fa-phone-alt"></span>
+                <p class="mb-0"><span style="color: #007a9b;" class="fa fa-phone-alt"></span>
                     <a href=" tel:+914842576253">0484 - 2577602</a>
                 </p>
                 </p>
