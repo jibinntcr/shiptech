@@ -132,24 +132,32 @@
                             style="object-fit: cover;" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">Shiptech CUSAT</h6>
                     <h1 class="mb-5">Vision</h1>
                     <p class="mb-5">To evolve into a globally recognized department in the frontier areas of Naval
                         Architecture and Ship Building.</p>
                     <h1 class="mb-5">Mission</h1>
                     <p class="mb-5">
-                    <ul>
-                        <li>We are committed to achieve academic excellence in the field of Naval
-                            Architecture and ShipBuilding through innovative teaching and learning
-                            processes</li>
-                        <li>To prepare the students to be professionally competent to face the
+                    <ul class="mission-dot">
+                        <li><i class="fa fa-ship me-3" aria-hidden="true"></i>
+                            <span>We are committed to achieve academic
+                                excellence in the field of Naval Architecture and ShipBuilding through innovative
+                                teaching and learning processes</span>
+                        </li>
+                        <li><i class="fa fa-ship me-3" aria-hidden="true"></i>To prepare the students to be
+                            professionally competent to face the
                             challenges in academics, the industry and research.</li>
-                        <li>Promote inter-disciplinary research among the faculty and the students to
+                        <li><i class="fa fa-ship me-3" aria-hidden="true"></i>Promote inter-disciplinary research
+                            among
+                            the faculty and the students to
                             create state of art research facilities.
                         </li>
-                        <li>To promote quality and ethics among the students</li>
-                        <li>Motivate the students to acquire entrepreneurial skills to become global
+                        <li><i class="fa fa-ship me-3" aria-hidden="true"></i>To promote quality and ethics among
+                            the
+                            students</li>
+                        <li><i class="fa fa-ship me-3" aria-hidden="true"></i>Motivate the students to acquire
+                            entrepreneurial skills to become global
                             leaders.</li>
                     </ul>
                     </p>

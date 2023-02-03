@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #ff3e41;
+  --primary: #007a9b;
   --secondary: #51cfed;
   --light: #f8f2f0;
   --dark: #060315;
@@ -475,4 +475,34 @@
 .justify-para {
   text-align: justify;
   text-justify: inter-word;
+}
+.mission-dot {
+  list-style-type: none;
+}
+
+.ship-contact-data ul {
+  padding: 0 0 30px !important;
+}
+
+.ship-contact-data ul li {
+  padding-left: 50px !important;
+  position: relative;
+  margin-bottom: 10px !important;
+}
+
+.ship-contact-data ul li:first-child {
+  min-height: 52px;
+}
+
+.ship-contact-data ul li span b {
+  color: #007a9b;
+  font-weight: 400 !important;
+}
+
+.ship-contact-data ul li i {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  font-size: 17px;
+  color: #007a9b;
 }
