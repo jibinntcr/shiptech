@@ -7,23 +7,22 @@ if (strlen($_SESSION['alogin']) == 0) {
 } else {
 
     if (isset($_POST['hodBTN'])) {
-        $name = $_POST['name'];
-        $message = $_POST['message'];
-        $designation = $_POST['designation'];
+        $mainCaption = $_POST['mainCaption'];
+        $subCaption = $_POST['subCaption'];
         $folder = 'uploads/';
         $file = $folder . basename($_FILES["file"]["name"]);
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO hod(name,message,designation,status,photo) VALUES ('" . $name . "','" . $message . "','" . $designation . "','" . $status . "','" . $photo . "')";
+        $sql = "INSERT INTO banner(mainCaption,subCaption,status,image) VALUES ('" . $mainCaption . "','" . $subCaption . "','" . $status . "','" . $photo . "')";
         $query = $dbh->prepare($sql);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
             echo '<script>alert("Success")</script>';
-            echo '<script>window.location = "hod.php";</script>';
+            echo '<script>window.location = "banner.php";</script>';
         } else {
             echo '<script>alert("something went wrong please try again")</script>';
-            echo '<script>window.location = "hod.php";</script>';
+            echo '<script>window.location = "banner.php";</script>';
         }
     }
 ?>
@@ -36,7 +35,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>New HOD | ShiptechAdmin</title>
+    <title>New Banner | Shiptech Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../vendors/feather/feather.css">
     <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -70,22 +69,18 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">New HOD</h4>
+                                <h4 class="card-title">New Banner</h4>
                                 <form class="forms-sample" enctype="multipart/form-data" method="POST">
                                     <div class="form-group">
-                                        <label for="exampleInputUsername1">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name">
+                                        <label for="exampleInputUsername1">Main Caption</label>
+                                        <input type="text" class="form-control" id="mainCaption" name="mainCaption">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputUsername1">Designation</label>
-                                        <input type="text" class="form-control" id="designation" name="designation">
+                                        <label for="exampleInputUsername1">Sub Caption</label>
+                                        <input type="text" class="form-control" id="subCaption" name="subCaption">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Image(5520x3880 px)</label>
+                                        <label for="exampleTextarea1">Image(1366 x 612px)</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg">
                                     </div>

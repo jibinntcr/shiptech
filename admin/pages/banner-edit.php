@@ -6,24 +6,45 @@ if (strlen($_SESSION['alogin']) == 0) {
     header('location:login.php');
 } else {
 
-    if (isset($_POST['hodBTN'])) {
-        $name = $_POST['name'];
-        $message = $_POST['message'];
-        $designation = $_POST['designation'];
-        $folder = 'uploads/';
-        $file = $folder . basename($_FILES["file"]["name"]);
-        move_uploaded_file($_FILES['file']['tmp_name'], $file);
-        $photo = basename($_FILES["file"]["name"]);
-        $status = '1';
-        $sql = "INSERT INTO hod(name,message,designation,status,photo) VALUES ('" . $name . "','" . $message . "','" . $designation . "','" . $status . "','" . $photo . "')";
-        $query = $dbh->prepare($sql);
-        $result = $query->execute();
-        if ($query->rowCount() > 0) {
-            echo '<script>alert("Success")</script>';
-            echo '<script>window.location = "hod.php";</script>';
-        } else {
-            echo '<script>alert("something went wrong please try again")</script>';
-            echo '<script>window.location = "hod.php";</script>';
+    if (isset($_POST['BannerUpdateBTN'])) {
+        if (($_FILES["file"]["error"]) == 4) {
+            $id = $_POST['id'];
+            $mainCaption = $_POST['mainCaption'];
+            $subCaption = $_POST['subCaption'];
+            $photo = $_POST['imageName'];
+            $sql = "UPDATE  banner SET maincaption='$mainCaption',subCaption='$subCaption',image='$photo' where id='$id'";
+            // print_r($sql);
+            // exit();
+            $query = $dbh->prepare($sql);
+            $result = $query->execute();
+            if ($query->rowCount() > 0) {
+                echo '<script>alert("Success")</script>';
+                echo '<script>window.location = "banner.php";</script>';
+            } else {
+                echo '<script>alert("something went wrong please try again")</script>';
+                echo '<script>window.location = "banner.php";</script>';
+            }
+        } else if (($_FILES["file"]["error"]) == 0) {
+            $id = $_POST['id'];
+            $mainCaption = $_POST['mainCaption'];
+            $subCaption = $_POST['subCaption'];
+            $folder = 'uploads/';
+            $file = $folder . basename($_FILES["file"]["name"]);
+            move_uploaded_file($_FILES['file']['tmp_name'], $file);
+            $photo = basename($_FILES["file"]["name"]);
+            $status = '1';
+            $sql = "UPDATE  banner SET mainCaption='$mainCaption',subCaption='$subCaption',image='$photo' where id='$id'";
+            // print_r($sql);
+            // exit();
+            $query = $dbh->prepare($sql);
+            $result = $query->execute();
+            if ($query->rowCount() > 0) {
+                echo '<script>alert("Success")</script>';
+                echo '<script>window.location = "banner.php";</script>';
+            } else {
+                echo '<script>alert("something went wrong please try again")</script>';
+                echo '<script>window.location = "banner.php";</script>';
+            }
         }
     }
 ?>
@@ -36,7 +57,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>New HOD | ShiptechAdmin</title>
+    <title>Banner Edit | Shiptech Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../vendors/feather/feather.css">
     <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -70,28 +91,44 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">New HOD</h4>
+                                <h4 class="card-title">Banner Edit</h4>
                                 <form class="forms-sample" enctype="multipart/form-data" method="POST">
+                                    <?php
+                                        $id = $_GET['id'];
+                                        // print_r($id);
+                                        // exit();
+                                        $sql = "SELECT id,mainCaption,subCaption,image from banner where id= $id ";
+                                        $query = $dbh->prepare($sql);
+                                        $query->execute();
+                                        $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+                                        if ($query->rowCount() > 0) {
+                                        ?>
                                     <div class="form-group">
-                                        <label for="exampleInputUsername1">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name">
+                                        <input type="hidden" id="id" name="id"
+                                            value="<?php echo htmlentities($userArr[0]->id); ?>" />
+                                        <input type="hidden" id="imageName" name="imageName"
+                                            value="<?php echo htmlentities($userArr[0]->image); ?>" />
+                                        <label for="exampleInputUsername1">Main Caption</label>
+                                        <input type="text" class="form-control" id="mainCaption" name="mainCaption"
+                                            value="<?php echo htmlentities($userArr[0]->mainCaption); ?>">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputUsername1">Sub Caption</label>
+                                        <input type="text" class="form-control" id="subCaption" name="subCaption"
+                                            value="<?php echo htmlentities($userArr[0]->subCaption); ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputUsername1">Designation</label>
-                                        <input type="text" class="form-control" id="designation" name="designation">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Image(5520x3880 px)</label>
+                                        <label for="exampleTextarea1">Image</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg">
                                     </div>
-                                    <button type="submit" class="btn btn-primary mr-2" name="hodBTN"
-                                        id="hodBTN">Submit</button>
+                                    <button type="submit" class="btn btn-primary mr-2" name="BannerUpdateBTN"
+                                        id="BannerUpdateBTN">Save</button>
                                     <button class="btn btn-light">Cancel</button>
+                                    <?php
+                                        }
+                                        ?>
                                 </form>
                                 <script>
                                 CKEDITOR.replace('message');
