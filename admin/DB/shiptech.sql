@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2023 at 01:15 PM
+-- Generation Time: Feb 08, 2023 at 09:59 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -41,6 +41,28 @@ CREATE TABLE `announcement` (
 
 INSERT INTO `announcement` (`id`, `announcements`, `link`, `status`, `dlt_status`) VALUES
 (9, 'PhD Rank List 2022', 'https://dca.cusat.ac.in/assets/pdf/PhD%20ranklist2022.pdf', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banner`
+--
+
+CREATE TABLE `banner` (
+  `id` int(11) NOT NULL,
+  `mainCaption` text DEFAULT NULL,
+  `subCaption` text DEFAULT NULL,
+  `image` text NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `dltSts` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `banner`
+--
+
+INSERT INTO `banner` (`id`, `mainCaption`, `subCaption`, `image`, `status`, `dltSts`) VALUES
+(1, 'third', 'third', 'unnamed.png', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -260,7 +282,7 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`id`, `name`, `designation`, `email`, `address`, `iqacLink`, `about`, `interest1`, `interest2`, `interest3`, `interest4`, `interest5`, `interest6`, `interest7`, `interest8`, `interest9`, `interest10`, `education1`, `edDescription1`, `education2`, `edDescription2`, `education3`, `edDescription3`, `education4`, `edDescription4`, `education5`, `edDescription5`, `education6`, `edDescription6`, `experience1`, `experience2`, `experience3`, `experience4`, `experience5`, `experience6`, `experience7`, `experience8`, `experience9`, `experience10`, `expDescription1`, `expDescription2`, `expDescription3`, `expDescription4`, `expDescription5`, `expDescription6`, `expDescription7`, `expDescription8`, `expDescription9`, `expDescription10`, `publications`, `foundedProjects`, `otherInfo`, `image`, `status`, `role1`, `role2`, `role3`, `role4`, `role5`, `role6`, `role7`, `role8`, `role9`, `role10`, `project1`, `project2`, `project3`, `project4`, `project5`, `project6`, `project7`, `project8`, `project9`, `project10`, `agency1`, `agency2`, `agency3`, `agency4`, `agency5`, `agency6`, `agency7`, `agency8`, `agency9`, `agency10`, `thumbname`) VALUES
-(3, 'Dr. M. V. Judy', 'Professor and Head of the Department', 'judynair@cusat.ac.in', 'Department of Computer Applications, Cochin University of Science and Technology,', 'https://iqac.cusat.ac.in/Web/profile_view/184/Dr.M.V.JUDY', 'Dr. M. V. Judy is presently a Professor and Head of the Department of Computer Applications at Cochin University of Science & Technology, Kerala. She received her Ph.D. degree from Sastra Deemed University in 2009. She has 19 + years of teaching experience along with numerous research articles published in peer-reviewed Journals and International Conferences. She serves as the Principal Investigator for various Projects funded from DST, State Plan Grants, and Department of Biotechnology. Dr. Judy’s Research Interest includes Machine Learning, Big Data Analytics, Computational Biology and Affective Computing.', ' Data Mining ', 'Computational Biology', 'Big Data', 'Evolutionary Computing', 'Affective Computing', '', '', '', '', '', 'Ph.D. (Computer Science)', '2009', 'M.Phil. (Computer Science)', '2005', 'Master of Computer Applications (MCA)', '2002', '', '', '', '', '', '', 'Professor', 'Associate Professor', 'Associate Professor and H', 'Assistant Professor-III', 'Lecturer', '', '', '', '', '', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2019 - Till Date', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2016 - November 2019', 'Department of CS and IT AMRITA University (Kochi Campus)\r\nJune 2010 - December 2016', 'SASTRA University, Thanjavur.\r\nAugust 2003 - November 2009', 'Bishop Heber College, Trichy.\r\nAugust 2002 - August 2003', '', '', '', '', '', '<ul>\r\n	<li>Sabeen Govind P.V., M.V. Judy (2022). A Block-Based Data Hiding Technique Using Convolutional Neural Network. In: Roy S., Sinwar D., Perumal T., Slowik A., Tavares, J.M.R.S. (eds) Innovations in Computational Intelligence and Computer Vision . Advances in Intelligent Systems and Computing, vol 1424. Springer, Singapore.<a href=\"https://doi.org/10.1007/978-981-19-0475-2_21\">Read Online</a></li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Soman G., Vivek M. V., M. V. Judy, Papageorgiou E, Gerogiannis VC. Precision-Based Weighted Blending Distributed Ensemble Model for Emotion Classification. Algorithms. 2022; 15(2):55.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Sabeen Govind and M. V. Judy, &ldquo;A Secure Framework for Remote Diagnosis in Health Care: A High Capacity Reversible Data Hiding Technique for Medical Images&rdquo;, Computers &amp; Electrical Engineering, An International Journal, Elsevier, SCI(2021), Impact factor: 2.67.</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Sabeen Govind P.V., Varghese B.M. &amp; M.V. Judy , &ldquo;A high imperceptible data hiding technique using quorum function&quot;, Multimedia Tools and Applications (2021), Springer, Scopus Q1, SCI impact factor: 2.313</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>M. V. Judy, Autism spectrum disorders: Integration of the genome, transcriptome and the environment, Journal of the Neurological Sciences, Elsevier Publication, ISSN: 0022-510X15 May 2016, Vol 364, pp 167&ndash;176, SCI, Impact Factor: 2.126</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li><a href=\"https://scholar.google.ca/citations?user=e9Nuq2IAAAAJ&amp;hl=en\">Google Scholar Profile</a></li>\r\n</ul>\r\n', NULL, '', 'faculty-judy (1).jpg', 1, 'Co-PI', 'Principal Investigator', 'Supervisor ', 'Principal Investigator', 'Principal Investigator', 'Mentor', 'Co-PI', '', '', '', 'Establishment of Bioinformatics Centre, CUSAT', 'Visual Enhancement of Underwater Optical Images and, Accuracy Improvement of Target', 'Big data analytics research Facility', 'Development of a computational tool, algorithms for Gene finding, mapping of genotype – phenotype based on classification of clinical data for Autism spectrum disorder.', 'Implementation of enhanced Deep learning algorithms for Big data analytics in computational epidemiology', 'Automated real time traffic control system', 'Securing Clinical Information in Medical Images', '', '', '', 'Department of Biotechnology, Govt of India', 'Department of Science and Technology Frontiers And Futuristic Technologies', 'CUSAT – State Plan Grants 2016-2017', 'Department of Science and Technology Cognitive Science Division', 'CUSAT – State Plan Grants 2016-2017', 'IEDC - CUSAT7', 'Rajagiri Hospital/Rajagiri School of Social Sciences', '', '', '', ' MCA ,M.Phil. ,Ph.D.');
+(3, 'Jerry Sabu', 'designation', 'jerryaksa97@gmail.com', 'address', 'https://iqac.cusat.ac.in/Web/profile_view/184/Dr.M.V.JUDY', 'about', ' Data Mining ', 'Computational Biology', 'Big Data', 'Evolutionary Computing', 'Affective Computing', '', '', '', '', '', 'Ph.D. (Computer Science)', '2009', 'M.Phil. (Computer Science)', '2005', 'Master of Computer Applications (MCA)', '2002', '', '', '', '', '', '', 'Professor', 'Associate Professor', 'Associate Professor and H', 'Assistant Professor-III', 'Lecturer', '', '', '', '', '', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2019 - Till Date', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2016 - November 2019', 'Department of CS and IT AMRITA University (Kochi Campus)\r\nJune 2010 - December 2016', 'SASTRA University, Thanjavur.\r\nAugust 2003 - November 2009', 'Bishop Heber College, Trichy.\r\nAugust 2002 - August 2003', '', '', '', '', '', '<ul>\r\n	<li>nil</li>\r\n</ul>\r\n', NULL, '', 'faculty-judy (1).jpg', 1, 'Co-PI', 'Principal Investigator', 'Supervisor ', 'Principal Investigator', 'Principal Investigator', 'Mentor', 'Co-PI', '', '', '', 'Establishment of Bioinformatics Centre, CUSAT', 'Visual Enhancement of Underwater Optical Images and, Accuracy Improvement of Target', 'Big data analytics research Facility', 'Development of a computational tool, algorithms for Gene finding, mapping of genotype – phenotype based on classification of clinical data for Autism spectrum disorder.', 'Implementation of enhanced Deep learning algorithms for Big data analytics in computational epidemiology', 'Automated real time traffic control system', 'Securing Clinical Information in Medical Images', '', '', '', 'Department of Biotechnology, Govt of India', 'Department of Science and Technology Frontiers And Futuristic Technologies', 'CUSAT – State Plan Grants 2016-2017', 'Department of Science and Technology Cognitive Science Division', 'CUSAT – State Plan Grants 2016-2017', 'IEDC - CUSAT7', 'Rajagiri Hospital/Rajagiri School of Social Sciences', '', '', '', 'first page qualification');
 
 -- --------------------------------------------------------
 
@@ -646,6 +668,12 @@ ALTER TABLE `announcement`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `banner`
+--
+ALTER TABLE `banner`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `completedresearchscholar`
 --
 ALTER TABLE `completedresearchscholar`
@@ -781,6 +809,12 @@ ALTER TABLE `workshop`
 --
 ALTER TABLE `announcement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `banner`
+--
+ALTER TABLE `banner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `completedresearchscholar`

@@ -57,7 +57,7 @@
                             <div class="col-10 col-lg-8">
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Department of </h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Ship Technolgy </h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Kochin University of Science &amp;
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Cochin University of Science &amp;
                                     Technology</p>
                             </div>
                         </div>
