@@ -1,0 +1,29 @@
+/** @format */
+
+p.thick {
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  h4 {
+    font-size: 1.2em;
+  }
+}
+
+hr {
+  border: 0.2px solid gray;
+  width: 100%;
+}
+
+.small-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+overflow-hidden-x {
+  overflow-x: hidden;
+}
