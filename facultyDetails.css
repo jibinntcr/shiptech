@@ -62,6 +62,6 @@ overflow-hidden-x {
   color: white;
 }
 
-.card1:hover a {
-  color: RED;
+.card1:hover a:hover {
+  color: red;
 }
