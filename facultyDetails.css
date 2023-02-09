@@ -65,3 +65,40 @@ overflow-hidden-x {
 .card1:hover a:hover {
   color: red;
 }
+
+.title-color {
+  background: linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246));
+  background-image: linear-gradient(
+    to right,
+    rgb(56, 189, 248),
+    rgb(59, 130, 246)
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.border-red {
+  border: 1px solid red;
+  board-radius: 23px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.points h5 {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .points h5 {
+    font-size: 16px;
+  }
+}
+
+.points {
+  border: 2px solid red;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px gray;
+}
