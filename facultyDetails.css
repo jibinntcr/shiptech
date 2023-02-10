@@ -102,3 +102,11 @@ ul {
   border-radius: 20px;
   box-shadow: 5px 5px 10px gray;
 }
+
+
+.er{
+display: grid; 
+grid-template-columns: repeat(2, minmax(0, 1fr)); 
+gap: 0.75rem; 
+
+}
