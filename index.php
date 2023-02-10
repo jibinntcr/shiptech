@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -403,6 +404,107 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
+
+
+    <!-- News and events -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <h6 class="text-secondary text-uppercase">Pricing Plan</h6> -->
+                <h1 class="mb-5">News and Events</h1>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="price-item">
+                        <div class=" profile-card-5">
+                            <div class="card-img-block">
+                                <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="right-text"> 10/12/23</p>
+                            <h4 class="mb-3"> News </h4>
+                            <p class="card-text">ficia quibusdam? Odio totam et it alias placeat earum, deleniti ab
+                                quibusdam
+                                laborum?.</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                    More</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="price-item">
+                        <div class=" profile-card-5">
+                            <div class="card-img-block">
+                                <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="right-text"> 10/12/23</p>
+                            <h4 class="mb-3"> News </h4>
+                            <p class="card-text">ficia quibusdam? Odio totam et it alias placeat earum, deleniti ab
+                                quibusdam
+                                laborum?.</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                    More</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="price-item">
+                        <div class=" profile-card-5">
+                            <div class="card-img-block">
+                                <img class="card-img-top"
+                                    src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="right-text"> 10/12/23</p>
+                            <h4 class="mb-3"> News </h4>
+                            <p class="card-text">ficia quibusdam? Odio totam et it alias placeat earum, deleniti ab
+                                quibusdam
+                                laborum?.</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                                    More</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!--  News and events  End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
