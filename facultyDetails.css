@@ -35,7 +35,7 @@ overflow-hidden-x {
   }
 }
 
-.card1 a {
+/* .card1 a {
   color: gold;
   transition: all 0.3s ease-in-out;
   display: block;
@@ -50,9 +50,9 @@ overflow-hidden-x {
   background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
   background-size: 200%;
   transition: 0.5s ease-out;
-}
+} */
 
-.card1:hover,
+/* .card1:hover,
 .card1:hover a,
 .card1:hover p,
 .card1:hover h1,
@@ -109,4 +109,4 @@ display: grid;
 grid-template-columns: repeat(2, minmax(0, 1fr)); 
 gap: 0.75rem; 
 
-}
+} */
