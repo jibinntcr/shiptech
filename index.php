@@ -31,6 +31,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/date.css" rel="stylesheet">
 </head>
 
 <body>
@@ -408,10 +409,10 @@
 
 
     <!-- News and events -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <!-- <h6 class="text-secondary text-uppercase">Pricing Plan</h6> -->
+
                 <h1 class="mb-5">News and Events</h1>
             </div>
             <div class="row g-4">
@@ -483,11 +484,223 @@
 
         </div>
     </div>
-    </div>
+    </div> -->
     <!--  News and events  End -->
 
 
+    <!-- News and events 2 -->
 
+    <div class="container">
+
+        <div class="text-center">
+            <h6 class="text-secondary text-uppercase">Upcoming </h6>
+            <h1 class="mb-0">Events</h1>
+        </div>
+
+
+
+
+        <div class="row border p-2 my-4">
+            <div class="border border-white mb-1 mb-lg-4   datep">
+                <div class="card-body mb-0 d-flex flex-column text-center">
+                    <div class="bg-primary text-white py-1 ">
+                        March
+                    </div>
+                    <div class="pt-1 bg-white border border-white">
+                        <span class="display-3 font-weight-bold">17</span>
+                    </div>
+                    <div class="border border-white bg-white pt-2 pb-1">
+                        <span class="text-sm">Sunday</span>
+                    </div>
+                    <div class="border border-white bg-white pb-2">
+                        <span class="text-xs">8:00 am </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+
+
+                <div class="ms-4">
+                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
+                            Prof N Ravishankar, IISc</span>
+
+                    </p>
+
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
+                            Nila Campus, Kanjikode
+                        </span>
+
+                    </p>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
+                            Dinesh Jagadeesan</span>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="row border p-2 my-4">
+            <div class="border border-white mb-1 mb-lg-4   datep">
+                <div class="card-body mb-0 d-flex flex-column text-center">
+                    <div class="bg-primary text-white py-1 ">
+                        March
+                    </div>
+                    <div class="pt-1 bg-white border border-white">
+                        <span class="display-3 font-weight-bold">17</span>
+                    </div>
+                    <div class="border border-white bg-white pt-2 pb-1">
+                        <span class="text-sm">Sunday</span>
+                    </div>
+                    <div class="border border-white bg-white pb-2">
+                        <span class="text-xs">8:00 am </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+
+
+                <div class="ms-4">
+                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
+                            Prof N Ravishankar, IISc</span>
+
+                    </p>
+
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
+                            Nila Campus, Kanjikode
+                        </span>
+
+                    </p>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
+                            Dinesh Jagadeesan</span>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row border p-2 my-4">
+            <div class="border border-white mb-1 mb-lg-4   datep">
+                <div class="card-body mb-0 d-flex flex-column text-center">
+                    <div class="bg-primary text-white py-1 ">
+                        March
+                    </div>
+                    <div class="pt-1 bg-white border border-white">
+                        <span class="display-3 font-weight-bold">17</span>
+                    </div>
+                    <div class="border border-white bg-white pt-2 pb-1">
+                        <span class="text-sm">Sunday</span>
+                    </div>
+                    <div class="border border-white bg-white pb-2">
+                        <span class="text-xs">8:00 am </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+
+
+                <div class="ms-4">
+                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
+                            Prof N Ravishankar, IISc</span>
+
+                    </p>
+
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
+                            Nila Campus, Kanjikode
+                        </span>
+
+                    </p>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
+                            Dinesh Jagadeesan</span>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row border p-2 my-4">
+            <div class="border border-white mb-1 mb-lg-4   datep">
+                <div class="card-body mb-0 d-flex flex-column text-center">
+                    <div class="bg-primary text-white py-1 ">
+                        March
+                    </div>
+                    <div class="pt-1 bg-white border border-white">
+                        <span class="display-3 font-weight-bold">17</span>
+                    </div>
+                    <div class="border border-white bg-white pt-2 pb-1">
+                        <span class="text-sm">Sunday</span>
+                    </div>
+                    <div class="border border-white bg-white pb-2">
+                        <span class="text-xs">8:00 am </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+
+
+                <div class="ms-4">
+                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
+                            Prof N Ravishankar, IISc</span>
+
+                    </p>
+
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
+                            Nila Campus, Kanjikode
+                        </span>
+
+                    </p>
+                    <p>
+                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
+                            Dinesh Jagadeesan</span>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--  News and events 2 End -->
 
 
 
