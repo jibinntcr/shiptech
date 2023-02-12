@@ -12,3 +12,11 @@
   color: white;
   text-align: center;
 }
+
+.textHover {
+  color: white;
+}
+
+.textHover:hover {
+  color: #51cfed;
+}
