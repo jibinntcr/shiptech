@@ -1,0 +1,18 @@
+/** @format */
+
+@media (min-width: 770px) {
+  .datep {
+    width: 200px;
+  }
+}
+
+@media (max-width: 770px) {
+  .datep {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}

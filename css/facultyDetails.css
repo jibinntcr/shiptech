@@ -28,6 +28,7 @@ overflow-hidden-x {
   overflow-x: hidden;
 }
 
+
 @media only screen and (max-width: 767px) {
   .element {
     margin-left: 20px;
@@ -35,7 +36,8 @@ overflow-hidden-x {
   }
 }
 
-.card1 a {
+
+/* .card1 a {
   color: gold;
   transition: all 0.3s ease-in-out;
   display: block;
@@ -50,9 +52,9 @@ overflow-hidden-x {
   background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
   background-size: 200%;
   transition: 0.5s ease-out;
-}
+} */
 
-.card1:hover,
+/* .card1:hover,
 .card1:hover a,
 .card1:hover p,
 .card1:hover h1,
@@ -103,8 +105,18 @@ ul {
   box-shadow: 5px 5px 10px gray;
 }
 
+<<<<<<< HEAD:facultyDetails.css
 .er {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
 }
+=======
+
+.er{
+display: grid; 
+grid-template-columns: repeat(2, minmax(0, 1fr)); 
+gap: 0.75rem; 
+
+} */
+>>>>>>> 6315db234e3466d5c7b4f5e55ffcfc50a3d3d9b5:css/facultyDetails.css
