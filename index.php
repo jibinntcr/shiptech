@@ -271,7 +271,7 @@
                         </div>
                         <h4 class="mb-3">Course 1</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                        <a class="btn-slide mt-2" href="course-details.php"><i class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>

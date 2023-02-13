@@ -77,7 +77,7 @@
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
                         </div>
-                        <h5 class="mb-0"><a href="#">Fac Name</a></h5>
+                        <h5 class="mb-0"><a href="faculty-details.php">Fac Name</a></h5>
                         <p>Designation</p>
                         <div class="btn-slide mt-1">
                             <i class="fa fa-share"></i>

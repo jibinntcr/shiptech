@@ -53,7 +53,7 @@
                 </div>
             </div>
             <a href="#" class="nav-item nav-link">Events</a>
-            <a href="#" class="nav-item nav-link">Gallery</a>
+            <a href="gallery.php" class="nav-item nav-link">Gallery</a>
             <a href="#" class="nav-item nav-link">Connect</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
