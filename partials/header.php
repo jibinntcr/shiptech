@@ -55,7 +55,7 @@
             <a href="#" class="nav-item nav-link">Events</a>
             <a href="#" class="nav-item nav-link">Gallery</a>
             <a href="#" class="nav-item nav-link">Connect</a>
-            <a href="#" class="nav-item nav-link">Contact</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
     </div>
 </nav>
