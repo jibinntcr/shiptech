@@ -409,7 +409,7 @@
 
 
     <!-- News and events -->
-    <!-- <div class="container-xxl py-5">
+    <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
 
@@ -484,7 +484,7 @@
 
         </div>
     </div>
-    </div> -->
+    </div>
     <!--  News and events  End -->
 
 
