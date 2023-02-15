@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Logistica - Shipping Company Website Template</title>
+    <title>Gallery | Department of Shiptechnology</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -75,7 +75,7 @@
         <div class="container flex flex-wrap row  py-5 mx-auto">
 
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">SHIP TECHNOLOGY</h6>
+                <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
                 <h1 class="mb-5">Gallery</h1>
             </div>
 

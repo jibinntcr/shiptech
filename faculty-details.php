@@ -55,12 +55,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown"> DR. M. V. JUDY</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown"> DR. Name</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">DR. M. V. JUDY</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">DR. Name</li>
                 </ol>
             </nav>
         </div>

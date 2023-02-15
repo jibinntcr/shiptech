@@ -72,7 +72,7 @@
             <div class="row row g-4 justify-content-center">
                 <h1 class="mb-4 text-center wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s;">Forms</h1>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                <!-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s;">
                     <div class="service-item text-center pt-3">
                         <div class="p-4 mb-3">
@@ -118,7 +118,7 @@
                             <h4> <a href="#" target="_blank">APPLICATION FOR REVALUATION OF ANSWER BOOKS </a> </h4>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row gy-3 gx-4 mb-4">
                     <div class="team-left">
                         <div class="panel-body table-responsive">

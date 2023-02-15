@@ -28,7 +28,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
         <img class="img-fluid me-3 m-0" src="img/logo.webp" alt="">
     </a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -36,7 +36,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
-            <a href="index.php" class="nav-item nav-link">Accademics</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Accademics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="course.php" class="dropdown-item">Courses</a>
+                    <a href="research.php" class="dropdown-item">Research</a>
+                </div>
+            </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
@@ -47,7 +53,7 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp; Facilities</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
-                    <a href="#" class="dropdown-item">Department Library</a>
+                    <a href="library.php" class="dropdown-item">Department Library</a>
                     <a href="#" class="dropdown-item">University Library</a>
                 </div>
             </div>
