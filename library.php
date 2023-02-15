@@ -156,24 +156,92 @@
                         </div>
                     </div>
                 </div>
+
+
+
                 <div class="container-xxl py-5">
+                    <div class="container py-5">
+                        <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
+                            <h1 class="mb-5">Courses Offered</h1>
+                        </div> -->
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="service-item p-4 fac-img-curv">
+                                    <div class="overflow-hidden mb-4">
+                                        <img class="fac-img-curv img-fluid" src="./img/TheNavalArchitectMagazine.jpg"
+                                            style="object-fit: cover; height: 240px; " alt="">
+                                    </div>
+                                    <h4 class="mb-3">The Naval Architect Magazine</h4>
+                                    <a class="btn-slide mt-2" href="https://www.rina.org.uk/Magazines.html"><i
+                                            class="fa fa-arrow-right"></i><span>Read
+                                            More</span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-item p-4 fac-img-curv">
+                                    <div class="overflow-hidden mb-4">
+                                        <img class="img-fluid fac-img-curv" src="img/nptel.jpg" alt=""
+                                            style="object-fit: cover; height: 240px; ">
+                                    </div>
+                                    <h4 class="mb-3">Naval Architecture Online Classes</h4>
+                                    <a class="btn-slide mt-2"
+                                        href="https://www.youtube.com/channel/UCVM3rFd2pDbuf_u7WILEJpw"><i
+                                            class="fa fa-arrow-right"></i><span>Read
+                                            More</span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="service-item p-4 fac-img-curv">
+                                    <div class="overflow-hidden mb-4">
+                                        <img class="img-fluid fac-img-curv" src="img/service-3.jpg" alt=""
+                                            style="object-fit: cover; height: 240px; ">
+                                    </div>
+                                    <h4 class="mb-3">NA &amp; SB Question <br>Papers</h4>
+                                    <a class="btn-slide mt-2" href="http://dspace.cusat.ac.in/ "><i
+                                            class="fa fa-arrow-right"></i><span>Read
+                                            More</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="container-xxl py-5">
                     <div class="container py-5">
                         <div class="row g-4 flex-wrap justify-content-center">
 
                             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" style="width: 300px;">
-                                <div class="price-item border">
+                                <div class="price-item border fac-img-curv">
                                     <div class=" profile-card-5">
                                         <div class="card-img-block">
-                                            <img class="card-img-top" src="./img/TheNavalArchitectMagazine.jpg"
-                                                alt="Card image cap" style="object-fit: cover; height: 240px; ">
+                                            <img class="card-img-top fac-img-curv" src="./img/TheNavalArchitectMagazine.jpg" alt="Card image cap" style="object-fit: cover; height: 240px; ">
                                         </div>
                                     </div>
                                     <div class=" card-body pt-0 my-3">
                                         <h4 style="margin-bottom: 18px;"> The Naval Architect Magazine </h4>
 
-                                        <a class="btn-slide mt-2" target="_blank"
-                                            href="https://www.rina.org.uk/Magazines.html"><i
-                                                class="fa fa-arrow-right"></i><span>Read
+                                        <a class="btn-slide mt-2" target="_blank" href="https://www.rina.org.uk/Magazines.html"><i class="fa fa-arrow-right"></i><span>Read
                                                 More</span></a>
                                     </div>
                                 </div>
@@ -183,16 +251,13 @@
                                 <div class=" price-item border">
                                     <div class=" profile-card-5">
                                         <div class="card-img-block">
-                                            <img class="card-img-top" src="./img/nptel.jpg" alt="Card image cap"
-                                                style="object-fit: cover; height: 240px;">
+                                            <img class="card-img-top" src="./img/nptel.jpg" alt="Card image cap" style="object-fit: cover; height: 240px;">
                                         </div>
                                     </div>
                                     <div class=" card-body pt-0 my-3">
                                         <p class="right-text"> </p>
                                         <h4> Naval Architecture Online Classes </h4>
-                                        <a class="btn-slide mt-3" target="_blank"
-                                            href="https://www.youtube.com/channel/UCVM3rFd2pDbuf_u7WILEJpw"><i
-                                                class="fa fa-arrow-right"></i><span>View
+                                        <a class="btn-slide mt-3" target="_blank" href="https://www.youtube.com/channel/UCVM3rFd2pDbuf_u7WILEJpw"><i class="fa fa-arrow-right"></i><span>View
                                                 More</span></a>
                                     </div>
                                 </div>
@@ -202,15 +267,13 @@
                                 <div class="price-item border">
                                     <div class=" profile-card-5 ">
                                         <div class="card-img-block">
-                                            <img class="card-img-top" src="./img/Previous-Year-Question-Papers.png"
-                                                alt="Card image cap" style="object-fit: cover; height: 240px;">
+                                            <img class="card-img-top" src="./img/Previous-Year-Question-Papers.png" alt="Card image cap" style="object-fit: cover; height: 240px;">
                                         </div>
                                     </div>
                                     <div class="card-body pt-0 my-3">
 
                                         <h4 style="margin-bottom: 24px;"> NA &SB Question Papers </h4>
-                                        <a class="btn-slide" target="_blank" href="http://dspace.cusat.ac.in/ "><i
-                                                class="fa fa-arrow-right"></i><span>View
+                                        <a class="btn-slide" target="_blank" href="http://dspace.cusat.ac.in/ "><i class="fa fa-arrow-right"></i><span>View
                                                 More</span></a>
                                     </div>
                                 </div>
@@ -219,7 +282,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

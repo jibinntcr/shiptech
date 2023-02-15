@@ -127,7 +127,8 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
+                        href="Approvals-and-Affiliations.php">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/Approvals-icon.png" alt="Icon">
@@ -315,40 +316,40 @@
 
 
 
-    <!-- Service Start -->
+    <!-- Course  Start -->
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Courses</h6>
+                <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
                 <h1 class="mb-5">Courses Offered</h1>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4">
+                    <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                            <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Course 1</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                        <h4 class="mb-3">B.Tech</h4>
+                        <p>Naval Architecture &amp;<br> Shipbuilding</p>
                         <a class="btn-slide mt-2" href="course-details.php"><i class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4">
+                    <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                            <img class="img-fluid fac-img-curv" src="img/service-2.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Course 2</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                        <h4 class="mb-3">M.Tech</h4>
+                        <p>Computer Aided Structural Analysis &amp; Design</p>
                         <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
+                    <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                            <img class="img-fluid fac-img-curv" src="img/service-3.jpg" alt="">
                         </div>
                         <h4 class="mb-3">Course 3</h4>
                         <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
@@ -356,39 +357,7 @@
                                 More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-4.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 4</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-5.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 5</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-6.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 6</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -536,7 +505,7 @@
 
 
     <!-- News and events -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
 
@@ -610,14 +579,13 @@
             </div>
 
         </div>
-    </div>
-    </div>
+    </div> -->
     <!--  News and events  End -->
 
 
     <!-- News and events 2 -->
 
-    <div class="container">
+    <!-- <div class="container">
 
         <div class="text-center">
             <h6 class="text-secondary text-uppercase">Upcoming </h6>
@@ -825,7 +793,7 @@
         </div>
 
 
-    </div>
+    </div> -->
 
     <!--  News and events 2 End -->
 
