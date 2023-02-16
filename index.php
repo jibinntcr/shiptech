@@ -19,8 +19,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -44,8 +43,7 @@
 
 <body style="box-flex-group: #d6d6d6;">
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
         </div>
     </div>
@@ -60,8 +58,7 @@
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, .5);">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
@@ -76,15 +73,13 @@
             </div>
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, .5);">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics
                                     Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span
-                                        class="text-primary">Transport</span> Solution</h1>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Transport</span> Solution</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor
                                     at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea
                                     elitr.</p>
@@ -106,8 +101,7 @@
     <div class="container-xxl pb-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <a class="cat-item d-block bg-light text-center rounded p-3" href="">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
@@ -117,8 +111,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="placement.php">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
@@ -128,10 +121,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
-                        href="Approvals-and-Affiliations.php">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="Approvals-and-Affiliations.php">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/Approvals-icon.png" alt="Icon">
@@ -140,8 +131,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
-                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                     <a class="cat-item d-block bg-light text-center rounded p-3" href="">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
@@ -162,12 +152,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
-                        <div
-                            class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+                        <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
                             <span class="d-flex align-items-center">&nbsp;Announcements </span>
                         </div>
-                        <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();"
-                            onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
+                        <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
                             &nbsp;&nbsp;
                             <a class="news-scroll text-white" href="#" target="_blank">Lorem ipsum dolor sit amet
                                 consectetur adipisicing elit. In, labore. Distinctio sunt provident aliquid debitis
@@ -191,17 +179,16 @@
         <div class="container">
             <div class="row">
                 <!-- event start -->
-                <div class="container my-5 row col-lg-6">
+                <div class="container my-5 row col-xl-6">
                     <div class="text-center mb-3">
-                        <h6 class="text-secondary text-uppercase">Upcoming</h6>
+                        <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
                         <h1 class="mb-0">Events</h1>
                     </div>
 
                     <div class="container2">
                         <ul>
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -237,8 +224,7 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -274,8 +260,7 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -311,8 +296,7 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -348,8 +332,7 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -385,8 +368,7 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -421,8 +403,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -457,8 +438,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
                                             <h3 class="text-white">05</h3>
@@ -499,7 +479,7 @@
                 <!-- event end -->
 
                 <!-- news start -->
-                <div class="container my-5 row col-lg-6">
+                <div class="container my-5 row col-xl-6">
                     <div class="text-center mb-3">
                         <h1 class="mb-0">News</h1>
                     </div>
@@ -507,24 +487,22 @@
                     <div class="container3">
                         <ul>
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <img class="d-block" style="
-                      width: 180.34px;
-                      height: 180.34px;
+                      width: 120.34px;
+                      height: 120.34px;
                       object-fit: contain;
                       border-radius: 20px;
                     " src="img/about.jpg" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
+                                        <div class="ms-4 overflow-hidden">
                                             <h6 class="my-2 my-lg-2">
                                                 4th Rajagiri Conference on ...
                                             </h6>
 
-                                            <p>
-                                                Made for usage, commonly searched for. Fork, like and
-                                                use it. Just move ...
+                                            <p class="p-sm-2">
+                                                Made for usage, commonly se Just move ...
                                             </p>
 
                                             <p class="mt-1">
@@ -543,24 +521,22 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <img class="d-block" style="
-                      width: 180.34px;
-                      height: 180.34px;
+                      width: 120.34px;
+                      height: 120.34px;
                       object-fit: contain;
                       border-radius: 20px;
                     " src="img/about.jpg" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
+                                        <div class="ms-4 overflow-hidden">
                                             <h6 class="my-2 my-lg-2">
                                                 4th Rajagiri Conference on ...
                                             </h6>
 
-                                            <p>
-                                                Made for usage, commonly searched for. Fork, like and
-                                                use it. Just move ...
+                                            <p class="p-sm-2">
+                                                Made for usage, commonly se Just move ...
                                             </p>
 
                                             <p class="mt-1">
@@ -579,24 +555,22 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <img class="d-block" style="
-                      width: 180.34px;
-                      height: 180.34px;
+                      width: 120.34px;
+                      height: 120.34px;
                       object-fit: contain;
                       border-radius: 20px;
                     " src="img/about.jpg" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
+                                        <div class="ms-4 overflow-hidden">
                                             <h6 class="my-2 my-lg-2">
                                                 4th Rajagiri Conference on ...
                                             </h6>
 
-                                            <p>
-                                                Made for usage, commonly searched for. Fork, like and
-                                                use it. Just move ...
+                                            <p class="p-sm-2">
+                                                Made for usage, commonly se Just move ...
                                             </p>
 
                                             <p class="mt-1">
@@ -615,24 +589,56 @@
                             </li>
 
                             <li>
-                                <div class="d-flex border p-2 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <img class="d-block" style="
-                      width: 180.34px;
-                      height: 180.34px;
+                      width: 120.34px;
+                      height: 120.34px;
                       object-fit: contain;
                       border-radius: 20px;
                     " src="img/about.jpg" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
+                                        <div class="ms-4 overflow-hidden">
                                             <h6 class="my-2 my-lg-2">
                                                 4th Rajagiri Conference on ...
                                             </h6>
 
-                                            <p>
-                                                Made for usage, commonly searched for. Fork, like and
-                                                use it. Just move ...
+                                            <p class="p-sm-2">
+                                                Made for usage, commonly se Just move ...
+                                            </p>
+
+                                            <p class="mt-1">
+                                                <span style="
+                            color: #ff3e41;
+                            font-weight: bold;
+                            font-size: smaller;
+                          ">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    9.00 AM - 5.00 PM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <img class="d-block" style="
+                      width: 120.34px;
+                      height: 120.34px;
+                      object-fit: contain;
+                      border-radius: 20px;
+                    " src="img/about.jpg" alt="" />
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4 overflow-hidden">
+                                            <h6 class="my-2 my-lg-2">
+                                                4th Rajagiri Conference on ...
+                                            </h6>
+
+                                            <p class="p-sm-2">
+                                                Made for usage, commonly se Just move ...
                                             </p>
 
                                             <p class="mt-1">
@@ -670,8 +676,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
@@ -755,8 +760,7 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -770,8 +774,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
