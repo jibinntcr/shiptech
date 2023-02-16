@@ -48,15 +48,25 @@
 }
 
 .container2 {
+<<<<<<< HEAD:css/event.css
   /* margin: 20px auto; */
   height: 350px;
+=======
+  // margin: 20px auto;
+  height: 500px;
+>>>>>>> 440d2d52205dd9791cdb217c8f656814771c09e0:css/events.css
 
   overflow: hidden;
 }
 
 .container3 {
+<<<<<<< HEAD:css/event.css
   /* margin: 20px auto; */
   height: 350px;
+=======
+  // margin: 20px auto;
+  height: 500px;
+>>>>>>> 440d2d52205dd9791cdb217c8f656814771c09e0:css/events.css
 
   overflow: hidden;
 }
