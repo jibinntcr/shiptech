@@ -76,7 +76,6 @@
                     style="min-height: 400px;">
                     <!-- card  -->
                     <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
-
                         <img src="img/SOP_Mammootty2016.jpg" class="card-img-top img-fluid" style="border-radius: 15px;"
                             alt=" Chicago Skyscrapers" />
                         <div class="card-body text-center">
@@ -85,17 +84,11 @@
                             </h4>
                             <p class="card-text thick">PROFESSOR AND HEAD OF THE DEPARTMENT</p>
                         </div>
-
                         <hr class="my-2">
-
-
-
                         <div class="card-body ">
                             <h6 class="card-title text-uppercase mb-3 ">
                                 CONTACT INFO
                             </h6>
-
-
                             <div class="small-text ">
 
                                 <div class="row mb-md-3 mb-2">
@@ -103,7 +96,6 @@
                                     <div class="col-10 text-right"><a class="white col-11"
                                             href="mailto:example@gmail.com">example@gmail.com</a></div>
                                 </div>
-
                                 <div class="row mb-md-3 mb-2">
                                     <div class="col-2">
                                         <i class="fas fa-map-marker-alt"></i>
@@ -112,7 +104,6 @@
                                         and
                                         Technology</div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-2"> <i class="fa fa-address-book"></i></div>
                                     <div class="col-10 text-right">
@@ -123,11 +114,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
 
