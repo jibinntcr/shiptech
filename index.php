@@ -29,6 +29,7 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/icons/css/all.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,6 +38,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/date.css" rel="stylesheet">
+
+    <link href="css/event.css" rel="stylesheet" />
 </head>
 
 <body style="box-flex-group: #d6d6d6;">
@@ -116,7 +119,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="placement.php">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/placement-icon.png" alt="Icon">
@@ -180,6 +183,483 @@
     </div>
     <!-- SCROLL NEWS END  -->
 
+
+
+    <!-- NEWS AND EVENTS START -->
+
+    <div class="container-xxl  wow fadeInUp py-5" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <!-- event start -->
+                <div class="container my-5 row col-lg-6">
+                    <div class="text-center mb-3">
+                        <h6 class="text-secondary text-uppercase">Upcoming</h6>
+                        <h1 class="mb-0">Events</h1>
+                    </div>
+
+                    <div class="container2">
+                        <ul>
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                2nd Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                2nd Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                2nd Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                2nd Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center max-w-665"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                2nd Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                3nd Chemis ql3irhtwo84htwt iuw3hroscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                4 Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
+                                            <h3 class="text-white">05</h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white">Jul</h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white">2023</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p>
+
+                                            <h6 class="my-2 my-lg-2">
+                                                2nd Chemistry Colloquium on Electron Microscopy
+                                            </h6>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-solid fa-location-dot"></i></span>
+                                                <span class="font-bold"> Kalamassery Campus </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- event end -->
+
+                <!-- news start -->
+                <div class="container my-5 row col-lg-6">
+                    <div class="text-center mb-3">
+                        <h1 class="mb-0">News</h1>
+                    </div>
+
+                    <div class="container3">
+                        <ul>
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <img class="d-block" style="
+                      width: 180.34px;
+                      height: 180.34px;
+                      object-fit: contain;
+                      border-radius: 20px;
+                    " src="img/about.jpg" alt="" />
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <h6 class="my-2 my-lg-2">
+                                                4th Rajagiri Conference on ...
+                                            </h6>
+
+                                            <p>
+                                                Made for usage, commonly searched for. Fork, like and
+                                                use it. Just move ...
+                                            </p>
+
+                                            <p class="mt-1">
+                                                <span style="
+                            color: #ff3e41;
+                            font-weight: bold;
+                            font-size: smaller;
+                          ">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    9.00 AM - 5.00 PM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <img class="d-block" style="
+                      width: 180.34px;
+                      height: 180.34px;
+                      object-fit: contain;
+                      border-radius: 20px;
+                    " src="img/about.jpg" alt="" />
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <h6 class="my-2 my-lg-2">
+                                                4th Rajagiri Conference on ...
+                                            </h6>
+
+                                            <p>
+                                                Made for usage, commonly searched for. Fork, like and
+                                                use it. Just move ...
+                                            </p>
+
+                                            <p class="mt-1">
+                                                <span style="
+                            color: #ff3e41;
+                            font-weight: bold;
+                            font-size: smaller;
+                          ">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    9.00 AM - 5.00 PM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <img class="d-block" style="
+                      width: 180.34px;
+                      height: 180.34px;
+                      object-fit: contain;
+                      border-radius: 20px;
+                    " src="img/about.jpg" alt="" />
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <h6 class="my-2 my-lg-2">
+                                                4th Rajagiri Conference on ...
+                                            </h6>
+
+                                            <p>
+                                                Made for usage, commonly searched for. Fork, like and
+                                                use it. Just move ...
+                                            </p>
+
+                                            <p class="mt-1">
+                                                <span style="
+                            color: #ff3e41;
+                            font-weight: bold;
+                            font-size: smaller;
+                          ">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    9.00 AM - 5.00 PM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="d-flex border p-2 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <img class="d-block" style="
+                      width: 180.34px;
+                      height: 180.34px;
+                      object-fit: contain;
+                      border-radius: 20px;
+                    " src="img/about.jpg" alt="" />
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+                                            <h6 class="my-2 my-lg-2">
+                                                4th Rajagiri Conference on ...
+                                            </h6>
+
+                                            <p>
+                                                Made for usage, commonly searched for. Fork, like and
+                                                use it. Just move ...
+                                            </p>
+
+                                            <p class="mt-1">
+                                                <span style="
+                            color: #ff3e41;
+                            font-weight: bold;
+                            font-size: smaller;
+                          ">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    9.00 AM - 5.00 PM</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- news end -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- NEWS AND EVENTS END -->
 
 
 
@@ -297,17 +777,25 @@
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
                     <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+                    <p class="mb-5 justify-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Blanditiis
                         numquam atque,
-                        sit voluptatum labore dolor, qui voluptatem debitis maxime praesentium officiis totam maiores
-                        sunt ea quidem facilis officia, a vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Ipsa, perspiciatis. Repellat iste nam quos ab illum adipisci cumque. Quo dolorum quod odit qui
-                        quos non quasi nisi consectetur consequatur beatae dolores atque rerum incidunt commodi, maxime
+                        sit voluptatum labore dolor, qui voluptatem debitis maxime praesentium officiis totam
+                        maiores
+                        sunt ea quidem facilis officia, a vel. Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                        Ipsa, perspiciatis. Repellat iste nam quos ab illum adipisci cumque. Quo dolorum quod odit
+                        qui
+                        quos non quasi nisi consectetur consequatur beatae dolores atque rerum incidunt commodi,
+                        maxime
                         iusto optio mollitia. Quisquam magnam, a, vitae rem inventore similique molestias repellat
                         cumque quasi libero saepe enim non repellendus impedit labore nostrum, aperiam quibusdam
-                        dolorum. Rerum suscipit culpa nam sint beatae deserunt cum maiores architecto nulla similique
-                        modi necessitatibus a fugiat sequi vel unde delectus, quasi tempore amet ullam labore eveniet!
-                        Natus exercitationem suscipit eligendi qui quod itaque quam assumenda et esse. Libero, ad?</p>
+                        dolorum. Rerum suscipit culpa nam sint beatae deserunt cum maiores architecto nulla
+                        similique
+                        modi necessitatibus a fugiat sequi vel unde delectus, quasi tempore amet ullam labore
+                        eveniet!
+                        Natus exercitationem suscipit eligendi qui quod itaque quam assumenda et esse. Libero, ad?
+                    </p>
                 </div>
             </div>
         </div>
@@ -373,7 +861,8 @@
                     <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
                         Consonantia, there live the blind texts. </p>
-                    <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a></p>
+                    <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
+                    </p>
                 </div>
                 <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial--wrap">
@@ -389,7 +878,8 @@
                                     </div>
                                 </div>
                                 <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia
+                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries
+                                        Vokalia
                                         and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
                                 </blockquote>
                             </div>
@@ -405,7 +895,8 @@
                                     </div>
                                 </div>
                                 <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia
+                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries
+                                        Vokalia
                                         and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
                                 </blockquote>
                             </div>
@@ -421,7 +912,8 @@
                                     </div>
                                 </div>
                                 <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia
+                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries
+                                        Vokalia
                                         and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
                                 </blockquote>
                             </div>
@@ -504,582 +996,6 @@
 
 
 
-    <!-- News and events -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-
-                <h1 class="mb-5">News and Events</h1>
-            </div>
-            <div class="row g-4">
-
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class=" profile-card-5">
-                            <div class="card-img-block">
-                                <img class="card-img-top"
-                                    src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                    alt="Card image cap">
-                            </div>
-                        </div>
-                        <div class="card-body pt-0">
-                            <p class="right-text"> 10/12/23</p>
-                            <h4 class="mb-3"> News </h4>
-                            <p class="card-text">ficia quibusdam? Odio totam et it alias placeat earum, deleniti ab
-                                quibusdam
-                                laborum?.</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                    More</span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class=" profile-card-5">
-                            <div class="card-img-block">
-                                <img class="card-img-top"
-                                    src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                    alt="Card image cap">
-                            </div>
-                        </div>
-                        <div class="card-body pt-0">
-                            <p class="right-text"> 10/12/23</p>
-                            <h4 class="mb-3"> News </h4>
-                            <p class="card-text">ficia quibusdam? Odio totam et it alias placeat earum, deleniti ab
-                                quibusdam
-                                laborum?.</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                    More</span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class=" profile-card-5">
-                            <div class="card-img-block">
-                                <img class="card-img-top"
-                                    src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                    alt="Card image cap">
-                            </div>
-                        </div>
-                        <div class="card-body pt-0">
-                            <p class="right-text"> 10/12/23</p>
-                            <h4 class="mb-3"> News </h4>
-                            <p class="card-text">ficia quibusdam? Odio totam et it alias placeat earum, deleniti ab
-                                quibusdam
-                                laborum?.</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                    More</span></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div> -->
-    <!--  News and events  End -->
-
-
-    <!-- News and events 2 -->
-
-    <!-- <div class="container">
-
-        <div class="text-center">
-            <h6 class="text-secondary text-uppercase">Upcoming </h6>
-            <h1 class="mb-0">Events</h1>
-        </div>
-
-
-
-
-        <div class="row border p-2 my-4">
-            <div class="border border-white mb-1 mb-lg-4   datep">
-                <div class="card-body mb-0 d-flex flex-column text-center">
-                    <div class="bg-primary text-white py-1 ">
-                        March
-                    </div>
-                    <div class="pt-1 bg-white border border-white">
-                        <span class="display-3 font-weight-bold">17</span>
-                    </div>
-                    <div class="border border-white bg-white pt-2 pb-1">
-                        <span class="text-sm">Sunday</span>
-                    </div>
-                    <div class="border border-white bg-white pb-2">
-                        <span class="text-xs">8:00 am </span>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-
-
-                <div class="ms-4">
-                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
-                            Prof N Ravishankar, IISc</span>
-
-                    </p>
-
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
-                            Nila Campus, Kanjikode
-                        </span>
-
-                    </p>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
-                            Dinesh Jagadeesan</span>
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-        <div class="row border p-2 my-4">
-            <div class="border border-white mb-1 mb-lg-4   datep">
-                <div class="card-body mb-0 d-flex flex-column text-center">
-                    <div class="bg-primary text-white py-1 ">
-                        March
-                    </div>
-                    <div class="pt-1 bg-white border border-white">
-                        <span class="display-3 font-weight-bold">17</span>
-                    </div>
-                    <div class="border border-white bg-white pt-2 pb-1">
-                        <span class="text-sm">Sunday</span>
-                    </div>
-                    <div class="border border-white bg-white pb-2">
-                        <span class="text-xs">8:00 am </span>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-
-
-                <div class="ms-4">
-                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
-                            Prof N Ravishankar, IISc</span>
-
-                    </p>
-
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
-                            Nila Campus, Kanjikode
-                        </span>
-
-                    </p>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
-                            Dinesh Jagadeesan</span>
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="row border p-2 my-4">
-            <div class="border border-white mb-1 mb-lg-4   datep">
-                <div class="card-body mb-0 d-flex flex-column text-center">
-                    <div class="bg-primary text-white py-1 ">
-                        March
-                    </div>
-                    <div class="pt-1 bg-white border border-white">
-                        <span class="display-3 font-weight-bold">17</span>
-                    </div>
-                    <div class="border border-white bg-white pt-2 pb-1">
-                        <span class="text-sm">Sunday</span>
-                    </div>
-                    <div class="border border-white bg-white pb-2">
-                        <span class="text-xs">8:00 am </span>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-
-
-                <div class="ms-4">
-                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
-                            Prof N Ravishankar, IISc</span>
-
-                    </p>
-
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
-                            Nila Campus, Kanjikode
-                        </span>
-
-                    </p>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
-                            Dinesh Jagadeesan</span>
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-
-
-        <div class="row border p-2 my-4">
-            <div class="border border-white mb-1 mb-lg-4   datep">
-                <div class="card-body mb-0 d-flex flex-column text-center">
-                    <div class="bg-primary text-white py-1 ">
-                        March
-                    </div>
-                    <div class="pt-1 bg-white border border-white">
-                        <span class="display-3 font-weight-bold">17</span>
-                    </div>
-                    <div class="border border-white bg-white pt-2 pb-1">
-                        <span class="text-sm">Sunday</span>
-                    </div>
-                    <div class="border border-white bg-white pb-2">
-                        <span class="text-xs">8:00 am </span>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="d-flex col-md-8 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-
-
-                <div class="ms-4">
-                    <h3 class=" mb-2 mb-lg-4"> 2nd Chemistry Colloquium on Electron Microscopy</h3>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Speaker :</span> <span class=" font-bold">
-                            Prof N Ravishankar, IISc</span>
-
-                    </p>
-
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Location :</span> <span class=" font-bold">
-                            Nila Campus, Kanjikode
-                        </span>
-
-                    </p>
-                    <p>
-                        <span style="color:#ff3e41 ; font-weight: bold;"> Organizer :</span> <span class=" font-bold">
-                            Dinesh Jagadeesan</span>
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div> -->
-
-    <!--  News and events 2 End -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Feature Start -->
-    <!-- <div class="container-fluid overflow-hidden py-5 px-lg-0">
-        <div class="container feature py-5 px-lg-0">
-            <div class="row g-5 mx-lg-0">
-                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
-                    <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
-                    <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                        <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>Worldwide Service</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
-                                duo
-                                justo magna erat amet</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>On Time Delivery</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
-                                duo
-                                justo magna erat amet</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>24/7 Telephone Support</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
-                                duo
-                                justo magna erat amet</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
-                            style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Feature End -->
-
-
-    <!-- Pricing Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Pricing Plan</h6>
-                <h1 class="mb-5">Perfect Pricing Plan</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Basic Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order
-                                    Now</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Standard Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>99.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order
-                                    Now</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Advanced Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>149.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order
-                                    Now</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Pricing End -->
-
-
-    <!-- Quote Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
-                    <h1 class="mb-5">Request A Free Qoute!</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                        diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                        <div class="ps-4">
-                            <h6>Call for any query!</h6>
-                            <h3 class="text-primary m-0">+012 345 6789</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Freight</option>
-                                        <option value="1">Freight 1</option>
-                                        <option value="2">Freight 2</option>
-                                        <option value="3">Freight 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Quote End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Our Team</h6>
-                <h1 class="mb-5">Expert Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
-
-
 
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>
@@ -1102,6 +1018,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/Scrolling.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
