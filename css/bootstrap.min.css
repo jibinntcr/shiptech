@@ -6848,6 +6848,9 @@ fieldset:disabled .btn {
 .bg-dark {
   background-color: #060315 !important;
 }
+.bg-upper-nav {
+  background-color: #416185 !important;
+}
 .bg-body {
   background-color: #fff !important;
 }

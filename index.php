@@ -65,8 +65,8 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Department of </h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Ship Technolgy </h1>
+                                <h2 class="text-white mb-3 animated slideInDown">Department of </h2>
+                                <h1 class="display-1 text-white animated slideInDown mb-4">Ship Technolgy </h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Cochin University of Science &amp;
                                     Technology</p>
                             </div>
@@ -108,7 +108,8 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
+                        href="https://snas.in/">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/tile-icon-snas.png" alt="Icon">
@@ -119,12 +120,13 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="placement.php">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
+                        href="https://descon.cusat.ac.in/">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
-                                <img class="img-fluid" src="img/placement-icon.png" alt="Icon">
+                                <img class="img-fluid" src="img/descon.png" alt="Icon">
                             </div>
-                            <h6>Placement</h6>
+                            <h6>DESCON</h6>
                         </div>
                     </a>
                 </div>

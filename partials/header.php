@@ -1,5 +1,5 @@
 <!-- Topbar Start -->
-<div class="wrap bg-dark upper-header py-2 px-0">
+<div class="wrap bg-upper-nav upper-header py-2 px-0">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col d-flex">
@@ -29,7 +29,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
     <a href="index.php" class="navbar-brand d-flex align-items-center">
-        <img class="img-fluid me-3 m-0" src="img/logo.webp" alt="">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="logo">
     </a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -40,26 +40,41 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Accademics</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="course.php" class="dropdown-item">Courses</a>
-                    <a href="research.php" class="dropdown-item">Research</a>
+                    <!-- <a href="research.php" class="dropdown-item">Research</a> -->
                 </div>
             </div>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="faculty.php" class="dropdown-item">Faculty</a>
                     <a href="faculty.php" class="dropdown-item">Technical Staff</a>
+                    <a href="faculty.php" class="dropdown-item">Administrative Staff</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp; Facilities</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
-                    <a href="library.php" class="dropdown-item">Department Library</a>
-                    <a href="#" class="dropdown-item">University Library</a>
+                    <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
+                    <a href="funded-projects.php" class="dropdown-item">Funded Project</a>
+                    <a href="#" class="dropdown-item">Achievements</a>
+                    <a href="#" class="dropdown-item">PhD Awarded</a>
                 </div>
             </div>
             <a href="#" class="nav-item nav-link">Events</a>
             <a href="gallery.php" class="nav-item nav-link">Gallery</a>
-            <a href="gallery.php" class="nav-item nav-link">Connect</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam Registration</a>
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">Alumni</a>
+
+                </div>
+            </div>
             <a href="gallery.php" class="nav-item nav-link">Contact</a>
             <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
