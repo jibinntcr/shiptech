@@ -15,8 +15,10 @@
             <div class="col d-flex justify-content-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
-                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4"
+                            href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center "
+                            href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
                     </p>
                 </div>
             </div>
@@ -57,11 +59,11 @@
                     <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
                     <a href="mou.php" class="dropdown-item">MoU</a>
                     <a href="funded-projects.php" class="dropdown-item">Funded Project</a>
-                    <a href="#" class="dropdown-item">Achievements</a>
-                    <a href="#" class="dropdown-item">PhD Awarded</a>
+                    <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">PhD Awarded</a>
                 </div>
             </div>
-            <a href="#" class="nav-item nav-link">Events</a>
+            <a href="library.php" class="nav-item nav-link">Library</a>
             <a href="gallery.php" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>

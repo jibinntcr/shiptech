@@ -20,12 +20,12 @@
 
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="#">Academics</a>
+                <a class="btn btn-link" href="course.php">Courses</a>
                 <a class="btn btn-link" href="#">Announcements</a>
                 <a class="btn btn-link" href="#">Events</a>
-                <a class="btn btn-link" href="#">Gallery</a>
+                <a class="btn btn-link" href="gallery.php">Gallery</a>
                 <a class="btn btn-link" href="#">Connect</a>
-                <a class="btn btn-link" href="#">Contact Us</a>
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
             </div>
             <div class="col-lg-6 col-md-4">
                 <div class="row pt-2">
