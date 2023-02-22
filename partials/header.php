@@ -47,14 +47,15 @@
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
-                <div class="dropdown-menu bg-light border-0 m-0">
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 200px;">
                     <a href="faculty.php" class="dropdown-item">Faculty</a>
                     <a href="faculty.php" class="dropdown-item">Technical Staff</a>
                     <a href="faculty.php" class="dropdown-item">Administrative Staff</a>
                 </div>
             </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp; Facilities</a>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
                     <a href="mou.php" class="dropdown-item">MoU</a>
@@ -69,7 +70,8 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
-                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam Registration</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
                     <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
                         Ragging Cell</a>
                     <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
