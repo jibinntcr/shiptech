@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -36,7 +37,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -88,63 +90,86 @@
     </div> -->
     <div class="container-xxl py-5">
         <div class="container py-5">
-            <div class="row g-0">
-                <div class="wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item fac-img-curv card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4 patent-image">
-                                <img src="img/service-1.jpg" class="img-fluid  fac-img-curv" alt="...">
+            <div class="container">
+                <div class="card  float-left my-3" style=" border-radius: 25px;">
+                    <div class="row  ">
+
+                        <div class="col-lg-7 mb-3 " style="box-sizing: border-box;">
+                            <div class="card-block p-2 m-2">
+                                <h5 class="card-title">Name</h5>
+                                <p class="card-text" style="margin-bottom: 0 !important;"><small
+                                        class="text-muted"><b>Project Name</b></small></p>
+                                <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
+                                </p>
+                                <p class="card-text justify-para  ">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
+                                    id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
+                                    illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
+                                    molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
+                                    fugiat minus atque nulla.</p>
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body" style="margin-left: 2rem;">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text" style="margin-bottom: 0 !important;"><small class="text-muted"><b>Project Name</b></small></p>
-                                    <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
-                                    </p>
-                                    <p class="card-text justify-para">Lorem ipsum dolor sit amet consectetur adipisicing
-                                        elit. Tempora quod incidunt voluptatum cupiditate rerum similique, explicabo in
-                                        tempore consectetur, unde cumque quia. Debitis quis dolores reprehenderit
-                                        maiores quos officia voluptates libero sint cupiditate dolorem eaque laborum
-                                        nostrum, tempore minus ea a? Magni neque tempora commodi dolores accusantium
-                                        voluptatibus dolorem sapiente?</p>
-                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                                </div>
-                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <img class="d-block w-100" src="img/service-1.jpg" alt="" style=" border-radius: 12px;">
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="card  float-left" style=" border-radius: 25px;">
+                    <div class="row  ">
 
-        <div class="container">
-            <div class="row g-0">
-                <div class="wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item fac-img-curv card mb-3">
-                        <div class="row g-0">
+                        <div class="col-lg-7 mb-3 " style="box-sizing: border-box;">
+                            <div class="card-block p-2 m-2">
+                                <h5 class="card-title">Name</h5>
+                                <p class="card-text" style="margin-bottom: 0 !important;"><small
+                                        class="text-muted"><b>Project Name</b></small></p>
+                                <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
+                                </p>
+                                <p class="card-text justify-para  ">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
+                                    id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
+                                    illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
+                                    molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
+                                    fugiat minus atque nulla.</p>
+                            </div>
+                        </div>
 
-                            <div class="col-md-8">
-                                <div class="card-body" style="margin-right: 2rem;">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text" style="margin-bottom: 0 !important;"><small class="text-muted"><b>Project Name</b></small></p>
-                                    <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
-                                    </p>
-                                    <p class="card-text justify-para">Lorem ipsum dolor, sit amet consectetur
-                                        adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
-                                        id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
-                                        illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
-                                        molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
-                                        fugiat minus atque nulla.</p>
-                                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                                </div>
-                            </div>
-                            <div class="col-md-4 patent-image">
-                                <img src="img/service-1.jpg" class="img-fluid  fac-img-curv" alt="...">
-                            </div>
+                        <div class="col-lg-5">
+                            <img class="d-block w-100" src="img/service-1.jpg" alt="" style=" border-radius: 12px;">
                         </div>
                     </div>
                 </div>
+                <div class="card  float-left my-3" style=" border-radius: 25px;">
+                    <div class="row  ">
+
+                        <div class="col-lg-7 mb-3 " style="box-sizing: border-box;">
+                            <div class="card-block p-2 m-2">
+                                <h5 class="card-title">Name</h5>
+                                <p class="card-text" style="margin-bottom: 0 !important;"><small
+                                        class="text-muted"><b>Project Name</b></small></p>
+                                <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
+                                </p>
+                                <p class="card-text justify-para  ">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
+                                    id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
+                                    illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
+                                    molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
+                                    fugiat minus atque nulla.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <img class="d-block w-100" src="img/service-1.jpg" alt="" style=" border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
+
+
     </div>
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>
