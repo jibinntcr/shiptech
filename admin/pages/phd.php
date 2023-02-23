@@ -66,6 +66,12 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <h4>Research Schoalars</h4>
                                     </button>
                                 </div>
+                                <div class="col-md-4 mb-4">
+                                    <button onclick="location.href = 'funded-projects.php';" type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        <h4>Funded Projects</h4>
+                                    </button>
+                                </div>
                                 <!-- <div class="col-md-4 mb-4">
                                         <button onclick="location.href = 'completedscholars.php';" type="button" class="btn btn-primary btn-lg btn-block">
                                             <h4>Completed Scholars</h4>
