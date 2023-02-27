@@ -6,7 +6,7 @@ $(function () {
     console.log(tickerHeight)
 
     $('.container2 ul li:last-child').prependTo('.container2 ul')
-    $('.container2 ul').css('marginTop', -tickerHeight)
+    // $('.container2 ul').css('marginTop', -tickerHeight)
     function moveTop() {
         $('.container2 ul').animate({
             top: -tickerHeight
@@ -29,7 +29,7 @@ $(function () {
     tickerHeight += 24
 
     $('.container3 ul li:last-child').prependTo('.container3 ul')
-    $('.container3 ul').css('marginTop', -tickerHeight)
+    //   $('.container3 ul').css('marginTop', -tickerHeight)
     function moveTop() {
         $('.container3 ul').animate({
             top: -tickerHeight
