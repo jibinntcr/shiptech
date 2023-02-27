@@ -6,24 +6,24 @@ if (strlen($_SESSION['alogin']) == 0) {
     header('location:login.php');
 } else {
 
-    if (isset($_POST['hodBTN'])) {
-        $topCaption = $_POST['topCaption'];
-        $mainCaption = $_POST['mainCaption'];
-        $subCaption = $_POST['subCaption'];
+    if (isset($_POST['newsBTN'])) {
+        $heading = $_POST['heading'];
+        $content = $_POST['content'];
+        $date = $_POST['date'];
         $folder = 'uploads/';
         $file = $folder . basename($_FILES["file"]["name"]);
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO banner(topcaption,mainCaption,subCaption,status,image) VALUES ('" . $topCaption . "','" . $mainCaption . "','" . $subCaption . "','" . $status . "','" . $photo . "')";
+        $sql = "INSERT INTO news(title,content,date,status,image) VALUES ('" . $heading . "','" . $content . "','" . $date . "','" . $status . "','" . $photo . "')";
         $query = $dbh->prepare($sql);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
             echo '<script>alert("Success")</script>';
-            echo '<script>window.location = "banner.php";</script>';
+            echo '<script>window.location = "news.php";</script>';
         } else {
             echo '<script>alert("something went wrong please try again")</script>';
-            echo '<script>window.location = "banner.php";</script>';
+            echo '<script>window.location = "news.php";</script>';
         }
     }
 ?>
@@ -36,7 +36,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>New Banner | Shiptech Admin</title>
+    <title>New News | ShiptechAdmin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../vendors/feather/feather.css">
     <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -70,31 +70,31 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">New Banner</h4>
+                                <h4 class="card-title">New News</h4>
                                 <form class="forms-sample" enctype="multipart/form-data" method="POST">
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername1">Top Caption</label>
-                                        <input type="text" class="form-control" id="topCaption" name="topCaption">
+                                    <div class="col-lg-12 form-group">
+                                        <label for="exampleInputUsername1">Heading</label>
+                                        <input type="text" class="form-control" id="heading" name="heading" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername1">Main Caption</label>
-                                        <input type="text" class="form-control" id="mainCaption" name="mainCaption">
+                                    <div class="col-lg-6 form-group">
+                                        <label for="exampleInputUsername1">Date</label>
+                                        <input type="date" class="form-control" id="date" name="date" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername1">Sub Caption</label>
-                                        <input type="text" class="form-control" id="subCaption" name="subCaption">
+                                    <div class="col-lg-12 form-group">
+                                        <label for="exampleTextarea1">Content</label>
+                                        <textarea class="form-control" id="content" name="content" rows="4"></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Image(1366 x 612px)</label>
+                                    <div class="col-lg-12 form-group">
+                                        <label for="exampleTextarea1">Image(800X400 px)</label>
                                         <input class="form-control" type="file" id="file" name="file"
-                                            accept="image/gif, image/png, image/jpg, image/jpeg">
+                                            accept="image/gif, image/png, image/jpg, image/jpeg" required>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mr-2" name="hodBTN"
-                                        id="hodBTN">Submit</button>
+                                    <button type="submit" class="btn btn-primary mr-2" name="newsBTN"
+                                        id="newsBTN">Submit</button>
                                     <button class="btn btn-light">Cancel</button>
                                 </form>
                                 <script>
-                                CKEDITOR.replace('message');
+                                CKEDITOR.replace('content');
                                 </script>
                             </div>
                         </div>

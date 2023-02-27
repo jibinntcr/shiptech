@@ -29,7 +29,6 @@
   border-radius: 50%;
   /* background-color: #007bff; */
 
-  /* font-size: 15px; */
   /* font-weight: 900; */
   text-align: center;
 }
@@ -48,14 +47,14 @@
 }
 
 .container2 {
-  /* margin: 20px auto; */
+  /* // margin: 20px auto; */
   height: 500px;
 
   overflow: hidden;
 }
 
 .container3 {
-  /* margin: 20px auto; */
+  /* // margin: 20px auto; */
   height: 500px;
 
   overflow: hidden;

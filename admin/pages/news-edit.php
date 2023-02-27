@@ -6,46 +6,52 @@ if (strlen($_SESSION['alogin']) == 0) {
     header('location:login.php');
 } else {
 
-    if (isset($_POST['BannerUpdateBTN'])) {
+    if (isset($_POST['newsUpdateBTN'])) {
         if (($_FILES["file"]["error"]) == 4) {
+            if ($_POST['date'] == '') {
+                $date = $_POST['oldDate'];
+            } else {
+                $date = $_POST['date'];
+            }
             $id = $_POST['id'];
-            $topCaption = $_POST['topCaption'];
-            $mainCaption = $_POST['mainCaption'];
-            $subCaption = $_POST['subCaption'];
+            $title = $_POST['title'];
+            $content = $_POST['content'];
+
             $photo = $_POST['imageName'];
-            $sql = "UPDATE  banner SET topCaption='$topCaption', maincaption='$mainCaption',subCaption='$subCaption',image='$photo' where id='$id'";
-            // print_r($sql);
-            // exit();
+            $sql = "UPDATE  news SET title='$title',content='$content',date='$date',image='$photo' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
                 echo '<script>alert("Success")</script>';
-                echo '<script>window.location = "banner.php";</script>';
+                echo '<script>window.location = "news.php";</script>';
             } else {
                 echo '<script>alert("something went wrong please try again")</script>';
-                echo '<script>window.location = "banner.php";</script>';
+                echo '<script>window.location = "news.php";</script>';
             }
         } else if (($_FILES["file"]["error"]) == 0) {
+            if ($_POST['date'] == '') {
+                $date = $_POST['oldDate'];
+            } else {
+                $date = $_POST['date'];
+            }
             $id = $_POST['id'];
-            $topCaption = $_POST['topCaption'];
-            $mainCaption = $_POST['mainCaption'];
-            $subCaption = $_POST['subCaption'];
+            $title = $_POST['title'];
+            $content = $_POST['content'];
             $folder = 'uploads/';
             $file = $folder . basename($_FILES["file"]["name"]);
             move_uploaded_file($_FILES['file']['tmp_name'], $file);
             $photo = basename($_FILES["file"]["name"]);
             $status = '1';
-            $sql = "UPDATE  banner SET topCaption='$topCaption', mainCaption='$mainCaption',subCaption='$subCaption',image='$photo' where id='$id'";
-            // print_r($sql);
-            // exit();
+            $sql = "UPDATE  news SET title='$title',content='$content',date='$date',image='$photo' where id='$id'";
+
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
                 echo '<script>alert("Success")</script>';
-                echo '<script>window.location = "banner.php";</script>';
+                echo '<script>window.location = "news.php";</script>';
             } else {
                 echo '<script>alert("something went wrong please try again")</script>';
-                echo '<script>window.location = "banner.php";</script>';
+                echo '<script>window.location = "news.php";</script>';
             }
         }
     }
@@ -59,7 +65,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Banner Edit | Shiptech Admin</title>
+    <title>Edit News | Shiptech Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../vendors/feather/feather.css">
     <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -93,52 +99,57 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Banner Edit</h4>
+                                <h4 class="card-title">Edit News</h4>
                                 <form class="forms-sample" enctype="multipart/form-data" method="POST">
                                     <?php
                                         $id = $_GET['id'];
                                         // print_r($id);
                                         // exit();
-                                        $sql = "SELECT id,topCaption,mainCaption,subCaption,image from banner where id= $id ";
+                                        $sql = "SELECT id,title,content,date,image from news where id= $id ";
                                         $query = $dbh->prepare($sql);
                                         $query->execute();
                                         $userArr = $query->fetchAll(PDO::FETCH_OBJ);
                                         if ($query->rowCount() > 0) {
                                         ?>
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername1">Top Caption</label>
-                                        <input type="text" class="form-control" id="topCaption" name="topCaption"
-                                            value="<?php echo htmlentities($userArr[0]->topCaption); ?>">
-                                    </div>
-                                    <div class="form-group">
+                                    <div class="col-lg-12 form-group">
                                         <input type="hidden" id="id" name="id"
                                             value="<?php echo htmlentities($userArr[0]->id); ?>" />
+
                                         <input type="hidden" id="imageName" name="imageName"
                                             value="<?php echo htmlentities($userArr[0]->image); ?>" />
-                                        <label for="exampleInputUsername1">Main Caption</label>
-                                        <input type="text" class="form-control" id="mainCaption" name="mainCaption"
-                                            value="<?php echo htmlentities($userArr[0]->mainCaption); ?>">
+
+                                        <input type="hidden" id="oldDate" name="oldDate"
+                                            value="<?php echo htmlentities($userArr[0]->date); ?>" />
+
+                                        <label for="exampleInputUsername1">Heading</label>
+                                        <input type="text" class="form-control" id="title" name="title"
+                                            value="<?php echo htmlentities($userArr[0]->title); ?>">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername1">Sub Caption</label>
-                                        <input type="text" class="form-control" id="subCaption" name="subCaption"
-                                            value="<?php echo htmlentities($userArr[0]->subCaption); ?>">
+                                    <div class="col-lg-6 form-group">
+                                        <label for="exampleInputUsername1">Date</label>
+                                        <input type="date" class="form-control" id="date" name="date"
+                                            value="<?php echo htmlentities($userArr[0]->date); ?>">
+                                    </div>
+                                    <div class="col-lg-12 form-group">
+                                        <label for="exampleTextarea1">Content</label>
+                                        <textarea class="form-control" id="content" name="content"
+                                            rows="4"><?php echo htmlentities($userArr[0]->content); ?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea1">Image</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg">
                                     </div>
-                                    <button type="submit" class="btn btn-primary mr-2" name="BannerUpdateBTN"
-                                        id="BannerUpdateBTN">Save</button>
+                                    <button type="submit" class="btn btn-primary mr-2" name="newsUpdateBTN"
+                                        id="newsUpdateBTN">Save</button>
                                     <button class="btn btn-light">Cancel</button>
                                     <?php
                                         }
                                         ?>
                                 </form>
                                 <script>
-                                CKEDITOR.replace('message');
+                                CKEDITOR.replace('content');
                                 </script>
                             </div>
                         </div>
