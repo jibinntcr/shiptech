@@ -64,3 +64,7 @@ ul {
   list-style: none;
   position: relative;
 }
+
+li {
+  margin-bottom: 24px;
+}
