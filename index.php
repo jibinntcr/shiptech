@@ -15,7 +15,7 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 
     <link rel="stylesheet" href="testimonial/css/bootstrap.min.css">
     <link rel="stylesheet" href="testimonial/css/owl.carousel.min.css">
@@ -46,6 +46,7 @@ include('admin/includes/config.php');
     <link href="css/date.css" rel="stylesheet">
 
     <link href="css/event.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 </head>
 
 <body style="box-flex-group: #d6d6d6;">
@@ -212,299 +213,66 @@ include('admin/includes/config.php');
 
                     <div class="container2">
                         <ul>
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
 
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                2nd Chemistry Colloquium on Electron Microscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <?php
+                            $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC ";
+                            $query = $dbh->prepare($sql);
+                            $query->execute();
+                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                            $cnt = 1;
+                            if ($query->rowCount() > 0) {
+                                foreach ($results as $result) {
+                            ?>
 
                             <li>
                                 <div class="d-flex border p-1 my-4 align-items-center max-w-665"
                                     style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
-                                            <h3 class="text-white">05</h3>
+
+                                            <?php $date = $result->date;
+                                                    $date = date_create($date);
+                                                    ?>
+                                            <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
                                         </div>
                                         <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
+                                            <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
                                         </div>
                                         <div class="cell">
-                                            <h6 class="text-white">2023</h6>
+                                            <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
                                         </div>
                                     </div>
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
                                         <div class="ms-4">
-                                            <p class="mt-1">
+                                            <!-- <p class="mt-1">
                                                 <span style="color: #ff3e41; font-weight: bold">
                                                     <i class="fa-regular fa-clock"></i></span>
                                                 <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                2nd Chemistry Colloquium on Electron Microscopy
-                                            </h6>
+                                            </p> -->
+                                            <a href="events-view.php?id=<?php echo   $result->id ?>">
+                                                <h6 class="my-2 my-lg-2">
+                                                    <?php $title =  substr($result->title, 0, 48);
+                                                            echo $title ?>
+                                                </h6>
+                                            </a>
 
                                             <p>
                                                 <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
+                                                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                                </span>
+                                                <span class="font-bold">
+                                                    <?php $subHeading = substr($result->content, 0, 18);
+                                                            echo $subHeading ?>
+                                                </span>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </li>
+                            <?php }
+                            } ?>
 
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                2nd Chemistry Colloquium on Electron Microscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                2nd Chemistry Colloquium on Electron Microscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                2nd Chemistry Colloquium on Electron Microscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                3nd Chemis ql3irhtwo84htwt iuw3hroscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                4 Chemistry Colloquium on Electron Microscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
-                                        <div class="cell">
-                                            <h3 class="text-white">05</h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white">Jul</h5>
-                                        </div>
-                                        <div class="cell">
-                                            <h6 class="text-white">2023</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
-                                            <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p>
-
-                                            <h6 class="my-2 my-lg-2">
-                                                2nd Chemistry Colloquium on Electron Microscopy
-                                            </h6>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-solid fa-location-dot"></i></span>
-                                                <span class="font-bold"> Kalamassery Campus </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </div>
 
@@ -523,7 +291,7 @@ include('admin/includes/config.php');
 
 
                             <?php
-                            $sql = "SELECT * from news WHERE status='1' ";
+                            $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC ";
                             $query = $dbh->prepare($sql);
                             $query->execute();
                             $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -541,34 +309,33 @@ include('admin/includes/config.php');
                       border-radius: 20px;" src="admin/pages/uploads/<?php echo $result->image ?>" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <a>
-                                            <div class="ms-4 overflow-hidden">
-                                                <a href="news-view.php?id=<?php echo   $result->id ?>">
-                                                    <h6 class="my-2 my-lg-2">
-                                                        <?php
-                                                                $title =  substr($result->title, 0, 27);
-                                                                $subHeading = substr($result->content, 0, 39);
-                                                                echo  $title
-                                                                ?> </h6>
-                                                </a>
+                                        <div class="ms-4 overflow-hidden">
+                                            <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                                <h6 class="my-2 my-lg-2">
+                                                    <?php
+                                                            $title =  substr($result->title, 0, 27);
+                                                            $subHeading = substr($result->content, 0, 39);
+                                                            echo  $title
+                                                            ?> </h6>
+                                            </a>
 
-                                                <p class="p-sm-2">
-                                                    <?php echo  $subHeading ?>...
-                                                </p>
+                                            <p class="p-sm-2">
+                                                <?php echo  $subHeading ?>...
+                                            </p>
 
-                                                <p class="mt-1">
-                                                    <span style="
+                                            <p class="mt-1">
+                                                <span style="
                             color: #ff3e41;
                             font-weight: bold;
                             font-size: smaller;
                           ">
-                                                        <i class="fa-regular fa-clock"></i></span>
-                                                    <span class="font-bold" style="font-size: smaller">
-                                                        <?php $date = $result->date;
-                                                                $date = date_create($date);
-                                                                echo date_format($date, "d/m/Y"); ?></span>
-                                                </p>
-                                            </div>
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    <?php $date = $result->date;
+                                                            $date = date_create($date);
+                                                            echo date_format($date, "d/m/Y"); ?></span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -692,41 +459,38 @@ include('admin/includes/config.php');
     <!-- ABOUT End -->
 
     <!-- HOS MESSAGE  Start -->
+    <?php
+                    $sql = "SELECT * from hod where status='1' ";
+                    $query = $dbh->prepare($sql);
+                    $query->execute();
+                    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+                    if ($query->rowCount() > 0) {
+                    ?>
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/about.jpg"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
+                            src="admin/pages/uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;"
+                            alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
                     <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Blanditiis
-                        numquam atque,
-                        sit voluptatum labore dolor, qui voluptatem debitis maxime praesentium officiis totam
-                        maiores
-                        sunt ea quidem facilis officia, a vel. Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit.
-                        Ipsa, perspiciatis. Repellat iste nam quos ab illum adipisci cumque. Quo dolorum quod odit
-                        qui
-                        quos non quasi nisi consectetur consequatur beatae dolores atque rerum incidunt commodi,
-                        maxime
-                        iusto optio mollitia. Quisquam magnam, a, vitae rem inventore similique molestias repellat
-                        cumque quasi libero saepe enim non repellendus impedit labore nostrum, aperiam quibusdam
-                        dolorum. Rerum suscipit culpa nam sint beatae deserunt cum maiores architecto nulla
-                        similique
-                        modi necessitatibus a fugiat sequi vel unde delectus, quasi tempore amet ullam labore
-                        eveniet!
-                        Natus exercitationem suscipit eligendi qui quod itaque quam assumenda et esse. Libero, ad?
-                    </p>
+                    <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?> </p>
+                    <span><b><?php echo ($userArr[0]->name); ?></b>
+                        <br>
+                        <?php echo ($userArr[0]->designation); ?></span>
+
                 </div>
             </div>
         </div>
     </div>
+    <?php }
+                ?>
     <!-- HOD MESSAGE  End -->
 
 
@@ -794,56 +558,40 @@ include('admin/includes/config.php');
                 <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial--wrap">
                         <div class="owl-single owl-carousel no-dots no-nav">
-                            <div class="testimonial-item">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="photo mr-3">
-                                        <img src="img/team-1.jpg" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="author">
-                                        <cite class="d-block mb-0">Kaila Woodland 1</cite>
-                                        <span>Owner, Greenland, Inc.</span>
-                                    </div>
-                                </div>
-                                <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries
-                                        Vokalia
-                                        and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
-                                </blockquote>
-                            </div>
+
+
+
+                            <?php
+                            $sql = "SELECT * from testimonials  WHERE status='1'";
+                            $query = $dbh->prepare($sql);
+                            $query->execute();
+                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                            $cnt = 1;
+                            if ($query->rowCount() > 0) {
+                                foreach ($results as $result) {
+                            ?>
 
                             <div class="testimonial-item">
                                 <div class="d-flex align-items-center mb-4">
                                     <div class="photo mr-3">
-                                        <img src="img/team-1.jpg" alt="Image" class="img-fluid">
+                                        <img src="admin/pages/uploads/<?php echo $result->image ?>" alt="Image"
+                                            class="img-fluid">
                                     </div>
                                     <div class="author">
-                                        <cite class="d-block mb-0">Kaila Woodland 2</cite>
-                                        <span>Owner, Greenland, Inc.</span>
+                                        <cite class="d-block mb-0"><?php echo $result->name ?></cite>
+                                        <span><?php echo $result->designation ?></span><br>
+                                        <span><?php echo $result->course ?>,<?php echo $result->batch ?></span>
                                     </div>
-                                </div>
-                                <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries
-                                        Vokalia
-                                        and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
-                                </blockquote>
-                            </div>
 
-                            <div class="testimonial-item">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="photo mr-3">
-                                        <img src="img/team-3.jpg" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="author">
-                                        <cite class="d-block mb-0">Kaila Woodland 3</cite>
-                                        <span>Owner, Greenland, Inc.</span>
-                                    </div>
                                 </div>
                                 <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries
-                                        Vokalia
-                                        and Consonantia, there live the blind texts. Separated they live.&rdquo;</p>
+                                    <p>&ldquo;<?php echo $result->message ?>.&rdquo;</p>
                                 </blockquote>
                             </div>
+                            <?php }
+                            } ?>
+
+
                         </div>
                         <div class="custom-nav-wrap">
                             <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
@@ -855,73 +603,6 @@ include('admin/includes/config.php');
             </div>
         </div>
     </div>
-    <!-- NEW TESTIMONIAL END  -->
-    <!-- old  Testimonial Start -->
-    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Testimonial</h6>
-                <h1 class="mb-0">Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Testimonial End -->
-
-
 
 
     <!-- Footer Start -->

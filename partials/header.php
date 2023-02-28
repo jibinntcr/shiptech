@@ -70,8 +70,14 @@
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance
+                        Redressal Committee 2022</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance
+                        Redressal Form</a>
                     <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
                         Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/p" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
                     <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
                     <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">Alumni</a>
 

@@ -1,3 +1,12 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('admin/includes/config.php');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +18,12 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -37,8 +45,7 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -79,94 +86,27 @@
                 <h1 class="mb-5">Gallery</h1>
             </div>
 
+            <?php
+            $sql = "SELECT * from gallery WHERE status = '1'";
+            $query = $dbh->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $cnt = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {
+            ?>
+
+                    <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <img src="admin/pages/uploads/<?php echo   $result->thumbnail ?>" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Your Image">
+                        <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
+                            <a class="btn" href="gallery-item.php?id=<?php echo   $result->id ?>"> <span class="display-6  textHover"><?php echo   $result->name ?></span> </a>
+                        </div>
+
+                    </div>
+            <?php }
+            } ?>
 
 
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <a class="btn" href="gallery-item.php"> <span class="display-6  textHover">Onam 2022</span> </a>
-                </div>
-
-            </div>
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
-
-            <div class="img-container col-md-6  col-lg-4  mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75 " style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover ">Onam 2022</span>
-                    </button>
-                </div>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;"
-                    alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <button class="btn "> <span class="display-6 textHover">Onam 2022</span> </button>
-                </div>
-
-            </div>
 
 
         </div>

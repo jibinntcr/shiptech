@@ -1,3 +1,9 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('admin/includes/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +15,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,58 +75,29 @@
     <div cl ass="container-xxl py-5">
         <div class="container py-5">
             <div class="row g-4">
+
+                <?php
+                $sql = "SELECT * from mous WHERE status='1'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
+                            <img class="fac-img-curv img-fluid" src="admin/pages/uploads/<?php echo   $result->image ?>"
+                                alt="">
                         </div>
-                        <h4 class="mb-3">Mou1</h4>
-                        <p class="justify-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa esse et
-                            explicabo illo dolor saepe molestiae nihil distinctio. Dolores veritatis officia repellat
-                            fuga impedit sapiente facere ipsa eligendi inventore! Libero aliquam molestiae veritatis
-                            perferendis ex. Autem corrupti atque eveniet doloremque? Perferendis beatae unde eligendi,
-                            laborum asperiores at odit accusantium, repudiandae, sequi fugit officia perspiciatis iusto
-                            omnis consequatur maxime. Alias odit, nam quis ipsam assumenda magnam laborum repellat
-                            accusamus! Est harum numquam laboriosam, vero suscipit dignissimos tempora nulla vitae
-                            expedita possimus quasi quaerat dolores nesciunt voluptatem, esse placeat? Nisi, eum ea. Ex
-                            numquam maxime magnam modi esse est nulla placeat sunt.</p>
+                        <h4><?php echo   $result->name ?></h4>
+                        <span class="mb-3"><?php echo $result->year ?></span><br>
+                        <p class="justify-para pt-3"><?php echo   $result->description ?></p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid fac-img-curv" src="img/service-2.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">mou2</h4>
-                        <p class="justify-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                            blanditiis numquam corporis aliquid aut neque nihil, quod, nobis quis iste est? Excepturi
-                            iusto perspiciatis corporis accusamus sunt, facilis consequuntur dolor blanditiis dicta
-                            distinctio dolorum quidem ipsa est eligendi amet ad quia sed soluta facere illum qui error
-                            ipsum. Velit laborum, iusto, corporis nisi earum ullam amet officia ad repellat magni
-                            voluptas perferendis id et inventore. Asperiores commodi soluta labore tenetur sed, maiores
-                            quam aliquid, quidem saepe molestias enim reprehenderit? Consequuntur esse amet delectus
-                            ducimus totam voluptatum reprehenderit laborum facilis, laudantium ut velit est veritatis
-                            dolores incidunt id eaque modi porro?</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid fac-img-curv" src="img/service-3.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Mou3</h4>
-                        <p class="justify-para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi totam
-                            qui culpa optio explicabo quidem omnis blanditiis, reiciendis harum exercitationem rem
-                            architecto, eum quibusdam sunt, nobis adipisci est ab laboriosam dolore dolorum natus saepe
-                            labore quasi et. Modi recusandae ipsam, id aliquid repellendus eaque ex adipisci quae! Odio
-                            officia voluptate est ab libero aliquid enim vero ratione laboriosam numquam iusto sunt
-                            eveniet deleniti earum nostrum distinctio quisquam, facilis maiores! Recusandae, odit
-                            tempore. Aperiam ad natus reiciendis odit totam explicabo dicta veritatis eos officiis
-                            nostrum veniam accusantium accusamus id repellendus, dignissimos doloribus quam inventore
-                            iste dolorum ducimus tempore earum laboriosam! Voluptatum. </p>
-                    </div>
-                </div>
-
+                <?php }
+                } ?>
             </div>
         </div>
     </div>

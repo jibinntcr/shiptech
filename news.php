@@ -9,13 +9,12 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -33,18 +32,17 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/gallery.css" rel="stylesheet">
     <style>
-    ul {
-        list-style: none;
-        position: relative;
-    }
+        ul {
+            list-style: none;
+            position: relative;
+        }
     </style>
 
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -76,11 +74,9 @@
         <div class="row">
             <div class="col-md-7">
                 <h1 class="mb-4">Headline of the Article</h1>
-                <img src="https://via.placeholder.com/800x400" alt="Article Image" style="border-radius: 25px;"
-                    class="img-fluid mb-4">
+                <img src="https://via.placeholder.com/800x400" alt="Article Image" style="border-radius: 25px;" class="img-fluid mb-4">
                 <p class="mb-4">
-                    <span style="color:#ff3e41 ; font-weight: bold; "> <i class="fa-regular fa-clock"></i></span> <span
-                        class=" font-bold">
+                    <span style="color:#ff3e41 ; font-weight: bold; "> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold">
                         9.00 AM - 5.00 PM</span>
                 </p>
                 <p class="lead mb-4 justify-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur
@@ -107,11 +103,8 @@
                 <div class="container3">
                     <ul>
                         <li>
-                            <div class="d-flex border p-1 my-4 align-items-center"
-                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <img class="d-block "
-                                    style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
-                                    src="img/about.jpg" alt="">
+                            <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="img/about.jpg" alt="">
                                 <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                     <div class="ms-4 overflow-hidden">
                                         <h6 class=" my-2 my-lg-2"> 4th Rajagiri Conference on ...
@@ -120,9 +113,7 @@
                                             Made for usage, commonly se Just move ...
                                         </p>
                                         <p class="mt-1">
-                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
-                                                    class="fa-regular fa-clock"></i></span> <span class=" font-bold"
-                                                style="font-size: smaller;">
+                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
                                                 9.00 AM - 5.00 PM</span>
                                         </p>
                                     </div>
@@ -130,11 +121,8 @@
                             </div>
                         </li>
                         <li>
-                            <div class="d-flex border p-1 my-4 align-items-center"
-                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <img class="d-block "
-                                    style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
-                                    src="img/about.jpg" alt="">
+                            <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="img/about.jpg" alt="">
                                 <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                     <div class="ms-4 overflow-hidden">
                                         <h6 class=" my-2 my-lg-2"> 4th Rajagiri Conference on ...
@@ -143,9 +131,7 @@
                                             Made for usage, commonly se Just move ...
                                         </p>
                                         <p class="mt-1">
-                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
-                                                    class="fa-regular fa-clock"></i></span> <span class=" font-bold"
-                                                style="font-size: smaller;">
+                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
                                                 9.00 AM - 5.00 PM</span>
                                         </p>
                                     </div>
@@ -153,11 +139,8 @@
                             </div>
                         </li>
                         <li>
-                            <div class="d-flex border p-1 my-4 align-items-center"
-                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <img class="d-block "
-                                    style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
-                                    src="img/about.jpg" alt="">
+                            <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="img/about.jpg" alt="">
                                 <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                     <div class="ms-4 overflow-hidden">
                                         <h6 class=" my-2 my-lg-2"> 4th Rajagiri Conference on ...
@@ -167,9 +150,7 @@
 
                                         </p>
                                         <p class="mt-1">
-                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
-                                                    class="fa-regular fa-clock"></i></span> <span class=" font-bold"
-                                                style="font-size: smaller;">
+                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
                                                 9.00 AM - 5.00 PM</span>
                                         </p>
                                     </div>
@@ -177,11 +158,8 @@
                             </div>
                         </li>
                         <li>
-                            <div class="d-flex border p-1 my-4 align-items-center"
-                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <img class="d-block "
-                                    style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
-                                    src="img/about.jpg" alt="">
+                            <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="img/about.jpg" alt="">
                                 <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                     <div class="ms-4 overflow-hidden">
                                         <h6 class=" my-2 my-lg-2"> 4th Rajagiri Conference on ...
@@ -190,9 +168,7 @@
                                             Made for usage, commonly se Just move ...
                                         </p>
                                         <p class="mt-1">
-                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
-                                                    class="fa-regular fa-clock"></i></span> <span class=" font-bold"
-                                                style="font-size: smaller;">
+                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
                                                 9.00 AM - 5.00 PM</span>
                                         </p>
                                     </div>
@@ -200,11 +176,8 @@
                             </div>
                         </li>
                         <li>
-                            <div class="d-flex border p-1 my-4 align-items-center"
-                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <img class="d-block "
-                                    style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
-                                    src="img/about.jpg" alt="">
+                            <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="img/about.jpg" alt="">
                                 <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                     <div class="ms-4 overflow-hidden">
                                         <h6 class=" my-2 my-lg-2"> 4th Rajagiri Conference on ...
@@ -213,9 +186,7 @@
                                             Made for usage, commonly se Just move ...
                                         </p>
                                         <p class="mt-1">
-                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
-                                                    class="fa-regular fa-clock"></i></span> <span class=" font-bold"
-                                                style="font-size: smaller;">
+                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
                                                 9.00 AM - 5.00 PM</span>
                                         </p>
                                     </div>

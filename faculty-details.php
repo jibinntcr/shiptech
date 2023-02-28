@@ -9,13 +9,12 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -38,8 +37,7 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -72,12 +70,10 @@
     <div class="container-fluid py-5 px-lg-0">
         <div class="container  about py-5 px-lg-0 element">
             <div class="row g-5 mx-lg-5">
-                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
-                    style="min-height: 400px;">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <!-- card  -->
                     <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
-                        <img src="img/SOP_Mammootty2016.jpg" class="card-img-top img-fluid" style="border-radius: 15px;"
-                            alt=" Chicago Skyscrapers" />
+                        <img src="img/SOP_Mammootty2016.jpg" class="card-img-top img-fluid" style="border-radius: 15px;" alt=" Chicago Skyscrapers" />
                         <div class="card-body text-center">
                             <h4 class="card-title text-uppercase ">
                                 DR. Name
@@ -93,8 +89,7 @@
 
                                 <div class="row mb-md-3 mb-2">
                                     <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                    <div class="col-10 text-right"><a class="white col-11"
-                                            href="mailto:example@gmail.com">example@gmail.com</a></div>
+                                    <div class="col-10 text-right"><a class="white col-11" href="mailto:example@gmail.com">example@gmail.com</a></div>
                                 </div>
                                 <div class="row mb-md-3 mb-2">
                                     <div class="col-2">

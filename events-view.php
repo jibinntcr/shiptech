@@ -11,7 +11,7 @@ include('admin/includes/config.php');
 
 <head>
     <meta charset="utf-8">
-    <title>News | Department of Ship Technology</title>
+    <title>Events | Department of Ship Technology</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -39,6 +39,7 @@ include('admin/includes/config.php');
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/gallery.css" rel="stylesheet">
+    <link href="css/event.css" rel="stylesheet" />
     <style>
         ul {
             list-style: none;
@@ -66,11 +67,11 @@ include('admin/includes/config.php');
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">News</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Events</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">News</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Events</a></li>
                     <!-- <li class="breadcrumb-item text-white active" aria-current="page">SHIP TECHNOLOGY LIBRARY CUSAT
                     </li> -->
                 </ol>
@@ -84,7 +85,7 @@ include('admin/includes/config.php');
             $id = $_GET['id'];
             // print_r($id);
             // exit();
-            $sql = "SELECT id,title,content,date,image from news where id= $id ";
+            $sql = "SELECT id,title,content,date,image from events where id= $id ";
             $query = $dbh->prepare($sql);
             $query->execute();
             $userArr = $query->fetchAll(PDO::FETCH_OBJ);
@@ -107,13 +108,13 @@ include('admin/includes/config.php');
             ?>
             <div class="container my-5 col-xl-5">
                 <div class="text-center mb-3">
-                    <h1 class="mb-0"> Other news</h1>
+                    <h1 class="mb-0"> Other Events</h1>
                 </div>
-                <div class="container3">
+                <div class="container2">
                     <ul class="p-2">
 
                         <?php
-                        $sql = "SELECT * from news ";
+                        $sql = "SELECT * from events ORDER BY `events`.`date` DESC";
                         $query = $dbh->prepare($sql);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -123,26 +124,45 @@ include('admin/includes/config.php');
                         ?>
 
                                 <li>
-                                    <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                        <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="admin/pages/uploads/<?php echo $result->image ?>" alt="">
-                                        <div class="d-flex col-md-8 mb-0 mx-md-3  ">
-                                            <div class="ms-4 overflow-hidden">
-                                                <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                    <div class="d-flex border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                        <div class="circle bg-primary d-flex justify-content-center container">
+                                            <div class="cell">
+
+                                                <?php $date = $result->date;
+                                                $date = date_create($date);
+                                                ?>
+                                                <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                            </div>
+                                            <div class="cell">
+                                                <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
+                                            </div>
+                                            <div class="cell">
+                                                <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                            <div class="ms-4">
+                                                <!-- <p class="mt-1">
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <i class="fa-regular fa-clock"></i></span>
+                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
+                                            </p> -->
+                                                <a href="events-view.php?id=<?php echo   $result->id ?>">
                                                     <h6 class="my-2 my-lg-2">
-                                                        <?php
-                                                        $title =  substr($result->title, 0, 27);
-                                                        $subHeading = substr($result->content, 0, 39);
-                                                        echo  $title
-                                                        ?> </h6>
+                                                        <?php $title =  substr($result->title, 0, 48);
+                                                        echo $title ?>
+                                                    </h6>
                                                 </a>
-                                                <p class="p-sm-2">
-                                                    <?php echo  $subHeading ?>...
-                                                </p>
-                                                <p class="mt-1">
-                                                    <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
-                                                        <?php $date = $result->date;
-                                                        $date = date_create($date);
-                                                        echo date_format($date, "d/m/Y"); ?></span>
+
+                                                <p>
+                                                    <span style="color: #ff3e41; font-weight: bold">
+                                                        <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                                    </span>
+                                                    <span class="font-bold">
+                                                        <?php $subHeading = substr($result->content, 0, 18);
+                                                        echo $subHeading ?>
+                                                    </span>
                                                 </p>
                                             </div>
                                         </div>

@@ -1,3 +1,9 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('admin/includes/config.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +15,13 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="admin/images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -37,7 +44,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -48,18 +56,28 @@
     <!-- Navbar Start -->
     <?php include('partials/header.php') ?>
     <!-- Navbar End -->
-
+    <?php
+    $id = $_GET['id'];
+    // print_r($id);
+    // exit();
+    $sql = "SELECT * from gallerimages where galleryID=$id ";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+    ?>
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown text-uppercase">Onam 2022</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown text-uppercase">
+                <?php echo htmlentities($userArr[0]->name); ?></h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="gallery.php">GALLERY</a></li>
-                    <li class="breadcrumb-item text-white active text-uppercase" aria-current="page">Onam 2022
-                    </li>
+                    <li class="breadcrumb-item text-white active text-uppercase" aria-current="page">
+                        <?php echo htmlentities($userArr[0]->name); ?> </li>
                 </ol>
             </nav>
         </div>
@@ -76,87 +94,27 @@
 
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Gallery</h6>
-                <h1 class="mb-5 text-uppercase"> Onam 2022</h1>
+                <h1 class="mb-5 text-uppercase"><?php echo htmlentities($userArr[0]->name); ?></h1>
             </div>
 
-
+            <?php
+                $sql = "SELECT * from gallerimages where galleryID='$id'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) { ?>
 
             <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
+                <a href="admin/pages/<?php echo   $result->image ?>" class="fancybox" data-fancybox="gallery1">
+                    <img src="admin/pages/<?php echo $result->image ?>" class="img-fluid  w-100 h-100"
+                        style="object-fit: cover; border-radius: 20px;" alt="Gallery Images">
                 </a>
 
             </div>
-
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="img/about.jpg" class="fancybox" data-fancybox="gallery1">
-                    <img src="img/about.jpg" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Onam 2022">
-                </a>
-
-            </div>
-
-
-
+            <?php }
+                } ?>
 
         </div>
     </div>
@@ -165,7 +123,7 @@
 
 
 
-
+    <?php } ?>
 
 
 
