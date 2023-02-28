@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2023 at 09:59 AM
+-- Generation Time: Feb 28, 2023 at 01:48 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,7 +40,8 @@ CREATE TABLE `announcement` (
 --
 
 INSERT INTO `announcement` (`id`, `announcements`, `link`, `status`, `dlt_status`) VALUES
-(9, 'PhD Rank List 2022', 'https://dca.cusat.ac.in/assets/pdf/PhD%20ranklist2022.pdf', 1, 0);
+(9, '   Announcement test', 'https://infinio.co.in/', 1, 0),
+(13, 'Announcement2', 'https://infinio.co.in/', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -54,15 +55,17 @@ CREATE TABLE `banner` (
   `subCaption` text DEFAULT NULL,
   `image` text NOT NULL,
   `status` tinyint(1) DEFAULT NULL,
-  `dltSts` tinyint(1) DEFAULT NULL
+  `dltSts` tinyint(1) DEFAULT NULL,
+  `topcaption` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `banner`
 --
 
-INSERT INTO `banner` (`id`, `mainCaption`, `subCaption`, `image`, `status`, `dltSts`) VALUES
-(1, 'third', 'third', 'unnamed.png', 1, NULL);
+INSERT INTO `banner` (`id`, `mainCaption`, `subCaption`, `image`, `status`, `dltSts`, `topcaption`) VALUES
+(1, 'Banner 1 Main Caption', 'Banner 1 Sub Caption ', 'carousel-1.jpg', 1, NULL, 'Banner 1 Top caption'),
+(2, 'Banner 2 Main Caption  ', 'Banner 2 Sub Caption', 'carousel-1.jpg', 1, NULL, 'Banner 2 Top Caption ');
 
 -- --------------------------------------------------------
 
@@ -186,6 +189,31 @@ INSERT INTO `dcaoth` (`id`, `AuthKey`, `any`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `image` varchar(200) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `createdtime` timestamp NOT NULL DEFAULT current_timestamp(),
+  `content` text NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `title`, `image`, `date`, `createdtime`, `content`, `status`) VALUES
+(1, 'first event1 Top tech news: ChatGPT Writes a “Scary Email” to a Ghosted Client and Saves Rs 90 Lakh Payment! “G20 Summit Members Could Consider an Entire Ban on Crypto” – RBI Governor', 'about.jpg', '2023-01-31 18:30:00', '2023-02-28 06:03:56', '<p>Although ChatGPT is a heated topic online, the CEO of a design agency swears by it. The chatbot assisted Greg Isenberg, CEO of Late Checkout, in recovering Rs 90,68,187 lakh ($109,500) from a client who abandoned them without paying. Greg shared this on Twitter. Isenberg described a multi-billion-dollar client who ghosted the company because it consistently &ldquo;underpromised and over-delivered&rdquo; on its designs. Isenberg claimed that the incident was ruining the morale of his team. He considered utilizing ChatGPT to create a &ldquo;little more of a terrifying email to capture attention&rdquo; rather than taking the legal route.&rdquo; Isenberg provided context information in the prompt and instructed ChatGPT to act as though its role is to collect customer payments for the finance department. Should I forward this thread to the client who ghosted me? I never told him that I sent the collecting email using ChatGPT. I believe that would be hilarious for him.&rdquo; Isenberg concluded the thread with a post.Although ChatGPT is a heated topic online, the CEO of a design agency swears by it. The chatbot assisted Greg Isenberg, CEO of Late Checkout, in recovering Rs 90,68,187 lakh ($109,500) from a client who abandoned them without paying. Greg shared this on Twitter. Isenberg described a multi-billion-dollar client who ghosted the company because it consistently &ldquo;underpromised and over-delivered&rdquo; on its designs. Isenberg claimed that the incident was ruining the morale of his team. He considered utilizing ChatGPT to create a &ldquo;little more of a terrifying email to capture attention&rdquo; rather than taking the legal route.&rdquo; Isenberg provided context information in the prompt and instructed ChatGPT to act as though its role is to collect customer payments for the finance department. Should I forward this thread to the client who ghosted me? I never told him that I sent the collecting email using ChatGPT. I believe that would be hilarious for him.&rdquo; Isenberg concluded the thread with a post.</p>\r\n', 1),
+(2, 'second event', 'feature.jpg', '2023-02-22 18:30:00', '2023-02-28 06:05:04', '<p>second conten</p>\r\n', 1),
+(3, 'third one', 'feature.jpg', '2022-12-06 18:30:00', '2023-02-28 07:02:27', '<p>test event on december&nbsp;</p>\r\n', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `faculty`
 --
 
@@ -287,6 +315,27 @@ INSERT INTO `faculty` (`id`, `name`, `designation`, `email`, `address`, `iqacLin
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `forms`
+--
+
+CREATE TABLE `forms` (
+  `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `year` date NOT NULL,
+  `image` varchar(11) NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `forms`
+--
+
+INSERT INTO `forms` (`id`, `name`, `year`, `image`, `status`) VALUES
+(1, 'Test Form', '2023-02-20', 'INCOME.pdf', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gallerimages`
 --
 
@@ -302,7 +351,15 @@ CREATE TABLE `gallerimages` (
 --
 
 INSERT INTO `gallerimages` (`id`, `image`, `galleryID`, `name`) VALUES
-(7, 'galleryImages/faculty-vinod (1).jpg', 22, 'test gallery');
+(7, 'galleryImages/faculty-vinod (1).jpg', 22, 'test gallery'),
+(47, 'galleryImages/team-1.jpg', 26, 'test Gallery '),
+(48, 'galleryImages/team-2.jpg', 26, 'test Gallery '),
+(49, 'galleryImages/team-3.jpg', 26, 'test Gallery '),
+(50, 'galleryImages/team-4.jpg', 26, 'test Gallery '),
+(51, 'galleryImages/testimonial-1.jpg', 26, 'test Gallery '),
+(52, 'galleryImages/testimonial-2.jpg', 26, 'test Gallery '),
+(53, 'galleryImages/testimonial-3.jpg', 26, 'test Gallery '),
+(54, 'galleryImages/testimonial-4.jpg', 26, 'test Gallery ');
 
 -- --------------------------------------------------------
 
@@ -322,7 +379,8 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `name`, `thumbnail`, `status`) VALUES
-(22, 'test gallery', 'innpasco2017.jpg', 0);
+(22, 'test gallery', 'innpasco2017.jpg', 0),
+(26, 'test Gallery ', 'about.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -345,7 +403,8 @@ CREATE TABLE `hod` (
 --
 
 INSERT INTO `hod` (`id`, `name`, `message`, `photo`, `status`, `dltSts`, `designation`) VALUES
-(7, 'Dr. M. V. JUDY', '<p>Welcome to the Department of Computer Applications!!!<br />\r\nAs the Department of Computer Applications, we are committed to providing education, research, and innovation that will impact our world for the better, and we strive to develop global leaders and socially responsible professionals. We seek to provide our students with a balance of both intellectual and practical experiences to enable them to serve the needs of society.<br />\r\n<strong>&ldquo;Let us aspire to greatness by immersing ourselves in knowledge &ldquo;</strong></p>\r\n', 'HODs desk.jpg', 0, NULL, 'Professor and Head of the Department.');
+(7, 'Dr. M. V. JUDY', '<p>Welcome to the Department of Computer Applications!!!<br />\r\nAs the Department of Computer Applications, we are committed to providing education, research, and innovation that will impact our world for the better, and we strive to develop global leaders and socially responsible professionals. We seek to provide our students with a balance of both intellectual and practical experiences to enable them to serve the needs of society.<br />\r\n<strong>&ldquo;Let us aspire to greatness by immersing ourselves in knowledge &ldquo;</strong></p>\r\n', 'HODs desk.jpg', 0, NULL, 'Professor and Head of the Department.'),
+(8, 'Hod Name ', '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis numquam atque, sit voluptatum labore dolor, qui voluptatem debitis maxime praesentium officiis totam maiores sunt ea quidem facilis officia, a vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, perspiciatis. Repellat iste nam quos ab illum adipisci cumque. Quo dolorum quod odit qui quos non quasi nisi consectetur consequatur beatae dolores atque rerum incidunt commodi, maxime iusto optio mollitia. Quisquam magnam, a, vitae rem inventore similique molestias repellat cumque quasi libero saepe enim non repellendus impedit labore nostrum, aperiam quibusdam dolorum. Rerum suscipit culpa nam sint beatae deserunt cum maiores architecto nulla similique modi necessitatibus a fugiat sequi vel unde delectus, quasi tempore amet ullam labore eveniet! Natus exercitationem suscipit eligendi qui quod itaque quam assumenda et esse. Libero, ad?</p>\r\n', 'SOP_Mammootty2016.jpg', 1, NULL, 'HOD, Department of Ship Technology');
 
 -- --------------------------------------------------------
 
@@ -369,6 +428,30 @@ CREATE TABLE `mous` (
 
 INSERT INTO `mous` (`id`, `name`, `image`, `year`, `description`, `status`, `dltStatus`) VALUES
 (2, '  Kerala Police Academy', 'kp.jpg', '2019', 'Cochin University of Science and Technology signed an MoU with Kerala Police Academy (KEPA) under the initiative of the Department of Computer Applications. The objective of the MoU is to promote scientific and cultural cooperation between Kerala Police Academy and Cochin University of Science and Technology. KEPA had identified the Department as their potential collaborator and under this collaboration, discussions were conducted, workshops were organized, students were given internships at KEPA, and seat reservation was done for KEPA people in the MSC Computer Science with specialization in Data Science program run by the Department.', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `time` timestamp NOT NULL DEFAULT current_timestamp(),
+  `content` text NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `title`, `image`, `date`, `time`, `content`, `status`) VALUES
+(1, 'new Date Changed Sunak and EU chief expected to agree new NI Brexit deal', 'about.jpg', '2023-02-25 18:30:00', '2023-02-27 10:59:32', '<p>Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.</p>\r\n', 1),
+(2, 'Manish Sisodia News Live Updates: Court sends Delhi deputy CM to CBI remand till March 4 in excise policy case', 'about.jpg', '2023-03-09 18:30:00', '2023-02-27 12:01:30', '<p>Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.</p>\r\n', 1);
 
 -- --------------------------------------------------------
 
@@ -516,7 +599,8 @@ CREATE TABLE `researchscholar` (
 --
 
 INSERT INTO `researchscholar` (`id`, `reg`, `name`, `guide`, `title`, `year`, `status`, `scholarstatus`) VALUES
-(3, '  2528', 'James K.N', 'Dr. Babu Sundar S', 'Real Time Raga Detection and Analysis Using Computer', '2009', 1, 'Completed');
+(3, '      2528', 'James K.N', 'Dr. Babu Sundar S', 'Real Time Raga Detection and Analysis Using Computer', '2009', 1, 'Completed'),
+(6, '10070', 'Jerry Sabu', 'NIl', 'Nil', '2023', 1, 'Completed');
 
 -- --------------------------------------------------------
 
@@ -614,7 +698,8 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `name`, `image`, `message`, `designation`, `batch`, `status`, `dltStatus`, `course`) VALUES
-(3, ' Navami S. Binu', 'navami.png', 'I feel very proud and blessed to be a part of the DCA family. I have received such wonderful teachers who guided me throughout the course. The faculties have very good subject knowledge. The non-teaching staff are really supportive and friendly towards each student. Everyone experiences a new life with new environment and learns life skills that go beyond education. Thank you, DCA for every life lessons', 'Systems Engineer , TCS Digital', '2019-2022', 1, 0, 'MCA ');
+(3, '  Navami S. Binu', 'SOP_Mammootty2016.jpg', 'I feel very proud and blessed to be a part of the DCA family. I have received such wonderful teachers who guided me throughout the course. The faculties have very good subject knowledge. The non-teaching staff are really supportive and friendly towards each student. Everyone experiences a new life with new environment and learns life skills that go beyond education. Thank you, DCA for every life lessons', 'Systems Engineer , TCS Digital', '2019-2022', 1, 0, 'MCA '),
+(14, 'Jerry Sabu', 'testimonial-3.jpg', 'You may need to provide additional documents depending on your circumstances. The Home Office will contact you if you need to provide more evidence.', 'Developer', '2018', 1, 0, 'BCA');
 
 -- --------------------------------------------------------
 
@@ -698,9 +783,21 @@ ALTER TABLE `dcaoth`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `faculty`
 --
 ALTER TABLE `faculty`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `forms`
+--
+ALTER TABLE `forms`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -726,6 +823,12 @@ ALTER TABLE `hod`
 -- Indexes for table `mous`
 --
 ALTER TABLE `mous`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -808,13 +911,13 @@ ALTER TABLE `workshop`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `completedresearchscholar`
@@ -841,34 +944,52 @@ ALTER TABLE `dcaoth`
   MODIFY `id` int(35) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `forms`
+--
+ALTER TABLE `forms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `gallerimages`
 --
 ALTER TABLE `gallerimages`
-  MODIFY `id` int(35) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(35) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(35) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(35) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `hod`
 --
 ALTER TABLE `hod`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `mous`
 --
 ALTER TABLE `mous`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `patents`
@@ -904,7 +1025,7 @@ ALTER TABLE `researchlab`
 -- AUTO_INCREMENT for table `researchscholar`
 --
 ALTER TABLE `researchscholar`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `studentslab`
@@ -928,7 +1049,7 @@ ALTER TABLE `technicalstaff`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
