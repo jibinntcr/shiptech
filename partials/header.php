@@ -15,8 +15,10 @@
             <div class="col d-flex justify-content-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
-                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4"
+                            href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center "
+                            href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
                     </p>
                 </div>
             </div>
@@ -70,9 +72,9 @@
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
-                    <a href="#" target="_blank" class="dropdown-item">Students Grievance
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
                         Redressal Committee 2022</a>
-                    <a href="#" target="_blank" class="dropdown-item">Students Grievance
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
                         Redressal Form</a>
                     <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
                         Ragging Cell</a>
