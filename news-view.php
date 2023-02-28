@@ -109,12 +109,12 @@ include('admin/includes/config.php');
             </div>
             <?php }
             ?>
-            <div class="container my-5 row col-xl-5">
+            <div class="container my-5 col-xl-5">
                 <div class="text-center mb-3">
                     <h1 class="mb-0"> Other news</h1>
                 </div>
                 <div class="container3">
-                    <ul>
+                    <ul class="p-2">
 
                         <?php
                         $sql = "SELECT * from news ";
