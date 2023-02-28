@@ -68,7 +68,7 @@
             <a href="gallery.php" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
-                <div class="dropdown-menu bg-light border-0 m-0">
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 250px;">
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
