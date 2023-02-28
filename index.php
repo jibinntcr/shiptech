@@ -329,7 +329,7 @@ include('admin/includes/config.php');
                             font-weight: bold;
                             font-size: smaller;
                           ">
-                                                    <i class="fa-regular fa-clock"></i></span>
+                                                    <i class="fa-regular fa-calendar"></i></span>
                                                 <span class="font-bold" style="font-size: smaller">
                                                     <?php $date = $result->date;
                                                             $date = date_create($date);
