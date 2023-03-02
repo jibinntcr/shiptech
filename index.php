@@ -460,12 +460,12 @@ include('admin/includes/config.php');
 
     <!-- HOS MESSAGE  Start -->
     <?php
-                    $sql = "SELECT * from hod where status='1' ";
-                    $query = $dbh->prepare($sql);
-                    $query->execute();
-                    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
-                    if ($query->rowCount() > 0) {
-                    ?>
+    $sql = "SELECT * from hod where status='1' ";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+    ?>
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
@@ -480,7 +480,7 @@ include('admin/includes/config.php');
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
                     <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?> </p>
+                    <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
                     <span><b><?php echo ($userArr[0]->name); ?></b>
                         <br>
                         <?php echo ($userArr[0]->designation); ?></span>
@@ -490,7 +490,7 @@ include('admin/includes/config.php');
         </div>
     </div>
     <?php }
-                ?>
+    ?>
     <!-- HOD MESSAGE  End -->
 
 
@@ -503,39 +503,34 @@ include('admin/includes/config.php');
                 <h1 class="mb-5">Courses Offered</h1>
             </div>
             <div class="row g-4">
+
+
+                <?php
+                $sql = "SELECT * from course WHERE status='1'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
+                            <img class="fac-img-curv img-fluid" src="admin/pages/uploads/<?php echo $result->image ?>"
+                                alt="">
                         </div>
-                        <h4 class="mb-3">B.Tech</h4>
-                        <p>Naval Architecture &amp;<br> Shipbuilding</p>
-                        <a class="btn-slide mt-2" href="course-details.php"><i class="fa fa-arrow-right"></i><span>Read
+                        <h4 class="mb-3"><?php echo $result->name ?></h4>
+                        <p><?php echo $result->specialization ?></p>
+                        <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i
+                                class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid fac-img-curv" src="img/service-2.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">M.Tech</h4>
-                        <p>Computer Aided Structural Analysis &amp; Design</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid fac-img-curv" src="img/service-3.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 3</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
+
+                <?php }
+                } ?>
 
             </div>
         </div>
