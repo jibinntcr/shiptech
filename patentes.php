@@ -1,3 +1,12 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('admin/includes/config.php');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +23,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -36,7 +46,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -62,109 +73,51 @@
             </nav>
         </div>
     </div>
-    <!-- Page Header End -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="row g-0">
-                <div class="wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="col-md-4">
-                            <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div> -->
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="container">
+                <?php
+                $sql = "SELECT * from patents WHERE status='1'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
                 <div class="card  float-left my-3" style=" border-radius: 25px;">
                     <div class="row  ">
-
                         <div class="col-lg-7 mb-3 " style="box-sizing: border-box;">
                             <div class="card-block p-2 m-2">
-                                <h5 class="card-title">Name</h5>
-                                <p class="card-text" style="margin-bottom: 0 !important;"><small class="text-muted"><b>Project Name</b></small></p>
-                                <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
+                                <h5 class="card-title"><?php echo $result->name ?></h5>
+                                <p class="card-text" style="margin-bottom: 0 !important;"><small
+                                        class="text-muted"><b><?php echo $result->projectname ?></b></small></p>
+                                <p style="margin-bottom: 0 !important;">
+                                    <small class="text-muted">
+                                        <b>Publication Date:
+                                            <?php echo $result->publicationDate ?>
+                                        </b>
+                                    </small>
                                 </p>
-                                <p class="card-text justify-para  ">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
-                                    id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
-                                    illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
-                                    molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
-                                    fugiat minus atque nulla.</p>
+                                <p>
+                                    <small class="text-muted">
+                                        <b>Members:
+                                            <?php echo $result->member1 ?>
+                                        </b>
+                                    </small>
+                                </p>
+                                <p class="card-text justify-para"><?php echo $result->description ?></p>
                             </div>
                         </div>
-
                         <div class="col-lg-5">
                             <img class="d-block w-100" src="img/service-1.jpg" alt="" style=" border-radius: 12px;">
                         </div>
                     </div>
                 </div>
-                <div class="card  float-left" style=" border-radius: 25px;">
-                    <div class="row  ">
-
-                        <div class="col-lg-7 mb-3 " style="box-sizing: border-box;">
-                            <div class="card-block p-2 m-2">
-                                <h5 class="card-title">Name</h5>
-                                <p class="card-text" style="margin-bottom: 0 !important;"><small class="text-muted"><b>Project Name</b></small></p>
-                                <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
-                                </p>
-                                <p class="card-text justify-para  ">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
-                                    id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
-                                    illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
-                                    molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
-                                    fugiat minus atque nulla.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5">
-                            <img class="d-block w-100" src="img/service-1.jpg" alt="" style=" border-radius: 12px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="card  float-left my-3" style=" border-radius: 25px;">
-                    <div class="row  ">
-
-                        <div class="col-lg-7 mb-3 " style="box-sizing: border-box;">
-                            <div class="card-block p-2 m-2">
-                                <h5 class="card-title">Name</h5>
-                                <p class="card-text" style="margin-bottom: 0 !important;"><small class="text-muted"><b>Project Name</b></small></p>
-                                <p class=""><small class="text-muted"><b>Publication Date: 10-11-2022</b></small>
-                                </p>
-                                <p class="card-text justify-para  ">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Quis harum, porro temporibus illum, repudiandae officia neque
-                                    id corporis quidem recusandae animi totam, laudantium nobis iusto! Consequatur
-                                    illo odit recusandae hic pariatur tempore quisquam, dignissimos debitis, beatae
-                                    molestias rerum nulla necessitatibus vero! Deserunt perferendis quia unde optio
-                                    fugiat minus atque nulla.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5">
-                            <img class="d-block w-100" src="img/service-1.jpg" alt="" style=" border-radius: 12px;">
-                        </div>
-                    </div>
-                </div>
-
-
-
+                <?php }
+                } ?>
             </div>
         </div>
-
-
     </div>
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>

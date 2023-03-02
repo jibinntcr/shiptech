@@ -11,10 +11,6 @@ if (strlen($_SESSION['alogin']) == 0) {
         $projectName = $_POST['projectName'];
         $publicationDate = $_POST['publicationDate'];
         $memeber1 = $_POST['member1'];
-        $memeber2 = $_POST['member2'];
-        $memeber3 = $_POST['member3'];
-        $memeber4 = $_POST['member4'];
-        $memeber5 = $_POST['member5'];
         $description = $_POST['description'];
         $message = $_POST['message'];
         $folder = 'uploads/';
@@ -22,7 +18,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO patents(name,projectname,publicationDate,member1,member2,member3,member4,member5,description,image,status) VALUES ('" . $name . "','" . $projectName . "','" . $publicationDate . "','" .  $memeber1 . "','" .  $memeber2 . "','" . $memeber3 . "','" . $memeber4 . "','" . $memeber5 . "','" . $description . "','" . $photo . "','" . $status . "')";
+        $sql = "INSERT INTO patents(name,projectname,publicationDate,member1,description,image,status) VALUES ('" . $name . "','" . $projectName . "','" . $publicationDate . "','" .  $memeber1 . "','" . $description . "','" . $photo . "','" . $status . "')";
         // print_r($sql);
         // exit();
         $query = $dbh->prepare($sql);
@@ -95,31 +91,15 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             name="publicationDate" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Member 1</label>
+                                        <label for="exampleTextarea1">Members</label>
                                         <input type="text" class="form-control" id="member1" name="member1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Member 2</label>
-                                        <input type="text" class="form-control" id="member2" name="member2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Member 3</label>
-                                        <input type="text" class="form-control" id="member3" name="member3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Member 4</label>
-                                        <input type="text" class="form-control" id="member4" name="member4">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Member 5</label>
-                                        <input type="text" class="form-control" id="member5" name="member5">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea1">Description</label>
                                         <textarea class="form-control" id="description" name="description" rows="4"></textarea required>
                                         </div>
                                         <div class="form-group">
-                                        <label for="exampleTextarea1">Image(500x500 px)</label>
+                                        <label for="exampleTextarea1">Image(500x300 px)</label>
                                             <input class="form-control" type="file" id="file" name="file" accept="image/gif, image/png, image/jpg, image/jpeg" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2" name="patentBTN" id="patentBTN">Submit</button>

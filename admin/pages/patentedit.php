@@ -13,12 +13,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             $projectName = $_POST['EditProjectName'];
             $publicationDate = $_POST['EditPublicationDate'];
             $member1 = $_POST['EditMember1'];
-            $member2 = $_POST['EditMember2'];
-            $member3 = $_POST['EditMember3'];
-            $member4 = $_POST['EditMember4'];
-            $member5 = $_POST['EditMember5'];
             $description = $_POST['EditDescription'];
-            $sql = "UPDATE  patents SET name=' $name',projectname='$projectName',publicationDate='$publicationDate',member1='$member1',member2='$member2',member3='$member3',member4='$member4',member5='$member5',description='$description',image='$photo' where id='$id'";
+            $sql = "UPDATE  patents SET name=' $name',projectname='$projectName',publicationDate='$publicationDate',member1='$member1',description='$description',image='$photo' where id='$id'";
             // print_r($sql);
             // exit();
             $query = $dbh->prepare($sql);
@@ -36,16 +32,12 @@ if (strlen($_SESSION['alogin']) == 0) {
             $projectName = $_POST['EditProjectName'];
             $publicationDate = $_POST['EditPublicationDate'];
             $member1 = $_POST['EditMember1'];
-            $member2 = $_POST['EditMember2'];
-            $member3 = $_POST['EditMember3'];
-            $member4 = $_POST['EditMember4'];
-            $member5 = $_POST['EditMember5'];
             $description = $_POST['EditDescription'];
             $folder = 'uploads/';
             $file = $folder . basename($_FILES["file"]["name"]);
             move_uploaded_file($_FILES['file']['tmp_name'], $file);
             $photo = basename($_FILES["file"]["name"]);
-            $sql = "UPDATE  patents SET name=' $name',projectname='$projectName',publicationDate='$publicationDate',member1='$member1',member2='$member2',member3='$member3',member4='$member4',member5='$member5',description='$description',image='$photo' where id='$id'";
+            $sql = "UPDATE  patents SET name=' $name',projectname='$projectName',publicationDate='$publicationDate',member1='$member1',description='$description',image='$photo' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -139,29 +131,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             value="<?php echo htmlentities($userArr[0]->publicationDate); ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="Year">Member 1</label>
+                                        <label for="Year">Members</label>
                                         <input type="text" class="form-control" id="EditMember1" name="EditMember1"
                                             value="<?php echo htmlentities($userArr[0]->member1); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Year">Member 2</label>
-                                        <input type="text" class="form-control" id="EditMember2" name="EditMember2"
-                                            value="<?php echo htmlentities($userArr[0]->member2); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Year">Member 1</label>
-                                        <input type="text" class="form-control" id="EditMember3" name="EditMember3"
-                                            value="<?php echo htmlentities($userArr[0]->member3); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Year">Member 1</label>
-                                        <input type="text" class="form-control" id="EditMember4" name="EditMember4"
-                                            value="<?php echo htmlentities($userArr[0]->member4); ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Year">Member 1</label>
-                                        <input type="text" class="form-control" id="EditMember5" name="EditMember5"
-                                            value="<?php echo htmlentities($userArr[0]->member5); ?>">
                                     </div>
                                     <div class="form-group">
                                         <label for="Message">Description</label>
