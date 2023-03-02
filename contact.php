@@ -117,33 +117,33 @@
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <form action="mail.php" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form action="mail/mail.php" method="post" enctype="multipart/form-data" autocomplete="off">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="name" name="name"
-                                        placeholder="Your Name" required="">
+                                        placeholder="Your Name" required>
                                     <label for="name">Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="number" class="form-control" id="phone" name="phone"
-                                        placeholder="Your Phone" required="">
+                                        placeholder="Your Phone" required>
                                     <label for="phone">Phone</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="Your Email" required="">
+                                        placeholder="Your Email" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="subject" name="subject"
-                                        placeholder="Subject" required="">
+                                        placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
