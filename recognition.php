@@ -1,3 +1,11 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('admin/includes/config.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,72 +75,30 @@
     <div cl ass="container-xxl py-5">
         <div class="container py-5">
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <h4 class="">Dr. Sample Name</h4>
-                        <p><small class="text-muted"><b>Designation</b></small></p>
-                        <p class="justify-para mb-3">
-                        <h4 class="recognition-heading">Recognition 1</h4>
-                        <p class="justify-para recognition-para">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Vero dolorem
-                            quaerat eos illum
-                            praesentium deleniti reiciendis culpa ut cumque corporis, eum, et dolor. Neque sunt atque
-                            aperiam, cumque harum maiores.</p>
-                        </p>
-                        <p class="justify-para mb-3">
-                        <h4 class="recognition-heading">Recognition 2</h4>
-                        <p class="justify-para recognition-para">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Vero dolorem
-                            quaerat eos illum
-                            praesentium deleniti reiciendis culpa ut cumque corporis, eum, et dolor. Neque sunt atque
-                            aperiam, cumque harum maiores.</p>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <h4 class="">Dr. Sample Name</h4>
-                        <p><small class="text-muted"><b>Designation</b></small></p>
-                        <p class="justify-para mb-3">
-                        <h4 class="recognition-heading">Recognition 1</h4>
-                        <p class="justify-para recognition-para">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Vero dolorem
-                            quaerat eos illum
-                            praesentium deleniti reiciendis culpa ut cumque corporis, eum, et dolor. Neque sunt atque
-                            aperiam, cumque harum maiores.</p>
-                        </p>
-                        <p class="justify-para mb-3">
-                        <h4 class="recognition-heading">Recognition 2</h4>
-                        <p class="justify-para recognition-para">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Vero dolorem
-                            quaerat eos illum
-                            praesentium deleniti reiciendis culpa ut cumque corporis, eum, et dolor. Neque sunt atque
-                            aperiam, cumque harum maiores.</p>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <h4 class="">Dr. Sample Name</h4>
-                        <p><small class="text-muted"><b>Designation</b></small></p>
-                        <p class="justify-para mb-3">
-                        <h4 class="recognition-heading">Recognition 1</h4>
-                        <p class="justify-para recognition-para">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Vero dolorem
-                            quaerat eos illum
-                            praesentium deleniti reiciendis culpa ut cumque corporis, eum, et dolor. Neque sunt atque
-                            aperiam, cumque harum maiores.</p>
-                        </p>
-                        <p class="justify-para mb-3">
-                        <h4 class="recognition-heading">Recognition 2</h4>
-                        <p class="justify-para recognition-para">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Vero dolorem
-                            quaerat eos illum
-                            praesentium deleniti reiciendis culpa ut cumque corporis, eum, et dolor. Neque sunt atque
-                            aperiam, cumque harum maiores.</p>
-                        </p>
-                    </div>
-                </div>
+
+                <?php
+                $sql = "SELECT * from recognition WHERE status = '1'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item p-4 fac-img-curv">
+                                <h4 class=""><?php echo   $result->name ?></h4>
+                                <p><small class="text-muted"><b><?php echo   $result->designation ?></b></small></p>
+                                <p class="justify-para mb-3">
+                                <p class="justify-para recognition-para"><?php echo   $result->recognition ?></p>
+                                </p>
+                                <p class="justify-para mb-3">
+                            </div>
+                        </div>
+                <?php }
+                } ?>
+
+
 
             </div>
         </div>
