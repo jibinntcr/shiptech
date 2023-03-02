@@ -49,6 +49,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="../pages/approvals.php">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">Approvals</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="../pages/recognition.php">
                 <i class="icon-ban menu-icon"></i>
                 <span class="menu-title">Recognitions</span>

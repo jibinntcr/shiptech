@@ -109,14 +109,14 @@ include('admin/includes/config.php');
                         </p>
 
 
-                        <h4 class="mb-2"> Syllabus</h4>
+                        <h4 class="mb-5 mt-5"> Syllabus</h4>
                         <ul class="mission-dot " style=" margin-left: 15px;">
 
                             <!-- Syllebus 1 start  -->
                             <?php $syllabus1 = $userArr[0]->sllabusLink;
                             if (!empty($syllabus1)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus1 ?>" target="_blank"><?php echo $userArr[0]->sllabus ?></a>
                                 </li>
@@ -128,7 +128,7 @@ include('admin/includes/config.php');
                             <?php $syllabus2 = $userArr[0]->link2;
                             if (!empty($syllabus2)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus2 ?>" target="_blank"><?php echo $userArr[0]->syllabus2 ?></a>
                                 </li>
@@ -140,7 +140,7 @@ include('admin/includes/config.php');
                             <?php $syllabus3 = $userArr[0]->link3;
                             if (!empty($syllabus3)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus3 ?>" target="_blank"><?php echo $userArr[0]->syllabus3 ?></a>
                                 </li>
@@ -154,7 +154,7 @@ include('admin/includes/config.php');
                             <?php $syllabus4 = $userArr[0]->link4;
                             if (!empty($syllabus4)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus4 ?>" target="_blank"><?php echo $userArr[0]->syllabus4 ?></a>
                                 </li>
@@ -166,7 +166,7 @@ include('admin/includes/config.php');
                             <?php $syllabus5 = $userArr[0]->link5;
                             if (!empty($syllabus5)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus5 ?>" target="_blank"><?php echo $userArr[0]->syllabus5 ?></a>
                                 </li>
@@ -178,7 +178,7 @@ include('admin/includes/config.php');
                             <?php $syllabus6 = $userArr[0]->link6;
                             if (!empty($syllabus6)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus6 ?>" target="_blank"><?php echo $userArr[0]->syllabus6 ?></a>
                                 </li>
@@ -190,7 +190,7 @@ include('admin/includes/config.php');
                             <?php $syllabus7 = $userArr[0]->link7;
                             if (!empty($syllabus7)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus7 ?>" target="_blank"><?php echo $userArr[0]->syllabus7 ?></a>
                                 </li>
@@ -202,7 +202,7 @@ include('admin/includes/config.php');
                             <?php $syllabus8 = $userArr[0]->link8;
                             if (!empty($syllabus8)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus8 ?>" target="_blank"><?php echo $userArr[0]->syllabus8 ?></a>
                                 </li>
@@ -214,7 +214,7 @@ include('admin/includes/config.php');
                             <?php $syllabus9 = $userArr[0]->link9;
                             if (!empty($syllabus9)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus9 ?>" target="_blank"><?php echo $userArr[0]->syllabus9 ?></a>
                                 </li>
@@ -226,7 +226,7 @@ include('admin/includes/config.php');
                             <?php $syllabus10 = $userArr[0]->link10;
                             if (!empty($syllabus10)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus10 ?>" target="_blank"><?php echo $userArr[0]->syllabus10 ?></a>
                                 </li>
@@ -238,7 +238,7 @@ include('admin/includes/config.php');
                             <?php $syllabus11 = $userArr[0]->link11;
                             if (!empty($syllabus11)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus11 ?>" target="_blank"><?php echo $userArr[0]->syllabus11 ?></a>
                                 </li>
@@ -250,7 +250,7 @@ include('admin/includes/config.php');
                             <?php $syllabus12 = $userArr[0]->link12;
                             if (!empty($syllabus12)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus12 ?>" target="_blank"><?php echo $userArr[0]->syllabus12 ?></a>
                                 </li>
@@ -262,7 +262,7 @@ include('admin/includes/config.php');
                             <?php $syllabus13 = $userArr[0]->link13;
                             if (!empty($syllabus13)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus13 ?>" target="_blank"><?php echo $userArr[0]->syllabus13 ?></a>
                                 </li>
@@ -274,7 +274,7 @@ include('admin/includes/config.php');
                             <?php $syllabus14 = $userArr[0]->link14;
                             if (!empty($syllabus14)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus14 ?>" target="_blank"><?php echo $userArr[0]->syllabus14 ?></a>
                                 </li>
@@ -286,7 +286,7 @@ include('admin/includes/config.php');
                             <?php $syllabus15 = $userArr[0]->link15;
                             if (!empty($syllabus15)) {
                             ?>
-                                <li class="mb-0">
+                                <li class="mb-2">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus15 ?>" target="_blank"><?php echo $userArr[0]->syllabus15 ?></a>
                                 </li>
