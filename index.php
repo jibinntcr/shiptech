@@ -208,14 +208,16 @@ include('admin/includes/config.php');
                 <div class="container my-5 row col-xl-6">
                     <div class="text-center mb-3">
                         <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
-                        <h1 class="mb-0">Events</h1>
+                        <a href="news-home.php">
+                            <h1 class="mb-0">Events</h1>
+                        </a>
                     </div>
 
                     <div class="container2">
                         <ul>
 
                             <?php
-                            $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC ";
+                            $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 4";
                             $query = $dbh->prepare($sql);
                             $query->execute();
                             $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -283,7 +285,9 @@ include('admin/includes/config.php');
                 <!-- news start -->
                 <div class="container my-5 row col-xl-6">
                     <div class="text-center mb-3">
-                        <h1 class="mb-0">News</h1>
+                        <a href="news-home.php">
+                            <h1 class="mb-0">News</h1>
+                        </a>
                     </div>
 
                     <div class="container3">
@@ -291,7 +295,7 @@ include('admin/includes/config.php');
 
 
                             <?php
-                            $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC ";
+                            $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC LIMIT 4; ";
                             $query = $dbh->prepare($sql);
                             $query->execute();
                             $results = $query->fetchAll(PDO::FETCH_OBJ);

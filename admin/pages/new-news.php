@@ -85,7 +85,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <textarea class="form-control" id="content" name="content" rows="4"></textarea>
                                     </div>
                                     <div class="col-lg-12 form-group">
-                                        <label for="exampleTextarea1">Image(800X400 px)</label>
+                                        <label for="exampleTextarea1">Image(800X800 px)</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg" required>
                                     </div>

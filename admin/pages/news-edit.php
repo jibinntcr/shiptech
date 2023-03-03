@@ -137,7 +137,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             rows="4"><?php echo htmlentities($userArr[0]->content); ?></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Image</label>
+                                        <label for="exampleTextarea1">Image(800X800 px)</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg">
                                     </div>
