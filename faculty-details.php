@@ -1,3 +1,11 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('admin/includes/config.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +22,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -37,7 +46,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -48,17 +58,26 @@
     <!-- Navbar Start -->
     <?php include('partials/header.php') ?>
     <!-- Navbar End -->
+    <?php
+    $id = $_GET['id'];
 
+    $sql = "SELECT * from faculty where id= $id ";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+    ?>
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown"> DR. Name</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown"><?php echo $userArr[0]->name ?></h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">DR. Name</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page"> <?php echo $userArr[0]->name ?>
+                    </li>
                 </ol>
             </nav>
         </div>
@@ -67,18 +86,20 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5 px-lg-0">
+    <div class="container-fluid py-5 px-lg-0" style="overflow:hidden;">
         <div class="container  about py-5 px-lg-0 element">
             <div class="row g-5 mx-lg-5">
-                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
+                    style="min-height: 400px;">
                     <!-- card  -->
                     <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
-                        <img src="img/SOP_Mammootty2016.jpg" class="card-img-top img-fluid" style="border-radius: 15px;" alt=" Chicago Skyscrapers" />
+                        <img src="admin/pages/uploads/<?php echo $userArr[0]->image ?>" class="card-img-top img-fluid"
+                            style="border-radius: 15px;" alt="faculty image" />
                         <div class="card-body text-center">
                             <h4 class="card-title text-uppercase ">
-                                DR. Name
+                                <?php echo $userArr[0]->name ?>
                             </h4>
-                            <p class="card-text thick">PROFESSOR AND HEAD OF THE DEPARTMENT</p>
+                            <p class="card-text thick"><?php echo $userArr[0]->designation ?></p>
                         </div>
                         <hr class="my-2">
                         <div class="card-body ">
@@ -86,24 +107,22 @@
                                 CONTACT INFO
                             </h6>
                             <div class="small-text ">
-
                                 <div class="row mb-md-3 mb-2">
                                     <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                    <div class="col-10 text-right"><a class="white col-11" href="mailto:example@gmail.com">example@gmail.com</a></div>
+                                    <div class="col-10 text-right"><a class="white col-11"
+                                            href="mailto:<?php echo $userArr[0]->email ?>"><?php echo $userArr[0]->email ?></a>
+                                    </div>
                                 </div>
                                 <div class="row mb-md-3 mb-2">
                                     <div class="col-2">
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
-                                    <div class="col-10 text-right">Department of Shiptech, Cochin University of Science
-                                        and
-                                        Technology</div>
+                                    <div class="col-10 text-right"><?php echo $userArr[0]->address ?></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-2"> <i class="fa fa-address-book"></i></div>
                                     <div class="col-10 text-right">
-
-                                        <a class="white col-11" href="">CUSAT IQAC
+                                        <a class="white col-11" href="<?php echo $userArr[0]->iqacLink ?>">CUSAT IQAC
                                             Profile</a>
                                     </div>
                                 </div>
@@ -111,591 +130,625 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- card end -->
                 <div class="col-lg-8 mx-lg-2 col-md-12 about-text wow fadeInUp " data-wow-delay="0.3s">
-                    <!-- <h6 class="text-secondary text-uppercase mb-3">About Us</h6> -->
-                    <h1 class="mb-5 title-color "> DR.Name
-                        <!--  name  -->
-                    </h1>
-                    <p class="mb-5 " style="margin-right: 3%;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        At debitis perspiciatis assumenda dolore vel amet. Ea amet omnis, quaerat mollitia totam
-                        corrupti ratione cupiditate doloremque nihil recusandae assumenda, dolorem ipsam Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Perspiciatis ullam laborum temporibus ad optio
-                        necessitatibus incidunt vel at cumque nobis labore, distinctio dolore quaerat exercitationem
-                        tenetur non sunt eum et.
+                    <h1 class="mb-5 title-color "><?php echo $userArr[0]->name ?> </h1>
+                    <p class="mb-5 " style="margin-right: 3%;"><?php echo $userArr[0]->about ?>
                     </p>
-
                     <i class="fa-solid fa-book-open-readertext-primary fa-3x"></i>
-
                     <div>
                         <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
                             <h2 class="mb-5">Field Of Special Interest</h2>
                             <div class="d-flex flex-wrap ">
 
 
-
+                                <!-- SPECIAL INTEREST 1 START -->
+                                <?php $interest1 = $userArr[0]->interest1;
+                                    if (!empty($interest1)) {
+                                    ?>
                                 <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                                     <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
-
                                     <div class="ms-4">
-                                        <h5>Worldwide Service</h5>
-
+                                        <h5><?php echo $interest1 ?></h5>
                                     </div>
                                 </div>
-                                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 1 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                <?php $interest2 = $userArr[0]->interest2;
+                                    if (!empty($interest2)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                                     <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
-
                                     <div class="ms-4">
-                                        <h5>On Time Delivery</h5>
-
+                                        <h5><?php echo $interest2 ?></h5>
                                     </div>
                                 </div>
-                                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 2 END -->
+
+                                <!-- SPECIAL INTEREST 3 START -->
+                                <?php $interest3 = $userArr[0]->interest3;
+                                    if (!empty($interest3)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                                     <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
-
                                     <div class="ms-4">
-                                        <h5>24/7 Telephone Support</h5>
-
+                                        <h5><?php echo $interest3 ?></h5>
                                     </div>
                                 </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 3 END -->
 
-                                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
+                                <!-- SPECIAL INTEREST 4  START -->
+                                <?php $interest4 = $userArr[0]->interest4;
+                                    if (!empty($interest4)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                                     <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
-
                                     <div class="ms-4">
-                                        <h5>24/7 Telephone Support</h5>
-
+                                        <h5><?php echo $interest4 ?></h5>
                                     </div>
                                 </div>
-                                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 4 END -->
+
+                                <!-- SPECIAL INTEREST 5  START -->
+                                <?php $interest5 = $userArr[0]->interest5;
+                                    if (!empty($interest5)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                                     <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
-
                                     <div class="ms-4">
-                                        <h5>24/7 Telephone Support</h5>
-                                        <!-- <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet
-                                        lorem sit clita duo
-                                        justo magna erat amet</p> -->
+                                        <h5><?php echo $interest5 ?></h5>
                                     </div>
                                 </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 5 END -->
+
+                                <!-- SPECIAL INTEREST 6  START -->
+                                <?php $interest6 = $userArr[0]->interest6;
+                                    if (!empty($interest6)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5><?php echo $interest6 ?></h5>
+                                    </div>
+                                </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 6 END -->
+
+                                <!-- SPECIAL INTEREST 7  START -->
+                                <?php $interest7 = $userArr[0]->interest7;
+                                    if (!empty($interest7)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5><?php echo $interest7 ?></h5>
+                                    </div>
+                                </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 7 END -->
+
+                                <!-- SPECIAL INTEREST 8  START -->
+                                <?php $interest8 = $userArr[0]->interest8;
+                                    if (!empty($interest8)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5><?php echo $interest8 ?></h5>
+                                    </div>
+                                </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 8 END -->
+
+                                <!-- SPECIAL INTEREST 9  START -->
+                                <?php $interest9 = $userArr[0]->interest9;
+                                    if (!empty($interest9)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5><?php echo $interest9 ?></h5>
+                                    </div>
+                                </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 9 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                <?php $interest10 = $userArr[0]->interest10;
+                                    if (!empty($interest10)) {
+                                    ?>
+                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5><?php echo $interest10 ?></h5>
+                                    </div>
+                                </div>
+                                <?php }
+                                    ?>
+                                <!-- SPECIAL INTEREST 10 END -->
 
                             </div>
-
-
                         </div>
-                        <!-- <a href="" class="btn btn-primary py-3 px-5">Explore More</a> -->
                     </div>
                 </div>
             </div>
         </div>
         <!-- About End -->
-
         <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
             <h2 class="mb-5">Experience</h2>
             <div class="d-flex flex-wrap ">
 
-
+                <!-- EXPERIENCE 1  START -->
+                <?php $experience1 = $userArr[0]->experience1;
+                    if (!empty($experience1)) {
+                    ?>
 
                 <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
-
-                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
-
-                    <div class="ms-4">
-                        <h5>Professor</h5>
-                        <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quae magni eum
-                            fugiat eos libero, velit aperiam quod! Sit soluta quod assumenda reiciendis voluptatum
-                            similique praesentium accusamus excepturi ullam veritatis.</p>
-
-                    </div>
-                </div>
-                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>Associate Professor</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, voluptates
-                            error quibusdam aliquid suscipit repellendus labore blanditiis optio aliquam vero accusamus
-                            quae voluptas repudiandae possimus voluptatem assumenda quo? Expedita, porro?</p>
-
+                        <h5><?php echo $experience1 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription1 ?></p>
                     </div>
                 </div>
-                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2   START -->
+                <?php $experience2 = $userArr[0]->experience2;
+                    if (!empty($experience2)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                     <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>
-                            Associate Professor and Head</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nisi eius
-                            recusandae voluptatem non laboriosam mollitia officiis, quod voluptatibus sapiente
-                            voluptates earum illum deleniti neque alias cum quae ullam itaque.</p>
-
-
+                        <h5><?php echo $experience2 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription2 ?></p>
                     </div>
                 </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 2  END -->
 
-                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
+                <!-- EXPERIENCE 3  START -->
+                <?php $experience3 = $userArr[0]->experience3;
+                    if (!empty($experience3)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                     <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>
-                            Assistant Professor-III</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iure id
-                            explicabo deserunt, repellendus maiores et debitis at voluptatum, rem odit nostrum, alias
-                            vero assumenda nihil illo! Saepe, animi deleniti.</p>
-
-
+                        <h5><?php echo $experience3 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription3 ?></p>
                     </div>
                 </div>
-                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                <?php $experience4 = $userArr[0]->experience4;
+                    if (!empty($experience4)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                     <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>
-                            Lecturer</h5>
-                        <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, hic eaque itaque
-                            at tempore commodi veritatis labore maxime cumque corrupti aspernatur quasi in minima
-                            dolore, consequuntur repellendus et aperiam dolores?</p>
+                        <h5><?php echo $experience4 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription4 ?></p>
                     </div>
                 </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                <?php $experience5 = $userArr[0]->experience5;
+                    if (!empty($experience5)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $experience5 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription5 ?></p>
+                    </div>
+                </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 5  END -->
+
+                <!-- EXPERIENCE 6  START -->
+                <?php $experience6 = $userArr[0]->experience6;
+                    if (!empty($experience6)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $experience6 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription6 ?></p>
+                    </div>
+                </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 6  END -->
+
+                <!-- EXPERIENCE 7  START -->
+                <?php $experience7 = $userArr[0]->experience7;
+                    if (!empty($experience7)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $experience7 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription7 ?></p>
+                    </div>
+                </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 7  END -->
+
+                <!-- EXPERIENCE 8  START -->
+                <?php $experience8 = $userArr[0]->experience8;
+                    if (!empty($experience8)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $experience8 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription8 ?></p>
+                    </div>
+                </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 8  END -->
+
+                <!-- EXPERIENCE 9  START -->
+                <?php $experience9 = $userArr[0]->experience9;
+                    if (!empty($experience9)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $experience9 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription9 ?></p>
+                    </div>
+                </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 9  END -->
+
+                <!-- EXPERIENCE 10  START -->
+                <?php $experience10 = $userArr[0]->experience10;
+                    if (!empty($experience10)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $experience10 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->expDescription10 ?></p>
+                    </div>
+                </div>
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 10  END -->
+
 
             </div>
-
-
         </div>
-
-
-
         <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
             <h2 class="mb-5">Education</h2>
             <div class="d-flex flex-wrap ">
 
-
+                <!-- EXPERIENCE 1  START -->
+                <?php $education1 = $userArr[0]->education1;
+                    if (!empty($education1)) {
+                    ?>
 
                 <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
-
                     <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>Ph.D. (Computer Science)</h5>
-                        <p class="mb-0">2009</p>
-
+                        <h5><?php echo $userArr[0]->education1 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->edDescription1 ?></p>
                     </div>
                 </div>
-                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
+
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2  START -->
+                <?php $education2 = $userArr[0]->education2;
+                    if (!empty($education2)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                     <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>M.Phil. (Computer Science)</h5>
-                        <p class="mb-0">2009</p>
-
+                        <h5><?php echo $userArr[0]->education2 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->edDescription2 ?></p>
                     </div>
                 </div>
-                <div class="d-flex col-md-5 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                <?php $education3 = $userArr[0]->education3;
+                    if (!empty($education3)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
                     <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
                     <div class="ms-4">
-                        <h5>
-                            Master of Computer Applications (MCA)</h5>
-                        <p class="mb-0">2009</p>
-
+                        <h5><?php echo $userArr[0]->education3 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->edDescription3 ?></p>
                     </div>
                 </div>
 
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 3  END -->
 
+                <!-- EXPERIENCE 4  START -->
+                <?php $education4 = $userArr[0]->education4;
+                    if (!empty($education4)) {
+                    ?>
 
-            </div>
-
-
-        </div>
-
-
-        <div class="container-xxl py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-start">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-
-                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                            <h2 class="mb-5">Experience</h2>
-                            <div class="d-flex flex-wrap ">
-
-
-
-                                <div class="d-flex col-12  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
-                                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>Professor</h5>
-                                        <p class="mb-0">Department of Computer Applications, Cochin University of
-                                            Science and Technology
-                                            (CUSAT), Cochin, Kerala. December 2019 - Till Date</p>
-
-                                    </div>
-                                </div>
-                                <div class="d-flex col-12 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
-                                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>Associate Professor</h5>
-                                        <p class="mb-0">Department of Computer Applications, Cochin University of
-                                            Science and Technology
-                                            (CUSAT), Cochin, Kerala. December 2016 - November 2019</p>
-
-                                    </div>
-                                </div>
-                                <div class="d-flex col-12 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-                                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>
-                                            Associate Professor and Head</h5>
-                                        <p class="mb-0">Department of Computer Applications, Cochin University of
-                                            Science and Technology
-                                            (CUSAT), Cochin, Kerala. December 2016 - November 2019</p>
-
-                                    </div>
-                                </div>
-
-                                <div class="d-flex col-12 mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
-                                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>
-                                            Assistant Professor-III</h5>
-                                        <p class="mb-0">Department of Computer Applications, Cochin University of
-                                            Science and Technology
-                                            (CUSAT), Cochin, Kerala. December 2016 - November 2019</p>
-
-                                    </div>
-                                </div>
-                                <div class="d-flex col-12 mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-                                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>
-                                            Lecturer</h5>
-                                        <p class="mb-0">Department of Computer Applications, Cochin University of
-                                            Science and Technology
-                                            (CUSAT), Cochin, Kerala. December 2016 - November 2019</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $userArr[0]->education4 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->edDescription4 ?></p>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-
-                        <div class="col-lg-12 feature-text wow fadeInUp " data-wow-delay="0.1s">
-                            <h2 class="mb-5">Education</h2>
-                            <div class="d-flex flex-wrap ">
-                                <div class="d-flex  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
-
-                                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>Ph.D. (Computer Science)</h5>
-                                        <p class="mb-0">2009</p>
-
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-5 mx-3 wow fadeIn" data-wow-delay="0.5s">
-                                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>M.Phil. (Computer Science)</h5>
-                                        <p class="mb-0">2009</p>
-
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-5 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-                                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
-                                    <div class="ms-4">
-                                        <h5>
-                                            Master of Computer Applications (MCA)</h5>
-                                        <p class="mb-0">2009</p>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-                    <!-- <div class="col-lg-6">
-                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                            <h2 class="mb-5">Education</h2>
-                        </div>
-                    </div> -->
                 </div>
+
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                <?php $education5 = $userArr[0]->education5;
+                    if (!empty($education5)) {
+                    ?>
+
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5><?php echo $userArr[0]->education5 ?></h5>
+                        <p class="mb-0"><?php echo $userArr[0]->edDescription5 ?></p>
+                    </div>
+                </div>
+
+                <?php }
+                    ?>
+                <!-- EXPERIENCE 5  END -->
+
             </div>
         </div>
 
+        <!-- PUBLICATIONS START -->
+        <?php $publications = $userArr[0]->publications;
+            if (!empty($publications)) {
+            ?>
+        <div class="container my-5" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Publications
+            </h2>
+            <p class="mb-5"><?php echo $userArr[0]->publications ?>
+            </p>
+        </div>
+        <?php }
+            ?>
+
+        <!-- PUBLICATIONS END  -->
 
 
+        <!-- FUNDED PROJECTS START -->
+
+        <?php $role1 = $userArr[0]->role1;
+            $role2 = $userArr[0]->role2;
+            $role3 = $userArr[0]->role3;
+            $role4 = $userArr[0]->role4;
+            $role5 = $userArr[0]->role5;
+            $role6 = $userArr[0]->role6;
+            $role7 = $userArr[0]->role7;
+            $role8 = $userArr[0]->role8;
+            $role9 = $userArr[0]->role9;
+            $role10 = $userArr[0]->role10;
+            if (!empty($role1) || !empty($role2) || !empty($role3) || !empty($role4) || !empty($role5) || !empty($role6) || !empty($role7) || !empty($role8) || !empty($role9) || !empty($role10)) {
+            ?>
+        <div class="container my-5" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Funded Projects
+            </h2>
+            <table class="table table-bordered table-hover">
+                <thead class="bg-primary text-white">
+                    <tr class="text-center">
+                        <th scope="col">Role</th>
+                        <th scope="col">Project</th>
+                        <th scope="col">Funding Agency</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- FUNDED PROJECT 1 START -->
+                    <?php $role1 = $userArr[0]->role1;
+                            if (!empty($role1)) {
+                            ?>
+                    <tr>
+                    <tr>
+                        <td><?php echo $userArr[0]->role1 ?></td>
+                        <td><?php echo $userArr[0]->project1 ?></td>
+                        <td><?php echo $userArr[0]->agency1 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 1 END -->
+
+                    <!-- FUNDED PROJECT 2 START -->
+                    <?php $role2 = $userArr[0]->role2;
+                            if (!empty($role2)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role2 ?></td>
+                        <td><?php echo $userArr[0]->project2 ?></td>
+                        <td><?php echo $userArr[0]->agency2 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 2 END -->
+
+                    <!-- FUNDED PROJECT 3 START -->
+                    <?php $role3 = $userArr[0]->role3;
+                            if (!empty($role3)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role3 ?></td>
+                        <td><?php echo $userArr[0]->project3 ?></td>
+                        <td><?php echo $userArr[0]->agency3 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 3 END -->
+
+                    <!-- FUNDED PROJECT 4 START -->
+                    <?php $role4 = $userArr[0]->role4;
+                            if (!empty($role4)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role4 ?></td>
+                        <td><?php echo $userArr[0]->project4 ?></td>
+                        <td><?php echo $userArr[0]->agency4 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 4 END -->
+
+                    <!-- FUNDED PROJECT 5 START -->
+                    <?php $role5 = $userArr[0]->role5;
+                            if (!empty($role5)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role5 ?></td>
+                        <td><?php echo $userArr[0]->project5 ?></td>
+                        <td><?php echo $userArr[0]->agency5 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 5 END -->
+
+                    <!-- FUNDED PROJECT 6 START -->
+                    <?php $role6 = $userArr[0]->role6;
+                            if (!empty($role6)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role6 ?></td>
+                        <td><?php echo $userArr[0]->project6 ?></td>
+                        <td><?php echo $userArr[0]->agency6 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 6 END -->
+
+                    <!-- FUNDED PROJECT 7 START -->
+                    <?php $role7 = $userArr[0]->role7;
+                            if (!empty($role7)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role7 ?></td>
+                        <td><?php echo $userArr[0]->project7 ?></td>
+                        <td><?php echo $userArr[0]->agency7 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 7 END -->
+
+                    <!-- FUNDED PROJECT 8 START -->
+                    <?php $role8 = $userArr[0]->role8;
+                            if (!empty($role8)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role8 ?></td>
+                        <td><?php echo $userArr[0]->project8 ?></td>
+                        <td><?php echo $userArr[0]->agency8 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 8 END -->
+
+                    <!-- FUNDED PROJECT 9 START -->
+                    <?php $role9 = $userArr[0]->role9;
+                            if (!empty($role9)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role9 ?></td>
+                        <td><?php echo $userArr[0]->project9 ?></td>
+                        <td><?php echo $userArr[0]->agency9 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 9 END -->
+
+                    <!-- FUNDED PROJECT 10 START -->
+                    <?php $role10 = $userArr[0]->role10;
+                            if (!empty($role10)) {
+                            ?>
+                    <tr>
+                        <td><?php echo $userArr[0]->role10 ?></td>
+                        <td><?php echo $userArr[0]->project10 ?></td>
+                        <td><?php echo $userArr[0]->agency10 ?></td>
+                    </tr>
+                    <?php }
+                            ?>
+                    <!-- FUNDED PROJECT 2 END -->
 
 
+                </tbody>
+            </table>
+        </div>
+        <?php }
+            ?>
+
+        <!-- FUNDED PROJECTS END -->
 
 
+        <!-- OTHER DETAILS START -->
+        <?php $otherInfo = $userArr[0]->otherInfo;
+            if (!empty($otherInfo)) {
+            ?>
+        <div class="container my-5" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Other Info
+            </h2>
+            <p class="mb-5"><?php echo $userArr[0]->otherInfo ?>
+            </p>
+        </div>
+        <?php }
+            ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- 
-        <div class="container-fluid overflow-hidden py-5 px-lg-0">
-            <div class="container feature py-5 px-lg-0">
-                <div class="row g-5 mx-lg-0">
-                    <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
-                        <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
-                        <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                            <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
-                            <div class="ms-4">
-                                <h5>Worldwide Service</h5>
-                                <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed
-                                    stet
-                                    lorem sit clita duo
-                                    justo magna erat amet</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                            <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
-                            <div class="ms-4">
-                                <h5>On Time Delivery</h5>
-                                <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed
-                                    stet
-                                    lorem sit clita duo
-                                    justo magna erat amet</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                            <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                            <div class="ms-4">
-                                <h5>24/7 Telephone Support</h5>
-                                <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed
-                                    stet
-                                    lorem sit clita duo
-                                    justo magna erat amet</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-
-        <!-- <div class="container-xxl py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase mb-3">Some Facts</h6>
-                        <h1 class="mb-5">#1 Place To Manage All Of Your Shipments</h1>
-                        <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                            diam
-                            amet
-                            diam et
-                            eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                            dolore
-                            erat
-                            amet
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                            <div class="ps-4">
-                                <h6>Call for any query!</h6>
-                                <h3 class="text-primary m-0">+012 345 6789</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-6">
-                                <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
-                                    <i class="fa fa-users fa-2x text-white mb-3"></i>
-                                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                    <p class="text-white mb-0">Happy Clients</p>
-                                </div>
-                                <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
-                                    <i class="fa fa-ship fa-2x text-white mb-3"></i>
-                                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                    <p class="text-white mb-0">Complete Shipments</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
-                                    <i class="fa fa-star fa-2x text-white mb-3"></i>
-                                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                                    <p class="text-white mb-0">Customer Reviews</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-
-        <!-- <div class="container-fluid overflow-hidden py-5 px-lg-0">
-            <div class="container feature py-5 px-lg-0">
-                <div class="row g-5 mx-lg-0">
-                    <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
-                        <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
-                        <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                            <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
-                            <div class="ms-4">
-                                <h5>Worldwide Service</h5>
-                                <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet
-                                    lorem
-                                    sit
-                                    clita
-                                    duo
-                                    justo magna erat amet</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                            <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
-                            <div class="ms-4">
-                                <h5>On Time Delivery</h5>
-                                <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet
-                                    lorem
-                                    sit
-                                    clita
-                                    duo
-                                    justo magna erat amet</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                            <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                            <div class="ms-4">
-                                <h5>24/7 Telephone Support</h5>
-                                <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet
-                                    lorem
-                                    sit
-                                    clita
-                                    duo
-                                    justo magna erat amet</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
-                        <div class="position-relative h-100">
-                            <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
-                                style="object-fit: cover;" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-
-
-
-
-
-
-
-        <!-- <div class="container-xxl py-5">
-            <div class="container py-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Expert Team Members</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item p-4">
-                            <div class="overflow-hidden mb-4">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <p>Designation</p>
-                            <div class="btn-slide mt-1">
-                                <i class="fa fa-share"></i>
-                                <span>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item p-4">
-                            <div class="overflow-hidden mb-4">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <p>Designation</p>
-                            <div class="btn-slide mt-1">
-                                <i class="fa fa-share"></i>
-                                <span>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item p-4">
-                            <div class="overflow-hidden mb-4">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <p>Designation</p>
-                            <div class="btn-slide mt-1">
-                                <i class="fa fa-share"></i>
-                                <span>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                        <div class="team-item p-4">
-                            <div class="overflow-hidden mb-4">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            </div>
-                            <h5 class="mb-0">Full Name</h5>
-                            <p>Designation</p>
-                            <div class="btn-slide mt-1">
-                                <i class="fa fa-share"></i>
-                                <span>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+        <!-- OTHER DETAILS END  -->
     </div>
-
+    <?php }
+    ?>
 
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>

@@ -2,7 +2,6 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include('admin/includes/config.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
