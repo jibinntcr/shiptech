@@ -73,6 +73,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="../pages/news.php">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">News</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="../pages/events.php">
                 <i class="icon-bar-graph menu-icon"></i>
                 <span class="menu-title">Events</span>
@@ -85,9 +91,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../pages/news.php">
-                <i class="icon-paper menu-icon"></i>
-                <span class="menu-title">News</span>
+            <a class="nav-link" href="../pages/placement.php">
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Placement</span>
             </a>
         </li>
     </ul>
