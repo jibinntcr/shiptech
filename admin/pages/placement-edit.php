@@ -131,7 +131,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             value="<?php echo htmlentities($userArr[0]->company); ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Image</label>
+                                        <label for="exampleTextarea1">Image(768x461 px)</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg">
                                     </div>
