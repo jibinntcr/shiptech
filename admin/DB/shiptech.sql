@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2023 at 01:48 PM
+-- Generation Time: Mar 09, 2023 at 03:09 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -46,6 +46,27 @@ INSERT INTO `announcement` (`id`, `announcements`, `link`, `status`, `dlt_status
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `approvals`
+--
+
+CREATE TABLE `approvals` (
+  `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `year` varchar(4) NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `approvals`
+--
+
+INSERT INTO `approvals` (`id`, `name`, `year`, `image`, `status`) VALUES
+(1, '  FIRST ONE', '2010', '12th Level 1st Stage PSCPDFBANKS.IN.pdf', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `banner`
 --
 
@@ -65,7 +86,8 @@ CREATE TABLE `banner` (
 
 INSERT INTO `banner` (`id`, `mainCaption`, `subCaption`, `image`, `status`, `dltSts`, `topcaption`) VALUES
 (1, 'Banner 1 Main Caption', 'Banner 1 Sub Caption ', 'carousel-1.jpg', 1, NULL, 'Banner 1 Top caption'),
-(2, 'Banner 2 Main Caption  ', 'Banner 2 Sub Caption', 'carousel-1.jpg', 1, NULL, 'Banner 2 Top Caption ');
+(2, 'Banner 2 Main Caption  ', 'Banner 2 Sub Caption', 'carousel-1.jpg', 1, NULL, 'Banner 2 Top Caption '),
+(3, 'Banner 3 Main Caption ', 'Banner 3 Sub caption ', 'carousel-1.jpg', 1, NULL, 'Banner  3 Top Caption');
 
 -- --------------------------------------------------------
 
@@ -165,7 +187,7 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`id`, `name`, `specialization`, `seat`, `eligibility`, `sllabus`, `sllabusLink`, `thumb`, `image`, `syllabus2`, `syllabus3`, `syllabus4`, `syllabus5`, `syllabus6`, `syllabus7`, `syllabus8`, `syllabus9`, `syllabus10`, `syllabus11`, `syllabus12`, `syllabus13`, `syllabus14`, `syllabus15`, `link2`, `link3`, `link4`, `link5`, `link6`, `link7`, `link8`, `link9`, `link10`, `link11`, `link12`, `link13`, `link14`, `link15`, `status`) VALUES
-(8, 'MCA', 'Master of Computer Applications', 'no seat', '<ul>\r\n	<li>Passed BCA/Bachelor degree in Computer Science Engineering or Equivalent degree</li>\r\n</ul>\r\n\r\n<p>OR</p>\r\n\r\n<ul>\r\n	<li>Passed BSc/BCom/BA with Mathematics at 10+2 level or at graduate level (with additional bridge course as per the norms o</li>\r\n</ul>\r\n', '2014 Admission Syllabus', 'https://dca.cusat.ac.in/assets/syllabus/MCA2014Syllabus.pdf', 'course-3.jpg', 'phd-image.jpg', '2015 Admission Syllabus', '2016 Admission Syllabus', '2019 Admission Syllabus', '2020 Admission Syllabus', '2022 Admission Syllabus', '', '', '', '', '', '', '', '', '', 'https://dca.cusat.ac.in/assets/syllabus/MCA2015Syllabus.pdf', 'https://dca.cusat.ac.in/assets/syllabus/MCA2016Syllabus.pdf', 'https://dca.cusat.ac.in/assets/syllabus/MCA2019Syllabus.pdf', 'https://dca.cusat.ac.in/assets/syllabus/MCA2020Syllabus.pdf', 'https://dca.cusat.ac.in/assets/syllabus/MCA2022Syllabus.pdf', '', '', '', '', '', '', '', '', '', 1);
+(11, 'B.TECH', ' NAVAL ARCHITECTURE AND SHIPBUILDING', '43', '<p>Passed BCA/Bachelor degree in Computer Science Engineering or Equivalent degree</p>\r\n', '1974 admission onwards', 'https://shiptech.cusat.ac.in/wp-content/uploads/2022/01/Syllabus-1974-onwards.pdf', 'btchnavel.jpg', 'btchnavel_main.jpg', '1980 admission onwards', 'Prior to 2010 admission', '2010 admission onwards', '2015 admission onwards', '2018 admission onwards', '2020 admission onwards', '', '', '', '', '', '', '', '', 'https://shiptech.cusat.ac.in/wp-content/uploads/2022/01/syllabus-1980-onwards.pdf', 'https://shiptech.cusat.ac.in/wp-content/uploads/2017/12/SYLLABUS-FOR-B.TECH-DEGREE-old.pdf', 'https://shiptech.cusat.ac.in/wp-content/uploads/2017/12/10to15syllabus.pdf', 'https://shiptech.cusat.ac.in/wp-content/uploads/2017/12/2015-syllabus.pdf', 'https://shiptech.cusat.ac.in/wp-content/uploads/2019/07/B.Tech_.NASB-2018-syllabus.pdf', 'https://shiptech.cusat.ac.in/wp-content/uploads/2020/12/B.Tech_.-NASB-Syllabus-2020-21.pdf', '', '', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -208,8 +230,10 @@ CREATE TABLE `events` (
 
 INSERT INTO `events` (`id`, `title`, `image`, `date`, `createdtime`, `content`, `status`) VALUES
 (1, 'first event1 Top tech news: ChatGPT Writes a “Scary Email” to a Ghosted Client and Saves Rs 90 Lakh Payment! “G20 Summit Members Could Consider an Entire Ban on Crypto” – RBI Governor', 'about.jpg', '2023-01-31 18:30:00', '2023-02-28 06:03:56', '<p>Although ChatGPT is a heated topic online, the CEO of a design agency swears by it. The chatbot assisted Greg Isenberg, CEO of Late Checkout, in recovering Rs 90,68,187 lakh ($109,500) from a client who abandoned them without paying. Greg shared this on Twitter. Isenberg described a multi-billion-dollar client who ghosted the company because it consistently &ldquo;underpromised and over-delivered&rdquo; on its designs. Isenberg claimed that the incident was ruining the morale of his team. He considered utilizing ChatGPT to create a &ldquo;little more of a terrifying email to capture attention&rdquo; rather than taking the legal route.&rdquo; Isenberg provided context information in the prompt and instructed ChatGPT to act as though its role is to collect customer payments for the finance department. Should I forward this thread to the client who ghosted me? I never told him that I sent the collecting email using ChatGPT. I believe that would be hilarious for him.&rdquo; Isenberg concluded the thread with a post.Although ChatGPT is a heated topic online, the CEO of a design agency swears by it. The chatbot assisted Greg Isenberg, CEO of Late Checkout, in recovering Rs 90,68,187 lakh ($109,500) from a client who abandoned them without paying. Greg shared this on Twitter. Isenberg described a multi-billion-dollar client who ghosted the company because it consistently &ldquo;underpromised and over-delivered&rdquo; on its designs. Isenberg claimed that the incident was ruining the morale of his team. He considered utilizing ChatGPT to create a &ldquo;little more of a terrifying email to capture attention&rdquo; rather than taking the legal route.&rdquo; Isenberg provided context information in the prompt and instructed ChatGPT to act as though its role is to collect customer payments for the finance department. Should I forward this thread to the client who ghosted me? I never told him that I sent the collecting email using ChatGPT. I believe that would be hilarious for him.&rdquo; Isenberg concluded the thread with a post.</p>\r\n', 1),
-(2, 'second event', 'feature.jpg', '2023-02-22 18:30:00', '2023-02-28 06:05:04', '<p>second conten</p>\r\n', 1),
-(3, 'third one', 'feature.jpg', '2022-12-06 18:30:00', '2023-02-28 07:02:27', '<p>test event on december&nbsp;</p>\r\n', 1);
+(2, 'first event1 Top tech news: ChatGPT Writes a “Scary Email” to a Ghosted Client and Saves Rs 90 Lakh Payment! “G20 Summit Members Could Consider an Entire Ban on Crypto” – RBI Governor', 'feature.jpg', '2023-02-22 18:30:00', '2023-02-28 06:05:04', '<p>second conten</p>\r\n', 1),
+(3, 'first event1 Top tech news: ChatGPT Writes a “Scary Email” to a Ghosted Client and Saves Rs 90 Lakh Payment! “G20 Summit Members Could Consider an Entire Ban on Crypto” – RBI Governor', 'feature.jpg', '2022-12-06 18:30:00', '2023-02-28 07:02:27', '<p>test event on december&nbsp;</p>\r\n', 1),
+(4, 'Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea', 'WhatsApp Image 2023-02-16 at 9.16.23 AM.jpeg', '2023-03-08 18:30:00', '2023-03-03 06:22:10', '<p>Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea</p>\r\n', 1),
+(5, 'Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea', 'Most-beautiful-70-home-designs.jpg', '2023-03-23 18:30:00', '2023-03-03 06:22:41', '<p>Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea</p>\r\n', 1);
 
 -- --------------------------------------------------------
 
@@ -310,7 +334,7 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`id`, `name`, `designation`, `email`, `address`, `iqacLink`, `about`, `interest1`, `interest2`, `interest3`, `interest4`, `interest5`, `interest6`, `interest7`, `interest8`, `interest9`, `interest10`, `education1`, `edDescription1`, `education2`, `edDescription2`, `education3`, `edDescription3`, `education4`, `edDescription4`, `education5`, `edDescription5`, `education6`, `edDescription6`, `experience1`, `experience2`, `experience3`, `experience4`, `experience5`, `experience6`, `experience7`, `experience8`, `experience9`, `experience10`, `expDescription1`, `expDescription2`, `expDescription3`, `expDescription4`, `expDescription5`, `expDescription6`, `expDescription7`, `expDescription8`, `expDescription9`, `expDescription10`, `publications`, `foundedProjects`, `otherInfo`, `image`, `status`, `role1`, `role2`, `role3`, `role4`, `role5`, `role6`, `role7`, `role8`, `role9`, `role10`, `project1`, `project2`, `project3`, `project4`, `project5`, `project6`, `project7`, `project8`, `project9`, `project10`, `agency1`, `agency2`, `agency3`, `agency4`, `agency5`, `agency6`, `agency7`, `agency8`, `agency9`, `agency10`, `thumbname`) VALUES
-(3, 'Jerry Sabu', 'designation', 'jerryaksa97@gmail.com', 'address', 'https://iqac.cusat.ac.in/Web/profile_view/184/Dr.M.V.JUDY', 'about', ' Data Mining ', 'Computational Biology', 'Big Data', 'Evolutionary Computing', 'Affective Computing', '', '', '', '', '', 'Ph.D. (Computer Science)', '2009', 'M.Phil. (Computer Science)', '2005', 'Master of Computer Applications (MCA)', '2002', '', '', '', '', '', '', 'Professor', 'Associate Professor', 'Associate Professor and H', 'Assistant Professor-III', 'Lecturer', '', '', '', '', '', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2019 - Till Date', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2016 - November 2019', 'Department of CS and IT AMRITA University (Kochi Campus)\r\nJune 2010 - December 2016', 'SASTRA University, Thanjavur.\r\nAugust 2003 - November 2009', 'Bishop Heber College, Trichy.\r\nAugust 2002 - August 2003', '', '', '', '', '', '<ul>\r\n	<li>nil</li>\r\n</ul>\r\n', NULL, '', 'faculty-judy (1).jpg', 1, 'Co-PI', 'Principal Investigator', 'Supervisor ', 'Principal Investigator', 'Principal Investigator', 'Mentor', 'Co-PI', '', '', '', 'Establishment of Bioinformatics Centre, CUSAT', 'Visual Enhancement of Underwater Optical Images and, Accuracy Improvement of Target', 'Big data analytics research Facility', 'Development of a computational tool, algorithms for Gene finding, mapping of genotype – phenotype based on classification of clinical data for Autism spectrum disorder.', 'Implementation of enhanced Deep learning algorithms for Big data analytics in computational epidemiology', 'Automated real time traffic control system', 'Securing Clinical Information in Medical Images', '', '', '', 'Department of Biotechnology, Govt of India', 'Department of Science and Technology Frontiers And Futuristic Technologies', 'CUSAT – State Plan Grants 2016-2017', 'Department of Science and Technology Cognitive Science Division', 'CUSAT – State Plan Grants 2016-2017', 'IEDC - CUSAT7', 'Rajagiri Hospital/Rajagiri School of Social Sciences', '', '', '', 'first page qualification');
+(3, 'Jerry Sabu', 'Professor', 'jerryaksa97@gmail.com', 'address', 'https://iqac.cusat.ac.in/Web/profile_view/184/Dr.M.V.JUDY', 'about', ' Data Mining ', 'Computational Biology', 'Big Data', 'Evolutionary Computing', 'Affective Computing', 'TEST6', 'TEST7', 'TEST8', 'TEST9', 'TEST10', 'Ph.D. (Computer Science)', '2009', 'M.Phil. (Computer Science)', '2005', 'Master of Computer Applications (MCA)', '2002', 'Education 4', 'Education Description 4', 'Education 5', 'Education Description 5', 'Education 6', 'Education Description 6', 'Professor', 'Associate Professor', 'Associate Professor and H', 'Assistant Professor-III', 'Lecturer', 'Experience 6', 'Experience 7', 'Experience 8', 'Experience 9', 'Experience 10', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2019 - Till Date', 'Department of Computer Applications, Cochin University of Science and Technology (CUSAT), Cochin, Kerala.\r\nDecember 2016 - November 2019', 'Department of CS and IT AMRITA University (Kochi Campus)\r\nJune 2010 - December 2016', 'SASTRA University, Thanjavur.\r\nAugust 2003 - November 2009', 'Bishop Heber College, Trichy.\r\nAugust 2002 - August 2003', 'Experience Description 6', 'Experience Description 7', 'Experience Description 8', 'Experience 9', 'Experience Description 10', '<ul>\r\n	<li>Test 1</li>\r\n</ul>\r\n', NULL, '<ul>\r\n	<li>test info</li>\r\n</ul>\r\n', 'SOP_Mammootty2016.jpg', 1, '', 'Funded Project Role 2', 'Funded Project Role 3', 'Funded Project Role 4', 'Funded Project Role 5', 'Funded Project Role 6', 'Funded Project Role 7', 'Funded Project Role 8', 'Funded Project Role 9', '', '', 'Funded Project Name 2', 'Funded Project Name 3', 'Funded Project Name 4', 'Funded Project Name 5', 'Funded Project Name 6', 'Funded Project Name 7', 'Funded Project Name 8', 'Funded Project Name 9', '', '', 'Funding Agency 2', 'Funding Agency 3', 'Funding Agency 4', 'Funding Agency 5', 'Funding Agency 6', 'Funding Agency 7', 'Funding Agency 8', 'Funding Agency 9', '', 'MCA.,M.Tech.');
 
 -- --------------------------------------------------------
 
@@ -450,8 +474,12 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `image`, `date`, `time`, `content`, `status`) VALUES
-(1, 'new Date Changed Sunak and EU chief expected to agree new NI Brexit deal', 'about.jpg', '2023-02-25 18:30:00', '2023-02-27 10:59:32', '<p>Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.</p>\r\n', 1),
-(2, 'Manish Sisodia News Live Updates: Court sends Delhi deputy CM to CBI remand till March 4 in excise policy case', 'about.jpg', '2023-03-09 18:30:00', '2023-02-27 12:01:30', '<p>Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.</p>\r\n', 1);
+(1, 'new Date Changed Sunak and EU chief expected to agree new NI Brexit deal', 'service-1.jpg', '2023-02-25 18:30:00', '2023-02-27 10:59:32', '<p>Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.</p>\r\n', 1),
+(2, 'Manish Sisodia News Live Updates: Court sends Delhi deputy CM to CBI remand till March 4 in excise policy case', 'about.jpg', '2023-03-09 18:30:00', '2023-02-27 12:01:30', '<p>Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.Xiaomi 13 series has made its global debut. The Xiaomi 13 and 13 Pro were originally launched in China in December 2022, and now the China-headquartered company is bringing the devices to global markets. In India, so far the company has launched the Xiaomi 13 Pro. Based on previous releases, Xiaomi 13 series will not launch in the US, but will be available in the UK, Europe and other parts of Asia. Xiaomi 13 Pro is the &#39;most-powerful&#39; Xiaomi phone to launch in India yet. The phone got listed on Amazon website recently and will go on sale next month.</p>\r\n', 1),
+(3, 'Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea', '5486441_2376176.jpg', '2023-03-29 18:30:00', '2023-03-03 06:20:12', '<p>Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea</p>\r\n', 1),
+(4, 'Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea', '5486441_2376176.jpg', '2023-03-17 18:30:00', '2023-03-03 06:20:44', '<p>Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea</p>\r\n', 1),
+(5, 'Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea', 'amigo pic.png', '2023-03-17 18:30:00', '2023-03-03 06:21:15', '<p>Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea</p>\r\n', 1),
+(6, 'Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea', 'gaurav-kumar-33Z4FsBTiAY-unsplash.jpg', '2023-01-04 18:30:00', '2023-03-03 06:21:36', '<p>Quam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros plateaQuam tincidunt elit pulvinar, ante odio ornare, netus consectetur ullamcorper varius sed luctus eros sem. Hac posuere felis, erat fames malesuada volutpat. Velit massa nulla nostra, potenti risus eros platea</p>\r\n', 1);
 
 -- --------------------------------------------------------
 
@@ -468,19 +496,39 @@ CREATE TABLE `patents` (
   `description` varchar(6000) NOT NULL,
   `image` varchar(250) NOT NULL,
   `status` tinyint(1) NOT NULL,
-  `dltStatus` tinyint(1) NOT NULL,
-  `member2` varchar(255) DEFAULT NULL,
-  `member3` varchar(255) DEFAULT NULL,
-  `member4` varchar(255) DEFAULT NULL,
-  `member5` varchar(255) DEFAULT NULL
+  `dltStatus` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `patents`
 --
 
-INSERT INTO `patents` (`id`, `name`, `projectname`, `publicationDate`, `member1`, `description`, `image`, `status`, `dltStatus`, `member2`, `member3`, `member4`, `member5`) VALUES
-(2, 'Dr. Santosh Kumar M. B.', 'PORTABLE AGRICULTURE NETWORK SYSTEM', '24/05/2019', 'Dr. Santosh Kumar M. B.', 'Banana plant farmers are facing severe problems of uprooting and breakage of their fully grown plants due to climatic (wind or other) effects. They find it difficult to safeguard their plants from such natural forces owing to their ignorance as to how and where failure could get started. In order to predict failure pattern of banana plants through a Finite Element Analysis (FEA), the mechanical properties of the plants are essential. Isotropic behavior is assumed for the banana plants and the Young’s modulus of elasticity, Poisson’s ratio, compressive strength and flexural strength of the material of stems of banana plants were determined.', 'patent-santhosh-kumar.jpg', 1, 0, 'Kannan Balakrishnan', 'Sunilkumar Neelakantapillai', '', '');
+INSERT INTO `patents` (`id`, `name`, `projectname`, `publicationDate`, `member1`, `description`, `image`, `status`, `dltStatus`) VALUES
+(2, '   Dr. Santosh Kumar M. B.', 'PORTABLE AGRICULTURE NETWORK SYSTEM', '24/05/2019', 'test name1,test name2,test name3', 'Banana plant farmers are facing severe problems of uprooting and breakage of their fully grown plants due to climatic (wind or other) effects. They find it difficult to safeguard their plants from such natural forces owing to their ignorance as to how and where failure could get started. In order to predict failure pattern of banana plants through a Finite Element Analysis (FEA), the mechanical properties of the plants are essential. Isotropic behavior is assumed for the banana plants and the Young’s modulus of elasticity, Poisson’s ratio, compressive strength and flexural strength of the material of stems of banana plants were determined.', 'service-1.jpg', 1, 0),
+(3, ' Test Patent', 'Test Project Name', '10-12-1995', 'memeber1,member2,memebr3,member4', 'lorem', 'service-1.jpg', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `placement`
+--
+
+CREATE TABLE `placement` (
+  `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `year` varchar(20) NOT NULL,
+  `course` text NOT NULL,
+  `company` text NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `placement`
+--
+
+INSERT INTO `placement` (`id`, `name`, `year`, `course`, `company`, `image`, `status`) VALUES
+(1, 'test 2', 'test2', 'test2', 'test2', 'service-1.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -492,7 +540,7 @@ CREATE TABLE `recognition` (
   `id` int(11) NOT NULL,
   `name` varchar(250) NOT NULL,
   `designation` varchar(250) NOT NULL,
-  `recognition` varchar(6000) NOT NULL,
+  `recognition` text NOT NULL,
   `status` tinyint(1) NOT NULL,
   `dltSts` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -502,7 +550,7 @@ CREATE TABLE `recognition` (
 --
 
 INSERT INTO `recognition` (`id`, `name`, `designation`, `recognition`, `status`, `dltSts`) VALUES
-(2, '  Dr. Vinod P.', 'Professor', '<p><strong>MARIE SKLODOWSKA</strong></p>\r\n\r\n<p>Post Doctoral fellowship (Seal of Excellence) under Horizon Europe, for the implementation of this project, he is approved 1,88,590.08/- Euros from the host institution of research which is the University of Padua, Italy.</p>\r\n\r\n<p><br />\r\n<strong>IN 2021 HE WAS AWARDED THE SEAL OF EXCELLENCE FOR A MARIE SKŁODOWSKA</strong></p>\r\n\r\n<p>Curie Individual Fellowship project proposal (Project Title OPTIMA: Organization Specific Threat Intelligence Mining and Sharing ) by the European Commission, approved 100,000 Euros from the host institution of research which is the University of Padua, Italy.</p>\r\n\r\n<p><br />\r\n<strong>SPADE</strong></p>\r\n\r\n<p>Signature-based Packer Detection, In Symposium on Information Security (SIS 2013), BITS Pilani, Hyderabad campus, November 15-16, 2013</p>\r\n', 1, 0);
+(2, ' test', 'Professor', '<p><strong>MARIE SKLODOWSKA</strong></p>\r\n\r\n<p>Post Doctoral fellowship (Seal of Excellence) under Horizon Europe, for the implementation of this project, he is approved 1,88,590.08/- Euros from the host institution of research which is the University of Padua, Italy.</p>\r\n\r\n<p><br />\r\n<strong>IN 2021 HE WAS AWARDED THE SEAL OF EXCELLENCE FOR A MARIE SKŁODOWSKA</strong></p>\r\n\r\n<p>Curie Individual Fellowship project proposal (Project Title OPTIMA: Organization Specific Threat Intelligence Mining and Sharing ) by the European Commission, approved 100,000 Euros from the host institution of research which is the University of Padua, Italy.</p>\r\n\r\n<p><br />\r\n<strong>SPADE</strong></p>\r\n\r\n<p>Signature-based Packer Detection, In Symposium on Information Security (SIS 2013), BITS Pilani, Hyderabad campus, November 15-16, 2013</p>\r\n', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -753,6 +801,12 @@ ALTER TABLE `announcement`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `approvals`
+--
+ALTER TABLE `approvals`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `banner`
 --
 ALTER TABLE `banner`
@@ -838,6 +892,12 @@ ALTER TABLE `patents`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `placement`
+--
+ALTER TABLE `placement`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `recognition`
 --
 ALTER TABLE `recognition`
@@ -914,10 +974,16 @@ ALTER TABLE `announcement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT for table `approvals`
+--
+ALTER TABLE `approvals`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `completedresearchscholar`
@@ -935,7 +1001,7 @@ ALTER TABLE `conference`
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `dcaoth`
@@ -947,7 +1013,7 @@ ALTER TABLE `dcaoth`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `faculty`
@@ -989,13 +1055,19 @@ ALTER TABLE `mous`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `patents`
 --
 ALTER TABLE `patents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `placement`
+--
+ALTER TABLE `placement`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `recognition`
