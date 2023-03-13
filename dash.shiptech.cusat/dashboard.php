@@ -40,74 +40,62 @@
                         <div class="col-md-12 grid-margin stretch-card">
                             <div class="row">
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = 'announcements.php';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = 'announcements.php';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Announcements</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = 'hod.php';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = 'hod.php';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>HOD Message</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Courses</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Testimonials</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Faculty</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>PhD</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Patentes</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Recognition</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>MoU</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Lab</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Events</h4>
                                     </button>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button onclick="location.href = '#';" type="button"
-                                        class="btn btn-primary btn-lg btn-block">
+                                    <button onclick="location.href = '#';" type="button" class="btn btn-primary btn-lg btn-block">
                                         <h4>Gallery</h4>
                                     </button>
                                 </div>
@@ -135,25 +123,25 @@
     <!-- container-scroller -->
 
     <!-- plugins:js -->
-    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="../vendors/chart.js/Chart.min.js"></script>
-    <script src="../vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <script src="../js/dataTables.select.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
 
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="../js/off-canvas.js"></script>
-    <script src="../js/hoverable-collapse.js"></script>
-    <script src="../js/template.js"></script>
-    <script src="../js/settings.js"></script>
-    <script src="../js/todolist.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/Chart.roundedBarCharts.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
 </body>
 
