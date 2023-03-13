@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,8 +107,8 @@ include('admin/includes/config.php');
                     foreach ($results as $result) { ?>
 
             <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <a href="admin/pages/<?php echo   $result->image ?>" class="fancybox" data-fancybox="gallery1">
-                    <img src="admin/pages/<?php echo $result->image ?>" class="img-fluid  w-100 h-100"
+                <a href="uploads/<?php echo   $result->image ?>" class="fancybox" data-fancybox="gallery1">
+                    <img src="uploads/<?php echo $result->image ?>" class="img-fluid  w-100 h-100"
                         style="object-fit: cover; border-radius: 20px;" alt="Gallery Images">
                 </a>
 

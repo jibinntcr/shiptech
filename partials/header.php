@@ -49,8 +49,8 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
                 <div class="dropdown-menu bg-light border-0 m-0" style="width: 200px;">
                     <a href="faculty.php" class="dropdown-item">Faculty</a>
-                    <a href="faculty.php" class="dropdown-item">Technical Staff</a>
-                    <a href="faculty.php" class="dropdown-item">Administrative Staff</a>
+                    <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
+                    <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a>
                 </div>
             </div>
             <div class=" nav-item dropdown">

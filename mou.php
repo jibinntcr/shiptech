@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,8 +88,7 @@ include('admin/includes/config.php');
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="admin/pages/uploads/<?php echo   $result->image ?>"
-                                alt="">
+                            <img class="fac-img-curv img-fluid" src="uploads/<?php echo   $result->image ?>" alt="">
                         </div>
                         <h4><?php echo   $result->name ?></h4>
                         <span class="mb-3"><?php echo $result->year ?></span><br>

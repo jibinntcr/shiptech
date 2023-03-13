@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 
 ?>
 
@@ -17,7 +17,7 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,7 +95,7 @@ include('admin/includes/config.php');
             ?>
             <div class="col-md-7">
                 <h1 class="mb-4"><?php echo htmlentities($userArr[0]->title); ?></h1>
-                <img src="admin/pages/uploads/<?php echo htmlentities($userArr[0]->image); ?>" alt="Article Image"
+                <img src="uploads/<?php echo htmlentities($userArr[0]->image); ?>" alt="Article Image"
                     style="border-radius: 25px;" class="img-fluid mb-4">
                 <p class="mb-4">
                     <span style="color:#ff3e41 ; font-weight: bold; "> <i class="fa-regular fa-clock"></i></span> <span

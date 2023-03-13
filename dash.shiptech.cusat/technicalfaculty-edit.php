@@ -116,7 +116,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Message</label>
+                                        <label for="exampleTextarea1">Designation</label>
                                         <input type="text" class="form-control" id="designation" name="designation"
                                             value="<?php echo htmlentities($userArr[0]->designation); ?>">
                                     </div>

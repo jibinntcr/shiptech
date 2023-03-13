@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 
 ?>
 
@@ -16,7 +16,7 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,7 +99,7 @@ include('admin/includes/config.php');
                                     style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
                                     <img class="d-block "
                                         style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
-                                        src="admin/pages/uploads/<?php echo $result->image ?>" alt="">
+                                        src="uploads/<?php echo $result->image ?>" alt="">
                                     <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                         <div class="ms-4 overflow-hidden">
                                             <a href="news-view.php?id=<?php echo   $result->id ?>">

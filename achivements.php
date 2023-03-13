@@ -9,12 +9,13 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -36,7 +37,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -77,7 +79,8 @@
                             <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
                         </div>
                         <h4 class="mb-3">Patents</h4>
-                        <a href="patentes.php" class="btn-slide mt-2" href="course-details.php"><i class="fa fa-arrow-right"></i><span>Read
+                        <a href="patentes.php" class="btn-slide mt-2" href="course-details.php"><i
+                                class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>
@@ -87,7 +90,8 @@
                             <img class="img-fluid fac-img-curv" src="img/service-2.jpg" alt="">
                         </div>
                         <h4 class="mb-3">Recognition</h4>
-                        <a href="recognition.php" class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                        <a href="recognition.php" class="btn-slide mt-2" href=""><i
+                                class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>

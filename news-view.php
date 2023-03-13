@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 
 ?>
 
@@ -17,12 +17,13 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -40,17 +41,18 @@ include('admin/includes/config.php');
     <link href="css/style.css" rel="stylesheet">
     <link href="css/gallery.css" rel="stylesheet">
     <style>
-        ul {
-            list-style: none;
-            position: relative;
-        }
+    ul {
+        list-style: none;
+        position: relative;
+    }
     </style>
 
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -90,19 +92,21 @@ include('admin/includes/config.php');
             $userArr = $query->fetchAll(PDO::FETCH_OBJ);
             if ($query->rowCount() > 0) {
             ?>
-                <div class="col-md-7">
-                    <h1 class="mb-4"><?php echo htmlentities($userArr[0]->title); ?></h1>
-                    <img src="admin/pages/uploads/<?php echo htmlentities($userArr[0]->image); ?>" alt="Article Image" style="border-radius: 25px;" class="img-fluid mb-4">
-                    <p class="mb-4">
-                        <span style="color:#ff3e41 ; font-weight: bold; "> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold">
-                            <?php $date = $userArr[0]->date;
+            <div class="col-md-7">
+                <h1 class="mb-4"><?php echo htmlentities($userArr[0]->title); ?></h1>
+                <img src="uploads/<?php echo htmlentities($userArr[0]->image); ?>" alt="Article Image"
+                    style="border-radius: 25px;" class="img-fluid mb-4">
+                <p class="mb-4">
+                    <span style="color:#ff3e41 ; font-weight: bold; "> <i class="fa-regular fa-clock"></i></span> <span
+                        class=" font-bold">
+                        <?php $date = $userArr[0]->date;
                             $date = date_create($date);
                             echo date_format($date, "d/m/Y"); ?></span>
-                    </p>
-                    <p class="mb-4 justify-para">
-                        <?php echo ($userArr[0]->content); ?>
-                    </p>
-                </div>
+                </p>
+                <p class="mb-4 justify-para">
+                    <?php echo ($userArr[0]->content); ?>
+                </p>
+            </div>
             <?php }
             ?>
             <div class="container my-5 col-xl-5">
@@ -122,32 +126,37 @@ include('admin/includes/config.php');
                             foreach ($results as $result) {
                         ?>
 
-                                <li>
-                                    <div class="d-flex border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                        <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="admin/pages/uploads/<?php echo $result->image ?>" alt="">
-                                        <div class="d-flex col-md-8 mb-0 mx-md-3  ">
-                                            <div class="ms-4 overflow-hidden">
-                                                <a href="news-view.php?id=<?php echo   $result->id ?>">
-                                                    <h6 class="my-2 my-lg-2">
-                                                        <?php
+                        <li>
+                            <div class="d-flex border p-1 my-4 align-items-center"
+                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <img class="d-block "
+                                    style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
+                                    src="uploads/<?php echo $result->image ?>" alt="">
+                                <div class="d-flex col-md-8 mb-0 mx-md-3  ">
+                                    <div class="ms-4 overflow-hidden">
+                                        <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                            <h6 class="my-2 my-lg-2">
+                                                <?php
                                                         $title =  substr($result->title, 0, 27);
                                                         $subHeading = substr($result->content, 0, 39);
                                                         echo  $title
                                                         ?> </h6>
-                                                </a>
-                                                <p class="p-sm-2">
-                                                    <?php echo  $subHeading ?>...
-                                                </p>
-                                                <p class="mt-1">
-                                                    <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-clock"></i></span> <span class=" font-bold" style="font-size: smaller;">
-                                                        <?php $date = $result->date;
+                                        </a>
+                                        <p class="p-sm-2">
+                                            <?php echo  $subHeading ?>...
+                                        </p>
+                                        <p class="mt-1">
+                                            <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
+                                                    class="fa-regular fa-clock"></i></span> <span class=" font-bold"
+                                                style="font-size: smaller;">
+                                                <?php $date = $result->date;
                                                         $date = date_create($date);
                                                         echo date_format($date, "d/m/Y"); ?></span>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        </p>
                                     </div>
-                                </li>
+                                </div>
+                            </div>
+                        </li>
                         <?php }
                         } ?>
 

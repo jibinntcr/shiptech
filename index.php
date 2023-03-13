@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ include('admin/includes/config.php');
     <link href="css/date.css" rel="stylesheet">
 
     <link href="css/event.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body style="box-flex-group: #d6d6d6;">
@@ -76,7 +76,7 @@ include('admin/includes/config.php');
             ?>
 
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="admin/pages/uploads/<?php echo   $result->image ?>" alt="">
+                <img class="img-fluid" src="uploads/<?php echo   $result->image ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
@@ -309,7 +309,7 @@ include('admin/includes/config.php');
                       width: 120.34px;
                       height: 120.34px;
                       object-fit: contain;
-                      border-radius: 20px;" src="admin/pages/uploads/<?php echo $result->image ?>" alt="" />
+                      border-radius: 20px;" src="uploads/<?php echo $result->image ?>" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
                                         <div class="ms-4 overflow-hidden">
@@ -476,8 +476,7 @@ include('admin/includes/config.php');
 
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
-                            src="admin/pages/uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;"
-                            alt="">
+                            src="uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
@@ -521,8 +520,7 @@ include('admin/includes/config.php');
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="admin/pages/uploads/<?php echo $result->image ?>"
-                                alt="">
+                            <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->image ?>" alt="">
                         </div>
                         <h4 class="mb-3"><?php echo $result->name ?></h4>
                         <p><?php echo $result->specialization ?></p>
@@ -572,8 +570,7 @@ include('admin/includes/config.php');
                             <div class="testimonial-item">
                                 <div class="d-flex align-items-center mb-4">
                                     <div class="photo mr-3">
-                                        <img src="admin/pages/uploads/<?php echo $result->image ?>" alt="Image"
-                                            class="img-fluid">
+                                        <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
                                     </div>
                                     <div class="author">
                                         <cite class="d-block mb-0"><?php echo $result->name ?></cite>

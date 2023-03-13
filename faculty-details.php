@@ -1,7 +1,7 @@
 <?php ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include('admin/includes/config.php');
+include('includes/config.php');
 
 ?>
 
@@ -17,7 +17,8 @@ include('admin/includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,7 +94,7 @@ include('admin/includes/config.php');
                     style="min-height: 400px;">
                     <!-- card  -->
                     <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
-                        <img src="admin/pages/uploads/<?php echo $userArr[0]->image ?>" class="card-img-top img-fluid"
+                        <img src="uploads/<?php echo $userArr[0]->image ?>" class="card-img-top img-fluid"
                             style="border-radius: 15px;" alt="faculty image" />
                         <div class="card-body text-center">
                             <h4 class="card-title text-uppercase ">
