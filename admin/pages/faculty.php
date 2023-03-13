@@ -57,7 +57,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                 <div class="col-md-6 mb-4">
                                     <button onclick="location.href = 'technicalfaculty.php';" type="button"
                                         class="btn btn-primary btn-lg btn-block">
-                                        <h4>Technical Staff</h4>
+                                        <h4>Other Staff</h4>
                                     </button>
                                 </div>
                             </div>

@@ -9,12 +9,13 @@ if (strlen($_SESSION['alogin']) == 0) {
     if (isset($_POST['technicalstaffBTN'])) {
         $name = $_POST['name'];
         $designation = $_POST['designation'];
+        $stafftype = $_POST['stafftype'];
         $folder = 'uploads/';
         $file = $folder . basename($_FILES["file"]["name"]);
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO technicalstaff(name,designation,status,image) VALUES ('" . $name . "','" . $designation . "','" . $status . "','" . $photo . "')";
+        $sql = "INSERT INTO technicalstaff(name,designation,type,status,image) VALUES ('" . $name . "','" . $designation . "','" . $stafftype . "','" . $status . "','" . $photo . "')";
         $query = $dbh->prepare($sql);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
@@ -35,7 +36,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>New Technical Staff | Shiptech Admin</title>
+    <title>New Other Staff | Shiptech Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../vendors/feather/feather.css">
     <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -68,11 +69,18 @@ if (strlen($_SESSION['alogin']) == 0) {
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">New Technical Staff</h4>
+                                <h4 class="card-title">New Other Staff</h4>
                                 <form class="forms-sample" enctype="multipart/form-data" method="POST">
                                     <div class="form-group">
                                         <label for="exampleInputUsername1">Name</label>
                                         <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleSelectGender">Type</label>
+                                        <select class="form-control" id="stafftype" name="stafftype" required="">
+                                            <option>Technical Staff </option>
+                                            <option>Administrative Staff</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea1">Designation</label>

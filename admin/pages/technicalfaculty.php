@@ -16,7 +16,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Technical Faculty | Shiptech Admin</title>
+    <title>Other Staff | Shiptech Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../vendors/feather/feather.css">
     <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
@@ -53,7 +53,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <div class="col-md-12 grid-margin">
                             <div class="row">
                                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                                    <h3 class="font-weight-bold">Technical Faculty </h3>
+                                    <h3 class="font-weight-bold">Other Staff</h3>
                                 </div>
                                 <div class="col-12 col-xl-4">
                                     <div class="justify-content-end d-flex">
