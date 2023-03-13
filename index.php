@@ -14,7 +14,7 @@ include('includes/config.php');
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <link rel="stylesheet" href="testimonial/css/bootstrap.min.css">
     <link rel="stylesheet" href="testimonial/css/owl.carousel.min.css">
@@ -45,7 +45,6 @@ include('includes/config.php');
     <link href="css/date.css" rel="stylesheet">
 
     <link href="css/event.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body style="box-flex-group: #d6d6d6;">
