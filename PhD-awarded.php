@@ -91,14 +91,16 @@ include('includes/config.php');
                         foreach ($results as $result) {
                     ?>
                     <tr>
-                        <td>1</td>
+                        <td><?php echo $cnt ?></td>
                         <td><?php echo $result->name ?></td>
                         <td><?php echo $result->title ?></td>
                         <td><?php echo $result->guide ?></td>
                         <td><?php echo $result->year ?></td>
                     </tr>
-                    <?php }
-                    } ?>
+                    <?php $cnt = $cnt + 1;
+                        }
+                    }
+                    ?>
 
                 </tbody>
             </table>
