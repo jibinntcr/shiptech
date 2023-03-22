@@ -95,13 +95,15 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                             ?>
                                                 <td><?php echo  $name ?></td>
 
-                                                <!-- <td>
-                                                                <div class="template-demo mt-2">
-                                                                    <button onclick="location.href = 'researchguide-edit.php?id=<?php echo   $result->id ?>';" type="button" class="btn btn-primary btn-rounded btn-icon">
-                                                                        <i class="mdi mdi-border-color"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </td> -->
+                                                <td>
+                                                    <div class="template-demo mt-2">
+                                                        <button
+                                                            onclick="location.href = 'edit-regulations.php?id=<?php echo   $result->id ?>';"
+                                                            type="button" class="btn btn-primary btn-rounded btn-icon">
+                                                            <i class="mdi mdi-border-color"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
                                                 <?php
 
                                                             $status = $result->status;

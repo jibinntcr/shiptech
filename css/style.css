@@ -829,3 +829,32 @@
 .recognition-para {
   color: #696e77;
 }
+.our-teamRec {
+  border: 1px solid #d3d3d3;
+  padding: 15px;
+  overflow: hidden;
+}
+.our-teamRec img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+}
+.our-teamRec .team-title a {
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  color: #444;
+  transition: all 0.5s ease;
+}
+.our-teamRec:hover .team-title a {
+  color: #f34f47;
+  text-decoration: none;
+}
+.our-teamRec .team-title small {
+  font-size: 13px;
+  color: #808080;
+}
+.our-teamRec .team-content {
+  padding: 15px 0 15px 5px;
+}
