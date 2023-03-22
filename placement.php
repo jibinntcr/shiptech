@@ -1,3 +1,9 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('includes/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,91 +75,48 @@
     </div>
     <!-- Page Header End -->
 
+
     <div class="container-xxl py-5">
+
+        <!-- partner companies start  -->
+
         <div class="container">
             <div class="row row g-4 justify-content-center">
                 <h1 class="mb-4 text-center wow fadeInUp" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s;">Placement</h1>
-                <div class="container">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="cards-wrapper">
-                                    <div class="card" style="border-radius: 20px">
-                                        <img class="d-block" style="
-                    width: 400px;
-                    height: 266px;
-                    object-fit: cover;
-                    border-radius: 20px;
-                  " src="img/placed-student-image.jpg" alt="" />
-                                    </div>
-                                    <div class="card d-none d-md-block" style="border-radius: 20px">
-                                        <img class="d-block" style="
-                    width: 400px;
-                    height: 266px;
-                    object-fit: cover;
-                    border-radius: 20px;
-                  " src="img/placed-student-image.jpg" alt="" />
-                                    </div>
-                                    <div class="card d-none d-md-block" style="border-radius: 20px">
-                                        <img class="d-block" style="
-                    width: 400px;
-                    height: 266px;
-                    object-fit: cover;
-                    border-radius: 20px;
-                  " src="img/placed-student-image.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
+                    style="visibility: visible; animation-delay: 0.1s;">Placed Students</h1>
+                <?php
+                $sql = "SELECT DISTINCT `year` FROM placement WHERE status='1' ORDER BY `year` DESC";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
 
-                            <div class="carousel-item">
-                                <div class="cards-wrapper">
-                                    <div class="card" style="border-radius: 20px">
-                                        <img class="d-block" style="
-                    width: 400px;
-                    height: 266.34px;
-                    object-fit: cover;
-                    border-radius: 20px;
-                  " src="img/placed-student-image.jpg" alt="" />
-                                    </div>
-                                    <div class="card d-none d-md-block " style="border-radius:
-              20px;">
 
-                                        <img class=" d-block" style="
-                  width: 400px;
-                  height: 266px;
-                  object-fit: cover;
-                  border-radius: 20px;
-                " src="img/placed-student-image.jpg" alt="" />
-                                    </div>
-                                    <div class="card d-none d-md-block" style="border-radius: 20px">
-                                        <img class="d-block" style="
-                  width: 400px;
-                  height: 266px;
-                  object-fit: cover;
-                  border-radius: 20px;
-                " src="img/placed-student-image.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp text-center center" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s;">
+                    <button type="button"
+                        onClick="Javascript:window.location.href='placed-students.php?id=<?php echo   $result->year ?>'"
+                        class=" btn btn-primary btn-lg text-white btn-hover align-items-center justify-content-center">
+                        <?php echo $result->year ?></button>
 
 
 
                 </div>
+                <?php }
+                } ?>
+
+
+
+
+
             </div>
         </div>
+    </div>
+    <div class=" container-xxl py-5">
 
         <!-- partner companies start  -->
 

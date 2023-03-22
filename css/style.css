@@ -419,6 +419,55 @@
   background: var(--secondary);
 }
 
+/*** Team ***/
+.team-item-pl {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.team-item-pl::before,
+.team-item-pl::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 40%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.team-item-pl::after {
+  top: auto;
+  bottom: 0;
+}
+
+.team-item-pl:hover::before,
+.team-item-pl:hover::after {
+  background: var(--primary);
+}
+
+.team-item-pl h5,
+.team-item-pl p {
+  transition: 0.5s;
+}
+
+.team-item-pl:hover h5,
+.team-item-pl:hover p {
+  color: #ffffff;
+}
+
+.team-item-pl img {
+  padding: 15px;
+  border: 1px solid var(--primary);
+}
+
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item {
   position: relative;

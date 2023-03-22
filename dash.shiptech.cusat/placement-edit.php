@@ -121,17 +121,12 @@ if (strlen($_SESSION['alogin']) == 0) {
                                             value="<?php echo htmlentities($userArr[0]->year); ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Message</label>
-                                        <input type="text" class="form-control" id="course" name="course"
-                                            value="<?php echo htmlentities($userArr[0]->course); ?>">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="exampleTextarea1">Company Name</label>
                                         <input type="text" class="form-control" id="company" name="company"
                                             value="<?php echo htmlentities($userArr[0]->company); ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleTextarea1">Image(768x461 px)</label>
+                                        <label for="exampleTextarea1">Image(500x500 px)</label>
                                         <input class="form-control" type="file" id="file" name="file"
                                             accept="image/gif, image/png, image/jpg, image/jpeg">
                                     </div>
