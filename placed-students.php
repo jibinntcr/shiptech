@@ -78,7 +78,8 @@ include('includes/config.php');
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Shiptech CUSAT</h6>
-                <h1 class="mb-5">Placed Students</h1>
+                <?php $id = $_GET['id']; ?>
+                <h1 class="mb-5">Placed Students of <?php echo $id ?></h1>
             </div>
 
 
@@ -86,7 +87,7 @@ include('includes/config.php');
 
             <div class="row g-4">
                 <?php
-                $id = $_GET['id'];
+
                 $sql = "SELECT * from placement  WHERE status='1' AND year='$id'";
                 $query = $dbh->prepare($sql);
                 $query->execute();
@@ -98,12 +99,11 @@ include('includes/config.php');
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item-pl">
-                        <h5><?php echo   $result->company ?></h5>
                         <img class="img-fluid rounded-circle w-100 mb-4" src="uploads/<?php echo   $result->image ?>"
                             alt="">
                         <div class="justify-content-center">
                             <h5><?php echo   $result->name ?></h5>
-                            <p class="mb-4"><?php echo   $result->course ?></p>
+                            <p class="mb-4"><?php echo   $result->company ?></p>
 
                         </div>
                     </div>

@@ -101,7 +101,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <textarea class="form-control" id="message" name="message" rows="4"></textarea required>
                                         </div>
                                         <div class="form-group">
-                                        <label for="exampleTextarea1">Image(387x391 px)</label>
+                                        <label for="exampleTextarea1">Image(500x500 px)</label>
                                             <input class="form-control" type="file" id="file" name="file" accept="image/gif, image/png, image/jpg, image/jpeg" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2" name="testimonialBTN" id="testimonialBTN">Submit</button>
