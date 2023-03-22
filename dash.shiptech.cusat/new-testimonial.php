@@ -1,6 +1,8 @@
 <?php
 session_start();
-error_reporting(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include('../includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:login.php');
@@ -17,9 +19,11 @@ if (strlen($_SESSION['alogin']) == 0) {
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO testimonials(name,course,designation,batch,message,status,image) VALUES ('" . $name . "','" . $course . "','" . $designation . "','" . $year . "',:message,'" . $status . "','" . $photo . "')";
+        $sql = "INSERT INTO testimonials(name,course,designation,batch,message,status,image) VALUES ('" . $name . "','" . $course . "','" . $designation . "','" . $year . "','" . $message . "','" . $status . "','" . $photo . "')";
+        // print_r($sql);
+        // exit();
         $query = $dbh->prepare($sql);
-        $query->bindParam(':message', $message, PDO::PARAM_STR);
+        // $query->bindParam(':message', $message, PDO::PARAM_STR);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
             echo '<script>alert("Success")</script>';
@@ -53,6 +57,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="ckeditor/ckeditor.js"> </script>
 </head>
 
 <body>
@@ -102,6 +107,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <button type="submit" class="btn btn-primary mr-2" name="testimonialBTN" id="testimonialBTN">Submit</button>
                                         <button class="btn btn-light">Cancel</button>
                                     </form>
+                                    <script>
+                                CKEDITOR.replace('message');
+                                </script>
                                 </div>
                             </div>
                         </div>

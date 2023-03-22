@@ -76,6 +76,7 @@ if (strlen($_SESSION['alogin']) == 0) {
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="ckeditor/ckeditor.js"> </script>
 </head>
 
 <body>
@@ -149,6 +150,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         }
                                         ?>
                                 </form>
+                                <script>
+                                CKEDITOR.replace('Editmessage');
+                                </script>
                             </div>
                         </div>
                     </div>
