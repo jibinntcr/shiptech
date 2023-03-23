@@ -110,7 +110,7 @@ include('includes/config.php');
                         </p>
 
 
-                        <h4 class="mb-2 mt-2"> Syllabus</h4>
+                        <h4 class="mb-5 mt-5"> Syllabus</h4>
                         <ul class="mission-dot " style=" margin-left: 15px;">
 
                             <!-- Syllebus 1 start  -->
@@ -287,7 +287,7 @@ include('includes/config.php');
                             <?php $syllabus15 = $userArr[0]->link15;
                             if (!empty($syllabus15)) {
                             ?>
-                                <li class="mb-2">
+                                <li class="">
                                     <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
                                     <a class="white col-11" href="<?php echo $syllabus15 ?>" target="_blank"><?php echo $userArr[0]->syllabus15 ?></a>
                                 </li>
