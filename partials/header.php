@@ -15,10 +15,8 @@
             <div class="col d-flex justify-content-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4"
-                            href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
-                        <a class="text-white d-flex align-items-center justify-content-center "
-                            href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
                     </p>
                 </div>
             </div>
@@ -39,7 +37,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Accademics</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="course.php" class="dropdown-item">Courses</a>
                     <!-- <a href="research.php" class="dropdown-item">Research</a> -->
