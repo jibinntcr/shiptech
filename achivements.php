@@ -95,7 +95,7 @@
                                 More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid fac-img-curv" src="img/service-3.jpg" alt="">
@@ -104,7 +104,7 @@
                         <a href="mou.php" class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>

@@ -63,6 +63,9 @@ include('includes/config.php');
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-1-new.jpg" alt="">
+            </div>
 
             <?php
             $sql = "SELECT * from banner WHERE status = '1'";
@@ -207,11 +210,12 @@ include('includes/config.php');
                     <div class="text-center mb-3">
                         <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
                         <a href="news-home.php">
-                            <h1 class="mb-0">Events</h1>
+
+                            <h1 class="eventHover" class="mb-0">Events</h1>
                         </a>
                     </div>
 
-                    <div class="container2">
+                    <div class=" container2">
                         <ul>
 
                             <?php
@@ -284,7 +288,7 @@ include('includes/config.php');
                 <div class="container my-5 row col-xl-6">
                     <div class="text-center mb-3">
                         <a href="news-home.php">
-                            <h1 class="mb-0">News</h1>
+                            <h1 class="eventHover" class="mb-0">News</h1>
                         </a>
                     </div>
 
@@ -366,7 +370,7 @@ include('includes/config.php');
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/about.jpg"
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
                             style="object-fit: cover;" alt="">
                     </div>
                 </div>
@@ -377,7 +381,7 @@ include('includes/config.php');
                         Architecture and Ship Building.</p>
                     <h1 class="mb-5">Mission</h1>
                     <p class="mb-5">
-                    <ul class="mission-dot">
+                    <ul class="mission-dot justify-para">
                         <li><i class="fa fa-ship me-3" aria-hidden="true"></i>
                             <span>We are committed to achieve academic
                                 excellence in the field of Naval Architecture and ShipBuilding through innovative
@@ -451,7 +455,7 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/feature.jpg"
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/shiptech.jpg"
                             style="object-fit: cover;" alt="">
                     </div>
                 </div>
@@ -478,7 +482,7 @@ include('includes/config.php');
                             src="uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
                     <h1 class="mb-5">Shiptech CUSAT</h1>
                     <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
@@ -545,8 +549,9 @@ include('includes/config.php');
                 <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
 
                     <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia, there live the blind texts. </p>
+                    <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and students
+                        who have been
+                        a vital part of our department.</p>
                     <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
                     </p>
                 </div>
@@ -572,14 +577,15 @@ include('includes/config.php');
                                         <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
                                     </div>
                                     <div class="author">
-                                        <cite class="d-block mb-0"><?php echo $result->name ?></cite>
-                                        <span><?php echo $result->designation ?></span><br>
-                                        <span><?php echo $result->course ?>,<?php echo $result->batch ?></span>
+                                        <cite class="d-block mb-0"
+                                            style="color: #150754!important;"><?php echo $result->name ?></cite>
+                                        <span><?php echo $result->designation ?>.</span><br>
+                                        <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
                                     </div>
 
                                 </div>
-                                <blockquote>
-                                    <p>&ldquo;<?php echo $result->message ?>.&rdquo;</p>
+                                <blockquote class="justify-para">
+                                    <p><?php echo $result->message ?></p>
                                 </blockquote>
                             </div>
                             <?php }

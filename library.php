@@ -75,7 +75,7 @@
                             style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
+                <div class="col-lg-6 about-text wow fadeInUp ship-contact-data justify-para" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">LIBRARY <i class="fa-solid fa-book-open-reader"></i>
                     </h6>
                     <h1 class="mb-3">SHIP TECHNOLOGY LIBRARY CUSAT</h1>
@@ -107,7 +107,7 @@
                         60
                         CUSAT Digital library offers access to past question papers, news items, syllabuses and other
                         e-contents. Past B.Tech Naval Architecture
-                        <a href="http://dspace.cusat.ac.in/jspui/handle/123456789/6731"
+                        <a target="_blank" href="http://dspace.cusat.ac.in/jspui/handle/123456789/6731"
                             style="text-decoration-line: underline;"> Question papers </a>
                         are available in the digital library.
                     </p>
@@ -122,7 +122,7 @@
                                         <div class="d-flex col-12 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
                                             <i class="fa-solid fa-door-open text-primary fa-2x flex-shrink-0"></i>
                                             <div class="ms-4 col-10">
-                                                <p>
+                                                <p class="justify-para">
                                                     The Library remains open on all working days of the Department. It
                                                     remains closed on even Saturdays, Sundays and other Holidays. The
                                                     Library is open from <span
@@ -173,7 +173,8 @@
                                             style="object-fit: cover; height: 240px; " alt="">
                                     </div>
                                     <h4 class="mb-3">The Naval Architect Magazine</h4>
-                                    <a class="btn-slide mt-2" href="https://www.rina.org.uk/Magazines.html"><i
+                                    <a target="_blank" class="btn-slide mt-2"
+                                        href="https://www.rina.org.uk/Magazines.html"><i
                                             class="fa fa-arrow-right"></i><span>Read
                                             More</span></a>
                                 </div>
@@ -185,7 +186,8 @@
                                             style="object-fit: cover; height: 240px; ">
                                     </div>
                                     <h4 class="mb-3">Naval Architecture Online Classes</h4>
-                                    <a class="btn-slide mt-2"
+                                    <a target="blank
+                                    " class="btn-slide mt-2"
                                         href="https://www.youtube.com/channel/UCVM3rFd2pDbuf_u7WILEJpw"><i
                                             class="fa fa-arrow-right"></i><span>Read
                                             More</span></a>
@@ -198,7 +200,7 @@
                                             style="object-fit: cover; height: 240px; ">
                                     </div>
                                     <h4 class="mb-3">NA &amp; SB Question <br>Papers</h4>
-                                    <a class="btn-slide mt-2" href="http://dspace.cusat.ac.in/ "><i
+                                    <a target="_blank" class="btn-slide mt-2" href="http://dspace.cusat.ac.in/ "><i
                                             class="fa fa-arrow-right"></i><span>Read
                                             More</span></a>
                                 </div>

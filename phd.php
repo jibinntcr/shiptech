@@ -77,7 +77,7 @@ include('includes/config.php');
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/phd_image.jpg"
                             style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
@@ -144,7 +144,7 @@ include('includes/config.php');
                                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                                     <div class="our-teamRec">
                                         <img src="uploads/<?php echo $result->image ?>" alt="">
-                                        <div class="team-content">
+                                        <div class="team-content justify-para">
                                             <h3 class="team-title">
                                                 <a><?php echo $result->name ?></a><small><?php echo $result->designation ?></small>
                                             </h3>
@@ -153,7 +153,16 @@ include('includes/config.php');
                                             <hr class="hrline">
                                             <!-- <div id="Rec1" class="p-4 collapse"> -->
 
-                                            <?php echo $result->area ?>
+                                            <?php
+                                                    $input_string = "$result->area ";
+
+                                                    $output_string = str_replace("&nbsp;", " ", $input_string);
+
+                                                    echo $output_string;
+
+
+                                                    // echo $result->area 
+                                                    ?>
                                             <!-- </div> -->
                                         </div>
                                     </div>

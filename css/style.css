@@ -732,7 +732,7 @@
 }
 
 .cat-item:hover div {
-  background: #03a4cc;
+  background: #0f0056;
   border-color: transparent;
 }
 
@@ -856,5 +856,8 @@
   color: #808080;
 }
 .our-teamRec .team-content {
-  padding: 15px 0 15px 5px;
+  padding: 15px 0 15px 0;
+}
+.eventHover:hover {
+  color: rgb(255, 0, 0);
 }
