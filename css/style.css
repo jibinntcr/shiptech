@@ -172,7 +172,7 @@
 .navbar .navbar-nav .nav-link {
   margin-left: 25px;
   padding: 10px 0;
-  color: #696e77;
+  color: #ffffff;
   font-weight: 400;
   outline: none;
 }
@@ -623,7 +623,7 @@
   color: #007a9b;
 }
 .upper-header a {
-  color: #007a9b;
+  color: #0a0549;
 }
 
 /*--------------------------------------------------------------
@@ -815,7 +815,7 @@
   color: var(--primary);
 }
 .bg-new-nav {
-  background-color: #001aff2c;
+  background-color: #150754;
 }
 
 .patent-image {
