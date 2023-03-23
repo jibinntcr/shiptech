@@ -225,7 +225,7 @@ include('includes/config.php');
                             ?>
 
                             <li>
-                                <div class="d-flex border p-1 my-4 align-items-center max-w-665"
+                                <div class="d-flex  border p-1 my-4 align-items-center max-w-665"
                                     style="border-radius: 20px; max-width: 655px; margin: 0 auto">
                                     <div class="circle bg-primary d-flex justify-content-center container">
                                         <div class="cell">
@@ -245,13 +245,9 @@ include('includes/config.php');
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
                                         <div class="ms-4">
-                                            <!-- <p class="mt-1">
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <i class="fa-regular fa-clock"></i></span>
-                                                <span class="font-bold"> 9.00 AM - 5.00 PM</span>
-                                            </p> -->
+
                                             <a href="events-view.php?id=<?php echo   $result->id ?>">
-                                                <h6 class="my-2 my-lg-2">
+                                                <h6 class="my-1 my-lg-2">
                                                     <?php $title =  substr($result->title, 0, 48);
                                                             echo $title ?>
                                                 </h6>
@@ -302,18 +298,18 @@ include('includes/config.php');
                                 foreach ($results as $result) {
                             ?>
                             <li>
-                                <div class="d-flex border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                <div class="d-flex news border p-1 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; hight:120px;  margin: 0 auto">
                                     <img class="d-block" style="
-                      width: 120.34px;
-                      height: 120.34px;
+                      width: 110px;
+                      height: 110px;
                       object-fit: contain;
                       border-radius: 20px;" src="uploads/<?php echo $result->image ?>" alt="" />
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
                                         <div class="ms-4 overflow-hidden">
                                             <a href="news-view.php?id=<?php echo   $result->id ?>">
-                                                <h6 class="my-2 my-lg-2">
+                                                <h6 class="">
                                                     <?php
                                                             $title =  substr($result->title, 0, 27);
                                                             $subHeading = substr($result->content, 0, 39);
@@ -321,11 +317,11 @@ include('includes/config.php');
                                                             ?> </h6>
                                             </a>
 
-                                            <p class="p-sm-2">
+                                            <p class="mb-0">
                                                 <?php echo  $subHeading ?>...
                                             </p>
 
-                                            <p class="mt-1">
+                                            <p class="mb-0">
                                                 <span style="
                             color: #ff3e41;
                             font-weight: bold;
@@ -620,7 +616,7 @@ include('includes/config.php');
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/Scrolling.js"></script>
+    <!-- <script src="js/Scrolling.js"></script> -->
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
