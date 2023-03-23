@@ -93,7 +93,7 @@ include('includes/config.php');
             $userArr = $query->fetchAll(PDO::FETCH_OBJ);
             if ($query->rowCount() > 0) {
             ?>
-            <div class="col-md-7">
+            <div class="col-md-7 justify-para">
                 <h1 class="mb-4"><?php echo htmlentities($userArr[0]->title); ?></h1>
                 <img src="uploads/<?php echo htmlentities($userArr[0]->image); ?>" alt="Article Image"
                     style="border-radius: 25px;" class="img-fluid mb-4">
@@ -118,7 +118,7 @@ include('includes/config.php');
                     <ul class="p-2">
 
                         <?php
-                        $sql = "SELECT * from events ORDER BY `events`.`date` DESC";
+                        $sql = "SELECT * from events  WHERE status='1' ORDER BY `date`";
                         $query = $dbh->prepare($sql);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -164,7 +164,7 @@ include('includes/config.php');
                                             <span style="color: #ff3e41; font-weight: bold">
                                                 <!-- <i class="fa-solid fa-location-dot"></i> -->
                                             </span>
-                                            <span class="font-bold">
+                                            <span class="font-bold ">
                                                 <?php $subHeading = substr($result->content, 0, 18);
                                                         echo $subHeading ?>
                                             </span>

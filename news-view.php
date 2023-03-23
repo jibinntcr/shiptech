@@ -92,7 +92,7 @@ include('includes/config.php');
             $userArr = $query->fetchAll(PDO::FETCH_OBJ);
             if ($query->rowCount() > 0) {
             ?>
-            <div class="col-md-7">
+            <div class="col-md-7 justify-para">
                 <h1 class="mb-4"><?php echo htmlentities($userArr[0]->title); ?></h1>
                 <img src="uploads/<?php echo htmlentities($userArr[0]->image); ?>" alt="Article Image"
                     style="border-radius: 25px;" class="img-fluid mb-4">
@@ -103,7 +103,7 @@ include('includes/config.php');
                             $date = date_create($date);
                             echo date_format($date, "d/m/Y"); ?></span>
                 </p>
-                <p class="mb-4 justify-para">
+                <p class="mb-4">
                     <?php echo ($userArr[0]->content); ?>
                 </p>
             </div>
@@ -117,7 +117,7 @@ include('includes/config.php');
                     <ul class="p-2">
 
                         <?php
-                        $sql = "SELECT * from news ";
+                        $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC ";
                         $query = $dbh->prepare($sql);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ);
