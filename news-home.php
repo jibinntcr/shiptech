@@ -21,7 +21,8 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -41,7 +42,8 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -92,33 +94,38 @@ include('includes/config.php');
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) {
                             ?>
-                                    <li class="mx-2">
-                                        <div class="d-flex border p-1 my-0 align-items-center" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                            <img class="d-block " style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;" src="uploads/<?php echo $result->image ?>" alt="">
-                                            <div class="d-flex col-md-8 mb-0 mx-md-3  ">
-                                                <div class="ms-4 overflow-hidden">
-                                                    <a href="news-view.php?id=<?php echo   $result->id ?>">
-                                                        <h6 class=" my-2 my-lg-2"> <?php
+                            <li class="mx-2">
+                                <div class="d-flex border p-1 my-0 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                    <img class="d-block "
+                                        style="width : 120.34px; height: 120.34px; object-fit: contain; border-radius: 20px;"
+                                        src="uploads/<?php echo $result->image ?>" alt="">
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3  ">
+                                        <div class="ms-4 overflow-hidden">
+                                            <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                                <h6 class=" my-2 my-lg-2"> <?php
                                                                                     $title =  substr($result->title, 0, 27);
                                                                                     $subHeading = substr($result->content, 0, 29);
                                                                                     echo  $title
                                                                                     ?>
 
-                                                        </h6>
-                                                    </a>
-                                                    <p class="p-sm-2">
-                                                        <?php echo  $subHeading ?>...
-                                                    </p>
-                                                    <p class="mt-1">
-                                                        <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i class="fa-regular fa-calendar"></i></span> <span class=" font-bold" style="font-size: smaller;">
-                                                            <?php $date = $result->date;
+                                                </h6>
+                                            </a>
+                                            <p class="p-sm-2">
+                                                <?php echo  $subHeading ?>...
+                                            </p>
+                                            <p class="mt-1">
+                                                <span style="color:#ff3e41 ; font-weight: bold; font-size: smaller;"> <i
+                                                        class="fa-regular fa-calendar"></i></span> <span
+                                                    class=" font-bold" style="font-size: smaller;">
+                                                    <?php $date = $result->date;
                                                             $date = date_create($date);
                                                             echo date_format($date, "d/m/Y"); ?></span>
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            </p>
                                         </div>
-                                    </li>
+                                    </div>
+                                </div>
+                            </li>
                             <?php
                                 }
                             } ?>
@@ -154,42 +161,43 @@ include('includes/config.php');
                         ?>
 
 
-                                <li class="mx-2">
-                                    <div class="d-flex border p-1 my-0 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                        <div class="circle bg-primary d-flex justify-content-center container">
-                                            <?php $date = $result->date;
+                        <li class="mx-2">
+                            <div class="d-flex border p-1 my-0 align-items-center max-w-665"
+                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
+                                <div class="circle bg-primary d-flex justify-content-center container">
+                                    <?php $date = $result->date;
                                             $date = date_create($date);
                                             ?>
-                                            <div class="cell ">
-                                                <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
-                                            </div>
-                                            <div class="cell ">
-                                                <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
-                                            </div>
-                                            <div class="cell ">
-                                                <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex col-md-8 mb-0 mx-md-3 ">
-                                            <div class="ms-4">
-                                                <!-- <p class="mt-1">
+                                    <div class="cell ">
+                                        <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                    </div>
+                                    <div class="cell ">
+                                        <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
+                                    </div>
+                                    <div class="cell ">
+                                        <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
+                                    </div>
+                                </div>
+                                <div class="d-flex col-md-8 mb-0 mx-md-3 ">
+                                    <div class="ms-4">
+                                        <!-- <p class="mt-1">
                                         <span style="color:#ff3e41 ; font-weight: bold;"> <i
                                                 class="fa-regular fa-clock"></i></span> <span class=" font-bold">
                                             9.00 AM - 5.00 PM</span>
                                     </p> -->
-                                                <a href="events-view.php?id=<?php echo   $result->id ?>">
-                                                    <h6 class=" my-2 my-lg-2"> <?php $title =  substr($result->title, 0, 48);
+                                        <a href="events-view.php?id=<?php echo   $result->id ?>">
+                                            <h6 class=" my-2 my-lg-2"> <?php $title =  substr($result->title, 0, 48);
                                                                                 echo $title ?></h6>
-                                                </a>
-                                                <p>
-                                                    <span style="color:#ff3e41 ; font-weight: bold;"> <span class=" font-bold">
-                                                            <?php echo  $subHeading ?>...
-                                                        </span>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        </a>
+                                        <p>
+                                            <span style="color:#ff3e41 ; font-weight: bold;"> <span class=" font-bold">
+                                                    <?php echo  $subHeading ?>...
+                                                </span>
+                                        </p>
                                     </div>
-                                </li>
+                                </div>
+                            </div>
+                        </li>
                         <?php }
                         }
                         ?>
