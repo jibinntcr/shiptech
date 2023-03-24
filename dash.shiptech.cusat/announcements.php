@@ -83,7 +83,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         </thead>
                                         <tbody>
                                             <?php
-                                                $sql = "SELECT * from announcement where dlt_status = 0 ";
+                                                $sql = "SELECT * from announcement where status = 1 ";
                                                 $query = $dbh->prepare($sql);
                                                 $query->execute();
                                                 $results = $query->fetchAll(PDO::FETCH_OBJ);
