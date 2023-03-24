@@ -42,12 +42,12 @@
                 <span class="menu-title">Phd</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="patents.php">
                 <i class="icon-head menu-icon"></i>
                 <span class="menu-title">Patents</span>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link" href="approvals.php">
                 <i class="icon-paper menu-icon"></i>

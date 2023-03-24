@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -36,7 +37,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -53,7 +55,7 @@
             <h1 class="display-3 text-white mb-3 animated slideInDown">RESEARCH FACILITIES</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
                     <li class="breadcrumb-item text-white active" aria-current="page">Research Facilities</li>
                 </ol>
@@ -79,7 +81,8 @@
                         Plan Grant.</p>
                 </div>
                 <div class="img-container d-flex justify-content-center wow fadeInUp mb-5" data-wow-delay="0.1s">
-                    <img src="img/Computational-Lab-(CHASE).png" class=" img-fluid h-100" style="object-fit: cover; border-radius: 20px;" alt="Your Image">
+                    <img src="img/Computational-Lab-(CHASE).png" class=" img-fluid h-100"
+                        style="object-fit: cover; border-radius: 20px;" alt="Your Image">
                 </div>
             </div>
             <!-- Computational Lab table start -->
@@ -143,7 +146,8 @@
                     aerospace.
                 </p>
                 <div class="img-container d-flex justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                    <img src="img/Instrumentation-Lab.png" class=" img-fluid h-100" style="object-fit: cover; border-radius: 20px;" alt="Your Image">
+                    <img src="img/Instrumentation-Lab.png" class=" img-fluid h-100"
+                        style="object-fit: cover; border-radius: 20px;" alt="Your Image">
                 </div>
             </div>
             <!--  Instrumentation Lab end -->
@@ -156,7 +160,8 @@
                     CH Software.
                 </p>
                 <div class="img-container d-flex justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                    <img src="img/ElectroChemical-Testing-Lab.png" class=" img-fluid h-100" style="object-fit: cover; border-radius: 20px;" alt="Your Image">
+                    <img src="img/ElectroChemical-Testing-Lab.png" class=" img-fluid h-100"
+                        style="object-fit: cover; border-radius: 20px;" alt="Your Image">
                 </div>
             </div>
             <!-- ElectroChemical Testing Lab end -->
@@ -168,12 +173,14 @@
                     <div class="row g-5 ">
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-1.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-1.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-2.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-2.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                     </div>
@@ -192,12 +199,16 @@
                     <div class="row g-5 ">
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Strength-of-Materials-Lab-2.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100"
+                                    src="img/Strength-of-Materials-Lab-2.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Strength-of-Materials-Lab-1.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100"
+                                    src="img/Strength-of-Materials-Lab-1.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                     </div>
@@ -212,12 +223,14 @@
                     <div class="row g-5 ">
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-1.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-1.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-2.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-2.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                     </div>
@@ -228,21 +241,24 @@
             <div class="container " style="margin-top: 80px;">
                 <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">7. Welding Lab
                 </h2>
-                <div class="d-flex align-items-center  mb-2 mx-3 wow fadeInUp" style="min-width: 250px;" data-wow-delay="0.5s">
+                <div class="d-flex align-items-center  mb-2 mx-3 wow fadeInUp" style="min-width: 250px;"
+                    data-wow-delay="0.5s">
                     <i class="fa-solid fa-circle-check text-primary  flex-shrink-0"></i>
                     <div class="ms-4">
                         <h5>
                             TIG Welding</h5>
                     </div>
                 </div>
-                <div class="d-flex align-items-center  mb-2 mx-3 wow fadeInUp" style="min-width: 250px;" data-wow-delay="0.5s">
+                <div class="d-flex align-items-center  mb-2 mx-3 wow fadeInUp" style="min-width: 250px;"
+                    data-wow-delay="0.5s">
                     <i class="fa-solid fa-circle-check text-primary  flex-shrink-0"></i>
                     <div class="ms-4">
                         <h5>
                             Spot Welding</h5>
                     </div>
                 </div>
-                <div class="d-flex align-items-center  mb-2 mx-3 wow fadeInUp" style="min-width: 250px;" data-wow-delay="0.5s">
+                <div class="d-flex align-items-center  mb-2 mx-3 wow fadeInUp" style="min-width: 250px;"
+                    data-wow-delay="0.5s">
                     <i class="fa-solid fa-circle-check text-primary  flex-shrink-0"></i>
                     <div class="ms-4">
                         <h5>

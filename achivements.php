@@ -57,7 +57,7 @@
             <h1 class="display-3 text-white mb-3 animated slideInDown">Achievements</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Achievements</a></li>
                     <!-- <li class="breadcrumb-item text-white active" aria-current="page">SHIP TECHNOLOGY LIBRARY CUSAT
                     </li> -->
@@ -73,7 +73,7 @@
                 <h1 class="mb-5">Courses Offered</h1>
             </div> -->
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
                             <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
@@ -83,7 +83,7 @@
                                 class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">

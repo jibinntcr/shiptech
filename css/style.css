@@ -166,7 +166,7 @@
 }
 
 .navbar .navbar-brand img {
-  /* max-height: 60px; */
+  max-height: 60px;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -193,7 +193,7 @@
 
 @media (max-width: 991.98px) {
   .navbar .navbar-brand img {
-    max-height: 45px;
+    max-height: 41px;
   }
 
   .navbar .navbar-nav {
