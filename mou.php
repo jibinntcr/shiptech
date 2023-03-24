@@ -86,7 +86,7 @@ include('includes/config.php');
                     foreach ($results as $result) {
                 ?>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
+                    <div class="service-item p-4 fac-img-curv justify-para">
                         <div class="overflow-hidden mb-4">
                             <img class="fac-img-curv img-fluid" src="uploads/<?php echo   $result->image ?>" alt="">
                         </div>

@@ -52,6 +52,8 @@ if (strlen($_SESSION['alogin']) == 0) {
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="ckeditor/ckeditor.js"> </script>
+</head>
 </head>
 
 <body>
@@ -93,6 +95,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <button type="submit" class="btn btn-primary mr-2" name="mouBTN" id="mouBTN">Submit</button>
                                         <button class="btn btn-light">Cancel</button>
                                     </form>
+                                    <script>
+                                CKEDITOR.replace('content');
+                                </script>
                                 </div>
                             </div>
                         </div>
