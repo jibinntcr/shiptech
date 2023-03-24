@@ -71,7 +71,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/lbrary-image.jpg"
                             style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
                                 <div class="service-item p-4 fac-img-curv">
                                     <div class="overflow-hidden mb-4">
-                                        <img class="img-fluid fac-img-curv" src="img/service-3.jpg" alt=""
+                                        <img class="img-fluid fac-img-curv" src="img/dig-librrary.jpg" alt=""
                                             style="object-fit: cover; height: 240px; ">
                                     </div>
                                     <h4 class="mb-3">NA &amp; SB Question <br>Papers</h4>
