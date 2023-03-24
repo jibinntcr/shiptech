@@ -47,7 +47,7 @@
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
-                <div class="dropdown-menu bg-light border-0 m-0" style="width: 200px;">
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
                     <a href="faculty.php" class="dropdown-item">Faculty</a>
                     <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
                     <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a>
@@ -69,7 +69,7 @@
             <a href="gallery.php" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
-                <div class="dropdown-menu bg-light border-0 m-0" style="width: 250px;">
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
