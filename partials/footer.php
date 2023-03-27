@@ -11,10 +11,20 @@
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-484 257-5714</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                    <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.youtube.com/@societyofnavalarchitecture1487"><i
+                            class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
