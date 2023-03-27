@@ -85,14 +85,12 @@ include('includes/config.php');
                     <h6 class="text-secondary text-uppercase mb-3">Research</h6>
                     <h1 class="mb-3">Course Description</h1>
                     <p class="mb-5 justify-para" style=" margin-left: 15px;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque saepe adipisci rem sunt sint
-                        error, laborum aperiam velit dolorum? Sunt accusantium maiores alias eaque facilis sit incidunt
-                        culpa dignissimos vitae doloribus qui unde facere enim, ducimus quas veniam. Voluptas,
-                        consequuntur ipsam rem doloremque voluptate laborum ratione fugit maiores dignissimos nesciunt
-                        cupiditate dolores molestias. Nemo accusantium vero quia eaque debitis hic, nostrum magni
-                        repellat labore adipisci quis deleniti quos cumque alias animi voluptas ducimus totam pariatur
-                        illo aliquid sit cum enim! Ea similique totam et modi nihil. Veritatis debitis quia cumque ab
-                        odio voluptatem, eveniet exercitationem ipsum alias perferendis atque molestiae.
+                        The Ph.D. in Ship Technology is a research-based programme that provides students with advanced
+                        knowledge and skills in ship technology. Students will conduct independent research and gain
+                        knowledge in a specific area of ship technology. Students will work closely with a faculty
+                        advisor throughout the programme to develop their research and advance their knowledge in their
+                        field. Graduates of the programme will be prepared for careers in academia, industry, and
+                        research institutions.
                     </p>
                     <h4 class="mb-2">Regulations</h4>
                     <ul class="mission-dot " style=" margin-left: 15px;">
