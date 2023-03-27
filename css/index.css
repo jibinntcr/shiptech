@@ -44,3 +44,12 @@ section {
   width: 100%;
   text-align: right;
 }
+
+.hod-img {
+  max-width: 500px;
+}
+@media (max-width: 576px) {
+  .your-element {
+    max-width: 450px;
+  }
+}
