@@ -24,7 +24,8 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -48,7 +49,8 @@ include('includes/config.php');
 
 <body style="box-flex-group: #d6d6d6;">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
         </div>
     </div>
@@ -75,22 +77,23 @@ include('includes/config.php');
                 foreach ($results as $result) {
             ?>
 
-                    <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="uploads/<?php echo   $result->image ?>" alt="">
-                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                            <div class="container">
-                                <div class="row justify-content-start">
-                                    <div class="col-10 col-lg-8">
-                                        <h2 class="text-white mb-3 animated slideInDown"><?php echo   $result->topcaption ?>
-                                        </h2>
-                                        <h1 class="display-1 text-white animated slideInDown mb-4">
-                                            <?php echo   $result->mainCaption ?></h1>
-                                        <p class="fs-5 fw-medium text-white mb-4 pb-2"><?php echo   $result->subCaption ?></p>
-                                    </div>
-                                </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="uploads/<?php echo   $result->image ?>" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h2 class="text-white mb-3 animated slideInDown"><?php echo   $result->topcaption ?>
+                                </h2>
+                                <h1 class="display-1 text-white animated slideInDown mb-4">
+                                    <?php echo   $result->mainCaption ?></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2"><?php echo   $result->subCaption ?></p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
             <?php }
             } ?>
         </div>
@@ -102,8 +105,10 @@ include('includes/config.php');
     <div class="container-xxl pb-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="https://snas.in/">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
+                        href="https://snas.in/">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/tile-icon-snas.png" alt="Icon">
@@ -112,8 +117,10 @@ include('includes/config.php');
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="https://descon.cusat.ac.in/">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
+                        href="https://descon.cusat.ac.in/">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/descon.png" alt="Icon">
@@ -122,8 +129,10 @@ include('includes/config.php');
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank" href="Approvals-and-Affiliations.php">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
+                        href="Approvals-and-Affiliations.php">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
                                 <img class="img-fluid" src="img/Approvals-icon.png" alt="Icon">
@@ -132,7 +141,8 @@ include('includes/config.php');
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
+                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                     <a class="cat-item d-block bg-light text-center rounded p-3" href="placement.php">
                         <div class="rounded p-4">
                             <div class="icon mb-3">
@@ -153,35 +163,38 @@ include('includes/config.php');
     $cnt = 1;
     if ($query->rowCount() > 0) { ?>
 
-        <!-- SCROLL NEWS START  -->
-        <div class="container-xxl  wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
-                            <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
-                                <span class="d-flex align-items-center">&nbsp;Announcements </span>
-                            </div>
-                            <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
-                                &nbsp;&nbsp;
-                                <?php
+    <!-- SCROLL NEWS START  -->
+    <div class="container-xxl  wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
+                        <div
+                            class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+                            <span class="d-flex align-items-center">&nbsp;Announcements </span>
+                        </div>
+                        <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();"
+                            onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
+                            &nbsp;&nbsp;
+                            <?php
                                 foreach ($results as $result) {
                                 ?>
 
 
-                                    <a class="news-scroll text-white" href="<?php echo  $result->link ?>" target="_blank"><?php echo   $result->announcements ?></a>
+                            <a class="news-scroll text-white" href="<?php echo  $result->link ?>"
+                                target="_blank"><?php echo   $result->announcements ?></a>
 
-                                    &nbsp;&nbsp;
-                                    <b class="text-white">|</b>
-                                    &nbsp;&nbsp;
-                                <?php }
+                            &nbsp;&nbsp;
+                            <b class="text-white">|</b>
+                            &nbsp;&nbsp;
+                            <?php }
                                 ?>
-                            </marquee>
-                        </div>
+                        </marquee>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <?php } ?>
     <!-- SCROLL NEWS END  -->
 
@@ -215,47 +228,48 @@ include('includes/config.php');
                                 foreach ($results as $result) {
                             ?>
 
-                                    <li>
-                                        <div class="d-flex  border p-1 my-4 align-items-center max-w-665" style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                            <div class="circle bg-primary d-flex justify-content-center container">
-                                                <div class="cell">
+                            <li>
+                                <div class="d-flex  border p-1 my-4 align-items-center max-w-665"
+                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
+                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                        <div class="cell">
 
-                                                    <?php $date = $result->date;
+                                            <?php $date = $result->date;
                                                     $date = date_create($date);
                                                     ?>
-                                                    <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
-                                                </div>
-                                                <div class="cell">
-                                                    <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
-                                                </div>
-                                                <div class="cell">
-                                                    <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                                <div class="ms-4">
-
-                                                    <a href="events-view.php?id=<?php echo   $result->id ?>">
-                                                        <h6 class="my-1 my-lg-2 eventHover">
-                                                            <?php $title =  substr($result->title, 0, 48);
-                                                            echo $title ?>
-                                                        </h6>
-                                                    </a>
-
-                                                    <p>
-                                                        <span style="color: #ff3e41; font-weight: bold">
-                                                            <!-- <i class="fa-solid fa-location-dot"></i> -->
-                                                        </span>
-                                                        <span class="font-bold">
-                                                            <?php $subHeading = substr($result->content, 0, 18);
-                                                            echo $subHeading ?>
-                                                        </span>
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
                                         </div>
-                                    </li>
+                                        <div class="cell">
+                                            <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
+                                        </div>
+                                        <div class="cell">
+                                            <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+
+                                            <a href="events-view.php?id=<?php echo   $result->id ?>">
+                                                <h6 class="my-1 my-lg-2 eventHover">
+                                                    <?php $title =  substr($result->title, 0, 48);
+                                                            echo $title ?>
+                                                </h6>
+                                            </a>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                                </span>
+                                                <span class="font-bold">
+                                                    <?php $subHeading = substr($result->content, 0, 18);
+                                                            echo $subHeading ?>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <?php }
                             } ?>
 
@@ -287,45 +301,46 @@ include('includes/config.php');
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) {
                             ?>
-                                    <li>
-                                        <div class="d-flex news border p-1 my-4 align-items-center" style="border-radius: 20px; max-width: 655px; hight:120px;  margin: 0 auto">
-                                            <img class="d-block" style="
+                            <li>
+                                <div class="d-flex news border p-1 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; hight:120px;  margin: 0 auto">
+                                    <img class="d-block" style="
                       width: 110px;
                       height: 110px;
                       object-fit: contain;
                       border-radius: 20px;" src="uploads/<?php echo $result->image ?>" alt="" />
 
-                                            <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                                <div class="ms-4 overflow-hidden">
-                                                    <a href="news-view.php?id=<?php echo   $result->id ?>">
-                                                        <h6 class="eventHover">
-                                                            <?php
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4 overflow-hidden">
+                                            <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                                <h6 class="eventHover">
+                                                    <?php
                                                             $title =  substr($result->title, 0, 27);
                                                             $subHeading = substr($result->content, 0, 29);
                                                             echo  $title
                                                             ?> </h6>
-                                                    </a>
+                                            </a>
 
-                                                    <p class="mb-0">
-                                                        <?php echo  $subHeading ?>...
-                                                    </p>
+                                            <p class="mb-0">
+                                                <?php echo  $subHeading ?>...
+                                            </p>
 
-                                                    <p class="mb-0">
-                                                        <span style="
+                                            <p class="mb-0">
+                                                <span style="
                             color: #ff3e41;
                             font-weight: bold;
                             font-size: smaller;
                           ">
-                                                            <i class="fa-regular fa-calendar"></i></span>
-                                                        <span class="font-bold" style="font-size: smaller">
-                                                            <?php $date = $result->date;
+                                                    <i class="fa-regular fa-calendar"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    <?php $date = $result->date;
                                                             $date = date_create($date);
                                                             echo date_format($date, "d/m/Y"); ?></span>
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            </p>
                                         </div>
-                                    </li>
+                                    </div>
+                                </div>
+                            </li>
                             <?php }
                             } ?>
 
@@ -351,7 +366,8 @@ include('includes/config.php');
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
@@ -435,13 +451,197 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/shiptech.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/shiptech.jpg"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ABOUT End -->
+
+
+
+
+
+    <!-- HOD MESSAGE 2 -->
+
+    <div class="container-xxl py-5">
+
+
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://infinio.co.in/test/uploads/hodmessage_img.jpg"
+                        class="img-fluid d-block mx-auto mb-3 fac-img-curv" alt="Your Image" style="max-width: 400px;">
+                    <p class="text-center d-md-none">
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+
+                    Greetings from the Department of Ship Technology (DoST), Cochin
+                    University of Science &amp;
+                    Technology (CUSAT), Kerala, India!!<br>
+                    <br>
+                    The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a
+                    pioneer in the field of Naval Architecture education in the country and has produced global
+                    leaders in maritime sector, in diverse fields including design, construction, operation, survey,
+                    maintenance, education and research.<br>
+                    <br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        We are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates
+                        have a 100% placement record for the past several years, a M.Tech course in Computer Aided
+                        Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine
+                        industry,&nbsp;and a Ph.D programme with 41 scholars at present.<br>
+                        <br>
+                        We are a truly interdisciplinary department with a very strong research atmosphere. Much of the
+                        graduate level research is done at the Computational Hydrodynamics and Structural Engineering
+                        (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The
+                        DoST has&nbsp;collaboration with the Indian Navy, MoUs with leading shipyards, Classification
+                        Societies and academic institutions.<br>
+                        <br>
+                        The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters
+                        to the overall development is highly encouraging.<br>
+                        <br>
+                        Student achievements are recognized through RINA (Royal Institution of Naval Architects, London)
+                        student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for
+                        developing technical and professional leadership among students is provided by the SNAS (Society
+                        of Naval Architecture Students). Department training and placement cell provides professional
+                        assistance for student placement as well as internship in leading companies.<br>
+                        <br>
+                        We are also actively participating in industrial projects as well as consultancy services
+                        through DESON, the consultancy wing of DoST.<br>
+                        <br>
+                        I invite you to browse through the web pages for further information
+
+                    </p>
+                    <span><b>Dr. Satheesh Babu P. K.</b>
+                        <br>
+                        Head of the Department
+                    </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <img src="https://infinio.co.in/test/uploads/hodmessage_img.jpg"
+                        class="img-fluid float-left fac-img-curv" alt="Your Image">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+                    <p class="mb-5 justify-para">
+                        Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp;
+                        Technology (CUSAT), Kerala, India!!<br>
+                        <br>
+                        The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a
+                        pioneer in the field of Naval Architecture education in the country and has produced global
+                        leaders in maritime sector, in diverse fields including design, construction, operation, survey,
+                        maintenance, education and research.<br>
+                        <br>
+                        We are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates
+                        have a 100% placement record for the past several years, a M.Tech course in Computer Aided
+                        Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine
+                        industry,&nbsp;and a Ph.D programme with 41 scholars at present.<br>
+                        <br>
+                        We are a truly interdisciplinary department with a very strong research atmosphere. Much of the
+                        graduate level research is done at the Computational Hydrodynamics and Structural Engineering
+                        (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The
+                        DoST has&nbsp;collaboration with the Indian Navy, MoUs with leading shipyards, Classification
+                        Societies and academic institutions.<br>
+                        <br>
+                        The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters
+                        to the overall development is highly encouraging.<br>
+                        <br>
+                        Student achievements are recognized through RINA (Royal Institution of Naval Architects, London)
+                        student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for
+                        developing technical and professional leadership among students is provided by the SNAS (Society
+                        of Naval Architecture Students). Department training and placement cell provides professional
+                        assistance for student placement as well as internship in leading companies.<br>
+                        <br>
+                        We are also actively participating in industrial projects as well as consultancy services
+                        through DESON, the consultancy wing of DoST.<br>
+                        <br>
+                        I invite you to browse through the web pages for further information
+
+                    </p>
+                    <span><b>Dr. Satheesh Babu P. K.</b>
+                        <br>
+                        Head of the Department
+                    </span>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
+                            src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="object-fit: cover;"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+                    <p class="mb-5 justify-para">
+                        Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp;
+                        Technology (CUSAT), Kerala, India!!<br>
+                        <br>
+                        The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a
+                        pioneer in the field of Naval Architecture education in the country and has produced global
+                        leaders in maritime sector, in diverse fields including design, construction, operation, survey,
+                        maintenance, education and research.<br>
+                        <br>
+                        We are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates
+                        have a 100% placement record for the past several years, a M.Tech course in Computer Aided
+                        Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine
+                        industry,&nbsp;and a Ph.D programme with 41 scholars at present.<br>
+                        <br>
+                        We are a truly interdisciplinary department with a very strong research atmosphere. Much of the
+                        graduate level research is done at the Computational Hydrodynamics and Structural Engineering
+                        (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The
+                        DoST has&nbsp;collaboration with the Indian Navy, MoUs with leading shipyards, Classification
+                        Societies and academic institutions.<br>
+                        <br>
+                        The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters
+                        to the overall development is highly encouraging.<br>
+                        <br>
+                        Student achievements are recognized through RINA (Royal Institution of Naval Architects, London)
+                        student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for
+                        developing technical and professional leadership among students is provided by the SNAS (Society
+                        of Naval Architecture Students). Department training and placement cell provides professional
+                        assistance for student placement as well as internship in leading companies.<br>
+                        <br>
+                        We are also actively participating in industrial projects as well as consultancy services
+                        through DESON, the consultancy wing of DoST.<br>
+                        <br>
+                        I invite you to browse through the web pages for further information
+
+                    </p>
+                    <span><b>Dr. Satheesh Babu P. K.</b>
+                        <br>
+                        Head of the Department
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end HOD MESSAGE 2 -->
 
     <!-- HOS MESSAGE  Start -->
     <?php
@@ -451,30 +651,34 @@ include('includes/config.php');
     $userArr = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
     ?>
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
 
-                        <div class="position-relative h-100">
-                            <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;" alt="">
-                        </div>
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
+                            src="uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;" alt="">
                     </div>
-                    <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
-                        <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
-                        <h1 class="mb-5">Shiptech CUSAT</h1>
-                        <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
-                        <span><b><?php echo ($userArr[0]->name); ?></b>
-                            <br>
-                            <?php echo ($userArr[0]->designation); ?></span>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+                    <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
+                    <span><b><?php echo ($userArr[0]->name); ?></b>
+                        <br>
+                        <?php echo ($userArr[0]->designation); ?></span>
 
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     <?php }
     ?>
     <!-- HOD MESSAGE  End -->
+
+
+
 
 
 
@@ -498,17 +702,18 @@ include('includes/config.php');
                     foreach ($results as $result) {
                 ?>
 
-                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="service-item p-4 fac-img-curv">
-                                <div class="overflow-hidden mb-4">
-                                    <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->image ?>" alt="">
-                                </div>
-                                <h4 class="mb-3"><?php echo $result->name ?></h4>
-                                <p><?php echo $result->specialization ?></p>
-                                <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i class="fa fa-arrow-right"></i><span>Read
-                                        More</span></a>
-                            </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4 fac-img-curv">
+                        <div class="overflow-hidden mb-4">
+                            <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->image ?>" alt="">
                         </div>
+                        <h4 class="mb-3"><?php echo $result->name ?></h4>
+                        <p><?php echo $result->specialization ?></p>
+                        <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i
+                                class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
+                    </div>
+                </div>
 
                 <?php }
                 } ?>
@@ -548,22 +753,23 @@ include('includes/config.php');
                                 foreach ($results as $result) {
                             ?>
 
-                                    <div class="testimonial-item">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="photo mr-3">
-                                                <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
-                                            </div>
-                                            <div class="author">
-                                                <cite class="d-block mb-0" style="color: #150754!important;"><?php echo $result->name ?></cite>
-                                                <span><?php echo $result->designation ?>.</span><br>
-                                                <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
-                                            </div>
-
-                                        </div>
-                                        <blockquote class="justify-para">
-                                            <p><?php echo $result->message ?></p>
-                                        </blockquote>
+                            <div class="testimonial-item">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="photo mr-3">
+                                        <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
                                     </div>
+                                    <div class="author">
+                                        <cite class="d-block mb-0"
+                                            style="color: #150754!important;"><?php echo $result->name ?></cite>
+                                        <span><?php echo $result->designation ?>.</span><br>
+                                        <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                                    </div>
+
+                                </div>
+                                <blockquote class="justify-para">
+                                    <p><?php echo $result->message ?></p>
+                                </blockquote>
+                            </div>
                             <?php }
                             } ?>
 
