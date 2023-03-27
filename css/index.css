@@ -45,14 +45,14 @@ section {
   text-align: right;
 }
 
-/* .hod-img {
-  max-width: 500px;
+.hod-img {
+  width: 500px;
 }
 @media (max-width: 576px) {
-  .your-element {
-    max-width: 450px;
+  .hod-img {
+    width: 150px;
   }
-} */
+}
 .speaker-image-border {
   border: #000000 solid 2px;
   box-shadow: #ff0000 3px 3px;

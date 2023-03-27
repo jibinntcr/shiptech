@@ -45,6 +45,18 @@ include('includes/config.php');
     <link href="css/date.css" rel="stylesheet">
 
     <link href="css/event.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet">
+    <style>
+    .hod-img {
+        width: 450px;
+    }
+
+    @media (max-width: 576px) {
+        .hod-img {
+            width: 300px;
+        }
+    }
+    </style>
 </head>
 
 <body style="box-flex-group: #d6d6d6;">
@@ -663,17 +675,18 @@ include('includes/config.php');
         <section class="container speaker-section spad">
             <div class="sec-title text-left">
                 <div class="row-cols-1 mb-5 speaker-disply">
-                    <span class="left">
+                    <span class="left m-5">
 
 
                         <div style="float: left; ">
-                            <img class="speaker-image-border"
-                                src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="width: 200px; margin-right: 15px;  border: #000000 solid 2px;
+                            <img class="speaker-image-border hod-img"
+                                src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
     box-shadow: #ff0000 3px 3px;
     padding: 20px;" />
                         </div>
                     </span>
-                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's&nbsp;Message&nbsp;&nbsp;&nbsp; </h6>
                     <h1 class="mb-5">Shiptech CUSAT</h1>
                     <p class="justify-para">
                         Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp;
