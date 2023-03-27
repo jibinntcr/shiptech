@@ -87,9 +87,9 @@ include('includes/config.php');
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h4> <a href="#" target="_blank" class="mb-3">MANDATORY
+                            <h4> <a href="uploads/Mandatory-disclosure.pdf" target="_blank" class="mb-3">MANDATORY
                                     DISCLOSURE</a> </h4>
-                            <p>(Updated on 07-04-2022)</p>
+                            <!-- <p>(Updated on 07-04-2022)</p> -->
                         </div>
                     </div>
                 </div>

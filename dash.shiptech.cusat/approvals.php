@@ -93,8 +93,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 ?>
                                             <tr><?php
                                                             $name =  substr($result->name, 0, 65);
+                                                            $year =  $result->year;
                                                             ?>
-                                                <td><?php echo  $name ?></td>
+                                                <td><?php echo  $name ?>, <?php echo $year ?></td>
 
                                                 <td>
                                                     <div class="template-demo mt-2">

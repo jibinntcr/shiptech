@@ -73,6 +73,8 @@
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
                     <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
                         Redressal Committee 2022</a>
                     <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
@@ -82,7 +84,8 @@
                     <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
                         Tech</a>
                     <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
-                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">Alumni</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department Alumni</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
 
                 </div>
             </div>
