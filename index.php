@@ -303,7 +303,7 @@ include('includes/config.php');
                             ?>
                             <li>
                                 <div class="d-flex news border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; hight:120px;  margin: 0 auto">
+                                    style="border-radius: 20px; max-width: 655px; height:120px;  margin: 0 auto">
                                     <img class="d-block" style="
                       width: 110px;
                       height: 110px;
@@ -464,7 +464,12 @@ include('includes/config.php');
 
 
 
+
+
+
     <!-- HOD MESSAGE 2 -->
+<<<<<<< HEAD
+=======
 
     <div class="container-xxl py-5">
 
@@ -662,6 +667,7 @@ include('includes/config.php');
     <!--end HOD MESSAGE 2 -->
 
     <!-- HOS MESSAGE  Start -->
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
     <?php
     $sql = "SELECT * from hod where status='1' ";
     $query = $dbh->prepare($sql);
@@ -670,9 +676,59 @@ include('includes/config.php');
     if ($query->rowCount() > 0) {
     ?>
     <div class="container-xxl py-5">
+<<<<<<< HEAD
+        <div class="container my-4">
+            <div class="row-cols-1 mb-5 speaker-disply justify-para">
+                <span class="left">
+                    <div style="float: left">
+                        <img class="img-fluid d-block mx-auto mb-3 fac-img-curv"
+                            src="uploads/<?php echo ($userArr[0]->photo) ?>"
+                            style="max-width: 500px; margin-right: 15px">
+                    </div>
+                </span>
+                <p>
+                <h6 class="text-secondary text-uppercase my-3">HOD's Message </h6>
+                <h1 class="mb-5">Shiptech CUSAT</h1>
+                </p>
+                <br class="justify-para">
+                <?php echo ($userArr[0]->message) ?>
+                </br>
+                <span class="speaker-name"><?php echo ($userArr[0]->name) ?></span><br>
+                <span class="speaker-name"><?php echo ($userArr[0]->designation) ?></span>
+                <br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <?php
+    }
+    ?>
+
+
+
+
+
+    <div class="container-xxl py-5">
+
+        <!--end HOD MESSAGE 2 -->
+
+        <!-- HOS MESSAGE  Start -->
+        <?php
+        $sql = "SELECT * from hod where status='1' ";
+        $query = $dbh->prepare($sql);
+        $query->execute();
+        $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+        if ($query->rowCount() > 0) {
+        ?>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+=======
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
@@ -690,10 +746,16 @@ include('includes/config.php');
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+        <?php }
+        ?>
+        <!-- HOD MESSAGE  End -->
+=======
     </div>
     <?php }
     ?>
     <!-- HOD MESSAGE  End -->
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
 
 
@@ -710,6 +772,17 @@ include('includes/config.php');
             <div class="row g-4">
 
 
+<<<<<<< HEAD
+                    <?php
+                    $sql = "SELECT * from course WHERE status='1'";
+                    $query = $dbh->prepare($sql);
+                    $query->execute();
+                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                    $cnt = 1;
+                    if ($query->rowCount() > 0) {
+                        foreach ($results as $result) {
+                    ?>
+=======
                 <?php
                 $sql = "SELECT * from course WHERE status='1'";
                 $query = $dbh->prepare($sql);
@@ -719,6 +792,7 @@ include('includes/config.php');
                 if ($query->rowCount() > 0) {
                     foreach ($results as $result) {
                 ?>
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
@@ -733,8 +807,13 @@ include('includes/config.php');
                     </div>
                 </div>
 
+<<<<<<< HEAD
+                    <?php }
+                    } ?>
+=======
                 <?php }
                 } ?>
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
             </div>
         </div>
@@ -761,6 +840,17 @@ include('includes/config.php');
 
 
 
+<<<<<<< HEAD
+                                <?php
+                                $sql = "SELECT * from testimonials  WHERE status='1'";
+                                $query = $dbh->prepare($sql);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt = 1;
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                ?>
+=======
                             <?php
                             $sql = "SELECT * from testimonials  WHERE status='1'";
                             $query = $dbh->prepare($sql);
@@ -770,6 +860,7 @@ include('includes/config.php');
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) {
                             ?>
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
                             <div class="testimonial-item">
                                 <div class="d-flex align-items-center mb-4">
@@ -784,12 +875,17 @@ include('includes/config.php');
                                     </div>
 
                                 </div>
+<<<<<<< HEAD
+                                <?php }
+                                } ?>
+=======
                                 <blockquote class="justify-para">
                                     <p><?php echo $result->message ?></p>
                                 </blockquote>
                             </div>
                             <?php }
                             } ?>
+>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
 
                         </div>
