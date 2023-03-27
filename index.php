@@ -468,10 +468,7 @@ include('includes/config.php');
 
 
     <!-- HOD MESSAGE 2 -->
-<<<<<<< HEAD
-=======
-
-    <div class="container-xxl py-5">
+    <<<<<<< HEAD=======<div class="container-xxl py-5">
 
 
         <div class="container my-4">
@@ -663,56 +660,11 @@ include('includes/config.php');
                 </div>
             </div>
         </div>
-    </div>
-    <!--end HOD MESSAGE 2 -->
-
-    <!-- HOS MESSAGE  Start -->
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
-    <?php
-    $sql = "SELECT * from hod where status='1' ";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
-    if ($query->rowCount() > 0) {
-    ?>
-    <div class="container-xxl py-5">
-<<<<<<< HEAD
-        <div class="container my-4">
-            <div class="row-cols-1 mb-5 speaker-disply justify-para">
-                <span class="left">
-                    <div style="float: left">
-                        <img class="img-fluid d-block mx-auto mb-3 fac-img-curv"
-                            src="uploads/<?php echo ($userArr[0]->photo) ?>"
-                            style="max-width: 500px; margin-right: 15px">
-                    </div>
-                </span>
-                <p>
-                <h6 class="text-secondary text-uppercase my-3">HOD's Message </h6>
-                <h1 class="mb-5">Shiptech CUSAT</h1>
-                </p>
-                <br class="justify-para">
-                <?php echo ($userArr[0]->message) ?>
-                </br>
-                <span class="speaker-name"><?php echo ($userArr[0]->name) ?></span><br>
-                <span class="speaker-name"><?php echo ($userArr[0]->designation) ?></span>
-                <br>
-                </p>
-            </div>
         </div>
-    </div>
-    <?php
-    }
-    ?>
-
-
-
-
-
-    <div class="container-xxl py-5">
-
         <!--end HOD MESSAGE 2 -->
 
         <!-- HOS MESSAGE  Start -->
+        >>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
         <?php
         $sql = "SELECT * from hod where status='1' ";
         $query = $dbh->prepare($sql);
@@ -721,211 +673,247 @@ include('includes/config.php');
         if ($query->rowCount() > 0) {
         ?>
         <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
-=======
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
-
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
-                            src="uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
-                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
-                    <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
-                    <span><b><?php echo ($userArr[0]->name); ?></b>
-                        <br>
-                        <?php echo ($userArr[0]->designation); ?></span>
-
-                </div>
-            </div>
-        </div>
-<<<<<<< HEAD
-        <?php }
-        ?>
-        <!-- HOD MESSAGE  End -->
-=======
-    </div>
-    <?php }
-    ?>
-    <!-- HOD MESSAGE  End -->
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
-
-
-
-
-
-
-    <!-- Course  Start -->
-    <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
-                <h1 class="mb-5">Courses Offered</h1>
-            </div>
-            <div class="row g-4">
-
-
-<<<<<<< HEAD
-                    <?php
-                    $sql = "SELECT * from course WHERE status='1'";
-                    $query = $dbh->prepare($sql);
-                    $query->execute();
-                    $results = $query->fetchAll(PDO::FETCH_OBJ);
-                    $cnt = 1;
-                    if ($query->rowCount() > 0) {
-                        foreach ($results as $result) {
-                    ?>
-=======
-                <?php
-                $sql = "SELECT * from course WHERE status='1'";
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt = 1;
-                if ($query->rowCount() > 0) {
-                    foreach ($results as $result) {
-                ?>
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
-
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->image ?>" alt="">
+            <<<<<<< HEAD <div class="container my-4">
+                <div class="row-cols-1 mb-5 speaker-disply justify-para">
+                    <span class="left">
+                        <div style="float: left">
+                            <img class="img-fluid d-block mx-auto mb-3 fac-img-curv"
+                                src="uploads/<?php echo ($userArr[0]->photo) ?>"
+                                style="max-width: 500px; margin-right: 15px">
                         </div>
-                        <h4 class="mb-3"><?php echo $result->name ?></h4>
-                        <p><?php echo $result->specialization ?></p>
-                        <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i
-                                class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-
-<<<<<<< HEAD
-                    <?php }
-                    } ?>
-=======
-                <?php }
-                } ?>
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
-
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- NEW TESTIMONIAL START  -->
-    <div class="testimonial-section">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
-
-                    <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
-                    <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and students
-                        who have been
-                        a vital part of our department.</p>
-                    <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
+                    </span>
+                    <p>
+                    <h6 class="text-secondary text-uppercase my-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+                    </p>
+                    <br class="justify-para">
+                    <?php echo ($userArr[0]->message) ?>
+                    </br>
+                    <span class="speaker-name"><?php echo ($userArr[0]->name) ?></span><br>
+                    <span class="speaker-name"><?php echo ($userArr[0]->designation) ?></span>
+                    <br>
                     </p>
                 </div>
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial--wrap">
-                        <div class="owl-single owl-carousel no-dots no-nav">
+        </div>
+        </div>
+        <?php
+        }
+        ?>
 
 
 
-<<<<<<< HEAD
-                                <?php
-                                $sql = "SELECT * from testimonials  WHERE status='1'";
-                                $query = $dbh->prepare($sql);
-                                $query->execute();
-                                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                                $cnt = 1;
-                                if ($query->rowCount() > 0) {
-                                    foreach ($results as $result) {
-                                ?>
-=======
-                            <?php
-                            $sql = "SELECT * from testimonials  WHERE status='1'";
-                            $query = $dbh->prepare($sql);
-                            $query->execute();
-                            $results = $query->fetchAll(PDO::FETCH_OBJ);
-                            $cnt = 1;
-                            if ($query->rowCount() > 0) {
-                                foreach ($results as $result) {
-                            ?>
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
-                            <div class="testimonial-item">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="photo mr-3">
-                                        <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
+
+        <div class="container-xxl py-5">
+
+            <!--end HOD MESSAGE 2 -->
+
+            <!-- HOS MESSAGE  Start -->
+            <?php
+            $sql = "SELECT * from hod where status='1' ";
+            $query = $dbh->prepare($sql);
+            $query->execute();
+            $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+            if ($query->rowCount() > 0) {
+            ?>
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                            =======
+                            <div class="container">
+                                <div class="row g-5">
+                                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s"
+                                        style="min-height: 400px;">
+                                        >>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
+
+                                        <div class="position-relative h-100">
+                                            <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
+                                                src="uploads/<?php echo ($userArr[0]->photo) ?>"
+                                                style="object-fit: cover;" alt="">
+                                        </div>
                                     </div>
-                                    <div class="author">
-                                        <cite class="d-block mb-0"
-                                            style="color: #150754!important;"><?php echo $result->name ?></cite>
-                                        <span><?php echo $result->designation ?>.</span><br>
-                                        <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
-                                    </div>
+                                    <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                                        <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                                        <h1 class="mb-5">Shiptech CUSAT</h1>
+                                        <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
+                                        <span><b><?php echo ($userArr[0]->name); ?></b>
+                                            <br>
+                                            <?php echo ($userArr[0]->designation); ?></span>
 
+                                    </div>
                                 </div>
-<<<<<<< HEAD
-                                <?php }
-                                } ?>
-=======
-                                <blockquote class="justify-para">
-                                    <p><?php echo $result->message ?></p>
-                                </blockquote>
                             </div>
                             <?php }
-                            } ?>
->>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
+                            ?>
+                            <!-- HOD MESSAGE  End -->
+
+                            <!-- HOD MESSAGE  End -->
 
 
-                        </div>
-                        <div class="custom-nav-wrap">
-                            <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
-                            <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-    <!-- Footer Start -->
-    <?php include('partials/footer.php') ?>
-    <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+                            <!-- Course  Start -->
+                            <div class="container-xxl py-5">
+                                <div class="container py-5">
+                                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                                        <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
+                                        <h1 class="mb-5">Courses Offered</h1>
+                                    </div>
+                                    <div class="row g-4">
 
 
-    <!-- JavaScript Libraries -->
-    <script src="testimonial/js/jquery-3.5.1.min.js"></script>
-    <script src="testimonial/js/owl.carousel.min.js"></script>
-    <script src="testimonial/js/aos.js"></script>
-    <script src="testimonial/js/custom.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/Scrolling.js"></script>
+                                        <<<<<<< HEAD <?php
+                                                        $sql = "SELECT * from course WHERE status='1'";
+                                                        $query = $dbh->prepare($sql);
+                                                        $query->execute();
+                                                        $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                                        $cnt = 1;
+                                                        if ($query->rowCount() > 0) {
+                                                            foreach ($results as $result) {
+                                                        ?>=======<?php
+                                                                $sql = "SELECT * from course WHERE status='1'";
+                                                                $query = $dbh->prepare($sql);
+                                                                $query->execute();
+                                                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                                                $cnt = 1;
+                                                                if ($query->rowCount() > 0) {
+                                                                    foreach ($results as $result) {
+                                ?>>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+                                            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                                                <div class="service-item p-4 fac-img-curv">
+                                                    <div class="overflow-hidden mb-4">
+                                                        <img class="fac-img-curv img-fluid"
+                                                            src="uploads/<?php echo $result->image ?>" alt="">
+                                                    </div>
+                                                    <h4 class="mb-3"><?php echo $result->name ?></h4>
+                                                    <p><?php echo $result->specialization ?></p>
+                                                    <a class="btn-slide mt-2"
+                                                        href="course-details.php?id=<?php echo   $result->id ?>"><i
+                                                            class="fa fa-arrow-right"></i><span>Read
+                                                            More</span></a>
+                                                </div>
+                                            </div>
+
+                                            <<<<<<< HEAD <?php }
+                                                                } ?>=======<?php }
+                                                        } ?>>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service End -->
+
+
+                            <!-- NEW TESTIMONIAL START  -->
+                            <div class="testimonial-section">
+                                <div class="container">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
+
+                                            <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
+                                            <p class="mb-4 justify-para">Experiences and feedback provided by our
+                                                esteemed alumni and students
+                                                who have been
+                                                a vital part of our department.</p>
+                                            <p><a class="btn btn-primary "><span class="fa fa-arrow-right"
+                                                        style="width: 100px;"></span></a>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                                            <div class="testimonial--wrap">
+                                                <div class="owl-single owl-carousel no-dots no-nav">
+
+
+
+                                                    <<<<<<< HEAD <?php
+                                                                    $sql = "SELECT * from testimonials  WHERE status='1'";
+                                                                    $query = $dbh->prepare($sql);
+                                                                    $query->execute();
+                                                                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                                                    $cnt = 1;
+                                                                    if ($query->rowCount() > 0) {
+                                                                        foreach ($results as $result) {
+                                                                    ?>=======<?php
+                                                                            $sql = "SELECT * from testimonials  WHERE status='1'";
+                                                                            $query = $dbh->prepare($sql);
+                                                                            $query->execute();
+                                                                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                                                            $cnt = 1;
+                                                                            if ($query->rowCount() > 0) {
+                                                                                foreach ($results as $result) {
+                                            ?>>>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
+
+                                                        <div class="testimonial-item">
+                                                            <div class="d-flex align-items-center mb-4">
+                                                                <div class="photo mr-3">
+                                                                    <img src="uploads/<?php echo $result->image ?>"
+                                                                        alt="Image" class="img-fluid">
+                                                                </div>
+                                                                <div class="author">
+                                                                    <cite class="d-block mb-0"
+                                                                        style="color: #150754!important;"><?php echo $result->name ?></cite>
+                                                                    <span><?php echo $result->designation ?>.</span><br>
+                                                                    <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                                                                </div>
+
+                                                            </div>
+                                                            <<<<<<< HEAD <?php }
+                                                                            } ?>=======<blockquote
+                                                                class="justify-para">
+                                                                <p><?php echo $result->message ?></p>
+                                                                </blockquote>
+                                                        </div>
+                                                        <?php }
+                                                                    } ?>
+                                                        >>>>>>> 98fc64a9e148b8d989267f371b755f7f857b5420
+
+
+                                                </div>
+                                                <div class="custom-nav-wrap">
+                                                    <a href="#" class="custom-owl-prev"><span
+                                                            class="icon-keyboard_backspace"></span></a>
+                                                    <a href="#" class="custom-owl-next"><span
+                                                            class="icon-keyboard_backspace"></span></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Footer Start -->
+                            <?php include('partials/footer.php') ?>
+                            <!-- Footer End -->
+
+
+                            <!-- Back to Top -->
+                            <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i
+                                    class="bi bi-arrow-up"></i></a>
+
+
+                            <!-- JavaScript Libraries -->
+                            <script src="testimonial/js/jquery-3.5.1.min.js"></script>
+                            <script src="testimonial/js/owl.carousel.min.js"></script>
+                            <script src="testimonial/js/aos.js"></script>
+                            <script src="testimonial/js/custom.js"></script>
+                            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js">
+                            </script>
+                            <script src="lib/wow/wow.min.js"></script>
+                            <script src="lib/easing/easing.min.js"></script>
+                            <script src="lib/waypoints/waypoints.min.js"></script>
+                            <script src="lib/counterup/counterup.min.js"></script>
+                            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                            <script src="js/Scrolling.js"></script>
+
+                            <!-- Template Javascript -->
+                            <script src="js/main.js"></script>
 </body>
 
 </html>
