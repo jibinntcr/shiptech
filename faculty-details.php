@@ -75,7 +75,7 @@ include('includes/config.php');
             <h1 class="display-3 text-white mb-3 animated slideInDown"><?php echo $userArr[0]->name ?></h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
                     <li class="breadcrumb-item text-white active" aria-current="page"> <?php echo $userArr[0]->name ?>
                     </li>
