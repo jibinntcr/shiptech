@@ -469,7 +469,7 @@ include('includes/config.php');
     <div class="container-xxl py-5">
 
 
-        <div class="container my-4">
+        <!-- <div class="container my-4">
             <div class="row">
                 <div class="col-md-6">
                     <img src="https://infinio.co.in/test/uploads/hodmessage_img.jpg"
@@ -524,11 +524,11 @@ include('includes/config.php');
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
-        <div class="container my-4">
+        <!-- <div class="container my-4">
             <div class="row  ">
                 <div class="col-md-7 order-md-2 ">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
@@ -556,10 +556,10 @@ include('includes/config.php');
 
 
                     </p>
-                    <!-- <span><b>Dr. Satheesh Babu P. K.</b>
+                    <span><b>Dr. Satheesh Babu P. K.</b>
                         <br>
                         Head of the Department
-                    </span> -->
+                    </span> 
 
 
                 </div>
@@ -598,11 +598,11 @@ include('includes/config.php');
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
 
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
 
@@ -657,8 +657,83 @@ include('includes/config.php');
 
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
+        <section class="container speaker-section spad">
+            <div class="sec-title text-left">
+                <div class="row-cols-1 mb-5 speaker-disply">
+                    <span class="left">
+
+
+                        <div style="float: left; ">
+                            <img class="speaker-image-border"
+                                src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="width: 200px; margin-right: 15px;  border: #000000 solid 2px;
+    box-shadow: #ff0000 3px 3px;
+    padding: 20px;" />
+                        </div>
+                    </span>
+                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
+                    <h1 class="mb-5">Shiptech CUSAT</h1>
+                    <p class="justify-para">
+                        Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp;
+                        Technology (CUSAT), Kerala, India!!<br>
+                        <br>
+                        The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a
+                        pioneer in the field of Naval Architecture education in the country and has produced global
+                        leaders in maritime sector, in diverse fields including design, construction, operation, survey,
+                        maintenance, education and research.<br>
+                        <br>
+                        We are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates
+                        have a 100% placement record for the past several years, a M.Tech course in Computer Aided
+                        Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine
+                        industry,&nbsp;and a Ph.D programme with 41 scholars at present.<br>
+                        <br>
+                        We are a truly interdisciplinary department with a very strong research atmosphere. Much of the
+                        graduate level research is done at the Computational Hydrodynamics and Structural Engineering
+                        (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The
+                        DoST has&nbsp;collaboration with the Indian Navy, MoUs with leading shipyards, Classification
+                        Societies and academic institutions.<br>
+                        <br>
+                        The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters
+                        to the overall development is highly encouraging.<br>
+                        <br>
+                        Student achievements are recognized through RINA (Royal Institution of Naval Architects, London)
+                        student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for
+                        developing technical and professional leadership among students is provided by the SNAS (Society
+                        of Naval Architecture Students). Department training and placement cell provides professional
+                        assistance for student placement as well as internship in leading companies.<br>
+                        <br>
+                        We are also actively participating in industrial projects as well as consultancy services
+                        through DESON, the consultancy wing of DoST.<br>
+                        <br>
+                        I invite you to browse through the web pages for further information
+                    </p>
+                    <span><b>Dr. Satheesh Babu P. K.</b>
+                        <br>
+                        Head of the Department
+                    </span>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
     <!--end HOD MESSAGE 2 -->
 
     <!-- HOS MESSAGE  Start -->
