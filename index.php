@@ -529,15 +529,11 @@ include('includes/config.php');
 
 
         <div class="container my-4">
-            <div class="row">
-                <div class="col-md-6 order-md-2">
-                    <img src="https://infinio.co.in/test/uploads/hodmessage_img.jpg"
-                        class="img-fluid float-left fac-img-curv" alt="Your Image">
-                </div>
-                <div class="col-md-6 order-md-1">
+            <div class="row  ">
+                <div class="col-md-7 order-md-2 ">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
                     <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para">
+                    <p class=" justify-para">
                         Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp;
                         Technology (CUSAT), Kerala, India!!<br>
                         <br>
@@ -557,6 +553,28 @@ include('includes/config.php');
                         DoST has&nbsp;collaboration with the Indian Navy, MoUs with leading shipyards, Classification
                         Societies and academic institutions.<br>
                         <br>
+
+
+                    </p>
+                    <!-- <span><b>Dr. Satheesh Babu P. K.</b>
+                        <br>
+                        Head of the Department
+                    </span> -->
+
+
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="https://infinio.co.in/test/uploads/hodmessage_img.jpg"
+                        class="img-fluid float-right fac-img-curv" alt="Your Image" style="max-width: 500px;">
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-12 justify-para">
+                    <p>
+                        <br>
                         The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters
                         to the overall development is highly encouraging.<br>
                         <br>
@@ -571,15 +589,15 @@ include('includes/config.php');
                         <br>
                         I invite you to browse through the web pages for further information
 
+
                     </p>
                     <span><b>Dr. Satheesh Babu P. K.</b>
                         <br>
                         Head of the Department
                     </span>
-
-
                 </div>
             </div>
+
         </div>
 
 
