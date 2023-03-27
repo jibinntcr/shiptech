@@ -12,12 +12,12 @@
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
                 <div class="d-flex pt-2">
                     <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
-                    <a target="_blank" class="btn btn-outline-light btn-social"
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a target="_blank" class="btn btn-outline-light btn-social"
+                            class="fab fa-linkedin-in"></i></a> -->
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i
-                            class="fab fa-linkedin-in"></i></a>
+                            class="fab fa-linkedin-in"></i></a> -->
                     <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
                     <a target="_blank" class="btn btn-outline-light btn-social"
