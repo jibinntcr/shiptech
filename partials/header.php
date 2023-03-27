@@ -42,6 +42,14 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="course.php" class="dropdown-item">Courses</a>
+                    <!-- <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank"
+                        class="dropdown-item">Program Educational
+                        Objectives</a>
+                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="dropdown-item">Program
+                        Outcomes (POs)</a>
+                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="dropdown-item">Program
+                        Specific
+                        Outcomes (PSOs)</a> -->
                     <!-- <a href="research.php" class="dropdown-item">Research</a> -->
                 </div>
             </div>
