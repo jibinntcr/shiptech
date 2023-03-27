@@ -73,6 +73,8 @@
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
                     <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
                         Redressal Committee 2022</a>
                     <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
