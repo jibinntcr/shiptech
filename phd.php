@@ -83,37 +83,66 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">Research</h6>
-                    <h1 class="mb-3">Course Description</h1>
-                    <p class="mb-5 justify-para" style=" margin-left: 15px;">
-                        The Ph.D. in Ship Technology is a research-based programme that provides students with advanced
-                        knowledge and skills in ship technology. Students will conduct independent research and gain
-                        knowledge in a specific area of ship technology. Students will work closely with a faculty
-                        advisor throughout the programme to develop their research and advance their knowledge in their
-                        field. Graduates of the programme will be prepared for careers in academia, industry, and
-                        research institutions.
-                    </p>
-                    <h4 class="mb-2">Regulations</h4>
+                    <h1 class="mb-3">Dept of Ship Technology, CUSAT</h1>
+                    <p class="mb-2 justify-para" style=" margin-left: 15px;">
+                        Research is central to the progress of any academic department. It improves the teaching
+                        effectiveness and helps to make a difference to business, industry and society as a whole
+                        thereby transforming the way academics, business, industry and the public sector collaborate.
+                        The department’s research mission is to utilize its core strengths to maximize impact and help
+                        the maritime communities (research and industrial) and the society to address global challenges.
+                        The Department provides a thriving research environment with collaborations with leading
+                        shipyards, Classification Societies, R & D organizations, etc. Further, all faculty members are
+                        consultants of DESCON (Consultancy wing of department) and carry out consultancy assignments for
+                        several Public/ Private organizations.<br></p>
+                    <h6 class="mb-2" style=" margin-left: 15px;"> Our research areas by and large fall under the
+                        following categories:</h6>
+
                     <ul class="mission-dot " style=" margin-left: 15px;">
-                        <?php
-
-                        $sql = "SELECT * from regulations  WHERE status='1' ORDER BY `regulations`.`year` DESC";
-                        $query = $dbh->prepare($sql);
-                        $query->execute();
-                        $results = $query->fetchAll(PDO::FETCH_OBJ);
-                        $cnt = 1;
-                        if ($query->rowCount() > 0) {
-                            foreach ($results as $result) {
-                        ?>
                         <li class="mb-0">
-                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>
-                            <a href="uploads/<?php echo $result->file ?>" target="_blank" class="white col-11"
-                                href="link"><?php echo $result->name ?></a>
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Naval Architecture (Ship
+                            Design, Ship Building, Computer Applications)
                         </li>
-                        <?php }
-                        }
-                        ?>
-
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Structures (Marine /
+                            Civil)
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Ship hydrodynamics
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Ship stability and
+                            hydrostatics
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Ship recycling
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Manoeuvring and motion
+                            stability of marine vehicles
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Marine materials and
+                            corrosion
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Offshore and subsea
+                            structures
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Numerical and
+                            experimental hydrodynamics
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Ship electrical systems
+                        </li>
+                        <li class="mb-0">
+                            <i class="fa fa-ship " aria-hidden="true" style="color:#007a9b"></i>Offshore renewable
+                            energy
+                        </li>
                     </ul>
+
+
+
                 </div>
             </div>
         </div>
@@ -204,6 +233,40 @@ include('includes/config.php');
                             doctoral committee every six months.</span>
                     </div> -->
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <h1 class="row justify-content-center mb-4">Regulations</h1>
+            <div class="row row g-4 justify-content-center">
+                <?php
+
+                $sql = "SELECT * from regulations  WHERE status='1' ORDER BY `regulations`.`year` DESC";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+
+                <a href="uploads/<?php echo $result->file ?>" target="_blank" class="col-lg-3 col-sm-6 wow fadeInUp"
+                    data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <!-- <div> -->
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa fa-file-pdf text-primary mb-4"></i>
+                            <h4 class="mb-3"><?php echo $result->name ?></h4>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </a>
+                <?php }
+                } ?>
+
+
+
             </div>
         </div>
     </div>
