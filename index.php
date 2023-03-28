@@ -478,10 +478,9 @@ include('includes/config.php');
 
     <!-- HOD MESSAGE 2 -->
 
-    <div class="container-xxl py-5">
 
 
-        <!-- <div class="container my-4">
+    <!-- <div class="container my-4">
             <div class="row">
                 <div class="col-md-6">
                     <img src="https://infinio.co.in/test/uploads/hodmessage_img.jpg"
@@ -540,7 +539,7 @@ include('includes/config.php');
 
 
 
-        <!-- <div class="container my-4">
+    <!-- <div class="container my-4">
             <div class="row  ">
                 <div class="col-md-7 order-md-2 ">
                     <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
@@ -614,7 +613,7 @@ include('includes/config.php');
 
 
 
-        <!-- <div class="container">
+    <!-- <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
 
@@ -670,128 +669,62 @@ include('includes/config.php');
                 </div>
             </div>
         </div> -->
-
-
-        <section class="container speaker-section spad">
-            <div class="sec-title text-left">
-                <div class="row-cols-1 mb-5 speaker-disply">
-                    <span class="left m-5">
-
-
-                        <div style="float: left; ">
-                            <img class="speaker-image-border hod-img"
-                                src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
-    box-shadow: #ff0000 3px 3px;
-    padding: 20px;" />
-                        </div>
-                    </span>
-
-                    <h6 class="text-secondary text-uppercase mb-3">HOD's&nbsp;Message&nbsp;&nbsp;&nbsp; </h6>
-                    <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="justify-para">
-                        Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp;
-                        Technology (CUSAT), Kerala, India!!<br>
-                        <br>
-                        The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a
-                        pioneer in the field of Naval Architecture education in the country and has produced global
-                        leaders in maritime sector, in diverse fields including design, construction, operation, survey,
-                        maintenance, education and research.<br>
-                        <br>
-                        We are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates
-                        have a 100% placement record for the past several years, a M.Tech course in Computer Aided
-                        Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine
-                        industry,&nbsp;and a Ph.D programme with 41 scholars at present.<br>
-                        <br>
-                        We are a truly interdisciplinary department with a very strong research atmosphere. Much of the
-                        graduate level research is done at the Computational Hydrodynamics and Structural Engineering
-                        (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The
-                        DoST has&nbsp;collaboration with the Indian Navy, MoUs with leading shipyards, Classification
-                        Societies and academic institutions.<br>
-                        <br>
-                        The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters
-                        to the overall development is highly encouraging.<br>
-                        <br>
-                        Student achievements are recognized through RINA (Royal Institution of Naval Architects, London)
-                        student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for
-                        developing technical and professional leadership among students is provided by the SNAS (Society
-                        of Naval Architecture Students). Department training and placement cell provides professional
-                        assistance for student placement as well as internship in leading companies.<br>
-                        <br>
-                        We are also actively participating in industrial projects as well as consultancy services
-                        through DESON, the consultancy wing of DoST.<br>
-                        <br>
-                        I invite you to browse through the web pages for further information
-                    </p>
-                    <span><b>Dr. Satheesh Babu P. K.</b>
-                        <br>
-                        Head of the Department
-                    </span>
-                </div>
-
-
-
-
-
-            </div>
-        </section>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--end HOD MESSAGE 2 -->
-
-    <!-- HOS MESSAGE  Start -->
     <?php
-    $sql = "SELECT * from hod where status='1' ";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
-    if ($query->rowCount() > 0) {
-    ?>
+        $sql = "SELECT * from hod where status='1' ";
+        $query = $dbh->prepare($sql);
+        $query->execute();
+        $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+        if ($query->rowCount() > 0) {
+        ?>
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
 
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv"
-                            src="uploads/<?php echo ($userArr[0]->photo) ?>" style="object-fit: cover;" alt="">
+            <section class="container speaker-section spad">
+                <div class="sec-title text-left">
+                    <div class="row-cols-1 mb-5 speaker-disply justify-para">
+                        <span class="left m-5">
+
+
+                            <div style="float: left; ">
+                                <img class="speaker-image-border hod-img"
+                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
+    box-shadow: #ff0000 3px 3px;
+    padding: 20px;" />
+                            </div>
+                        </span>
+
+                        <h6 class="text-secondary text-uppercase mb-3">HOD's&nbsp;Message&nbsp;&nbsp;&nbsp; </h6>
+                        <h1 class="mb-5">Shiptech CUSAT</h1>
+                        <p class="justify-para">
+                            <?php echo ($userArr[0]->message); ?>
+                        </p>
+                        <span><b><?php echo ($userArr[0]->name); ?></b>
+                            <br>
+                            <?php echo ($userArr[0]->designation); ?>
+                        </span>
                     </div>
-                </div>
-                <div class="col-lg-6 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
-                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
-                    <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para"><?php echo ($userArr[0]->message); ?></p>
-                    <span><b><?php echo ($userArr[0]->name); ?></b>
-                        <br>
-                        <?php echo ($userArr[0]->designation); ?></span>
+
+
+
+
 
                 </div>
-            </div>
+            </section>
         </div>
+
     </div>
     <?php }
-    ?>
-    <!-- HOD MESSAGE  End -->
+        ?>
 
-
+    <!--end HOD MESSAGE 2 -->
 
 
 
 
     <!-- Course  Start -->
     <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
                 <h1 class="mb-5">Courses Offered</h1>
             </div>
@@ -799,14 +732,14 @@ include('includes/config.php');
 
 
                 <?php
-                $sql = "SELECT * from course WHERE status='1'";
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt = 1;
-                if ($query->rowCount() > 0) {
-                    foreach ($results as $result) {
-                ?>
+            $sql = "SELECT * from course WHERE status='1'";
+            $query = $dbh->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $cnt = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {
+            ?>
 
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
@@ -822,7 +755,7 @@ include('includes/config.php');
                 </div>
 
                 <?php }
-                } ?>
+            } ?>
 
             </div>
         </div>
@@ -831,62 +764,66 @@ include('includes/config.php');
 
 
     <!-- NEW TESTIMONIAL START  -->
-    <div class="testimonial-section">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
+    <div class="container-xxl py-5">
+        <div class="testimonial-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
 
-                    <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
-                    <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and students
-                        who have been
-                        a vital part of our department.</p>
-                    <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
-                    </p>
-                </div>
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial--wrap">
-                        <div class="owl-single owl-carousel no-dots no-nav">
-
-
-
-                            <?php
-                            $sql = "SELECT * from testimonials  WHERE status='1'";
-                            $query = $dbh->prepare($sql);
-                            $query->execute();
-                            $results = $query->fetchAll(PDO::FETCH_OBJ);
-                            $cnt = 1;
-                            if ($query->rowCount() > 0) {
-                                foreach ($results as $result) {
-                            ?>
-
-                            <div class="testimonial-item">
-                                <div class="d-flex align-items-center mb-4">
-                                    <div class="photo mr-3">
-                                        <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
-                                    </div>
-                                    <div class="author">
-                                        <cite class="d-block mb-0"
-                                            style="color: #150754!important;"><?php echo $result->name ?></cite>
-                                        <span><?php echo $result->designation ?>.</span><br>
-                                        <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
-                                    </div>
-
-                                </div>
-                                <blockquote class="justify-para">
-                                    <p><?php echo $result->message ?></p>
-                                </blockquote>
-                            </div>
-                            <?php }
-                            } ?>
-
-
-                        </div>
-                        <div class="custom-nav-wrap">
-                            <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
-                            <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
-                        </div>
+                        <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
+                        <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and
+                            students
+                            who have been
+                            a vital part of our department.</p>
+                        <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
+                        </p>
                     </div>
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial--wrap">
+                            <div class="owl-single owl-carousel no-dots no-nav">
 
+
+
+                                <?php
+                                $sql = "SELECT * from testimonials  WHERE status='1'";
+                                $query = $dbh->prepare($sql);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt = 1;
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                ?>
+
+                                <div class="testimonial-item">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="photo mr-3">
+                                            <img src="uploads/<?php echo $result->image ?>" alt="Image"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="author">
+                                            <cite class="d-block mb-0"
+                                                style="color: #150754!important;"><?php echo $result->name ?></cite>
+                                            <span><?php echo $result->designation ?>.</span><br>
+                                            <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                                        </div>
+
+                                    </div>
+                                    <blockquote class="justify-para">
+                                        <p><?php echo $result->message ?></p>
+                                    </blockquote>
+                                </div>
+                                <?php }
+                                } ?>
+
+
+                            </div>
+                            <div class="custom-nav-wrap">
+                                <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
+                                <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
