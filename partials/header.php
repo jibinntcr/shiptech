@@ -83,10 +83,10 @@
                         Registration</a>
                     <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
                         cell</a>
-                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                    <!-- <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
                         Redressal Committee 2022</a>
                     <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
-                        Redressal Form</a>
+                        Redressal Form</a> -->
                     <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
                         Ragging Cell</a>
                     <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
