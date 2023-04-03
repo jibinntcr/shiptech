@@ -15,8 +15,10 @@
             <div class="col d-flex justify-content-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
-                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4"
+                            href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center "
+                            href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
                     </p>
                 </div>
             </div>
@@ -56,7 +58,7 @@
                 <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
                     <a href="faculty.php" class="dropdown-item">Faculty</a>
                     <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
-                    <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a>
+                    <!-- <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a> -->
                 </div>
             </div>
             <div class=" nav-item dropdown">
