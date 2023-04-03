@@ -32,61 +32,61 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>New MoU | Shiptech Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="vendors/feather/feather.css">
-    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="vendors/select2/select2.min.css">
-    <link rel="stylesheet" href="vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="css/vertical-layout-light/style.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <script src="ckeditor/ckeditor.js"> </script>
-</head>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>New MoU | Ship Technology Admin</title>
+        <!-- plugins:css -->
+        <link rel="stylesheet" href="vendors/feather/feather.css">
+        <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+        <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <link rel="stylesheet" href="vendors/select2/select2.min.css">
+        <link rel="stylesheet" href="vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+        <!-- endinject -->
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <script src="ckeditor/ckeditor.js"> </script>
+    </head>
+    </head>
 
-<body>
-    <div class="container-scroller">
-        <!-- partial:partials/_navbar.html -->
-        <?php include('partials/navbar.php') ?>
+    <body>
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <?php include('partials/navbar.php') ?>
 
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_settings-panel.html -->
             <!-- partial -->
-            <!-- partial:partials/_sidebar.html -->
-            <?php include('partials/sidebar.php') ?>
-            <!-- partial -->
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="col-lg-12 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">New MoU</h4>
-                                <form class="forms-sample" enctype="multipart/form-data" method="POST">
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername1">Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Year</label>
-                                        <input type="text" class="form-control" id="year" name="year" required>
-                                    </div>
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_settings-panel.html -->
+                <!-- partial -->
+                <!-- partial:partials/_sidebar.html -->
+                <?php include('partials/sidebar.php') ?>
+                <!-- partial -->
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">New MoU</h4>
+                                    <form class="forms-sample" enctype="multipart/form-data" method="POST">
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername1">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleTextarea1">Year</label>
+                                            <input type="text" class="form-control" id="year" name="year" required>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label for="exampleTextarea1">Content</label>
-                                        <textarea class="form-control" id="content" name="content" rows="4"></textarea required>
+                                        <div class="form-group">
+                                            <label for="exampleTextarea1">Content</label>
+                                            <textarea class="form-control" id="content" name="content" rows="4"></textarea required>
                                         </div>
                                         <div class="form-group">
                                         <label for="exampleTextarea1">Image(500x500px)</label>
