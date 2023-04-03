@@ -70,9 +70,18 @@
                     <a href="mou.php" class="dropdown-item">MoU</a>
                     <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
                     <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current PhD Sudents</a>
                     <a href="PhD-awarded.php" class="dropdown-item">PhD Awarded</a>
                 </div>
             </div>
+            <!-- <div class=" nav-item dropdown">
+                <a href="library.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank"
+                        class="dropdown-item">Department Library</a>
+
+                </div>
+            </div> -->
             <a href="library.php" class="nav-item nav-link">Library</a>
             <a href="gallery.php" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">

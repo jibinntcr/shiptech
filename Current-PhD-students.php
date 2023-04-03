@@ -2,23 +2,21 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include('includes/config.php');
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Faculty | Department of Ship Technology</title>
+    <title>Current PhD Students | Department of Shiptechnology</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.png" />
-
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +25,8 @@ include('includes/config.php');
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+    <link href="./lib/icons/css/all.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -39,6 +38,8 @@ include('includes/config.php');
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -50,81 +51,66 @@ include('includes/config.php');
         </div>
     </div>
     <!-- Spinner End -->
-
-
     <!-- Navbar Start -->
     <?php include('partials/header.php') ?>
     <!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Faculty</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Current PhD Students</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
-                    <li class="breadcrumb-item text-white active" aria-current="page">Faculty</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Current PhD Students</li>
                 </ol>
             </nav>
         </div>
     </div>
-    <!-- Page Header End -->
-
-
-    <!-- Team Start -->
     <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Ship Technology CUSAT</h6>
-                <h1 class="mb-5">Faculty</h1>
-            </div>
-            <div class="row g-4">
+        <div class="container my-5 overflow-auto">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-primary text-white">
+                    <tr class="text-center">
+                        <th scope="col">Sl. No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Thesis Title</th>
 
-                <?php
-                $sql = "SELECT * from faculty  WHERE status='1'  ORDER BY `faculty`.`priority` ASC";
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt = 1;
-                if ($query->rowCount() > 0) {
-                    foreach ($results as $result) {
-                ?>
+                        <th scope="col">Supervisor</th>
+                        <th scope="col">Year of Registration</th>
+                    </tr>
+                </thead>
+                <tbody>
 
+                    <?php
+                    $sql = "SELECT * from researchscholar  WHERE status='1' AND scholarstatus='Current' ORDER BY `year` DESC";
+                    $query = $dbh->prepare($sql);
+                    $query->execute();
+                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                    $cnt = 1;
+                    if ($query->rowCount() > 0) {
+                        foreach ($results as $result) {
+                    ?>
+                    <tr>
+                        <td><?php echo $cnt ?></td>
+                        <td><?php echo $result->name ?></td>
+                        <td><?php echo $result->title ?></td>
+                        <td><?php echo $result->guide ?></td>
+                        <td><?php echo $result->year ?></td>
+                    </tr>
+                    <?php $cnt = $cnt + 1;
+                        }
+                    }
+                    ?>
 
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid fac-img-curv" src="uploads/<?php echo   $result->image ?>" alt="">
-                        </div>
-                        <h5 class="mb-0"><a
-                                href="faculty-details.php?id=<?php echo   $result->id ?>"><?php echo   $result->name ?><br><?php echo   $result->thumbname ?></a>
-                        </h5>
-                        <p><?php echo   $result->designation ?></p>
-                    </div>
-                </div>
-                <?php }
-                }
-                ?>
-
-
-
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
-    <!-- Team End -->
-
-
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -133,7 +119,6 @@ include('includes/config.php');
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
