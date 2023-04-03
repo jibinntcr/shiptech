@@ -8,17 +8,15 @@
                     <a class="text-white" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
                 </p>
                 <p class="mb-0 text-white"><span class="fa fa-phone-alt"></span>
-                    <a class="text-white" href=" tel:+914842576253">0484 - 2577602</a>
+                    <a class="text-white" href=" tel:+914842575714">0484-2575714</a>
                 </p>
                 </p>
             </div>
             <div class="col d-flex justify-content-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4"
-                            href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
-                        <a class="text-white d-flex align-items-center justify-content-center "
-                            href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
                     </p>
                 </div>
             </div>
