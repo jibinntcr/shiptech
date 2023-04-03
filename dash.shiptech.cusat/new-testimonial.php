@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include('../includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
-    header('location:login.php');
+    header('location:index.php');
 } else {
 
     if (isset($_POST['testimonialBTN'])) {

@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 include('../includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
-    header('location:login.php');
+    header('location:index.php');
 } else {
     if (isset($_POST['CourseseditBTN'])) {
         if (($_FILES["file"]["error"]) == '4' && ($_FILES["file2"]["error"]) == '4') {
