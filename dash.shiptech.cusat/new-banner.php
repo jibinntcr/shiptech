@@ -86,7 +86,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleTextarea1">Image(1366 x 612px)</label>
-                                            <input class="form-control" type="file" id="file" name="file" accept="image/gif, image/png, image/jpg, image/jpeg">
+                                            <input class="form-control" type="file" id="file" name="file" accept="image/gif, image/png, image/jpg, image/jpeg" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2" name="hodBTN" id="hodBTN">Submit</button>
                                         <button class="btn btn-light">Cancel</button>
