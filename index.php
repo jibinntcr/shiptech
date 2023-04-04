@@ -95,7 +95,7 @@ include('includes/config.php');
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1-new.jpg" alt="">
+                <img class="img-fluid" src="img/carousel-1-new-.jpg" alt="">
             </div>
 
             <?php
@@ -552,6 +552,18 @@ include('includes/config.php');
                 <h1 class="mb-5">Courses Offered</h1>
             </div>
             <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4 fac-img-curv">
+                        <div class="overflow-hidden mb-4">
+                            <img class="fac-img-curv img-fluid" src="img/phd_image.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">PhD.</h4>
+                        <p>Research is central to the progress of any academic department</p>
+                        <a class="btn-slide mt-2" href="phd.php"><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
+                    </div>
+                </div>
 
 
                 <?php
