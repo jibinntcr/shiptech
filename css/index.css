@@ -55,6 +55,6 @@ section {
 }
 .speaker-image-border {
   border: #000000 solid 2px;
-  box-shadow: #ff0000 3px 3px;
+  /* box-shadow: #ff0000 3px 3px; */
   padding: 20px;
 }

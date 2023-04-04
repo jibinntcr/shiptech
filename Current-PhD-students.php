@@ -10,7 +10,7 @@ include('includes/config.php');
 
 <head>
     <meta charset="utf-8">
-    <title>Current PhD Students | Department of Shiptechnology</title>
+    <title>Current Ph.D. Students | Department of Shiptechnology</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -56,12 +56,12 @@ include('includes/config.php');
     <!-- Navbar End -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Current PhD Students</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Current Ph.D. Students</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
-                    <li class="breadcrumb-item text-white active" aria-current="page">Current PhD Students</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Current Ph.D. Students</li>
                 </ol>
             </nav>
         </div>
