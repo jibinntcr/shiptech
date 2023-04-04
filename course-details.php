@@ -97,7 +97,7 @@ include('includes/config.php');
                             style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
+                <div class="col-lg-6 about-text wow fadeInUp ship-contact-data justify-para" data-wow-delay="0.3s">
                     <h6 class="text-secondary text-uppercase mb-3">Department of Shiptechnology </h6>
                     <h1 class="mb-3"><?php echo htmlentities($userArr[0]->name); ?><br>
                         <?php echo htmlentities($userArr[0]->specialization); ?></h1>
@@ -115,7 +115,7 @@ include('includes/config.php');
                     </p>
 
 
-                    <h4 class="mb-5 mt-5"> Syllabus</h4>
+                    <h4 class="mb-3"> Syllabus</h4>
                     <ul class="mission-dot " style=" margin-left: 15px;">
 
                         <!-- Syllebus 1 start  -->
