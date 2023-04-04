@@ -61,7 +61,7 @@ include('includes/config.php');
             width: 300px;
         }
     }
-
+   
 
     .toggleLink {
         color: red;
@@ -120,7 +120,7 @@ include('includes/config.php');
 
 
 
-    <div class="container-xxl pb-5">
+    <div class="container">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
@@ -214,13 +214,7 @@ include('includes/config.php');
         </div>
     </div>
     <?php } ?>
-    <!-- SCROLL NEWS END  -->
-
-
-
-    <!-- NEWS AND EVENTS START -->
-
-    <div class="container-xxl  wow fadeInUp py-5" data-wow-delay="0.1s">
+    <div class="container  wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row">
                 <!-- event start -->
@@ -233,8 +227,8 @@ include('includes/config.php');
                         </a>
                     </div>
 
-                    <div class=" container2">
-                        <ul>
+                    <div class=" container2" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
+                        <ul  style="padding-left:1rem;padding-right:1rem;">
 
                             <?php
                             $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 3";
@@ -248,8 +242,8 @@ include('includes/config.php');
 
                             <li>
                                 <div class="d-flex  border p-1 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px; max-width: 655px; margin: 0 auto">
-                                    <div class="circle bg-primary d-flex justify-content-center container">
+                                    style="border-radius: 20px;border-width: thin; max-width: 655px; margin: 0 ;">
+                                    <div class="circle  d-flex justify-content-center container">
                                         <div class="cell">
 
                                             <?php $date = $result->date;
@@ -305,8 +299,8 @@ include('includes/config.php');
                         </a>
                     </div>
 
-                    <div class="container3">
-                        <ul>
+                    <div class="container3" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
+                        <ul style="padding-left:1rem;padding-right:1rem;">
 
 
                             <?php
@@ -384,7 +378,7 @@ include('includes/config.php');
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
-                            style="object-fit: cover;" alt="">
+                            style="object-fit: cover; box-shadow: -5px 5px 5px  #000;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
@@ -469,7 +463,7 @@ include('includes/config.php');
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/shiptech.jpg"
-                            style="object-fit: cover;" alt="">
+                            style="object-fit: cover; box-shadow: -5px 5px 5px  #000;" alt="">
                     </div>
                 </div>
             </div>
@@ -485,12 +479,12 @@ include('includes/config.php');
     $userArr = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
     ?>
-    <div class="container-xxl py-5">
+    <div class="container">
         <div class="container">
 
             <section class="container speaker-section spad">
                 <div class="sec-title text-left">
-                    <div class="row-cols-1 mb-5 speaker-disply justify-para">
+                    <div class="row-cols-1 speaker-disply justify-para">
                         <span class="left m-5">
 
 
