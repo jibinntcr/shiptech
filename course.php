@@ -23,8 +23,7 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -46,8 +45,7 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -82,6 +80,30 @@ include('includes/config.php');
                 <h1 class="mb-5">Courses Offered</h1>
             </div>
             <div class="row g-4">
+
+                <?php
+                $sql = "SELECT * from course WHERE status='1'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item p-4 fac-img-curv">
+                                <div class="overflow-hidden mb-4">
+                                    <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->thumb ?>" alt="">
+                                </div>
+                                <h4 class="mb-3"><?php echo $result->name ?></h4>
+                                <p><?php echo $result->specialization ?></p>
+                                <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i class="fa fa-arrow-right"></i><span>Read
+                                        More</span></a>
+                            </div>
+                        </div>
+                <?php }
+                }
+                ?>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
@@ -93,31 +115,6 @@ include('includes/config.php');
                                 More</span></a>
                     </div>
                 </div>
-
-                <?php
-                $sql = "SELECT * from course WHERE status='1'";
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt = 1;
-                if ($query->rowCount() > 0) {
-                    foreach ($results as $result) {
-                ?>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->thumb ?>" alt="">
-                        </div>
-                        <h4 class="mb-3"><?php echo $result->name ?></h4>
-                        <p><?php echo $result->specialization ?></p>
-                        <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i
-                                class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <?php }
-                }
-                ?>
 
 
             </div>

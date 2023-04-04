@@ -538,19 +538,6 @@ include('includes/config.php');
             </div>
             <div class="row g-4">
 
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="img/phd_image.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Ph.D.</h4>
-                        <p>Research is central to the progress of any academic department</p>
-                        <a class="btn-slide mt-2" href="phd.php"><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-
-
                 <?php
                 $sql = "SELECT * from course WHERE status='1'";
                 $query = $dbh->prepare($sql);
@@ -576,7 +563,17 @@ include('includes/config.php');
 
                 <?php }
                 } ?>
-
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4 fac-img-curv">
+                        <div class="overflow-hidden mb-4">
+                            <img class="fac-img-curv img-fluid" src="img/phd_image.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">Ph.D.</h4>
+                        <p>Research is central to the progress of any academic department</p>
+                        <a class="btn-slide mt-2" href="phd.php"><i class="fa fa-arrow-right"></i><span>Read
+                                More</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
