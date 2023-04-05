@@ -61,6 +61,7 @@ include('includes/config.php');
             width: 300px;
         }
     }
+    }
 
 
 
