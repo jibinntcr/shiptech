@@ -126,7 +126,7 @@ include('includes/config.php');
 
 
 
-    <div class="container">
+    <div class="container py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
@@ -188,7 +188,7 @@ include('includes/config.php');
     if ($query->rowCount() > 0) { ?>
 
     <!-- SCROLL NEWS START  -->
-    <div class="container-xxl  wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -220,7 +220,7 @@ include('includes/config.php');
         </div>
     </div>
     <?php } ?>
-    <div class="container  wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container ">
             <div class="row  ">
                 <!-- event start -->
@@ -378,12 +378,13 @@ include('includes/config.php');
 
 
     <!-- About Start -->
-    <div class="container-xxl py-4">
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
+                        <img style=" border: 5px solid #555;"
+                            class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
                             style="object-fit: cover; box-shadow: -5px 5px 5px  #000;" alt="">
                     </div>
                 </div>
@@ -440,7 +441,7 @@ include('includes/config.php');
 
 
     <!-- ABOUT 2 -->
-    <div class="container">
+    <div class="container py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
@@ -485,7 +486,7 @@ include('includes/config.php');
     $userArr = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
     ?>
-    <div class="container">
+    <div class="container py-5">
         <div class="container">
 
             <section class="container speaker-section spad">
