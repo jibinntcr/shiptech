@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
                     <h1 class="mb-3">Computational Lab (CHASE)</h1>
-                    <p class="mb-2 justify-para" style="">
+                    <p class="mb-2 justify-para">
                         The <b>Computational Hydrodynamics and Structural Engineering (CHASE)</b> Lab was setupin the
                         academic
                         year 2016 –17 as part of the CUSAT 2020 scheme for Improving infrastructural facilties for
@@ -165,7 +165,7 @@
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
                     <h1 class="mb-3"> ElectroChemical Testing Lab</h1>
-                    <p class="mb-2 justify-para" style="">
+                    <p class="mb-2 justify-para">
                         The lab is equippped with CH Instruments Electro-chemical analyzer and CH Software.
                     </p>
                 </div>
