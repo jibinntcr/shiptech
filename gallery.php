@@ -23,7 +23,8 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -45,7 +46,8 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -96,13 +98,15 @@ include('includes/config.php');
                 foreach ($results as $result) {
             ?>
 
-                    <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <img src="uploads/<?php echo   $result->thumbnail ?>" class="img-fluid  w-100 h-100" style="object-fit: cover; border-radius: 20px;" alt="Your Image">
-                        <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                            <a class="btn" href="gallery-item.php?id=<?php echo   $result->id ?>"> <span class="display-6  textHover"><?php echo   $result->name ?></span> </a>
-                        </div>
+            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                <img src="uploads/<?php echo   $result->thumbnail ?>" class="img-fluid  w-100 h-100"
+                    style="object-fit: cover; border-radius: 20px;" alt="Your Image">
+                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
+                    <a class="btn" href="gallery-item.php?id=<?php echo   $result->id ?>"> <span
+                            class="display-6  textHover"><?php echo   $result->name ?></span> </a>
+                </div>
 
-                    </div>
+            </div>
             <?php }
             } ?>
 
