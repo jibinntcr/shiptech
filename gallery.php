@@ -118,17 +118,6 @@ include('includes/config.php');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>
     <!-- Footer End -->
