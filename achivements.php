@@ -67,23 +67,8 @@
     </div>
     <!-- Page Header End -->
     <div class="container-xxl py-5">
-        <div class="container py-5">
-            <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
-                <h1 class="mb-5">Courses Offered</h1>
-            </div> -->
-            <div class="row g-4">
-                <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="fac-img-curv img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Patents</h4>
-                        <a href="patentes.php" class="btn-slide mt-2" href="course-details.php"><i
-                                class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div> -->
+        <div class="container">
+            <div class="row row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
