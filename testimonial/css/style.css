@@ -1,15 +1,12 @@
-/**
- * Template Name: Append
- * Template Author: Untree.co
- * Template License: https://creativecommons.org/licenses/by/3.0/
- * Author URI: https://untree.co/
- * 
- * Twitter: https://twitter.com/Untree_co
- * Facebook: https://web.facebook.com/Untree.co/
- *
- * @format
- */
+/*
+* Template Name: Append
+* Template Author: Untree.co
+* Template License: https://creativecommons.org/licenses/by/3.0/
+* Author URI: https://untree.co/
 
+* Twitter: https://twitter.com/Untree_co
+* Facebook: https://web.facebook.com/Untree.co/
+*/
 html {
   overflow-x: hidden;
 }
@@ -2203,11 +2200,11 @@ h4,
 }
 
 .testimonial-section {
-  padding: 10px 0;
+  padding: 70px 0;
 }
 @media (max-width: 991.98px) {
   .testimonial-section {
-    padding: 10px 0;
+    padding: 30px 0;
   }
 }
 

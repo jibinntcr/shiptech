@@ -485,10 +485,10 @@ include('includes/config.php');
     $userArr = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
     ?>
-    <div class="container ">
+    <div class="container">
         <div class="container">
 
-            <section class="container speaker-section spad my-5">
+            <section class="container speaker-section spad">
                 <div class="sec-title text-left">
                     <div class="row-cols-1 speaker-disply justify-para">
                         <span class="left m-5">
@@ -501,10 +501,8 @@ include('includes/config.php');
                             </div>
                         </span>
 
-                        <h6 class="text-secondary text-uppercase mb-3">
-                            HOD's&nbsp;Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </h6>
-                        <h1 class="mb-5">Ship&nbsp;Technology&nbsp;CUSAT</h1>
+                        <h6 class="text-secondary text-uppercase mb-3">HOD's&nbsp;Message&nbsp;&nbsp;&nbsp; </h6>
+                        <h1 class="mb-5">Ship Technology CUSAT</h1>
                         <p class="justify-para">
                             <?php echo ($userArr[0]->message); ?>
                         </p>
@@ -532,7 +530,7 @@ include('includes/config.php');
 
 
     <!-- Course  Start -->
-    <div class="container-xxl py-2 my-3">
+    <div class="container-xxl py-5">
         <div class="container">
             <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
