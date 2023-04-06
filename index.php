@@ -221,10 +221,10 @@ include('includes/config.php');
     </div>
     <?php } ?>
     <div class="container  wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row">
+        <div class="container ">
+            <div class="row  ">
                 <!-- event start -->
-                <div class="container my-5 row col-xl-6">
+                <div class="container my-5 row col-xl-6" style="margin-right: 15px;">
                     <div class="text-center mb-3">
                         <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
                         <a href="news-home.php">
@@ -378,7 +378,7 @@ include('includes/config.php');
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-4">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -440,7 +440,7 @@ include('includes/config.php');
 
 
     <!-- ABOUT 2 -->
-    <div class="container-xxl py-5">
+    <div class="container">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
