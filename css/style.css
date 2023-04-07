@@ -356,6 +356,7 @@
 .service-item,
 .price-item,
 .team-item {
+  height: 100%;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.322);
 }
 
@@ -483,7 +484,7 @@
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item {
-  position: relative;
+  position: absolute;
   transition: 0.5s;
 }
 

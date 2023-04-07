@@ -2220,7 +2220,10 @@ h4,
 }
 
 .testimonial-item .photo img {
-  max-width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100px;
   border-radius: 50%;
 }
 
