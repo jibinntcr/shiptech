@@ -259,8 +259,9 @@
   .header-carousel .owl-nav .owl-prev,
   .header-carousel .owl-nav .owl-next {
     margin: 7px 0;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+
 
   }
 }
@@ -821,6 +822,19 @@
     margin: 7px 0;
     width: 30px;
     height: 30px;
+    display: none;
+
+  }
+}
+
+@media (max-width: 700px) {
+  
+  .header-carousel .owl-nav .owl-prev,
+  .header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 30px;
+    height: 30px;
+    display: none;
 
   }
 }

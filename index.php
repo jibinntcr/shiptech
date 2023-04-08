@@ -62,19 +62,50 @@ include('includes/config.php');
         }
     }
 
+    .card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
 
-    .toggleLink {
-        color: red;
-        text-decoration: underline
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
 
-    .toggleLink:hover {
-        cursor: pointer
-    }
+  &:hover:before {
+    transform: scale(21);
+  }
+}
 
-    .elaboration {
-        display: none
-    }
+.card1:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+}
+
+
     </style>
 </head>
 
@@ -123,7 +154,22 @@ include('includes/config.php');
         </div>
     </div>
     <!-- Carousel End -->
-
+    <a class="card1" href="#">
+    <h3 style="text-align: center;">SNAS</h3>
+    <p class="small" style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"  src="img/tile-icon-snas.png" alt="Icon"></p>
+    <div class="go-corner" href="#">
+      <div class="go-arrow">
+        →
+      </div>
+    </div>
+  </a>
 
 
     <div class="container py-5">
@@ -203,8 +249,6 @@ include('includes/config.php');
                             <?php
                                 foreach ($results as $result) {
                                 ?>
-
-
                             <a class="news-scroll text-white" href="<?php echo  $result->link ?>"
                                 target="_blank"><?php echo   $result->announcements ?></a>
 
@@ -234,7 +278,7 @@ include('includes/config.php');
                     </div>
 
                     <div class=" container2" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
-                        <ul style="padding-left:1rem;padding-right:1rem;">
+                        <ul style="padding-left:1rem;padding-right:1rem;padding:0;">
 
                             <?php
                             $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 3";
@@ -258,10 +302,10 @@ include('includes/config.php');
                                             <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
                                         </div>
                                         <div class="cell">
-                                            <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
+                                            <h3 class="text-white" style="text-align:center;" ><?php echo date_format($date, "F"); ?></h3>
                                         </div>
                                         <div class="cell">
-                                            <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
+                                            <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
                                         </div>
                                     </div>
 
@@ -550,7 +594,7 @@ include('includes/config.php');
                 ?>
 
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
+                    <div class="service-item p-4 fac-img-curv" style="height:100%">
                         <div class="overflow-hidden mb-4">
                             <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->thumb ?>" alt="">
                         </div>
@@ -582,91 +626,18 @@ include('includes/config.php');
 
 
     <!-- NEW TESTIMONIAL START  -->
-    <div class="container-xxl py-5 d-none d-md-block ">
-        <div class="testimonial-section">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
-
-                        <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
-                        <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
+                
+                <h1 class="mb-5">Testimonials</h1>
+                <h6 class="" style="font-size: mediam;color:#888">Experiences and feedback provided by our esteemed alumni and
                             students
                             who have been
-                            a vital part of our department.</p>
-                        <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
-                        </p>
-                    </div>
-                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                        <div class="testimonial--wrap">
-                            <div class="owl-single owl-carousel no-dots no-nav">
-
-
-
-                                <?php
-                                $sql = "SELECT * from testimonials  WHERE status='1'";
-                                $query = $dbh->prepare($sql);
-                                $query->execute();
-                                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                                $cnt = 1;
-                                if ($query->rowCount() > 0) {
-                                    foreach ($results as $result) {
-                                ?>
-
-                                <div class="testimonial-item">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="photo mr-3">
-                                            <img src="uploads/<?php echo $result->image ?>" alt="Image"
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="author">
-                                            <cite class="d-block mb-0"
-                                                style="color: #150754!important;"><?php echo $result->name ?></cite>
-                                            <span><?php echo $result->designation ?>.</span><br>
-                                            <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
-                                        </div>
-
-                                    </div>
-                                    <blockquote class="justify-para">
-                                        <p><?php echo $result->message ?></p>
-                                    </blockquote>
-                                </div>
-                                <?php }
-                                } ?>
-
-
-                            </div>
-                            <div class="custom-nav-wrap">
-                                <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
-                                <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                            a vital part of our department.</h6>
             </div>
-        </div>
-    </div>
-
-    <!-- end testimonial md -->
-    <!-- start below md testimonial -->
-    <!--  -->
-
-    <div class="container-xxl py-5  d-block d-md-none">
-        <div class="testimonial-section">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-4 mb-5 section-title" data-aos="fade-up" data-aos-delay="0">
-
-                        <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
-                        <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and
-                            students
-                            who have been
-                            a vital part of our department.</p>
-                        <p><a class="btn btn-primary "><span class="fa fa-arrow-right" style="width: 100px;"></span></a>
-                        </p>
-                    </div>
-                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                        <div class="testimonial--wrap">
+         <br>
+                        <div class="testimonial--wrap ">
                             <div class="owl-single owl-carousel no-dots no-nav">
 
 
@@ -682,48 +653,34 @@ include('includes/config.php');
                                 ?>
 
                                 <div class="testimonial-item">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="photo mr-3">
+                                    <div class="align-items-center">
+                                        <div class="photo">
                                             <img src="uploads/<?php echo $result->image ?>" alt="Image"
                                                 class="img-fluid">
                                         </div>
-                                        <div class="author">
+                                        <div class="author" style="text-align: center;">
                                             <cite class="d-block mb-0"
-                                                style="color: #150754!important;"><?php echo $result->name ?></cite>
-                                            <span><?php echo $result->designation ?>.</span><br>
-                                            <span><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                                                style="color: #150754!important; text-align: center;"><h3><?php echo $result->name ?></h3></cite>
+                                            <span style="text-align: center;"><?php echo $result->designation ?>.</span><br>
+                                            <span style="text-align: center;"><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
                                         </div>
 
                                     </div>
+                                   
 
 
                                     <blockquote class="justify-para">
                                         <?php
                                                 $message = $result->message; // get the message
-                                                $first_paragraph = substr($message, 0, 100); // extract first 100 characters
-                                                $remaining_text = substr($message, 100); // get the remaining text
+                                                $first_paragraph = substr($message, 0, 150); // extract first 100 characters
+                                                $remaining_text = substr($message, 150); // get the remaining text
                                                 ?>
-                                        <p><?php echo $first_paragraph ?></p>
+                                        <p  ><span id="smallText"><?php echo $message ?></span>
+                                         </p>
                                         <!-- display first 100 characters in first paragraph -->
-                                        <p id="remaining-text" class="d-none"><?php echo $remaining_text ?></p>
                                         <!-- initially hide remaining text in second paragraph -->
-                                        <?php if (strlen($message) > 100) : ?>
-                                        <!-- if message length is greater than 100, display "Read More" button -->
-                                        <button id="read-more-btn" class="btn btn-primary">Read More</button>
-                                        <?php endif; ?>
+                                        
                                     </blockquote>
-
-
-
-
-
-
-
-
-
-
-
-
                                 </div>
                                 <?php }
                                 } ?>
@@ -737,10 +694,8 @@ include('includes/config.php');
                         </div>
 
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div>
+          
 
     <!-- end below md testimonial -->
 
