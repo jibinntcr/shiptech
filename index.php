@@ -63,6 +63,7 @@ include('includes/config.php');
     }
 
     .card1 {
+<<<<<<< HEAD
         display: block;
         position: relative;
         max-width: 262px;
@@ -86,6 +87,54 @@ include('includes/config.php');
         .elaboration {
             display: none
         }
+=======
+  display: block;
+  position: relative;
+  height: 100%;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: #abd;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(24);
+  }
+}
+
+.card1:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h3 {
+    transition: all 0.3s ease-out;
+    
+    color: #ffffff;
+  }
+}
+
+
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
     </style>
 </head>
 
@@ -134,6 +183,7 @@ include('includes/config.php');
         </div>
     </div>
     <!-- Carousel End -->
+<<<<<<< HEAD
     <a class="card1" href="#">
         <h3 style="text-align: center;">SNAS</h3>
         <p class="small" style=" display: block;
@@ -151,55 +201,71 @@ include('includes/config.php');
     </a>
 
 
+=======
+    
+  
+
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
     <div class="container py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
-                        href="https://snas.in/">
-                        <div class="rounded p-4">
-                            <div class="icon mb-3">
-                                <img class="img-fluid" src="img/tile-icon-snas.png" alt="Icon">
-                            </div>
-                            <h6>SNAS</h6>
-                        </div>
-                    </a>
+                    <a class="card1" href="https://snas.in/" >
+    <h3 style="text-align: center;">SNAS</h3>
+    <p class="small" style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"  src="img/tile-icon-snas.png" alt="Icon"></p>
+  </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
-                        href="https://descon.cusat.ac.in/">
-                        <div class="rounded p-4">
-                            <div class="icon mb-3">
-                                <img class="img-fluid" src="img/descon.png" alt="Icon">
-                            </div>
-                            <h6>DESCON</h6>
-                        </div>
-                    </a>
+                    <a class="card1" href="https://descon.cusat.ac.in/">
+    <h3 style="text-align: center;">DESCON</h3>
+    <p class="small" style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"  src="img/descon.png" alt="Icon"></p>
+  </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" target="_blank"
-                        href="Approvals-and-Affiliations.php">
-                        <div class="rounded p-4">
-                            <div class="icon mb-3">
-                                <img class="img-fluid" src="img/Approvals-icon.png" alt="Icon">
-                            </div>
-                            <h6>Approvals &amp; Affiliations </h6>
-                        </div>
-                    </a>
+                    <a class="card1" href=""Approvals-and-Affiliations.php">
+    <h3 style="text-align: center;">Approvals & Affiliations</h3>
+    <p class="small" style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"  src="img/Approvals-icon.png" alt="Icon"></p>
+  </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
                     style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-                    <a class="cat-item d-block bg-light text-center rounded p-3" href="placement.php">
-                        <div class="rounded p-4">
-                            <div class="icon mb-3">
-                                <img class="img-fluid" src="img/placement-icon.png" alt="Icon">
-                            </div>
-                            <h6>Placement</h6>
-                        </div>
-                    </a>
+                    <a class="card1" href="placement.php">
+    <h3 style="text-align: center;">Placement</h3>
+    <p class="small" style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;"  src="img/placement-icon.png" alt="Icon"></p>
+  </a>
                 </div>
             </div>
         </div>
@@ -213,7 +279,7 @@ include('includes/config.php');
     if ($query->rowCount() > 0) { ?>
 
     <!-- SCROLL NEWS START  -->
-    <div class="container-xxl  wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -228,10 +294,13 @@ include('includes/config.php');
                             <?php
                                 foreach ($results as $result) {
                                 ?>
+<<<<<<< HEAD
                             <a class="news-scroll text-white" href="<?php echo  $result->link ?>"
                                 target="_blank"><?php echo   $result->announcements ?></a>
 
 
+=======
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
                             <a class="news-scroll text-white" href="<?php echo  $result->link ?>"
                                 target="_blank"><?php echo   $result->announcements ?></a>
 
@@ -247,11 +316,19 @@ include('includes/config.php');
         </div>
     </div>
     <?php } ?>
+<<<<<<< HEAD
     <div class="container  wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row">
                 <!-- event start -->
                 <div class="container my-5 row col-xl-6">
+=======
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container ">
+            <div class="row  ">
+                <!-- event start -->
+                <div class="container my-5 row col-xl-6" style="margin-right: 15px;">
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
                     <div class="text-center mb-3">
                         <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
                         <a href="news-home.php">
@@ -274,8 +351,8 @@ include('includes/config.php');
                             ?>
 
                             <li>
-                                <div class="d-flex  border p-1 my-4 align-items-center max-w-665"
-                                    style="border-radius: 20px;border-width: thin; max-width: 655px; margin: 0 ;">
+                                <div class="d-flex  border p-1 my-4 align-items-center"
+                                    style="border-radius: 20px;border-width: thin; max-width: 655px; height:120px;  margin: 0 auto;">
                                     <div class="circle  d-flex justify-content-center container">
                                         <div class="cell">
 
@@ -285,10 +362,10 @@ include('includes/config.php');
                                             <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
                                         </div>
                                         <div class="cell">
-                                            <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
+                                            <h3 class="text-white" style="text-align:center;" ><?php echo date_format($date, "F"); ?></h3>
                                         </div>
                                         <div class="cell">
-                                            <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
+                                            <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
                                         </div>
                                     </div>
 
@@ -314,11 +391,17 @@ include('includes/config.php');
                                         </div>
                                     </div>
                                 </div>
+                                
                             </li>
                             <?php }
                             } ?>
-
+                             
                         </ul>
+                        <div>
+                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;" href="news-home.php"><i
+                                class="fa fa-arrow-right"  style="color:#fff;"></i><span style="color:#fff;"> Read
+                                More</span></a>
+                        </div>
                     </div>
                 </div>
 
@@ -390,6 +473,10 @@ include('includes/config.php');
 
 
                         </ul>
+                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;" href="news-home.php"><i
+                                class="fa fa-arrow-right"  style="color:#fff;"></i><span style="color:#fff;"> Read
+                                More</span></a>
+                        </div>
                     </div>
                 </div>
 
@@ -405,12 +492,17 @@ include('includes/config.php');
 
 
     <!-- About Start -->
-    <div class="container-xxl py-4">
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
+<<<<<<< HEAD
                         <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
+=======
+                        <img style=" border: 5px solid #555;"
+                            class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
                             style="object-fit: cover; box-shadow: -5px 5px 5px  #000;" alt="">
                     </div>
                 </div>
@@ -467,7 +559,11 @@ include('includes/config.php');
 
 
     <!-- ABOUT 2 -->
+<<<<<<< HEAD
     <div class="container-xxl py-5">
+=======
+    <div class="container py-5">
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
@@ -512,7 +608,7 @@ include('includes/config.php');
     $userArr = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
     ?>
-    <div class="container">
+    <div class="container py-5">
         <div class="container">
 
             <section class="container speaker-section spad">
@@ -576,7 +672,11 @@ include('includes/config.php');
                 ?>
 
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+<<<<<<< HEAD
                     <div class="service-item p-4 fac-img-curv">
+=======
+                    <div class="service-item p-4 fac-img-curv" style="height:100%">
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
                         <div class="overflow-hidden mb-4">
                             <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->image ?>" alt="">
                         </div>
@@ -591,7 +691,7 @@ include('includes/config.php');
                 <?php }
                 } ?>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv">
+                    <div class="service-item p-4 fac-img-curv" style="height:100%">
                         <div class="overflow-hidden mb-4">
                             <img class="fac-img-curv img-fluid" src="img/phd_image-thumb.jpg" alt="">
                         </div>
@@ -608,6 +708,7 @@ include('includes/config.php');
 
 
     <!-- NEW TESTIMONIAL START  -->
+<<<<<<< HEAD
     <div class="container-xxl py-5 d-none d-md-block ">
         <div class="testimonial-section">
             <div class="container">
@@ -616,6 +717,14 @@ include('includes/config.php');
 
                         <h2 class="mb-4 font-weight-bold heading">Testimonials</h2>
                         <p class="mb-4 justify-para">Experiences and feedback provided by our esteemed alumni and
+=======
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
+                
+                <h1 class="mb-5">Testimonials</h1>
+                <h6 class="" style="font-size: mediam;color:#888">Experiences and feedback provided by our esteemed alumni and
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
                             students
                             who have been
                             a vital part of our department.</h6>
@@ -761,6 +870,7 @@ include('includes/config.php');
 
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
             </div>
         </div>
@@ -776,6 +886,21 @@ include('includes/config.php');
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i
                 class="bi bi-arrow-up"></i></a>
+=======
+                    </div>
+          
+
+    <!-- end below md testimonial -->
+
+
+    <!-- Footer Start -->
+    <?php include('partials/footer.php') ?>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
 
 
@@ -797,6 +922,7 @@ include('includes/config.php');
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
 
+<<<<<<< HEAD
         <script>
         const readMoreBtn = document.getElementById("read-more-btn");
         const remainingText = document.getElementById("remaining-text");
@@ -808,6 +934,19 @@ include('includes/config.php');
             remainingText.classList.add("d-block"); // add "d-block" class to remaining text
         });
         </script>
+=======
+    <script>
+    const readMoreBtn = document.getElementById("read-more-btn");
+    const remainingText = document.getElementById("remaining-text");
+
+    readMoreBtn.addEventListener("click", () => {
+        console.log("Read More button clicked")
+        readMoreBtn.classList.add("d-none"); // hide "Read More" button
+        remainingText.classList.remove("d-none"); // show remaining text
+        remainingText.classList.add("d-block"); // add "d-block" class to remaining text
+    });
+    </script>
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 </body>
 
 </html>
