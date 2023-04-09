@@ -27,11 +27,7 @@
   height: 100%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-<<<<<<< HEAD
-  background-color: #1b1c1d;
-=======
   background-color: #0066cd;
->>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
   text-align: center;
 }
@@ -43,7 +39,6 @@
   color: #fff;
 }
 .cell {
-
 }
 
 .container2 {
@@ -68,32 +63,31 @@ li {
   margin-bottom: 24px;
 }
 
-
 .education {
   --bg-color: #ffd861;
   --bg-color-light: #ffeeba;
-  --text-color-hover: #4C5656;
+  --text-color-hover: #4c5656;
   --box-shadow-color: rgba(255, 215, 97, 0.48);
 }
 
 .credentialing {
-  --bg-color: #B8F9D3;
+  --bg-color: #b8f9d3;
   --bg-color-light: #e2fced;
-  --text-color-hover: #4C5656;
+  --text-color-hover: #4c5656;
   --box-shadow-color: rgba(184, 249, 211, 0.48);
 }
 
 .wallet {
-  --bg-color: #CEB2FC;
-  --bg-color-light: #F0E7FF;
+  --bg-color: #ceb2fc;
+  --bg-color-light: #f0e7ff;
   --text-color-hover: #fff;
   --box-shadow-color: rgba(206, 178, 252, 0.48);
 }
 
 .human-resources {
-  --bg-color: #DCE9FF;
+  --bg-color: #dce9ff;
   --bg-color-light: #f1f7ff;
-  --text-color-hover: #4C5656;
+  --text-color-hover: #4c5656;
   --box-shadow-color: rgba(220, 233, 255, 0.48);
 }
 
@@ -108,14 +102,14 @@ li {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
 }
 
 .card:hover {
   transform: translateY(-5px) scale(1.005) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
     0 24px 46px var(--box-shadow-color);
 }
 
@@ -138,13 +132,13 @@ li {
 
 .card:active {
   transform: scale(1) translateZ(0);
-  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.11),
     0 15px 24px var(--box-shadow-color);
 }
 
 .card p {
   font-size: 17px;
-  color: #4C5656;
+  color: #4c5656;
   margin-top: 30px;
   z-index: 1000;
   transition: color 0.3s ease-out;
@@ -184,7 +178,7 @@ li {
 
 .overlay {
   width: 118px;
-  position: absolute; 
+  position: absolute;
   height: 118px;
   border-radius: 50%;
   background: var(--bg-color);

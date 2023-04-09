@@ -2553,13 +2553,8 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   color: #000;
-<<<<<<< HEAD
   background-color: #007a9b;
   border-color: #007a9b;
-=======
-  background-color: #0d6efd;
-  border-color: #0d6efd;
->>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 }
 .btn-primary:hover {
   color: #000;
