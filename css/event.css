@@ -27,7 +27,11 @@
   height: 100%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+<<<<<<< HEAD
   background-color: #1b1c1d;
+=======
+  background-color: #0066cd;
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
   text-align: center;
 }

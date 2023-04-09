@@ -4,7 +4,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'infinio_shipdb');
+define('DB_NAME', 'shiptech');
 //echo "connecdted ";
 // Establish database connection.
 try {

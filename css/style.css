@@ -260,6 +260,7 @@
   .header-carousel .owl-nav .owl-next {
     margin: 7px 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 20px;
     height: 20px;
 
@@ -267,6 +268,11 @@
     width: 30px;
     height: 30px;
 >>>>>>> 6143b66b44cd9fdc4f8449f2ea2b495490215024
+=======
+    width: 20px;
+    height: 20px;
+
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
   }
 }
@@ -362,7 +368,6 @@
 .service-item,
 .price-item,
 .team-item {
-  height: 100%;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.322);
 }
 
@@ -490,7 +495,7 @@
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item {
-  position: absolute;
+  position: relative;
   transition: 0.5s;
 }
 
@@ -829,6 +834,9 @@
     width: 30px;
     height: 30px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
     display: none;
 
   }
@@ -842,8 +850,11 @@
     width: 30px;
     height: 30px;
     display: none;
+<<<<<<< HEAD
 =======
 >>>>>>> 6143b66b44cd9fdc4f8449f2ea2b495490215024
+=======
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
   }
 }
