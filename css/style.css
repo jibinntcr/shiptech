@@ -259,9 +259,14 @@
   .header-carousel .owl-nav .owl-prev,
   .header-carousel .owl-nav .owl-next {
     margin: 7px 0;
+<<<<<<< HEAD
     width: 20px;
     height: 20px;
 
+=======
+    width: 30px;
+    height: 30px;
+>>>>>>> 6143b66b44cd9fdc4f8449f2ea2b495490215024
 
   }
 }
@@ -357,6 +362,7 @@
 .service-item,
 .price-item,
 .team-item {
+  height: 100%;
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.322);
 }
 
@@ -484,7 +490,7 @@
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item {
-  position: relative;
+  position: absolute;
   transition: 0.5s;
 }
 
@@ -822,6 +828,7 @@
     margin: 7px 0;
     width: 30px;
     height: 30px;
+<<<<<<< HEAD
     display: none;
 
   }
@@ -835,6 +842,8 @@
     width: 30px;
     height: 30px;
     display: none;
+=======
+>>>>>>> 6143b66b44cd9fdc4f8449f2ea2b495490215024
 
   }
 }
