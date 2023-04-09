@@ -37,7 +37,7 @@ include('includes/config.php');
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/events.css" rel="stylesheet">
+    <link href="css/event.css" rel="stylesheet">
 </head>
 
 <body>
@@ -164,20 +164,21 @@ include('includes/config.php');
                         <li class="mx-2">
                             <div class="d-flex border p-1 my-0 align-items-center max-w-665"
                                 style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <div class="circle bg-primary d-flex justify-content-center container">
-                                    <?php $date = $result->date;
-                                            $date = date_create($date);
-                                            ?>
-                                    <div class="cell ">
-                                        <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                <div class="circle  d-flex justify-content-center container">
+                                        <div class="cell">
+
+                                            <?php $date = $result->date;
+                                                    $date = date_create($date);
+                                                    ?>
+                                            <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h3 class="text-white" style="text-align:center;" ><?php echo date_format($date, "F"); ?></h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
+                                        </div>
                                     </div>
-                                    <div class="cell ">
-                                        <h5 class="text-white"><?php echo date_format($date, "M"); ?></h5>
-                                    </div>
-                                    <div class="cell ">
-                                        <h6 class="text-white"><?php echo date_format($date, "Y"); ?></h6>
-                                    </div>
-                                </div>
                                 <div class="d-flex col-md-8 mb-0 mx-md-3 ">
                                     <div class="ms-4">
                                         <!-- <p class="mt-1">

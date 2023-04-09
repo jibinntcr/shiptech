@@ -65,13 +65,13 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
                     Facilities</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
-                    <a href="phd.php" target="_blank" class="dropdown-item">PhD</a>
+                    <a href="phd.php" target="_blank" class="dropdown-item">Ph.D.</a>
                     <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
                     <a href="mou.php" class="dropdown-item">MoU</a>
                     <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
                     <a href="achivements.php" class="dropdown-item">Achievements</a>
-                    <a href="Current-PhD-students.php" class="dropdown-item">Current PhD Sudents</a>
-                    <a href="PhD-awarded.php" class="dropdown-item">PhD Awarded</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Sudents</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>
                 </div>
             </div>
             <!-- <div class=" nav-item dropdown">

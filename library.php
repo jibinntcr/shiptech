@@ -87,21 +87,16 @@
                         library has more than 10000 books, project reports/dissertations and 8 foreign journals.
                         <br>
                     </p>
-                    <div class="col-6">
-                        <h4 class="mb-3"> CONTACT INFO</h4>
-                        <div class="mb-5" style=" margin-left:15px;">
-                            <div class="row mb-md-3 mb-2">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11"
-                                        href="mailto:librarydstcusat@gmail.com">librarydstcusat@gmail.com</a></div>
-                            </div>
-                            <div class="row mb-md-3 mb-2">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:04842862595">04842862595</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h4 class="mb-3">Opening Hours</h4>
+                    <p class="mb-0" style=" margin-left: 15px;">
+                    <div class="d-flex col-12 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <i class="fa-solid fa-clock text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4 col-10"> The Library remains open on all working days of the Department. It
+                                                    remains closed on even Saturdays, Sundays and other Holidays. The
+                                                    Library is open from <span
+                                                        style="color:#ff3e41 ; font-weight: bold; "> 9AM to 4PM</span>
+</div></div>
+                                                    </p>
                     <h4 class="mb-3"> Digital Library </h4>
                     <p class="mb-0" style=" margin-left: 15px;">
                         60
@@ -117,25 +112,30 @@
                         <div class="row g-5 align-items-start">
                             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                                    <h2 class="mb-5">Opening Hours</h2>
-                                    <div class="d-flex flex-wrap ">
-                                        <div class="d-flex col-12 mb-0 mx-3 wow fadeInUp" data-wow-delay="0.7s">
-                                            <i class="fa-solid fa-clock text-primary fa-2x flex-shrink-0"></i>
+                                    <h2 class="mb-3">CONTACT INFO</h2>
+                                    
+                                        
                                             <div class="ms-4 col-10">
-                                                <p class="justify-para">
-                                                    The Library remains open on all working days of the Department. It
-                                                    remains closed on even Saturdays, Sundays and other Holidays. The
-                                                    Library is open from <span
-                                                        style="color:#ff3e41 ; font-weight: bold; "> 9AM to 4PM</span>
-                                                </p>
+                                            <div class="row mb-md-3 mb-2">
+                                <div class="col-2" style="width:7%;" > <i class="fa fa-envelope "></i></div>
+                                <div class="col-10" ><a class="white col-11"
+                                        href="mailto:librarydstcusat@gmail.com">librarydstcusat@gmail.com</a></div>
                                             </div>
-                                        </div>
+
+                                            <div class="row mb-md-3 mb-2">
+                                <div class="col-2" style="width:7%;"> <i class="fa fa-phone "></i></div>
+                                <div class="col-10 "><a class="white col-11 " href="tel:04842862595">04842862595</a>
+                                </div>
+                            </div>
+
+
+                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="col-lg-12 feature-text wow fadeInUp " data-wow-delay="0.1s">
-                                    <h2 class="mb-5">Librarian</h2>
+                                    <h2 class="mb-3">Librarian</h2>
                                     <div class="d-flex flex-wrap ">
                                         <div class="d-flex  mb-0 mx-3 wow fadeInUp" data-wow-delay="0.3s">
 
@@ -160,7 +160,7 @@
 
 
 
-                <div class="container-xxl py-5">
+                <div class="container-xl py-3">
                     <div class="container">
                         <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                             <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
@@ -168,7 +168,7 @@
                         </div> -->
                         <div class="row g-4">
                             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="service-item p-4 fac-img-curv">
+                                <div class="service-item p-4 fac-img-curv" style="height:100%">
                                     <div class="overflow-hidden mb-4">
                                         <img class="fac-img-curv img-fluid" src="./img/TheNavalArchitectMagazine.jpg"
                                             style="object-fit: cover; height: 240px; " alt="">
