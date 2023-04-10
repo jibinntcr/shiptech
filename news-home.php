@@ -10,7 +10,7 @@ include('includes/config.php');
 
 <head>
     <meta charset="utf-8">
-    <title>News &amp; Events | Department of Ship Technology</title>
+    <title>News | Department of Ship Technology</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -59,12 +59,12 @@ include('includes/config.php');
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">News &amp; Events</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">News</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
-                    <li class="breadcrumb-item text-white active" aria-current="page">News &amp; Events</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">News</li>
                 </ol>
             </nav>
         </div>
@@ -141,75 +141,7 @@ include('includes/config.php');
     <!-- news End -->
     <!-- EVENTS START  -->
 
-    <div class="container-fluid wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
-        <div class="">
-            <div class=" row">
-                <div class="text-center mb-3">
-                    <h1 class="mb-0">Events</h1>
-                </div>
-                <!-- event start -->
-                <div class="container my-5 col-12 ">
-                    <ul class="m-2 col-12 d-flex flex-wrap justify-content-center">
-                        <?php
-                        $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC ";
-                        $query = $dbh->prepare($sql);
-                        $query->execute();
-                        $results = $query->fetchAll(PDO::FETCH_OBJ);
-                        $cnt = 1;
-                        if ($query->rowCount() > 0) {
-                            foreach ($results as $result) {
-                        ?>
 
-
-                        <li class="mx-2">
-                            <div class="d-flex border p-1 my-0 align-items-center max-w-665"
-                                style="border-radius: 20px; max-width: 655px; margin: 0 auto;">
-                                <div class="circle  d-flex justify-content-center container">
-                                        <div class="cell">
-
-                                            <?php $date = $result->date;
-                                                    $date = date_create($date);
-                                                    ?>
-                                            <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h3 class="text-white" style="text-align:center;" ><?php echo date_format($date, "F"); ?></h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
-                                        </div>
-                                    </div>
-                                <div class="d-flex col-md-8 mb-0 mx-md-3 ">
-                                    <div class="ms-4">
-                                        <!-- <p class="mt-1">
-                                        <span style="color:#ff3e41 ; font-weight: bold;"> <i
-                                                class="fa-regular fa-clock"></i></span> <span class=" font-bold">
-                                            9.00 AM - 5.00 PM</span>
-                                    </p> -->
-                                        <a href="events-view.php?id=<?php echo   $result->id ?>">
-                                            <h6 class=" my-2 my-lg-2"> <?php $title =  substr($result->title, 0, 48);
-                                                                                echo $title ?></h6>
-                                        </a>
-                                        <p>
-                                            <span style="color:#ff3e41 ; font-weight: bold;"> <span class=" font-bold">
-                                                    <?php echo  $subHeading ?>...
-                                                </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <?php }
-                        }
-                        ?>
-
-
-                    </ul>
-                </div>
-                <!-- event end -->
-            </div>
-        </div>
-    </div>
 
     <!-- EVENTS END  -->
 

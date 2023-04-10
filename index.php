@@ -283,7 +283,7 @@ include('includes/config.php');
                 <div class="container my-5 row col-xl-6" style="margin-right: 15px;">
                     <div class="text-center mb-3">
                         <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
-                        <a href="news-home.php">
+                        <a href="events-home.php">
 
                             <h1 class="eventHover" class="mb-0">Events</h1>
                         </a>
@@ -352,7 +352,7 @@ include('includes/config.php');
                         </ul>
                         <div>
                             <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
-                                href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
+                                href="events-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
                                     style="color:#fff;"> Read
                                     More</span></a>
                         </div>
