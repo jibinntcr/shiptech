@@ -63,6 +63,10 @@ include('includes/config.php');
     }
 
     .card1 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99a37605b34f904f5fd8121477865ed8b86c9641
         display: block;
         position: relative;
         height: 100%;
