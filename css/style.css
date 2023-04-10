@@ -259,9 +259,20 @@
   .header-carousel .owl-nav .owl-prev,
   .header-carousel .owl-nav .owl-next {
     margin: 7px 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
     width: 20px;
     height: 20px;
 
+=======
+    width: 30px;
+    height: 30px;
+>>>>>>> 6143b66b44cd9fdc4f8449f2ea2b495490215024
+=======
+    width: 20px;
+    height: 20px;
+
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
   }
 }
@@ -822,6 +833,10 @@
     margin: 7px 0;
     width: 30px;
     height: 30px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
     display: none;
 
   }
@@ -835,6 +850,11 @@
     width: 30px;
     height: 30px;
     display: none;
+<<<<<<< HEAD
+=======
+>>>>>>> 6143b66b44cd9fdc4f8449f2ea2b495490215024
+=======
+>>>>>>> 195e153bcd582e65632a7d6734e01769055c3cbc
 
   }
 }
