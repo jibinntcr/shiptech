@@ -63,22 +63,20 @@ include('includes/config.php');
     }
 
     .card1 {
-<<<<<<< HEAD
-=======
 
->>>>>>> 99a37605b34f904f5fd8121477865ed8b86c9641
         display: block;
         position: relative;
         height: 100%;
-        max-width: 262px;
+        width: 100%;
         background-color: #f2f8f9;
         border-radius: 4px;
-        padding: 32px 24px;
-        margin: 12px;
+        padding: 32px 32px;
+        margin: 10px;
         text-decoration: none;
         z-index: 0;
         overflow: hidden;
-        background: #abd;
+        background: #bed;
+        justify-content: center;
 
         &:before {
             content: "";
@@ -96,20 +94,33 @@ include('includes/config.php');
         }
 
         &:hover:before {
-            transform: scale(24);
+            transform: scale(50);
+        }
+
+        &:hover {
+            .h3small {
+                transition: all 0.3s ease-out;
+                color: #fff;
+            }
+
+            .psmall {
+                transition: all 0.3s ease-out;
+
+                color: #fff;
+            }
         }
     }
 
     .card1:hover {
-        p {
+        .h3small {
             transition: all 0.3s ease-out;
-            color: rgba(255, 255, 255, 0.8);
+            color: #fff;
         }
 
-        h3 {
+        .psmall {
             transition: all 0.3s ease-out;
 
-            color: #ffffff;
+            color: #fff;
         }
     }
     </style>
@@ -169,8 +180,8 @@ include('includes/config.php');
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <a class="card1" href="https://snas.in/">
-                        <h3 style="text-align: center;">SNAS</h3>
-                        <p class="small" style=" display: block;
+                        <h3 class="h3small" style="text-align: center;">SNAS</h3>
+                        <p class="psmall" style=" display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;"> <img class="img-fluid" style=" display: block;
@@ -181,8 +192,8 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="card1" href="https://descon.cusat.ac.in/">
-                        <h3 style="text-align: center;">DESCON</h3>
+                    <a class="card1" sty href="https://descon.cusat.ac.in/">
+                        <h3 class="h3small" style="text-align: center;">DESCON</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
@@ -195,7 +206,7 @@ include('includes/config.php');
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                     <a class="card1" href="" Approvals-and-Affiliations.php">
-                        <h3 style="text-align: center;">Approvals & Affiliations</h3>
+                        <h3 class="h3small" style="text-align: center;">Approvals & Affiliations</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
@@ -208,7 +219,7 @@ include('includes/config.php');
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
                     style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                     <a class="card1" href="placement.php">
-                        <h3 style="text-align: center;">Placement</h3>
+                        <h3 class="h3small" style="text-align: center;">Placement</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
