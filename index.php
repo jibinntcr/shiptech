@@ -205,7 +205,7 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="card1" href="" Approvals-and-Affiliations.php">
+                    <a class="card1" href="Approvals-and-Affiliations.php">
                         <h3 class="h3small" style="text-align: center;">Approvals & Affiliations</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
