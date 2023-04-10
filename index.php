@@ -151,6 +151,9 @@ include('includes/config.php');
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/banner-03.jpg" alt="">
             </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/banner-04_.jpg" alt="">
+            </div>
 
             <?php
             $sql = "SELECT * from banner WHERE status = '1'";
