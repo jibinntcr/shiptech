@@ -518,43 +518,10 @@ include('includes/config.php');
         </div>
     </div>
 
-<<<<<<< HEAD
-=======
-  <div class="projcard-container" id="mainView">
-  <?php
-
-$sql = "SELECT * from researchguide  WHERE status='1'";
-$query = $dbh->prepare($sql);
-$query->execute();
-$results = $query->fetchAll(PDO::FETCH_OBJ);
-$cnt = 1;
-if ($query->rowCount() > 0) {
-    foreach ($results as $result) {
-?>
-    <div class="projcard projcard-blue">
-      <div class="projcard-innerbox">
-        <img class="projcard-img" src="uploads/<?php echo $result->image ?>" />
-        <div class="projcard-textbox">
-          <div class="projcard-title"><?php echo $result->name ?></div>
-          <div class="projcard-subtitle"><?php echo $result->designation ?></div>
-          <div class="projcard-bar"></div>
-          <div class="projcard-description" style="height:100%;" > <?php
-                                                    $input_string = "$result->area ";
-
-                                                    $output_string = str_replace("&nbsp;", " ", $input_string);
-
-                                                    echo $output_string;
-
-
-                                                    // echo $result->area 
-                                                    ?></div>
-          
-        </div>
-      </div>
->>>>>>> c5bb7fb375ecb3b558eac0cb2dca62cf95b62695
     </div>
 
     <div class="projcard-container" id="mainView">
+        <h1 class="row justify-content-center mb-4">Research Guides</h1>
         <?php
 
     $sql = "SELECT * from researchguide  WHERE status='1'";
@@ -572,16 +539,16 @@ if ($query->rowCount() > 0) {
                     <div class="projcard-title"><?php echo $result->name ?></div>
                     <div class="projcard-subtitle"><?php echo $result->designation ?></div>
                     <div class="projcard-bar"></div>
-                    <div class="projcard-description"> <?php
-                                                  $input_string = "$result->area ";
+                    <div class="projcard-description" style="height:100%;"> <?php
+                                                                      $input_string = "$result->area ";
 
-                                                  $output_string = str_replace("&nbsp;", " ", $input_string);
+                                                                      $output_string = str_replace("&nbsp;", " ", $input_string);
 
-                                                  echo $output_string;
+                                                                      echo $output_string;
 
 
-                                                  // echo $result->area 
-                                                  ?></div>
+                                                                      // echo $result->area 
+                                                                      ?></div>
 
                 </div>
             </div>
