@@ -88,6 +88,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
                 <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
                     <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
                     <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
@@ -101,7 +102,8 @@
                     <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
                         Tech</a>
                     <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
-                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department Alumni</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
                     <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
 
                 </div>
