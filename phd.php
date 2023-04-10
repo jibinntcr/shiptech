@@ -439,7 +439,7 @@ if ($query->rowCount() > 0) {
           <div class="projcard-title"><?php echo $result->name ?></div>
           <div class="projcard-subtitle"><?php echo $result->designation ?></div>
           <div class="projcard-bar"></div>
-          <div class="projcard-description"> <?php
+          <div class="projcard-description" style="height:100%;" > <?php
                                                     $input_string = "$result->area ";
 
                                                     $output_string = str_replace("&nbsp;", " ", $input_string);
