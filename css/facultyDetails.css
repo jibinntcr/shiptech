@@ -32,7 +32,7 @@ overflow-hidden-x {
 @media only screen and (max-width: 767px) {
   .element {
     margin-left: 20px;
-    // margin: 0 auto;
+    /* // margin: 0 auto; */
   }
 }
 
@@ -49,10 +49,10 @@ overflow-hidden-x {
   background: red; /* default color */
 
   /* "to left" / "to right" - affects initial color */
-  background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+  /* background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
   background-size: 200%;
   transition: 0.5s ease-out;
-} */
+} */ */
 
 /* .card1:hover,
 .card1:hover a,
@@ -105,18 +105,8 @@ ul {
   box-shadow: 5px 5px 10px gray;
 }
 
-<<<<<<< HEAD:facultyDetails.css
 .er {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
 }
-=======
-
-.er{
-display: grid; 
-grid-template-columns: repeat(2, minmax(0, 1fr)); 
-gap: 0.75rem; 
-
-} */
->>>>>>> 6315db234e3466d5c7b4f5e55ffcfc50a3d3d9b5:css/facultyDetails.css

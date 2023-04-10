@@ -253,7 +253,9 @@ include('includes/config.php');
                     <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
                         <div
                             class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
-                            <span class="d-flex align-items-center">&nbsp;Announcements </span>
+                            <a class="text-white" href="announcement.php"
+                                class="d-flex align-items-center annouHover">&nbsp;Announcements
+                            </a>
                         </div>
                         <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();"
                             onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
