@@ -64,64 +64,7 @@ include('includes/config.php');
 
     .card1 {
 
-        display: block;
-        position: relative;
-        height: 100%;
-        width: 100%;
-        background-color: #f2f8f9;
-        border-radius: 4px;
-        padding: 32px 32px;
-        margin: 10px;
-        text-decoration: none;
-        z-index: 0;
-        overflow: hidden;
-        background: #bed;
-        justify-content: center;
 
-        &:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: -16px;
-            right: -16px;
-            background: #00838d;
-            height: 32px;
-            width: 32px;
-            border-radius: 32px;
-            transform: scale(1);
-            transform-origin: 50% 50%;
-            transition: transform 0.25s ease-out;
-        }
-
-        &:hover:before {
-            transform: scale(50);
-        }
-        &:hover {
-            .h3small {
-            transition: all 0.3s ease-out;
-            color: #fff;
-        }
-
-        .psmall {
-            transition: all 0.3s ease-out;
-
-            color: #fff;
-        }
-        }
-    }
-
-    .card1:hover {
-        .h3small {
-            transition: all 0.3s ease-out;
-            color: #fff;
-        }
-
-        .psmall {
-            transition: all 0.3s ease-out;
-
-            color: #fff;
-        }
-    }
     </style>
 </head>
 
@@ -170,65 +113,69 @@ include('includes/config.php');
         </div>
     </div>
     <!-- Carousel End -->
-
-
+    
+  
 
     <div class="container py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <a class="card1" href="https://snas.in/">
-                        <h3 class="h3small" style="text-align: center;">SNAS</h3>
-                        <p class="psmall" style=" display: block;
+                    <a class="card1" href="https://snas.in/" >
+    <h3 style="text-align: center;">SNAS</h3>
+    <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;" src="img/tile-icon-snas.png" alt="Icon"></p>
-                    </a>
+  width: 50%;"  src="img/tile-icon-snas.png" alt="Icon"></p>
+  </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="card1" sty href="https://descon.cusat.ac.in/">
-                        <h3   class="h3small" style="text-align: center;">DESCON</h3>
-                        <p class="small" style=" display: block;
+                    <a class="card1" href="https://descon.cusat.ac.in/">
+    <h3 style="text-align: center;">DESCON</h3>
+    <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;" src="img/descon.png" alt="Icon"></p>
-                    </a>
+  width: 50%;"  src="img/descon.png" alt="Icon"></p>
+  </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="card1" href="" Approvals-and-Affiliations.php">
-                        <h3  class="h3small" style="text-align: center;">Approvals & Affiliations</h3>
-                        <p class="small" style=" display: block;
+                    <a class="card1" href=""Approvals-and-Affiliations.php">
+    <h3 style="text-align: center;">Approvals & Affiliations</h3>
+    <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;" src="img/Approvals-icon.png" alt="Icon"></p>
-                    </a>
+  width: 50%;"  src="img/Approvals-icon.png" alt="Icon"></p>
+  </a>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
                     style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-                    <a  class="card1" href="placement.php">
-                        <h3   class="h3small" style="text-align: center;">Placement</h3>
-                        <p class="small" style=" display: block;
+                    <a class="card1" href="placement.php">
+    <h3 style="text-align: center;">Placement</h3>
+    <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
   top: 50%;
   left: 50%;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
+  width: 50%;"> <img class="img-fluid"
+  style=" display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;" src="img/placement-icon.png" alt="Icon"></p>
-                    </a>
+  width: 50%;"  src="img/placement-icon.png" alt="Icon"></p>
+  </a>
                 </div>
             </div>
         </div>
@@ -310,8 +257,7 @@ include('includes/config.php');
                                             <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
                                         </div>
                                         <div class="cell">
-                                            <h3 class="text-white" style="text-align:center;">
-                                                <?php echo date_format($date, "F"); ?></h3>
+                                            <h3 class="text-white" style="text-align:center;" ><?php echo date_format($date, "F"); ?></h3>
                                         </div>
                                         <div class="cell">
                                             <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
@@ -340,17 +286,16 @@ include('includes/config.php');
                                         </div>
                                     </div>
                                 </div>
-
+                                
                             </li>
                             <?php }
                             } ?>
-
+                             
                         </ul>
                         <div>
-                            <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
-                                href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
-                                    style="color:#fff;"> Read
-                                    More</span></a>
+                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;" href="news-home.php"><i
+                                class="fa fa-arrow-right"  style="color:#fff;"></i><span style="color:#fff;"> Read
+                                More</span></a>
                         </div>
                     </div>
                 </div>
@@ -423,17 +368,16 @@ include('includes/config.php');
 
 
                         </ul>
-                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
-                            href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
-                                style="color:#fff;"> Read
+                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;" href="news-home.php"><i
+                                class="fa fa-arrow-right"  style="color:#fff;"></i><span style="color:#fff;"> Read
                                 More</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- news end -->
+                <!-- news end -->
+            </div>
         </div>
-    </div>
     </div>
 
 
@@ -650,75 +594,73 @@ include('includes/config.php');
     <div class="container-xxl py-5">
         <div class="container">
             <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
-
+                
                 <h1 class="mb-5">Testimonials</h1>
-                <h6 class="" style="font-size: mediam;color:#888">Experiences and feedback provided by our esteemed
-                    alumni and
-                    students
-                    who have been
-                    a vital part of our department.</h6>
+                <h6 class="" style="font-size: mediam;color:#888">Experiences and feedback provided by our esteemed alumni and
+                            students
+                            who have been
+                            a vital part of our department.</h6>
             </div>
-            <br>
-            <div class="testimonial--wrap ">
-                <div class="owl-single owl-carousel no-dots no-nav">
+         <br>
+                        <div class="testimonial--wrap ">
+                            <div class="owl-single owl-carousel no-dots no-nav">
 
 
 
-                    <?php
-                    $sql = "SELECT * from testimonials  WHERE status='1'";
-                    $query = $dbh->prepare($sql);
-                    $query->execute();
-                    $results = $query->fetchAll(PDO::FETCH_OBJ);
-                    $cnt = 1;
-                    if ($query->rowCount() > 0) {
-                        foreach ($results as $result) {
-                    ?>
+                                <?php
+                                $sql = "SELECT * from testimonials  WHERE status='1'";
+                                $query = $dbh->prepare($sql);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt = 1;
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                ?>
 
-                    <div class="testimonial-item">
-                        <div class="align-items-center">
-                            <div class="photo">
-                                <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
+                                <div class="testimonial-item">
+                                    <div class="align-items-center">
+                                        <div class="photo">
+                                            <img src="uploads/<?php echo $result->image ?>" alt="Image"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="author" style="text-align: center;">
+                                            <cite class="d-block mb-0"
+                                                style="color: #150754!important; text-align: center;"><h3><?php echo $result->name ?></h3></cite>
+                                            <span style="text-align: center;"><?php echo $result->designation ?>.</span><br>
+                                            <span style="text-align: center;"><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                                        </div>
+
+                                    </div>
+                                   
+
+
+                                    <blockquote class="justify-para">
+                                        <?php
+                                                $message = $result->message; // get the message
+                                                $first_paragraph = substr($message, 0, 150); // extract first 100 characters
+                                                $remaining_text = substr($message, 150); // get the remaining text
+                                                ?>
+                                        <p  ><span id="smallText"><?php echo $message ?></span>
+                                         </p>
+                                        <!-- display first 100 characters in first paragraph -->
+                                        <!-- initially hide remaining text in second paragraph -->
+                                        
+                                    </blockquote>
+                                </div>
+                                <?php }
+                                } ?>
+
+
                             </div>
-                            <div class="author" style="text-align: center;">
-                                <cite class="d-block mb-0" style="color: #150754!important; text-align: center;">
-                                    <h3><?php echo $result->name ?></h3>
-                                </cite>
-                                <span style="text-align: center;"><?php echo $result->designation ?>.</span><br>
-                                <span
-                                    style="text-align: center;"><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                            <div class="custom-nav-wrap">
+                                <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
+                                <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
                             </div>
-
                         </div>
 
-
-
-                        <blockquote class="justify-para">
-                            <?php
-                                    $message = $result->message; // get the message
-                                    $first_paragraph = substr($message, 0, 150); // extract first 100 characters
-                                    $remaining_text = substr($message, 150); // get the remaining text
-                                    ?>
-                            <p><span id="smallText"><?php echo $message ?></span>
-                            </p>
-                            <!-- display first 100 characters in first paragraph -->
-                            <!-- initially hide remaining text in second paragraph -->
-
-                        </blockquote>
                     </div>
-                    <?php }
-                    } ?>
-
-
-                </div>
-                <div class="custom-nav-wrap">
-                    <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
-                    <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
+                    </div>
+          
 
     <!-- end below md testimonial -->
 
