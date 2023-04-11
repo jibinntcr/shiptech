@@ -12,7 +12,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             $name = $_POST['EditName'];
             $designation = $_POST['EditDesignation'];
             $area = $_POST['Editarea'];
-            $sql = "UPDATE  researchguide SET name=' $name',designation='$designation',area='$area',image='$photo' where id='$id'";
+            $profileLink = $_POST['profileLink'];
+            $sql = "UPDATE  researchguide SET link='$profileLink', name='$name',designation='$designation',area='$area',image='$photo' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -33,7 +34,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             $file = $folder . basename($_FILES["file"]["name"]);
             move_uploaded_file($_FILES['file']['tmp_name'], $file);
             $photo = basename($_FILES["file"]["name"]);
-            $sql = "UPDATE  researchguide SET name=' $name',designation='$designation',area='$area',image='$photo' where id='$id'";
+            $profileLink = $_POST['profileLink'];
+            $sql = "UPDATE  researchguide SET link='$profileLink',name=' $name',designation='$designation',area='$area',image='$photo' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -111,6 +113,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 
                                                 <label for="name">Name</label>
                                                 <input type="text" class="form-control" id="EditName" name="EditName" value="<?php echo htmlentities($userArr[0]->name); ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputUsername1">Faculty Profile Link</label>
+                                                <input type="text" class="form-control" id="profileLink" name="profileLink" value="<?php echo htmlentities($userArr[0]->link); ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="name">Designation</label>
