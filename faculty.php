@@ -23,8 +23,7 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -43,8 +42,7 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -93,17 +91,16 @@ include('includes/config.php');
                 ?>
 
 
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item p-4 fac-img-curv">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid fac-img-curv" src="uploads/<?php echo   $result->image ?>" alt="">
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="team-item p-4 fac-img-curv">
+                                <div class="overflow-hidden mb-4">
+                                    <img class="img-fluid fac-img-curv" src="uploads/<?php echo   $result->image ?>" alt="">
+                                </div>
+                                <h5 class="mb-0"><a href="faculty-details.php?id=<?php echo   $result->id ?>&name=<?php echo $result->slug ?>"><?php echo   $result->name ?><br><?php echo   $result->thumbname ?></a>
+                                </h5>
+                                <p><?php echo   $result->designation ?></p>
+                            </div>
                         </div>
-                        <h5 class="mb-0"><a
-                                href="faculty-details.php?id=<?php echo   $result->id ?>"><?php echo   $result->name ?><br><?php echo   $result->thumbname ?></a>
-                        </h5>
-                        <p><?php echo   $result->designation ?></p>
-                    </div>
-                </div>
                 <?php }
                 }
                 ?>
