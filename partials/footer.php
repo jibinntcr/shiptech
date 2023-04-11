@@ -31,7 +31,8 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Quick Links</h4>
                 <a class="btn btn-link" href="course.php">Courses</a>
-                <a class="btn btn-link" href="news-home.php">News & Events</a>
+                <a class="btn btn-link" href="news-home.php">News</a>
+                <a class="btn btn-link" href="events-home.php">Events</a>
                 <a class="btn btn-link" href="gallery.php">Gallery</a>
                 <!-- <a class="btn btn-link" href="#">Connect</a> -->
                 <a class="btn btn-link" href="contact.php">Contact Us</a>

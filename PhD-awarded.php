@@ -21,7 +21,8 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -43,7 +44,8 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -80,7 +82,7 @@ include('includes/config.php');
                 <tbody>
 
                     <?php
-                    $sql = "SELECT * from researchscholar  WHERE status='1' AND scholarstatus='Completed' ORDER BY `year` DESC";
+                    $sql = "SELECT * from researchscholar  WHERE status='1' AND scholarstatus='Completed' ORDER BY `year` ASC";
                     $query = $dbh->prepare($sql);
                     $query->execute();
                     $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -88,13 +90,13 @@ include('includes/config.php');
                     if ($query->rowCount() > 0) {
                         foreach ($results as $result) {
                     ?>
-                            <tr>
-                                <td><?php echo $cnt ?></td>
-                                <td><?php echo $result->name ?></td>
-                                <td><?php echo $result->title ?></td>
-                                <td><?php echo $result->guide ?></td>
-                                <td><?php echo $result->year ?></td>
-                            </tr>
+                    <tr>
+                        <td><?php echo $cnt ?></td>
+                        <td><?php echo $result->name ?></td>
+                        <td><?php echo $result->title ?></td>
+                        <td><?php echo $result->guide ?></td>
+                        <td><?php echo $result->year ?></td>
+                    </tr>
                     <?php $cnt = $cnt + 1;
                         }
                     }

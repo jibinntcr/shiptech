@@ -55,11 +55,23 @@ include('includes/config.php');
     .hod-img {
         width: 450px;
     }
-
+    .rowCustome{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%; 
+    }
+    @media (max-width: 990px) {
+        .rowCustome{
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 50% 50%; 
+    }}
     @media (max-width: 576px) {
-        .hod-img {
-            width: 300px;
-        }
+        .rowCustome{
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 50% 50%; 
+    }
     }
 
     .card1 {
@@ -71,7 +83,6 @@ include('includes/config.php');
         background-color: #f2f8f9;
         border-radius: 4px;
         padding: 32px 32px;
-        margin: 10px;
         text-decoration: none;
         z-index: 0;
         overflow: hidden;
@@ -96,17 +107,18 @@ include('includes/config.php');
         &:hover:before {
             transform: scale(50);
         }
+
         &:hover {
             .h3small {
-            transition: all 0.3s ease-out;
-            color: #fff;
-        }
+                transition: all 0.3s ease-out;
+                color: #fff;
+            }
 
-        .psmall {
-            transition: all 0.3s ease-out;
+            .psmall {
+                transition: all 0.3s ease-out;
 
-            color: #fff;
-        }
+                color: #fff;
+            }
         }
     }
 
@@ -150,6 +162,9 @@ include('includes/config.php');
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/banner-03.jpg" alt="">
             </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/banner-04_.jpg" alt="">
+            </div>
 
             <?php
             $sql = "SELECT * from banner WHERE status = '1'";
@@ -192,7 +207,7 @@ include('includes/config.php');
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <a class="card1" sty href="https://descon.cusat.ac.in/">
-                        <h3   class="h3small" style="text-align: center;">DESCON</h3>
+                        <h3 class="h3small" style="text-align: center;">DESCON</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
@@ -204,8 +219,8 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="card1" href="" Approvals-and-Affiliations.php">
-                        <h3  class="h3small" style="text-align: center;">Approvals & Affiliations</h3>
+                    <a class="card1" href="Approvals-and-Affiliations.php">
+                        <h3 class="h3small" style="text-align: center;">Approvals & Affiliations</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
@@ -217,8 +232,8 @@ include('includes/config.php');
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
                     style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-                    <a  class="card1" href="placement.php">
-                        <h3   class="h3small" style="text-align: center;">Placement</h3>
+                    <a class="card1" href="placement.php">
+                        <h3 class="h3small" style="text-align: center;">Placement</h3>
                         <p class="small" style=" display: block;
   margin-left: auto;
   margin-right: auto;
@@ -249,7 +264,9 @@ include('includes/config.php');
                     <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
                         <div
                             class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
-                            <span class="d-flex align-items-center">&nbsp;Announcements </span>
+                            <a class="text-white" href="announcement.php"
+                                class="d-flex align-items-center annouHover">&nbsp;Announcements
+                            </a>
                         </div>
                         <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();"
                             onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
@@ -274,12 +291,12 @@ include('includes/config.php');
     <?php } ?>
     <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container ">
-            <div class="row  ">
+            <div class="rowCustome">
                 <!-- event start -->
-                <div class="container my-5 row col-xl-6" style="margin-right: 15px;">
+                <div class="container my-5 row col-xl-6" style="width:97%;padding:0px;margin-left:1.5%">
                     <div class="text-center mb-3">
                         <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
-                        <a href="news-home.php">
+                        <a href="events-home.php">
 
                             <h1 class="eventHover" class="mb-0">Events</h1>
                         </a>
@@ -348,7 +365,7 @@ include('includes/config.php');
                         </ul>
                         <div>
                             <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
-                                href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
+                                href="events-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
                                     style="color:#fff;"> Read
                                     More</span></a>
                         </div>
@@ -358,7 +375,7 @@ include('includes/config.php');
                 <!-- event end -->
 
                 <!-- news start -->
-                <div class="container my-5 row col-xl-6">
+                <div class="container my-5 row col-xl-6" style="width:97%;padding:0px;margin-left:1.5%">
                     <div class="text-center mb-3">
                         <a href="news-home.php">
                             <h1 class="eventHover" class="mb-0">News</h1>
@@ -380,7 +397,7 @@ include('includes/config.php');
                             ?>
                             <li>
                                 <div class="d-flex news border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; height:120px;  margin: 0 auto">
+                                    style="border-radius: 20px; max-width: 655px; height:100%;  margin: 0 auto">
                                     <img class="d-block" style="
                       width: 110px;
                       height: 110px;
