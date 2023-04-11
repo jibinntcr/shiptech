@@ -102,7 +102,8 @@ include('includes/config.php');
                 <img src="uploads/<?php echo   $result->thumbnail ?>" class="img-fluid  w-100 h-100"
                     style="object-fit: cover; border-radius: 20px;" alt="Your Image">
                 <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <a class="btn" href="gallery-item.php?id=<?php echo   $result->id ?>"> <span
+                    <a class="btn"
+                        href="gallery-item.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>"> <span
                             class="display-6  textHover"><?php echo   $result->name ?></span> </a>
                 </div>
 
