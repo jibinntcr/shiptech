@@ -153,7 +153,8 @@ include('includes/config.php');
                                                     <i class="fa-regular fa-clock"></i></span>
                                                 <span class="font-bold"> 9.00 AM - 5.00 PM</span>
                                             </p> -->
-                                        <a href="events-view.php?id=<?php echo   $result->id ?>">
+                                        <a
+                                            href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
                                             <h6 class="my-2 my-lg-2">
                                                 <?php $title =  substr($result->title, 0, 48);
                                                         echo $title ?>
