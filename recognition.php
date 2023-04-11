@@ -8,6 +8,147 @@ include('includes/config.php');
 
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cards_item {
+        display: flex;
+        padding: 1rem;
+    }
+
+    .card_image {
+        position: relative;
+        width: 100%;
+    }
+
+    .card_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card_price {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 0.25rem;
+        background-color: #1c95ff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .card_price span {
+        font-size: 12px;
+        margin-top: -2px;
+    }
+
+    .note {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        border-radius: 0.25rem;
+        background-color: #1c95ff;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    @media (min-width: 40rem) {
+        .cards_item {
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 56rem) {
+        .cards_item {
+            width: 33.3333%;
+        }
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card_content {
+        position: relative;
+        padding: 16px 12px 32px 24px;
+        margin: 16px 8px 8px 0;
+        max-height: 290px;
+        overflow-y: scroll;
+    }
+
+    .card_content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .card_content::-webkit-scrollbar-track {
+        box-shadow: 0;
+        border-radius: 0;
+    }
+
+    .card_content::-webkit-scrollbar-thumb {
+        background: #1c95ff;
+        border-radius: 15px;
+    }
+
+    .card_title {
+        position: relative;
+        margin: 0 0 24px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .card_title::after {
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1c95ff;
+        content: "";
+    }
+
+    hr {
+        margin: 24px auto;
+        width: 50px;
+        border-top: 2px solid #1c95ff;
+    }
+
+    .card_text p {
+        margin: 0 0 24px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .card_text p:last-child {
+        margin: 0;
+    }
+</style>
 
 <head>
     <meta charset="utf-8">
@@ -22,8 +163,7 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -45,8 +185,7 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -75,11 +214,10 @@ include('includes/config.php');
     </div>
     <!-- Page Header End -->
     <div cl ass="container-xxl py-5">
-        <div class="container py-5">
-            <div class="row g-4">
-
+        <div class="main">
+            <ul class="cards">
                 <?php
-                $sql = "SELECT * from recognition WHERE status = '1'";
+                $sql = "SELECT * from recognition WHERE status='1'";
                 $query = $dbh->prepare($sql);
                 $query->execute();
                 $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -87,22 +225,28 @@ include('includes/config.php');
                 if ($query->rowCount() > 0) {
                     foreach ($results as $result) {
                 ?>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4 fac-img-curv justify-para">
-                        <h4 class=""><?php echo   $result->name ?></h4>
-                        <p><small class="text-muted"><b><?php echo   $result->designation ?></b></small></p>
-                        <p class="justify-para mb-3">
-                        <p class="justify-para recognition-para"><?php echo   $result->recognition ?></p>
-                        </p>
-                        <p class="justify-para mb-3">
-                    </div>
-                </div>
+
+                        <div class="cards_item">
+                            <div class="card">
+
+                                <h2 class="card_title pt-4"><?php echo   $result->name ?><br><small class="text-muted"><b><?php echo   $result->designation ?></b></small></h2>
+                                <div class="card_content">
+
+                                    <div class="card_text">
+                                        <p><?php echo   $result->recognition ?>
+                                        </p>
+                                        <hr />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                 <?php }
                 } ?>
 
 
-
-            </div>
+            </ul>
         </div>
     </div>
     <!-- Footer Start -->

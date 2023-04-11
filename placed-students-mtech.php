@@ -2,7 +2,6 @@
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include('includes/config.php');
-
 ?>
 
 
@@ -12,13 +11,14 @@ include('includes/config.php');
 
 <head>
     <meta charset="utf-8">
-    <title>Gallery | Department of Shiptechnology</title>
+    <title>Placement Statistics | Department of Ship Technology</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.png" />
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +27,7 @@ include('includes/config.php');
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
-    <link href="./lib/icons/css/all.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -40,8 +39,6 @@ include('includes/config.php');
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/gallery.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -63,13 +60,12 @@ include('includes/config.php');
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">GALLERY</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Placement Statistics</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">GALLERY</a></li>
-                    <!-- <li class="breadcrumb-item text-white active" aria-current="page">SHIP TECHNOLOGY LIBRARY CUSAT
-                    </li> -->
+                    <!-- <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li> -->
+                    <li class="breadcrumb-item text-white active" aria-current="page">Placement Statistics</li>
                 </ol>
             </nav>
         </div>
@@ -77,51 +73,56 @@ include('includes/config.php');
     <!-- Page Header End -->
 
 
-
-
-
+    <!-- Team Start -->
     <div class="container-xxl py-5">
-        <div class="container flex flex-wrap row  py-5 mx-auto">
-
+        <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
-                <h1 class="mb-5">Gallery</h1>
+                <h6 class="text-secondary text-uppercase">Ship Technology CUSAT</h6>
+                <?php $id = $_GET['id']; ?>
+                <h1 class="mb-5">Placement Statistics of <?php echo $id ?></h1>
             </div>
 
-            <?php
-            $sql = "SELECT * from gallery WHERE status = '1' ORDER BY `gallery`.`id` DESC";
-            $query = $dbh->prepare($sql);
-            $query->execute();
-            $results = $query->fetchAll(PDO::FETCH_OBJ);
-            $cnt = 1;
-            if ($query->rowCount() > 0) {
-                foreach ($results as $result) {
-            ?>
 
-            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="uploads/<?php echo   $result->thumbnail ?>" class="img-fluid  w-100 h-100"
-                    style="object-fit: cover; border-radius: 20px;" alt="Your Image">
-                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
-                    <a class="btn"
-                        href="gallery-item.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>"> <span
-                            class="display-6  textHover"><?php echo   $result->name ?></span> </a>
+            <!-- Team Start -->
+
+            <div class="row g-4">
+                <?php
+
+                $sql = "SELECT * from placement  WHERE status='1' AND course='M.Tech' AND year='$id'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item-pl">
+                        <img class="img-fluid rounded-circle w-100 mb-4" src="uploads/<?php echo   $result->image ?>"
+                            alt="">
+                        <div class="justify-content-center">
+                            <h5><?php echo   $result->name ?></h5>
+                            <p class="mb-4"><?php echo   $result->company ?></p>
+
+                        </div>
+                    </div>
                 </div>
+                <?php }
+                }  ?>
 
             </div>
-            <?php }
-            } ?>
-
-
-
-
         </div>
     </div>
+    <!-- Team End -->
 
+    <!-- Team End -->
 
 
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>
     <!-- Footer End -->
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>

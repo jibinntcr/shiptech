@@ -66,12 +66,12 @@
                 <span class="menu-title">MoU</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="lab.php">
                 <i class="icon-columns menu-icon"></i>
                 <span class="menu-title">Lab</span>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link" href="news.php">
                 <i class="icon-paper menu-icon"></i>

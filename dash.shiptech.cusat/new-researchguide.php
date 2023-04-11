@@ -9,13 +9,14 @@ if (strlen($_SESSION['alogin']) == 0) {
     if (isset($_POST['researchguideBTN'])) {
         $name = $_POST['name'];
         $designation = $_POST['designation'];
+        $profileLink = $_POST['profileLink'];
         $areas = $_POST['editor'];
         $folder = '../uploads/';
         $file = $folder . basename($_FILES["file"]["name"]);
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO researchguide(name,designation,area,image,status) VALUES ('" . $name . "','" . $designation . "','" . $areas . "','" . $photo . "','" . $status . "')";
+        $sql = "INSERT INTO researchguide(name,designation,area,image,status,link) VALUES ('" . $name . "','" . $designation . "','" . $areas . "','" . $photo . "','" . $status . "','" . $profileLink . "')";
         // print_r($sql);
         // exit();
         $query = $dbh->prepare($sql);
@@ -77,6 +78,10 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <div class="form-group">
                                             <label for="exampleInputUsername1">Name</label>
                                             <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername1">Faculty Profile Link</label>
+                                            <input type="text" class="form-control" id="profileLink" name="profileLink" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleTextarea1">Designation</label>

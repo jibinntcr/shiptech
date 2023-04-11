@@ -10,6 +10,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             $photo = $_POST['imageName'];
             $thumb = $_POST['thumbName'];
 
+
+
             $id = $_POST['id'];
             $name = $_POST['name'];
             $specialization = $_POST['specialization'];
@@ -45,7 +47,9 @@ if (strlen($_SESSION['alogin']) == 0) {
             $syllabuslink14 = $_POST['syllabuslink14'];
             $syllabus15 = $_POST['syllabus15'];
             $syllabuslink15 = $_POST['syllabuslink15'];
-            $sql = "UPDATE  course SET name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
+
+            $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $name)));
+            $sql = "UPDATE  course SET slug='$slug', name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -92,6 +96,8 @@ if (strlen($_SESSION['alogin']) == 0) {
             $syllabus15 = $_POST['syllabus15'];
             $syllabuslink15 = $_POST['syllabuslink15'];
 
+            $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $name)));
+
             $folder = '../uploads/';
             $file = $folder . basename($_FILES["file"]["name"]);
             move_uploaded_file($_FILES['file']['tmp_name'], $file);
@@ -100,7 +106,7 @@ if (strlen($_SESSION['alogin']) == 0) {
             move_uploaded_file($_FILES['file2']['tmp_name'], $file2);
             $thumb = basename($_FILES["file2"]["name"]);
 
-            $sql = "UPDATE  course SET name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
+            $sql = "UPDATE  course SET slug='$slug', name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -148,12 +154,14 @@ if (strlen($_SESSION['alogin']) == 0) {
             $syllabus15 = $_POST['syllabus15'];
             $syllabuslink15 = $_POST['syllabuslink15'];
 
+            $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $name)));
+
             $folder = '../uploads/';
             $file2 = $folder . basename($_FILES["file2"]["name"]);
             move_uploaded_file($_FILES['file2']['tmp_name'], $file2);
             $thumb = basename($_FILES["file2"]["name"]);
 
-            $sql = "UPDATE  course SET name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
+            $sql = "UPDATE  course SET slug='$slug', name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -202,12 +210,14 @@ if (strlen($_SESSION['alogin']) == 0) {
             $syllabus15 = $_POST['syllabus15'];
             $syllabuslink15 = $_POST['syllabuslink15'];
 
+            $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $name)));
+
             $folder = '../uploads/';
             $file = $folder . basename($_FILES["file"]["name"]);
             move_uploaded_file($_FILES['file']['tmp_name'], $file);
             $photo = basename($_FILES["file"]["name"]);
 
-            $sql = "UPDATE  course SET name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
+            $sql = "UPDATE  course SET slug='$slug', name='$name',specialization='$specialization',seat='$seats',eligibility='$eligibility',sllabus='$syllabus1',syllabus2='$syllabus2',syllabus3='$syllabus3',syllabus4='$syllabus4',syllabus5='$syllabus5',syllabus6='$syllabus6',syllabus7='$syllabus7',syllabus8='$syllabus8',syllabus9='$syllabus9',syllabus10='$syllabus10',syllabus11='$syllabus11',syllabus12='$syllabus12',syllabus13='$syllabus13',syllabus14='$syllabus14',syllabus15='$syllabus15',sllabusLink='$syllabuslink1',link2='$syllabuslink2',link3='$syllabuslink3',link4='$syllabuslink4',link5='$syllabuslink5',link6='$syllabuslink6',link7='$syllabuslink7',link8='$syllabuslink8',link9='$syllabuslink9',link10='$syllabuslink10',link11='$syllabuslink11',link12='$syllabuslink12',link13='$syllabuslink13',link14='$syllabuslink14',link15='$syllabuslink15',image='$photo',thumb='$thumb' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {

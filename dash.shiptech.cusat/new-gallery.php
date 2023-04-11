@@ -15,8 +15,10 @@ if (strlen($_SESSION['alogin']) == 0) {
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
 
+        $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $name)));
+
         $status = '1';
-        $sql = "INSERT INTO gallery(name,thumbnail,status) VALUES ('" . $name . "','" . $photo . "','" . $status . "')";
+        $sql = "INSERT INTO gallery(name,thumbnail,status,slug) VALUES ('" . $name . "','" . $photo . "','" . $status . "','" . $slug . "')";
 
         // print_r($sql);
         // exit();

@@ -111,6 +111,14 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 <label for="exampleInputUsername1">Name</label>
                                                 <input type="text" class="form-control" id="name" name="name" value="<?php echo htmlentities($userArr[0]->name); ?>">
                                             </div>
+                                            <div class="form-group">
+                                                <label for="exampleSelectGender">Course</label>
+                                                <select class="form-control" id="course" name="course" required>
+                                                    <option><?php echo htmlentities($userArr[0]->course); ?></option>
+                                                    <option>B.Tech</option>
+                                                    <option>M.Tech</option>
+                                                </select>
+                                            </div>
 
                                             <div class="form-group">
                                                 <label for="exampleInputUsername1">Passout Year</label>

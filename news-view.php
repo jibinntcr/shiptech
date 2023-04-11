@@ -134,7 +134,8 @@ include('includes/config.php');
                                     src="uploads/<?php echo $result->image ?>" alt="">
                                 <div class="d-flex col-md-8 mb-0 mx-md-3  ">
                                     <div class="ms-4 overflow-hidden">
-                                        <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                        <a
+                                            href="news-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
                                             <h6 class="my-2 my-lg-2">
                                                 <?php
                                                         $title =  substr($result->title, 0, 27);

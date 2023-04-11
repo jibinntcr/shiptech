@@ -23,8 +23,7 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -42,322 +41,321 @@ include('includes/config.php');
     <link href="css/courseDetails.css" rel="stylesheet">
 </head>
 <style>
-.projcard-container {
-    margin: 50px 0;
-}
+    .projcard-container {
+        margin: 50px 0;
+    }
 
-/* Actual Code: */
-.projcard-container,
-.projcard-container * {
-    box-sizing: border-box;
-}
+    /* Actual Code: */
+    .projcard-container,
+    .projcard-container * {
+        box-sizing: border-box;
+    }
 
-.projcard-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-}
+    .projcard-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
+    }
 
-.projcard {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    font-size: 18px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
+    .projcard {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        font-size: 18px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
 
-.projcard:hover {
-    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
-    transform: translate(0px, -3px);
-}
+    .projcard:hover {
+        box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+        transform: translate(0px, -3px);
+    }
 
-.projcard::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
-    opacity: 0.07;
-}
+    .projcard::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(-70deg, #424242, transparent 50%);
+        opacity: 0.07;
+    }
 
-.projcard:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #424242, transparent 50%);
-}
+    .projcard:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #424242, transparent 50%);
+    }
 
-.projcard-innerbox {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
+    .projcard-innerbox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
-.projcard-img {
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 0;
-    left: 0;
-    transition: transform 0.2s ease;
-}
+    .projcard-img {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        top: 0;
+        left: 0;
+        transition: transform 0.2s ease;
+    }
 
-.projcard:nth-child(2n) .projcard-img {
-    left: initial;
-    right: 0;
-}
+    .projcard:nth-child(2n) .projcard-img {
+        left: initial;
+        right: 0;
+    }
 
-.projcard:hover .projcard-img {
-    transform: scale(1.05) rotate(1deg);
-}
+    .projcard:hover .projcard-img {
+        transform: scale(1.05) rotate(1deg);
+    }
 
-.projcard:hover .projcard-bar {
-    width: 70px;
-}
+    .projcard:hover .projcard-bar {
+        width: 70px;
+    }
 
-.projcard-textbox {
-    position: absolute;
-    top: 7%;
-    bottom: 7%;
-    left: 430px;
-    width: calc(100% - 470px);
-    font-size: 17px;
-}
+    .projcard-textbox {
+        position: absolute;
+        top: 7%;
+        bottom: 7%;
+        left: 430px;
+        width: calc(100% - 470px);
+        font-size: 17px;
+    }
 
-.projcard:nth-child(2n) .projcard-textbox {
-    left: initial;
-    right: 430px;
-}
+    .projcard:nth-child(2n) .projcard-textbox {
+        left: initial;
+        right: 430px;
+    }
 
-.projcard-textbox::before,
-.projcard-textbox::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background: #ff0000bb;
-    background: #fff;
-    top: -20%;
-    left: -55px;
-    height: 140%;
-    width: 60px;
-    transform: rotate(8deg);
-}
+    .projcard-textbox::before,
+    .projcard-textbox::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: #ff0000bb;
+        background: #fff;
+        top: -20%;
+        left: -55px;
+        height: 140%;
+        width: 60px;
+        transform: rotate(8deg);
+    }
 
-.projcard:nth-child(2n) .projcard-textbox::before {
-    display: none;
-}
-
-.projcard-textbox::after {
-    display: none;
-    left: initial;
-    right: -55px;
-}
-
-.projcard:nth-child(2n) .projcard-textbox::after {
-    display: block;
-}
-
-.projcard-textbox * {
-    position: relative;
-}
-
-.projcard-title {
-    font-family: 'Voces', 'Open Sans', arial, sans-serif;
-    font-size: 24px;
-}
-
-.projcard-subtitle {
-    font-family: 'Voces', 'Open Sans', arial, sans-serif;
-    color: #888;
-}
-
-.projcard-bar {
-    left: -2px;
-    width: 50px;
-    height: 5px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #424242;
-    transition: width 0.2s ease;
-}
-
-.projcard-blue .projcard-bar {
-    background-color: #0088FF;
-}
-
-.projcard-blue::before {
-    background-image: linear-gradient(-70deg, #0088FF, transparent 50%);
-}
-
-.projcard-blue:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #0088FF, transparent 50%);
-}
-
-.projcard-red .projcard-bar {
-    background-color: #D62F1F;
-}
-
-.projcard-red::before {
-    background-image: linear-gradient(-70deg, #D62F1F, transparent 50%);
-}
-
-.projcard-red:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #D62F1F, transparent 50%);
-}
-
-.projcard-green .projcard-bar {
-    background-color: #40BD00;
-}
-
-.projcard-green::before {
-    background-image: linear-gradient(-70deg, #40BD00, transparent 50%);
-}
-
-.projcard-green:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #40BD00, transparent 50%);
-}
-
-.projcard-yellow .projcard-bar {
-    background-color: #F5AF41;
-}
-
-.projcard-yellow::before {
-    background-image: linear-gradient(-70deg, #F5AF41, transparent 50%);
-}
-
-.projcard-yellow:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #F5AF41, transparent 50%);
-}
-
-.projcard-orange .projcard-bar {
-    background-color: #FF5722;
-}
-
-.projcard-orange::before {
-    background-image: linear-gradient(-70deg, #FF5722, transparent 50%);
-}
-
-.projcard-orange:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #FF5722, transparent 50%);
-}
-
-.projcard-brown .projcard-bar {
-    background-color: #C49863;
-}
-
-.projcard-brown::before {
-    background-image: linear-gradient(-70deg, #C49863, transparent 50%);
-}
-
-.projcard-brown:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #C49863, transparent 50%);
-}
-
-.projcard-grey .projcard-bar {
-    background-color: #424242;
-}
-
-.projcard-grey::before {
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
-}
-
-.projcard-grey:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, #424242, transparent 50%);
-}
-
-.projcard-customcolor .projcard-bar {
-    background-color: var(--projcard-color);
-}
-
-.projcard-customcolor::before {
-    background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%);
-}
-
-.projcard-customcolor:nth-child(2n)::before {
-    background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%);
-}
-
-.projcard-description {
-    z-index: 10;
-    font-size: 15px;
-    color: #424242;
-    height: 125px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.projcard-tagbox {
-    position: absolute;
-    bottom: 3%;
-    font-size: 14px;
-    cursor: default;
-    user-select: none;
-    pointer-events: none;
-}
-
-.projcard-tag {
-    display: inline-block;
-    background: #E0E0E0;
-    color: #777;
-    border-radius: 3px 0 0 3px;
-    line-height: 26px;
-    padding: 0 10px 0 23px;
-    position: relative;
-    margin-right: 20px;
-    cursor: default;
-    user-select: none;
-    transition: color 0.2s;
-}
-
-.projcard-tag::before {
-    content: '';
-    position: absolute;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-    height: 6px;
-    left: 10px;
-    width: 6px;
-    top: 10px;
-}
-
-.projcard-tag::after {
-    content: '';
-    position: absolute;
-    border-bottom: 13px solid transparent;
-    border-left: 10px solid #E0E0E0;
-    border-top: 13px solid transparent;
-    right: -10px;
-    top: 0;
-}
-
-#mobileView {
-    display: none;
-}
-
-@media (max-width: 767px) {
-    #mainView {
+    .projcard:nth-child(2n) .projcard-textbox::before {
         display: none;
     }
 
-    #mobileView {
+    .projcard-textbox::after {
+        display: none;
+        left: initial;
+        right: -55px;
+    }
+
+    .projcard:nth-child(2n) .projcard-textbox::after {
         display: block;
     }
-}
+
+    .projcard-textbox * {
+        position: relative;
+    }
+
+    .projcard-title {
+        font-family: 'Voces', 'Open Sans', arial, sans-serif;
+        font-size: 24px;
+    }
+
+    .projcard-subtitle {
+        font-family: 'Voces', 'Open Sans', arial, sans-serif;
+        color: #888;
+    }
+
+    .projcard-bar {
+        left: -2px;
+        width: 50px;
+        height: 5px;
+        margin: 10px 0;
+        border-radius: 5px;
+        background-color: #424242;
+        transition: width 0.2s ease;
+    }
+
+    .projcard-blue .projcard-bar {
+        background-color: #0088FF;
+    }
+
+    .projcard-blue::before {
+        background-image: linear-gradient(-70deg, #0088FF, transparent 50%);
+    }
+
+    .projcard-blue:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #0088FF, transparent 50%);
+    }
+
+    .projcard-red .projcard-bar {
+        background-color: #D62F1F;
+    }
+
+    .projcard-red::before {
+        background-image: linear-gradient(-70deg, #D62F1F, transparent 50%);
+    }
+
+    .projcard-red:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #D62F1F, transparent 50%);
+    }
+
+    .projcard-green .projcard-bar {
+        background-color: #40BD00;
+    }
+
+    .projcard-green::before {
+        background-image: linear-gradient(-70deg, #40BD00, transparent 50%);
+    }
+
+    .projcard-green:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #40BD00, transparent 50%);
+    }
+
+    .projcard-yellow .projcard-bar {
+        background-color: #F5AF41;
+    }
+
+    .projcard-yellow::before {
+        background-image: linear-gradient(-70deg, #F5AF41, transparent 50%);
+    }
+
+    .projcard-yellow:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #F5AF41, transparent 50%);
+    }
+
+    .projcard-orange .projcard-bar {
+        background-color: #FF5722;
+    }
+
+    .projcard-orange::before {
+        background-image: linear-gradient(-70deg, #FF5722, transparent 50%);
+    }
+
+    .projcard-orange:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #FF5722, transparent 50%);
+    }
+
+    .projcard-brown .projcard-bar {
+        background-color: #C49863;
+    }
+
+    .projcard-brown::before {
+        background-image: linear-gradient(-70deg, #C49863, transparent 50%);
+    }
+
+    .projcard-brown:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #C49863, transparent 50%);
+    }
+
+    .projcard-grey .projcard-bar {
+        background-color: #424242;
+    }
+
+    .projcard-grey::before {
+        background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    }
+
+    .projcard-grey:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, #424242, transparent 50%);
+    }
+
+    .projcard-customcolor .projcard-bar {
+        background-color: var(--projcard-color);
+    }
+
+    .projcard-customcolor::before {
+        background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%);
+    }
+
+    .projcard-customcolor:nth-child(2n)::before {
+        background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%);
+    }
+
+    .projcard-description {
+        z-index: 10;
+        font-size: 15px;
+        color: #424242;
+        height: 125px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .projcard-tagbox {
+        position: absolute;
+        bottom: 3%;
+        font-size: 14px;
+        cursor: default;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .projcard-tag {
+        display: inline-block;
+        background: #E0E0E0;
+        color: #777;
+        border-radius: 3px 0 0 3px;
+        line-height: 26px;
+        padding: 0 10px 0 23px;
+        position: relative;
+        margin-right: 20px;
+        cursor: default;
+        user-select: none;
+        transition: color 0.2s;
+    }
+
+    .projcard-tag::before {
+        content: '';
+        position: absolute;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+        height: 6px;
+        left: 10px;
+        width: 6px;
+        top: 10px;
+    }
+
+    .projcard-tag::after {
+        content: '';
+        position: absolute;
+        border-bottom: 13px solid transparent;
+        border-left: 10px solid #E0E0E0;
+        border-top: 13px solid transparent;
+        right: -10px;
+        top: 0;
+    }
+
+    #mobileView {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        #mainView {
+            display: none;
+        }
+
+        #mobileView {
+            display: block;
+        }
+    }
 </style>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <!-- <span class="sr-only">Loading...</span> -->
         </div>
@@ -389,8 +387,7 @@ include('includes/config.php');
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/phd_image.jpg"
-                            style="object-fit: cover; border-radius: 20px;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/phd_image.jpg" style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
@@ -464,50 +461,48 @@ include('includes/config.php');
             <div>
                 <h1 class="row justify-content-center mb-4">Research Guides</h1>
                 <div class="row gy-5 gx-4 mb-4">
-                    <div class="container-xxl py-5 wow fadeInUp p-4" data-wow-delay="0.1s"
-                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="container-xxl py-5 wow fadeInUp p-4" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <div class="container">
                             <div class="row g-4">
                                 <?php
 
-                $sql = "SELECT * from researchguide  WHERE status='1'";
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt = 1;
-                if ($query->rowCount() > 0) {
-                  foreach ($results as $result) {
-                ?>
+                                $sql = "SELECT * from researchguide  WHERE status='1'";
+                                $query = $dbh->prepare($sql);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt = 1;
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                ?>
 
-                                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                                    <div class="our-teamRec">
-                                        <img src="uploads/<?php echo $result->image ?>" alt="">
-                                        <div class="team-content justify-para">
-                                            <h3 class="team-title">
-                                                <a><?php echo $result->name ?></a><small><?php echo $result->designation ?></small>
-                                            </h3>
-                                            <!-- <a class="mb-0 centerIcon" data-toggle="collapse" href="#Rec1"><i class="fa-solid fa-circle-chevron-down"></i> -->
+                                        <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                                            <div class="our-teamRec">
+                                                <img src="uploads/<?php echo $result->image ?>" alt="">
+                                                <div class="team-content justify-para">
+                                                    <h3 class="team-title">
+                                                        <a><?php echo $result->name ?></a><small><?php echo $result->designation ?></small>
+                                                    </h3>
+                                                    <!-- <a class="mb-0 centerIcon" data-toggle="collapse" href="#Rec1"><i class="fa-solid fa-circle-chevron-down"></i> -->
 
-                                            <hr class="hrline">
-                                            <!-- <div id="Rec1" class="p-4 collapse"> -->
+                                                    <hr class="hrline">
+                                                    <!-- <div id="Rec1" class="p-4 collapse"> -->
 
-                                            <?php
-                          $input_string = "$result->area ";
+                                                    <?php
+                                                    $input_string = "$result->area ";
 
-                          $output_string = str_replace("&nbsp;", " ", $input_string);
+                                                    $output_string = str_replace("&nbsp;", " ", $input_string);
 
-                          echo $output_string;
+                                                    echo $output_string;
 
 
-                          // echo $result->area 
-                          ?>
-                                            <!-- </div> -->
+                                                    // echo $result->area 
+                                                    ?>
+                                                    <!-- </div> -->
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
                                 <?php }
-                } ?>
+                                } ?>
 
 
                             </div>
@@ -524,38 +519,38 @@ include('includes/config.php');
         <h1 class="row justify-content-center mb-4">Research Guides</h1>
         <?php
 
-    $sql = "SELECT * from researchguide  WHERE status='1'";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $results = $query->fetchAll(PDO::FETCH_OBJ);
-    $cnt = 1;
-    if ($query->rowCount() > 0) {
-      foreach ($results as $result) {
-    ?>
-        <div class="projcard projcard-blue">
-            <div class="projcard-innerbox">
-                <img class="projcard-img" src="uploads/<?php echo $result->image ?>" />
-                <div class="projcard-textbox">
-                    <div class="projcard-title"><?php echo $result->name ?></div>
-                    <div class="projcard-subtitle"><?php echo $result->designation ?></div>
-                    <div class="projcard-bar"></div>
-                    <div class="projcard-description" style="height:100%;"> <?php
-                                                                      $input_string = "$result->area ";
+        $sql = "SELECT * from researchguide  WHERE status='1'";
+        $query = $dbh->prepare($sql);
+        $query->execute();
+        $results = $query->fetchAll(PDO::FETCH_OBJ);
+        $cnt = 1;
+        if ($query->rowCount() > 0) {
+            foreach ($results as $result) {
+        ?>
+                <div class="projcard projcard-blue">
+                    <div class="projcard-innerbox">
+                        <img class="projcard-img" src="uploads/<?php echo $result->image ?>" />
+                        <div class="projcard-textbox">
+                            <a href="<?php echo $result->link ?>" target="_blank" class="projcard-title"><?php echo $result->name ?></a>
+                            <div class="projcard-subtitle"><?php echo $result->designation ?></div>
+                            <div class="projcard-bar"></div>
+                            <div class="projcard-description" style="height:100%;"> <?php
+                                                                                    $input_string = "$result->area ";
 
-                                                                      $output_string = str_replace("&nbsp;", " ", $input_string);
+                                                                                    $output_string = str_replace("&nbsp;", " ", $input_string);
 
-                                                                      echo $output_string;
+                                                                                    echo $output_string;
 
 
-                                                                      // echo $result->area 
-                                                                      ?></div>
+                                                                                    // echo $result->area 
+                                                                                    ?></div>
 
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
         <?php }
-    } ?>
+        } ?>
 
 
         <!--
@@ -664,11 +659,11 @@ include('includes/config.php');
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-    document.querySelectorAll(".projcard-description").forEach(function(box) {
-        $clamp(box, {
-            clamp: 6
+        document.querySelectorAll(".projcard-description").forEach(function(box) {
+            $clamp(box, {
+                clamp: 6
+            });
         });
-    });
     </script>
 </body>
 

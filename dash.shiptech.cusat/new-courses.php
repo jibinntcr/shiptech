@@ -12,6 +12,8 @@ if (strlen($_SESSION['alogin']) == 0) {
         $seats = $_POST['seats'];
         $eligibility = $_POST['editor'];
 
+        $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $name)));
+
         $syllabus1 = $_POST['syllabus1'];
         $link1 = $_POST['syllabuslink1'];
 
@@ -66,7 +68,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $thumb = basename($_FILES["file2"]["name"]);
 
         $status = '1';
-        $sql = "INSERT INTO course(name,specialization,seat,eligibility,thumb,image,sllabus,syllabus2,syllabus3,syllabus4,syllabus5,syllabus6,syllabus7,syllabus8,syllabus9,syllabus10,syllabus11,syllabus12,syllabus13,syllabus14,syllabus15,sllabusLink,link2,link3,link4,link5,link6,link7,link8,link9,link10,link11,link12,link13,link14,link15,status) VALUES ('" . $name . "','" . $specialization . "','" . $seats . "','" . $eligibility . "','" . $thumb . "','" . $photo . "','" . $syllabus1 . "','" . $syllabus2 . "','" . $syllabus3 . "','" . $syllabus4 . "','" . $syllabus5 . "','" . $syllabus6 . "','" . $syllabus7 . "','" . $syllabus8 . "','" . $syllabus9 . "','" . $syllabus10 . "','" . $syllabus11 . "','" . $syllabus12 . "','" . $syllabus13 . "','" . $syllabus14 . "','" . $syllabus15 . "','" . $link1 . "','" . $link2 . "','" . $link3 . "','" . $link4 . "','" . $link5 . "','" . $link6 . "','" . $link7 . "','" . $link8 . "','" . $link9 . "','" . $link10 . "','" . $link11 . "','" . $link12 . "','" . $link13 . "','" . $link14 . "','" . $link15 . "','" . $status . "')";
+        $sql = "INSERT INTO course(name,specialization,seat,eligibility,thumb,image,sllabus,syllabus2,syllabus3,syllabus4,syllabus5,syllabus6,syllabus7,syllabus8,syllabus9,syllabus10,syllabus11,syllabus12,syllabus13,syllabus14,syllabus15,sllabusLink,link2,link3,link4,link5,link6,link7,link8,link9,link10,link11,link12,link13,link14,link15,status,slug) VALUES ('" . $name . "','" . $specialization . "','" . $seats . "','" . $eligibility . "','" . $thumb . "','" . $photo . "','" . $syllabus1 . "','" . $syllabus2 . "','" . $syllabus3 . "','" . $syllabus4 . "','" . $syllabus5 . "','" . $syllabus6 . "','" . $syllabus7 . "','" . $syllabus8 . "','" . $syllabus9 . "','" . $syllabus10 . "','" . $syllabus11 . "','" . $syllabus12 . "','" . $syllabus13 . "','" . $syllabus14 . "','" . $syllabus15 . "','" . $link1 . "','" . $link2 . "','" . $link3 . "','" . $link4 . "','" . $link5 . "','" . $link6 . "','" . $link7 . "','" . $link8 . "','" . $link9 . "','" . $link10 . "','" . $link11 . "','" . $link12 . "','" . $link13 . "','" . $link14 . "','" . $link15 . "','" . $status . "','" . $slug . "')";
         $query = $dbh->prepare($sql);
         $result = $query->execute();
         if ($query->rowCount() > 0) {

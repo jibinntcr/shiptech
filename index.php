@@ -46,6 +46,7 @@ include('includes/config.php');
 
     <link href="css/event.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet">
+    <link href="card-css.css" rel="stylesheet">
 
 
 
@@ -55,24 +56,22 @@ include('includes/config.php');
     .hod-img {
         width: 450px;
     }
-    .rowCustome{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%; 
+
+    .rowCustome {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
     }
-    @media (max-width: 990px) {
-        .rowCustome{
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 50% 50%; 
-    }}
-    @media (max-width: 576px) {
-        .rowCustome{
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 50% 50%; 
+
+    @media (max-width: 1152px) {
+        .rowCustome {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: 50% 50%;
+        }
     }
-    }
+
+
 
     .card1 {
 
@@ -156,16 +155,6 @@ include('includes/config.php');
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/banner-1_.jpg" alt="">
             </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/banner-02.jpg" alt="">
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/banner-03.jpg" alt="">
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/banner-04_.jpg" alt="">
-            </div>
-
             <?php
             $sql = "SELECT * from banner WHERE status = '1'";
             $query = $dbh->prepare($sql);
@@ -193,61 +182,104 @@ include('includes/config.php');
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <a class="card1" href="https://snas.in/">
-                        <h3 class="h3small" style="text-align: center;">SNAS</h3>
-                        <p class="psmall" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;" src="img/tile-icon-snas.png" alt="Icon"></p>
-                    </a>
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">SNAS</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">SNAS</h3>
+                                    <button onclick="location.href='https://snas.in/'" class="flip-box-button">Learn
+                                        More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <a class="card1" sty href="https://descon.cusat.ac.in/">
-                        <h3 class="h3small" style="text-align: center;">DESCON</h3>
-                        <p class="small" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;" src="img/descon.png" alt="Icon"></p>
-                    </a>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
+                                    <button onclick="location.href='https://descon.cusat.ac.in/'"
+                                        class="flip-box-button">Learn
+                                        More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <a class="card1" href="Approvals-and-Affiliations.php">
-                        <h3 class="h3small" style="text-align: center;">Approvals & Affiliations</h3>
-                        <p class="small" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;" src="img/Approvals-icon.png" alt="Icon"></p>
-                    </a>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
+                                    <button onclick="location.href='Approvals-and-Affiliations.php'"
+                                        class="flip-box-button">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
-                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-                    <a class="card1" href="placement.php">
-                        <h3 class="h3small" style="text-align: center;">Placement</h3>
-                        <p class="small" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 50%;
-  left: 50%;
-  width: 50%;"> <img class="img-fluid" style=" display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;" src="img/placement-icon.png" alt="Icon"></p>
-                    </a>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Placement</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Placement</h3>
+                                    <button onclick="location.href='placement.php'" class="flip-box-button">Learn
+                                        More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>
+
     <?php
     $sql = "SELECT * from announcement where status='1'";
     $query = $dbh->prepare($sql);
@@ -289,9 +321,9 @@ include('includes/config.php');
         </div>
     </div>
     <?php } ?>
-    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container ">
-            <div class="rowCustome">
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s" style="padding:0px">
+        <div class="container " style="padding:0px">
+            <div class="rowCustome" style="margin-bottom:5%;">
                 <!-- event start -->
                 <div class="container my-5 row col-xl-6" style="width:97%;padding:0px;margin-left:1.5%">
                     <div class="text-center mb-3">
@@ -302,9 +334,9 @@ include('includes/config.php');
                         </a>
                     </div>
 
-                    <div class=" container2" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
-                        <ul style="padding-left:1rem;padding-right:1rem;">
-
+                    <div  style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px; padding-bottom:5%;">
+                    <div class="container2" style=" padding:0pc;margin:0px">
+                    <ul style="padding-left:1rem;padding-right:1rem;">
                             <?php
                             $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 3";
                             $query = $dbh->prepare($sql);
@@ -338,7 +370,8 @@ include('includes/config.php');
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
                                         <div class="ms-4">
 
-                                            <a href="events-view.php?id=<?php echo   $result->id ?>">
+                                            <a
+                                                href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
                                                 <h6 class="my-1 my-lg-2 eventHover">
                                                     <?php $title =  substr($result->title, 0, 48);
                                                             echo $title ?>
@@ -363,12 +396,15 @@ include('includes/config.php');
                             } ?>
 
                         </ul>
-                        <div>
+                        </div>
+                        <div style="margin-top:.5%;margin-bottom:.5%;">
                             <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
                                 href="events-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
                                     style="color:#fff;"> Read
                                     More</span></a>
                         </div>
+                  
+                        
                     </div>
                 </div>
 
@@ -382,8 +418,9 @@ include('includes/config.php');
                         </a>
                     </div>
 
-                    <div class="container3" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
-                        <ul style="padding-left:1rem;padding-right:1rem;">
+                    <div  style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px; padding-bottom:5%;">
+                    <div class="container3" style=" padding:0pc;margin:0px">    
+                    <ul style="padding-left:1rem;padding-right:1rem;">
 
 
                             <?php
@@ -406,7 +443,8 @@ include('includes/config.php');
 
                                     <div class="d-flex col-md-8 mb-0 mx-md-3">
                                         <div class="ms-4 overflow-hidden">
-                                            <a href="news-view.php?id=<?php echo   $result->id ?>">
+                                            <a
+                                                href="news-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
                                                 <h6 class="eventHover">
                                                     <?php
                                                             $title =  substr($result->title, 0, 27);
@@ -438,12 +476,14 @@ include('includes/config.php');
                             <?php }
                             } ?>
 
-
+                        </div>
                         </ul>
+                        <div  style="margin-top:.5%;margin-bottom:.5%;">
                         <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
                             href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
                                 style="color:#fff;"> Read
                                 More</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -577,9 +617,9 @@ include('includes/config.php');
                         <span class="left m-5">
 
 
-                            <div style="float: left; ">
+                            <div style="float: left;">
                                 <img class="speaker-image-border hod-img"
-                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
+                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="  width:100%; margin-bottom: 15px; border: #000000 solid 2px;
     padding: 20px;" />
                             </div>
                         </span>
@@ -638,7 +678,8 @@ include('includes/config.php');
                         </div>
                         <h4 class="mb-3"><?php echo $result->name ?></h4>
                         <p><?php echo $result->specialization ?></p>
-                        <a class="btn-slide mt-2" href="course-details.php?id=<?php echo   $result->id ?>"><i
+                        <a class="btn-slide mt-2"
+                            href="course-details.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>"><i
                                 class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
@@ -778,6 +819,9 @@ include('includes/config.php');
         remainingText.classList.remove("d-none"); // show remaining text
         remainingText.classList.add("d-block"); // add "d-block" class to remaining text
     });
+
+
+    
     </script>
 </body>
 

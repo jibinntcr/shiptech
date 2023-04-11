@@ -17,8 +17,10 @@ if (strlen($_SESSION['alogin']) == 0) {
             $title = $_POST['title'];
             $content = $_POST['content'];
 
+            $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $title)));
+
             $photo = $_POST['imageName'];
-            $sql = "UPDATE  events SET title='$title',content='$content',date='$date',image='$photo' where id='$id'";
+            $sql = "UPDATE  events SET title='$title',content='$content',date='$date',image='$photo',slug='$slug' where id='$id'";
             $query = $dbh->prepare($sql);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
@@ -42,7 +44,9 @@ if (strlen($_SESSION['alogin']) == 0) {
             move_uploaded_file($_FILES['file']['tmp_name'], $file);
             $photo = basename($_FILES["file"]["name"]);
             $status = '1';
-            $sql = "UPDATE  events SET title='$title',content='$content',date='$date',image='$photo' where id='$id'";
+
+            $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $title)));
+            $sql = "UPDATE  events SET title='$title',content='$content',date='$date',image='$photo',slug='$slug' where id='$id'";
 
             $query = $dbh->prepare($sql);
             $result = $query->execute();
