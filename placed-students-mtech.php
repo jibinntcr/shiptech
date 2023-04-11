@@ -77,7 +77,7 @@ include('includes/config.php');
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Department of<br>Ship Technology, CUSAT</h6>
+                <h6 class="text-secondary text-uppercase">Ship Technology CUSAT</h6>
                 <?php $id = $_GET['id']; ?>
                 <h1 class="mb-5">Placement Statistics of <?php echo $id ?></h1>
             </div>
@@ -88,7 +88,7 @@ include('includes/config.php');
             <div class="row g-4">
                 <?php
 
-                $sql = "SELECT * from placement  WHERE status='1' AND course='B.Tech' AND year='$id'";
+                $sql = "SELECT * from placement  WHERE status='1' AND course='M.Tech' AND year='$id'";
                 $query = $dbh->prepare($sql);
                 $query->execute();
                 $results = $query->fetchAll(PDO::FETCH_OBJ);

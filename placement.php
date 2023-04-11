@@ -369,43 +369,38 @@ include('includes/config.php');
 
     <div class="container-xxl py-5">
 
-        <!-- partner companies start  -->
-
         <div class="container">
             <div class="row row g-4 justify-content-center">
                 <h1 class="mb-4 text-center wow fadeInUp" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s;">Placement Statistics</h1>
-                <?php
-                $sql = "SELECT DISTINCT `year` FROM placement WHERE status='1' ORDER BY `year` DESC";
-                $query = $dbh->prepare($sql);
-                $query->execute();
-                $results = $query->fetchAll(PDO::FETCH_OBJ);
-                $cnt = 1;
-                if ($query->rowCount() > 0) {
-                    foreach ($results as $result) {
-                ?>
-
-
-
-                <div class="col-lg-3 col-sm-6 wow fadeInUp text-center center" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s;">
-                    <button type="button"
-                        onClick="Javascript:window.location.href='placed-students.php?id=<?php echo   $result->year ?>'"
-                        class=" btn btn-primary btn-lg text-white btn-hover align-items-center justify-content-center">
-                        <?php echo $result->year ?></button>
-
-
-
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4 fac-img-curv">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid fac-img-curv" src="img/mtech.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">M.Tech</h4>
+                        <a href="placement-statistics-mtech.php" class="btn-slide mt-2" href=""><i
+                                class="fa fa-arrow-right"></i><span>View
+                            </span></a>
+                    </div>
                 </div>
-                <?php }
-                } ?>
-
-
-
-
-
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4 fac-img-curv">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid fac-img-curv" src="img/btchnavel.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3">B.Tech</h4>
+                        <a href="placement-statistics-btech.php" class="btn-slide mt-2" href=""><i
+                                class="fa fa-arrow-right"></i><span>View
+                            </span></a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- partner companies start  -->
+
+
     </div>
 
     <!-- PLACEMENT BROCHURE START -->
@@ -417,7 +412,7 @@ include('includes/config.php');
             <h1 class="mb-5">Placement Brochure</h1>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s"
                 style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                 <div class="service-item p-4 fac-img-curv">
