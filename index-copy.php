@@ -46,7 +46,6 @@ include('includes/config.php');
 
     <link href="css/event.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet">
-    <link href="card-css.css" rel="stylesheet">
 
 
 
@@ -190,131 +189,6 @@ include('includes/config.php');
         </div>
     </div>
     <!-- Carousel End -->
-
-
-
-    <div class="container py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-
-                    <div class="box-item">
-                        <div class="flip-box">
-                            <div class="flip-box-front text-center"
-                                style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">SNAS</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
-                                </div>
-                            </div>
-                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">SNAS</h3>
-                                    <button onclick="location.href='https://snas.in/'" class="flip-box-button">Learn
-                                        More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-
-                    <div class="box-item">
-                        <div class="flip-box">
-                            <div class="flip-box-front text-center"
-                                style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
-                                </div>
-                            </div>
-                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
-                                    <button onclick="location.href='https://descon.cusat.ac.in/'"
-                                        class="flip-box-button">Learn
-                                        More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-
-                    <div class="box-item">
-                        <div class="flip-box">
-                            <div class="flip-box-front text-center"
-                                style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
-                                </div>
-                            </div>
-                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
-                                    <button onclick="location.href='Approvals-and-Affiliations.php'"
-                                        class="flip-box-button">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
-                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-
-                    <div class="box-item">
-                        <div class="flip-box">
-                            <div class="flip-box-front text-center"
-                                style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">Placement</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
-                                </div>
-                            </div>
-                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
-                                <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">Placement</h3>
-                                    <button onclick="location.href='placement.php'" class="flip-box-button">Learn
-                                        More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

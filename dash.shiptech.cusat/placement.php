@@ -38,7 +38,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 <body>
     <div class="container-scroller">
         <!-- partial:partials/_navbar.html -->
-        <?php include('../partials/navbar.php') ?>
+        <?php include('partials/navbar.php') ?>
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
