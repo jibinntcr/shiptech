@@ -57,6 +57,12 @@ include('includes/config.php');
         width: 450px;
     }
 
+    @media (max-width: 576px) {
+        .hod-img {
+            width: 300px;
+        }
+    }
+
     .rowCustome {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -608,24 +614,27 @@ include('includes/config.php');
     $userArr = $query->fetchAll(PDO::FETCH_OBJ);
     if ($query->rowCount() > 0) {
     ?>
-    <div class="container py-5">
+    <div class="container-xxl py-5">
         <div class="container">
 
             <section class="container speaker-section spad">
                 <div class="sec-title text-left">
-                    <div class="row-cols-1 speaker-disply justify-para">
+                    <div class="row-cols-1 mb-5 speaker-disply justify-para">
                         <span class="left m-5">
 
 
-                            <div style="float: left;">
+                            <div style="float: left; ">
                                 <img class="speaker-image-border hod-img"
-                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="  width:100%; margin-bottom: 15px; border: #000000 solid 2px;
+                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
+  
     padding: 20px;" />
                             </div>
                         </span>
 
-                        <h6 class="text-secondary text-uppercase mb-3">HOD's&nbsp;Message&nbsp;&nbsp;&nbsp; </h6>
-                        <h1 class="mb-5">Ship Technology CUSAT</h1>
+                        <h6 class="text-secondary text-uppercase mb-3">
+                            HOD's&nbsp;Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </h6>
+                        <h1 class="mb-5">Shiptech&nbsp;CUSAT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         <p class="justify-para">
                             <?php echo ($userArr[0]->message); ?>
                         </p>
@@ -634,6 +643,11 @@ include('includes/config.php');
                             <?php echo ($userArr[0]->designation); ?>
                         </span>
                     </div>
+
+
+
+
+
                 </div>
             </section>
         </div>
@@ -641,8 +655,6 @@ include('includes/config.php');
     </div>
     <?php }
     ?>
-
-    <!--end HOD MESSAGE 2 -->
 
 
 
@@ -745,7 +757,7 @@ include('includes/config.php');
 
 
 
-                        <blockquote class="justify-para">
+                        <div class="justify-para">
                             <?php
                                     $message = $result->message; // get the message
                                     $first_paragraph = substr($message, 0, 150); // extract first 100 characters
@@ -756,7 +768,7 @@ include('includes/config.php');
                             <!-- display first 100 characters in first paragraph -->
                             <!-- initially hide remaining text in second paragraph -->
 
-                        </blockquote>
+                        </div>
                     </div>
                     <?php }
                     } ?>
