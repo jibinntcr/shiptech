@@ -63,7 +63,7 @@ include('includes/config.php');
         grid-template-rows: 50% 50%;
     }
 
-    @media (max-width: 990px) {
+    @media (max-width: 1152px) {
         .rowCustome {
             display: grid;
             grid-template-columns: none;
@@ -71,13 +71,7 @@ include('includes/config.php');
         }
     }
 
-    @media (max-width: 576px) {
-        .rowCustome {
-            display: grid;
-            grid-template-columns: none;
-            grid-template-rows: 50% 50%;
-        }
-    }
+
 
     .card1 {
 
@@ -327,9 +321,9 @@ include('includes/config.php');
         </div>
     </div>
     <?php } ?>
-    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container ">
-            <div class="rowCustome">
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s" style="padding:0px">
+        <div class="container " style="padding:0px">
+            <div class="rowCustome" style="margin-bottom:5%;">
                 <!-- event start -->
                 <div class="container my-5 row col-xl-6" style="width:97%;padding:0px;margin-left:1.5%">
                     <div class="text-center mb-3">
@@ -340,74 +334,77 @@ include('includes/config.php');
                         </a>
                     </div>
 
-                    <div class=" container2" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
-                        <ul style="padding-left:1rem;padding-right:1rem;">
+                    <div style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px; padding-bottom:5%;">
+                        <div class="container2" style=" padding:0pc;margin:0px">
+                            <ul style="padding-left:1rem;padding-right:1rem;">
+                                <?php
+                                $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 3";
+                                $query = $dbh->prepare($sql);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt = 1;
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                ?>
 
-                            <?php
-                            $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 3";
-                            $query = $dbh->prepare($sql);
-                            $query->execute();
-                            $results = $query->fetchAll(PDO::FETCH_OBJ);
-                            $cnt = 1;
-                            if ($query->rowCount() > 0) {
-                                foreach ($results as $result) {
-                            ?>
+                                <li>
+                                    <div class="d-flex  border p-1 my-4 align-items-center"
+                                        style="border-radius: 20px;border-width: thin; max-width: 655px; height:120px;  margin: 0 auto;">
+                                        <div class="circle  d-flex justify-content-center container">
+                                            <div class="cell">
 
-                            <li>
-                                <div class="d-flex  border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px;border-width: thin; max-width: 655px; height:120px;  margin: 0 auto;">
-                                    <div class="circle  d-flex justify-content-center container">
-                                        <div class="cell">
-
-                                            <?php $date = $result->date;
-                                                    $date = date_create($date);
-                                                    ?>
-                                            <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                                <?php $date = $result->date;
+                                                        $date = date_create($date);
+                                                        ?>
+                                                <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                            </div>
+                                            <div class="cell">
+                                                <h3 class="text-white" style="text-align:center;">
+                                                    <?php echo date_format($date, "F"); ?></h3>
+                                            </div>
+                                            <div class="cell">
+                                                <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
+                                            </div>
                                         </div>
-                                        <div class="cell">
-                                            <h3 class="text-white" style="text-align:center;">
-                                                <?php echo date_format($date, "F"); ?></h3>
-                                        </div>
-                                        <div class="cell">
-                                            <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
+
+                                        <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                            <div class="ms-4">
+
+                                                <a
+                                                    href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
+                                                    <h6 class="my-1 my-lg-2 eventHover">
+                                                        <?php $title =  substr($result->title, 0, 48);
+                                                                echo $title ?>
+                                                    </h6>
+                                                </a>
+
+                                                <p>
+                                                    <span style="color: #ff3e41; font-weight: bold">
+                                                        <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                                    </span>
+                                                    <span class="font-bold">
+                                                        <?php $subHeading = substr($result->content, 0, 18);
+                                                                echo $subHeading ?>
+                                                    </span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4">
+                                </li>
+                                <?php }
+                                } ?>
 
-                                            <a
-                                                href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
-                                                <h6 class="my-1 my-lg-2 eventHover">
-                                                    <?php $title =  substr($result->title, 0, 48);
-                                                            echo $title ?>
-                                                </h6>
-                                            </a>
-
-                                            <p>
-                                                <span style="color: #ff3e41; font-weight: bold">
-                                                    <!-- <i class="fa-solid fa-location-dot"></i> -->
-                                                </span>
-                                                <span class="font-bold">
-                                                    <?php $subHeading = substr($result->content, 0, 18);
-                                                            echo $subHeading ?>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </li>
-                            <?php }
-                            } ?>
-
-                        </ul>
-                        <div>
+                            </ul>
+                        </div>
+                        <div style="margin-top:.5%;margin-bottom:.5%;">
                             <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
                                 href="events-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
                                     style="color:#fff;"> Read
                                     More</span></a>
                         </div>
+
+
                     </div>
                 </div>
 
@@ -421,69 +418,72 @@ include('includes/config.php');
                         </a>
                     </div>
 
-                    <div class="container3" style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px;">
-                        <ul style="padding-left:1rem;padding-right:1rem;">
+                    <div style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px; padding-bottom:5%;">
+                        <div class="container3" style=" padding:0pc;margin:0px">
+                            <ul style="padding-left:1rem;padding-right:1rem;">
 
 
-                            <?php
-                            $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC LIMIT 3; ";
-                            $query = $dbh->prepare($sql);
-                            $query->execute();
-                            $results = $query->fetchAll(PDO::FETCH_OBJ);
-                            $cnt = 1;
-                            if ($query->rowCount() > 0) {
-                                foreach ($results as $result) {
-                            ?>
-                            <li>
-                                <div class="d-flex news border p-1 my-4 align-items-center"
-                                    style="border-radius: 20px; max-width: 655px; height:100%;  margin: 0 auto">
-                                    <img class="d-block" style="
+                                <?php
+                                $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC LIMIT 3; ";
+                                $query = $dbh->prepare($sql);
+                                $query->execute();
+                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                $cnt = 1;
+                                if ($query->rowCount() > 0) {
+                                    foreach ($results as $result) {
+                                ?>
+                                <li>
+                                    <div class="d-flex news border p-1 my-4 align-items-center"
+                                        style="border-radius: 20px; max-width: 655px; height:100%;  margin: 0 auto">
+                                        <img class="d-block" style="
                       width: 110px;
                       height: 110px;
                       object-fit: contain;
                       border-radius: 20px;" src="uploads/<?php echo $result->image ?>" alt="" />
 
-                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
-                                        <div class="ms-4 overflow-hidden">
-                                            <a
-                                                href="news-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
-                                                <h6 class="eventHover">
-                                                    <?php
-                                                            $title =  substr($result->title, 0, 27);
-                                                            $subHeading = substr($result->content, 0, 29);
-                                                            echo  $title
-                                                            ?> </h6>
-                                            </a>
+                                        <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                            <div class="ms-4 overflow-hidden">
+                                                <a
+                                                    href="news-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
+                                                    <h6 class="eventHover">
+                                                        <?php
+                                                                $title =  substr($result->title, 0, 27);
+                                                                $subHeading = substr($result->content, 0, 29);
+                                                                echo  $title
+                                                                ?> </h6>
+                                                </a>
 
-                                            <p class="mb-0">
-                                                <?php echo  $subHeading ?>...
-                                            </p>
+                                                <p class="mb-0">
+                                                    <?php echo  $subHeading ?>...
+                                                </p>
 
-                                            <p class="mb-0">
-                                                <span style="
+                                                <p class="mb-0">
+                                                    <span style="
                             color: #ff3e41;
                             font-weight: bold;
                             font-size: smaller;
                           ">
-                                                    <i class="fa-regular fa-calendar"></i></span>
-                                                <span class="font-bold" style="font-size: smaller">
-                                                    <?php $date = $result->date;
-                                                            $date = date_create($date);
-                                                            echo date_format($date, "d/m/Y"); ?></span>
-                                            </p>
+                                                        <i class="fa-regular fa-calendar"></i></span>
+                                                    <span class="font-bold" style="font-size: smaller">
+                                                        <?php $date = $result->date;
+                                                                $date = date_create($date);
+                                                                echo date_format($date, "d/m/Y"); ?></span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <?php }
-                            } ?>
+                                </li>
+                                <?php }
+                                } ?>
 
-
+                        </div>
                         </ul>
-                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
-                            href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
-                                style="color:#fff;"> Read
-                                More</span></a>
+                        <div style="margin-top:.5%;margin-bottom:.5%;">
+                            <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
+                                href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
+                                    style="color:#fff;"> Read
+                                    More</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -617,9 +617,9 @@ include('includes/config.php');
                         <span class="left m-5">
 
 
-                            <div style="float: left; ">
+                            <div style="float: left;">
                                 <img class="speaker-image-border hod-img"
-                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
+                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="  width:100%; margin-bottom: 15px; border: #000000 solid 2px;
     padding: 20px;" />
                             </div>
                         </span>
@@ -634,11 +634,6 @@ include('includes/config.php');
                             <?php echo ($userArr[0]->designation); ?>
                         </span>
                     </div>
-
-
-
-
-
                 </div>
             </section>
         </div>

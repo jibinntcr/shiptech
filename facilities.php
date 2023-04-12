@@ -1,5 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+.card_image {
+    position: relative;
+    width: 100%;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_price {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: #1c95ff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card_price span {
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+.note {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    border-radius: 0.25rem;
+    background-color: #1c95ff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card_content {
+    position: relative;
+    padding: 16px 12px 32px 24px;
+    margin: 16px 8px 8px 0;
+    max-height: 290px;
+    overflow-y: scroll;
+}
+
+.card_content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card_content::-webkit-scrollbar-track {
+    box-shadow: 0;
+    border-radius: 0;
+}
+
+.card_content::-webkit-scrollbar-thumb {
+    background: #1c95ff;
+    border-radius: 15px;
+}
+
+.card_title {
+    position: relative;
+    margin: 0 0 24px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card_title::after {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c95ff;
+    content: "";
+}
+
+hr {
+    margin: 24px auto;
+    width: 50px;
+    border-top: 2px solid #1c95ff;
+}
+
+.card_text p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card_text p:last-child {
+    margin: 0;
+}
+</style>
 
 <head>
     <meta charset="utf-8">
@@ -14,7 +155,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -36,7 +178,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -68,7 +211,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/Computational-Lab-(CHASE).png" style="object-fit: cover; border-radius: 20px;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/Computational-Lab-(CHASE).png"
+                            style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
@@ -131,36 +275,82 @@
     <!-- computational lab end  -->
     <!-- instrumentation lab start  -->
 
-    <div class="container-xxl py-5">
+    <div cl ass="container-xxl py-5">
+        <div class="main">
+            <ul class="cards justify-para justify-content-center">
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image">
+                            <img src="img/ElectroChemical-Testing-Lab.png" />
+                            <!-- <span class="card_price"><span>Year</span></span> -->
+                        </div>
+                        <h2 class="card_title mt-3">ElectroChemical Testing Lab</h2>
+                        <div class="card_content">
+
+                            <div class="card_text">
+                                <p> The lab is equippped with CH Instruments Electro-chemical analyzer and CH Software.
+                                </p>
+                                <hr />
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image">
+                            <img src="img/Instrumentation-Lab.png" />
+                            <!-- <span class="card_price"><span>Year</span></span> -->
+                        </div>
+                        <h2 class="card_title mt-3">Instrumentation Lab</h2>
+                        <div class="card_content">
+
+                            <div class="card_text">
+                                <p>dSPACE MicroLabBox - Compact prototyping unit for the laboratory. The system can be
+                                    used mechatronic research and development areas such as robotics, electric drives
+                                    controls, renewable energy, vehicle engineering and aerospace. </p>
+                                <hr />
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
 
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
-                    <h1 class="mb-3">Instrumentation Lab</h1>
+                    <h1 class="mb-3">ElectroChemical Testing Lab</h1>
                     <p class="mb-5 justify-para"><span style="font-weight: bold;
-                    "> dSPACE MicroLabBox - </span>
-                        Compact prototyping unit for the laboratory. The
-                        system can be used mechatronic research and development areas such as
-                        robotics, electric drives controls, renewable energy, vehicle engineering and
-                        aerospace.
+                    ">The lab is equippped with CH Instruments Electro-chemical analyzer and CH Software.
                     </p>
                 </div>
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/Instrumentation-Lab.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/ElectroChemical-Testing-Lab.png"
+                            style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- instrumentation lab end  -->
     <!-- electro chemical testing lab start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/ElectroChemical-Testing-Lab.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/ElectroChemical-Testing-Lab.png"
+                            style="object-fit: cover; border-radius: 20px;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
@@ -171,7 +361,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- electro chemical testing lab end -->
     <!-- modal making lab start  -->
     <div class="container-xxl py-5">
@@ -183,12 +373,14 @@
                     <div class="row g-5 ">
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-1.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-1.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-2.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Model-Making-Lab-2.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                     </div>
@@ -210,12 +402,16 @@
                         <!-- <p>The material testing lab is equipped with the following Universal Testing Machine</p> -->
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Strength-of-Materials-Lab-1.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100"
+                                    src="img/Strength-of-Materials-Lab-1.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Strength-of-Materials-Lab-2.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100"
+                                    src="img/Strength-of-Materials-Lab-2.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                     </div>
@@ -235,12 +431,14 @@
                         <!-- <p>The material testing lab is equipped with the following Universal Testing Machine</p> -->
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-1.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-1.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                             <div class="position-relative h-100">
-                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-2.png" style="object-fit: cover; border-radius: 20px;" alt="">
+                                <img class="position-absolute img-fluid w-100 h-100" src="img/Fluid-Mechanics-Lab-2.png"
+                                    style="object-fit: cover; border-radius: 20px;" alt="">
                             </div>
                         </div>
                     </div>
