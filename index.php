@@ -748,9 +748,10 @@ include('includes/config.php');
                                 <cite class="d-block mb-0" style="color: #150754!important; text-align: center;">
                                     <h3><?php echo $result->name ?></h3>
                                 </cite>
-                                <span style="text-align: center;"><?php echo $result->designation ?>.</span><br>
                                 <span
-                                    style="text-align: center;"><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                                    style="text-align: center; font-weight: bold;"><?php echo $result->designation ?>.</span><br>
+                                <span
+                                    style="text-align: center;  font-weight: bold;"><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
                             </div>
 
                         </div>
