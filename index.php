@@ -817,17 +817,7 @@ include('includes/config.php');
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-    const readMoreBtn = document.getElementById("read-more-btn");
-    const remainingText = document.getElementById("remaining-text");
 
-    readMoreBtn.addEventListener("click", () => {
-        console.log("Read More button clicked")
-        readMoreBtn.classList.add("d-none"); // hide "Read More" button
-        remainingText.classList.remove("d-none"); // show remaining text
-        remainingText.classList.add("d-block"); // add "d-block" class to remaining text
-    });
-    </script>
 </body>
 
 </html>

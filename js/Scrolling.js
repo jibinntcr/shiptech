@@ -2,8 +2,8 @@ $(function () {
     var tickerLength = $('.container2 ul li').length
     var tickerHeight = $('.container2 ul li').outerHeight()
     tickerHeight += 24
-    console.log("tickerHeight")
-    console.log(tickerHeight)
+    // console.log("tickerHeight")
+    // console.log(tickerHeight)
 
     $('.container2 ul li:last-child').prependTo('.container2 ul')
     // $('.container2 ul').css('marginTop', -tickerHeight)
