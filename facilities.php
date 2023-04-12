@@ -275,49 +275,7 @@ hr {
     <!-- computational lab end  -->
     <!-- instrumentation lab start  -->
 
-    <div cl ass="container-xxl py-5">
-        <div class="main">
-            <ul class="cards justify-para justify-content-center">
-                <li class="cards_item">
-                    <div class="card">
-                        <div class="card_image">
-                            <img src="img/ElectroChemical-Testing-Lab.png" />
-                            <!-- <span class="card_price"><span>Year</span></span> -->
-                        </div>
-                        <h2 class="card_title mt-3">ElectroChemical Testing Lab</h2>
-                        <div class="card_content">
 
-                            <div class="card_text">
-                                <p> The lab is equippped with CH Instruments Electro-chemical analyzer and CH Software.
-                                </p>
-                                <hr />
-
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="cards_item">
-                    <div class="card">
-                        <div class="card_image">
-                            <img src="img/Instrumentation-Lab.png" />
-                            <!-- <span class="card_price"><span>Year</span></span> -->
-                        </div>
-                        <h2 class="card_title mt-3">Instrumentation Lab</h2>
-                        <div class="card_content">
-
-                            <div class="card_text">
-                                <p>dSPACE MicroLabBox - Compact prototyping unit for the laboratory. The system can be
-                                    used mechatronic research and development areas such as robotics, electric drives
-                                    controls, renewable energy, vehicle engineering and aerospace. </p>
-                                <hr />
-
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
 
 
 
@@ -448,7 +406,7 @@ hr {
     </div>
     <!-- Fluids MachanicalLab -->
     <div class="container">
-        <h2 class="mt-5 mb-lg-5 mx-auto justify-content-center flex">7. Welding Lab
+        <h2 class="mt-5 mb-lg-5 mx-auto justify-content-center flex">Welding Lab
         </h2>
     </div>
     <div class="container-xxl py-5">
@@ -479,6 +437,49 @@ hr {
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div cl ass="container-xxl py-5">
+        <div class="main">
+            <ul class="cards justify-para justify-content-center">
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image">
+                            <img src="img/ElectroChemical-Testing-Lab.png" />
+                            <!-- <span class="card_price"><span>Year</span></span> -->
+                        </div>
+                        <h2 class="card_title mt-3">ElectroChemical Testing Lab</h2>
+                        <div class="card_content">
+
+                            <div class="card_text">
+                                <p> The lab is equippped with CH Instruments Electro-chemical analyzer and CH Software.
+                                </p>
+                                <hr />
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image">
+                            <img src="img/Instrumentation-Lab.png" />
+                            <!-- <span class="card_price"><span>Year</span></span> -->
+                        </div>
+                        <h2 class="card_title mt-3">Instrumentation Lab</h2>
+                        <div class="card_content">
+
+                            <div class="card_text">
+                                <p>dSPACE MicroLabBox - Compact prototyping unit for the laboratory. The system can be
+                                    used mechatronic research and development areas such as robotics, electric drives
+                                    controls, renewable energy, vehicle engineering and aerospace. </p>
+                                <hr />
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 
