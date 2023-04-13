@@ -606,6 +606,15 @@ include('includes/config.php');
     </div>
     <!-- ABOUT End -->
 
+    <!--  youtube video Start -->
+    <div class="container">
+        <div class="embed-responsive embed-responsive-16by9 ">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ps38qzlaNEA"></iframe>
+        </div>
+    </div>
+    <!-- youtube video end -->
+
+
     <!-- HOD MESSAGE 2 Start -->
     <?php
     $sql = "SELECT * from hod where status='1' ";
