@@ -15,11 +15,12 @@
                     <!-- <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
                             class="fab fa-linkedin-in"></i></a> -->
-                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
-                        href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i
-                            class="fab fa-linkedin-in"></i></a> -->
                     <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i
+                            class="fab fa-linkedin-in"></i></a>
+
                     <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
                     <a target="_blank" class="btn btn-outline-light btn-social"
