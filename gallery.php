@@ -87,6 +87,16 @@ include('includes/config.php');
                 <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
                 <h1 class="mb-5">Gallery</h1>
             </div>
+            <div class="img-container col-md-6  col-lg-4 mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                <img src="img/department-video.jpg" class="img-fluid  w-100 h-100"
+                    style="object-fit: cover; border-radius: 20px;" alt="Your Image">
+                <div class="text-overlay text-white p-3 bg-primary w-75" style="border-radius: 20px;">
+                    <a class="btn" target="_blank"
+                        href="https://www.youtube.com/watch?time_continue=12&v=ps38qzlaNEA&embeds_euri=http%3A%2F%2Flocalhost%2F&source_ve_path=MTM5MTE3LDEzOTExNw&feature=emb_logo&themeRefresh=1">
+                        <span class="display-6  textHover">Department Video</span> </a>
+                </div>
+
+            </div>
 
             <?php
             $sql = "SELECT * from gallery WHERE status = '1' ORDER BY `gallery`.`id` DESC";

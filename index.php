@@ -327,7 +327,7 @@ include('includes/config.php');
         </div>
     </div>
     <?php } ?>
-    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s" style="padding:0px">
+    <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s" style="padding:0px">
         <div class="container " style="padding:0px">
             <div class="rowCustome" style="margin-bottom:5%;">
                 <!-- event start -->
@@ -497,7 +497,6 @@ include('includes/config.php');
             <!-- news end -->
         </div>
     </div>
-    </div>
 
 
     <!-- NEWS AND EVENTS END -->
@@ -506,7 +505,7 @@ include('includes/config.php');
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -607,11 +606,11 @@ include('includes/config.php');
     <!-- ABOUT End -->
 
     <!--  youtube video Start -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="embed-responsive embed-responsive-16by9 ">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ps38qzlaNEA"></iframe>
         </div>
-    </div>
+    </div> -->
     <!-- youtube video end -->
 
 
