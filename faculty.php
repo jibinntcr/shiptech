@@ -91,7 +91,7 @@ include('includes/config.php');
                 ?>
 
 
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="team-item p-4 fac-img-curv">
                                 <div class="overflow-hidden mb-4">
                                     <img class="img-fluid fac-img-curv" src="uploads/<?php echo   $result->image ?>" alt="">
