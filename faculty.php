@@ -83,7 +83,7 @@ include('includes/config.php');
             <div class="row g-4">
 
                 <?php
-                $sql = "SELECT * from faculty  WHERE status='1'  ORDER BY `faculty`.`priority` ASC";
+                $sql = "SELECT * from faculty  WHERE status='1' and navfac='No'  ORDER BY `faculty`.`priority` ASC";
                 $query = $dbh->prepare($sql);
                 $query->execute();
                 $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -114,6 +114,51 @@ include('includes/config.php');
         </div>
     </div>
     <!-- Team End -->
+
+    <!-- indian Navy Faculty Starting  -->
+
+    <?php
+    $sql = "SELECT * from faculty  WHERE status='1' and navfac='Yes '  ORDER BY `faculty`.`priority` ASC";
+
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_OBJ);
+    $cnt = 1;
+    if ($query->rowCount() > 0) { ?>
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Department of Ship Technology CUSAT</h6>
+                <h1 class="mb-5">Faculty from Indian Navy</h1>
+            </div>
+            <div class="row g-4">
+                <?php
+                    foreach ($results as $result) {
+                    ?>
+
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4 fac-img-curv">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid fac-img-curv" src="uploads/<?php echo   $result->image ?>" alt="">
+                        </div>
+                        <h5 class="mb-0"><a
+                                href="faculty-details.php?id=<?php echo   $result->id ?>&name=<?php echo $result->slug ?>"><?php echo   $result->name ?><br><?php echo   $result->thumbname ?></a>
+                        </h5>
+                        <p><?php echo   $result->designation ?></p>
+                    </div>
+                </div>
+                <?php }
+                }
+                ?>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- indian navy faculty end -->
 
 
     <!-- Footer Start -->
