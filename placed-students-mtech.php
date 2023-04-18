@@ -23,8 +23,7 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -43,8 +42,7 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -85,7 +83,7 @@ include('includes/config.php');
 
             <!-- Team Start -->
 
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <?php
 
                 $sql = "SELECT * from placement  WHERE status='1' AND course='M.Tech' AND year='$id'";
@@ -97,17 +95,16 @@ include('includes/config.php');
                     foreach ($results as $result) {
                 ?>
 
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item-pl">
-                        <img class="img-fluid rounded-circle w-100 mb-4" src="uploads/<?php echo   $result->image ?>"
-                            alt="">
-                        <div class="justify-content-center">
-                            <h5><?php echo   $result->name ?></h5>
-                            <p class="mb-4"><?php echo   $result->company ?></p>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="team-item-pl">
+                                <img class="img-fluid rounded-circle w-100 mb-4" src="uploads/<?php echo   $result->image ?>" alt="">
+                                <div class="justify-content-center">
+                                    <h5><?php echo   $result->name ?></h5>
+                                    <p class="mb-4"><?php echo   $result->company ?></p>
 
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
                 <?php }
                 }  ?>
 
