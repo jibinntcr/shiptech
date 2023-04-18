@@ -118,7 +118,7 @@ include('includes/config.php');
                     <ul class="p-2">
 
                         <?php
-                        $sql = "SELECT * from events  WHERE status='1' ORDER BY `date`";
+                        $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC";
                         $query = $dbh->prepare($sql);
                         $query->execute();
                         $results = $query->fetchAll(PDO::FETCH_OBJ);

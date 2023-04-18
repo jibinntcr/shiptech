@@ -379,8 +379,8 @@ include('includes/config.php');
                                                 <a
                                                     href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
                                                     <h6 class="my-1 my-lg-2 eventHover">
-                                                        <?php $title =  substr($result->title, 0, 48);
-                                                                echo $title ?>
+                                                        <?php $title =  substr($result->title, 0, 15);
+                                                                echo $title ?>...
                                                     </h6>
                                                 </a>
 
