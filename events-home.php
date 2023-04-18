@@ -112,7 +112,7 @@ include('includes/config.php');
                                     </div>
                                     <div class="cell">
                                         <h3 class="text-white" style="text-align:center;">
-                                            <?php echo date_format($date, "F"); ?></h3>
+                                            <?php echo date_format($date, "M"); ?></h3>
                                     </div>
                                     <div class="cell">
                                         <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
