@@ -156,7 +156,7 @@ include('includes/config.php');
                                         <a
                                             href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
                                             <h6 class="my-2 my-lg-2">
-                                                <?php $title =  substr($result->title, 0, 48);
+                                                <?php $title =  substr($result->title, 0, 15);
                                                         echo $title ?>
                                             </h6>
                                         </a>
@@ -166,7 +166,7 @@ include('includes/config.php');
                                                 <!-- <i class="fa-solid fa-location-dot"></i> -->
                                             </span>
                                             <span class="font-bold ">
-                                                <?php $subHeading = substr($result->content, 0, 18);
+                                                <?php $subHeading = substr($result->content, 0, 15);
                                                         echo $subHeading ?>
                                             </span>
                                         </p>

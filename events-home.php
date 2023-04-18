@@ -127,14 +127,11 @@ include('includes/config.php');
                                     </p> -->
                                         <a
                                             href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
-                                            <h6 class=" my-2 my-lg-2"> <?php $title =  substr($result->title, 0, 48);
-                                                                                $subHeading = substr($result->content, 0, 29);
-                                                                                echo $title ?></h6>
+                                            <h6 class=" my-2 my-lg-2"> <?php $title =  substr($result->title, 0, 30);
+                                                                                $subHeading = substr($result->content, 0, 15);
+                                                                                echo $title ?>...</h6>
                                         </a>
-                                        <p>
-                                            <span style="color:#ff3e41 ; font-weight: bold;"> <span class=" font-bold">
-                                                    <?php echo  $subHeading ?>
-                                                </span>
+
                                         </p>
                                     </div>
                                 </div>
@@ -143,8 +140,6 @@ include('includes/config.php');
                         <?php }
                         }
                         ?>
-
-
                     </ul>
                 </div>
                 <!-- event end -->
