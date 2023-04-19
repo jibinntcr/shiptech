@@ -20,7 +20,8 @@ include('includes/config.php');
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
@@ -51,7 +52,8 @@ include('includes/config.php');
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -80,7 +82,8 @@ include('includes/config.php');
                     </nav>
                 </div>
                 <div class="col-lg-6 animated fadeIn">
-                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="Placement/img/hero-2.png" alt="">
+                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;"
+                        src="Placement/img/hero-2.png" alt="">
                 </div>
             </div>
         </div>
@@ -120,74 +123,47 @@ include('includes/config.php');
 
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 500px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <!-- <h1 class="display-6">Services</h1> -->
                 <p class="text-primary fs-5 mb-5">Faculty Placement Coordinators</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Anoop C</h5>
-                        <p>
-                        <div class="" style="margin-left:15px;">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:anoop.c@cusat.ac.in">anoop.c@cusat.ac.in</a></div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 62385 58867">+91
-                                        6238558867</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Aravind K.R</h5>
-                        <p>
-                        <div class="" style="margin-left:15px;">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:aravind@cusat.ac.in">aravind@cusat.ac.in</a></div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 8089866415">+91
-                                        8089866415</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Mohammed Ashiqu</h5>
-                        <p>
-                        <div class="" style="margin-left:15px;">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:ashique@cusat.ac.in">ashique@cusat.ac.in</a>
-                                </div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 97452 25996">+91 97452
-                                        25996,</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
+            <div class="row g-4 justify-content-center">
 
-
+                <?php
+                $sql = "SELECT * from placemencordinators WHERE category='Faculty Coordinator'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="service-item bg-light p-5">
+                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
+                        <h5 class="mb-3"><?php echo  $result->name ?></h5>
+                        <p>
+                        <div class="" style="margin-left:15px;">
+                            <div class="row mb-md-3">
+                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                <div class="col-10 "><a class="white col-11"
+                                        href="mailto:<?php echo  $result->email ?>"><?php echo  $result->email ?></a>
+                                </div>
+                            </div>
+                            <div class="row mb-md-3">
+                                <div class="col-2"> <i class="fa fa-phone "></i></div>
+                                <div class="col-10 "><a class="white col-11 "
+                                        href="tel:<?php echo  $result->phone ?>"><?php echo  $result->phone ?></a>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <?php }
+                } ?>
             </div>
         </div>
     </div>
@@ -200,95 +176,47 @@ include('includes/config.php');
 
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 500px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                 <!-- <h1 class="display-6">Services</h1> -->
                 <p class="text-primary fs-5 mb-5">Student Placement Coordinators</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Khevin Cherian</h5>
-                        <p>
-                        <div class="">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:kevincherian2000@gmail.com">kevincherian2000@gmail.com</a></div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 97468 25629">+91 97468
-                                        25629</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Mazin Rahman C K</h5>
-                        <p>
-                        <div class="">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:mazin.rahman11@gmail.com">mazin.rahman11@gmail.com</a></div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 95264 81627">+91 95264
-                                        81627</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Adarsh T O</h5>
-                        <p>
-                        <div class="">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:adarshratheeshto@gmail.com">adarshratheeshto@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 9496716092">+91
-                                        9496716092</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="service-item bg-light p-5">
-                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
-                        <h5 class="mb-3">Vishnu P A</h5>
-                        <p>
-                        <div class="">
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
-                                <div class="col-10 "><a class="white col-11" href="mailto:vishnuasokh7@gmail.com">vishnuasokh7@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="row mb-md-3">
-                                <div class="col-2"> <i class="fa fa-phone "></i></div>
-                                <div class="col-10 "><a class="white col-11 " href="tel:+91 9207318336">+91
-                                        9207318336</a>
-                                </div>
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-                </div>
+            <div class="row g-4 justify-content-center">
 
-
+                <?php
+                $sql = "SELECT * from placemencordinators WHERE category='Student Coordinator'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="service-item bg-light p-5">
+                        <img class="img-fluid mb-4" src="img/icon-7.png" alt="">
+                        <h5 class="mb-3"><?php echo  $result->name ?></h5>
+                        <p>
+                        <div class="" style="margin-left:15px;">
+                            <div class="row mb-md-3">
+                                <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                <div class="col-10 "><a class="white col-11"
+                                        href="mailto:<?php echo  $result->email ?>"><?php echo  $result->email ?></a>
+                                </div>
+                            </div>
+                            <div class="row mb-md-3">
+                                <div class="col-2"> <i class="fa fa-phone "></i></div>
+                                <div class="col-10 "><a class="white col-11 "
+                                        href="tel:<?php echo  $result->phone ?>"><?php echo  $result->phone ?></a>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <?php }
+                } ?>
             </div>
         </div>
     </div>
@@ -352,14 +280,16 @@ include('includes/config.php');
 
         <div class="container">
             <div class="row row g-4 justify-content-center">
-                <h1 class="mb-4 text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">Placement Statistics</h1>
+                <h1 class="mb-4 text-center wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s;">Placement Statistics</h1>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item p-4 fac-img-curv">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid fac-img-curv" src="img/mtech.jpg" alt="">
                         </div>
                         <h4 class="mb-3">M.Tech</h4>
-                        <a href="placement-statistics-mtech.php" class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>View
+                        <a href="placement-statistics-mtech.php" class="btn-slide mt-2" href=""><i
+                                class="fa fa-arrow-right"></i><span>View
                             </span></a>
                     </div>
                 </div>
@@ -369,7 +299,8 @@ include('includes/config.php');
                             <img class="img-fluid fac-img-curv" src="img/btchnavel.jpg" alt="">
                         </div>
                         <h4 class="mb-3">B.Tech</h4>
-                        <a href="placement-statistics-btech.php" class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>View
+                        <a href="placement-statistics-btech.php" class="btn-slide mt-2" href=""><i
+                                class="fa fa-arrow-right"></i><span>View
                             </span></a>
                     </div>
                 </div>
@@ -391,25 +322,31 @@ include('includes/config.php');
         </div>
 
         <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s"
+                style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                 <div class="service-item p-4 fac-img-curv">
                     <div class="overflow-hidden mb-4">
-                        <img class="fac-img-curv img-fluid" src="./img/career-mag.jpg" style="object-fit: cover; height: 240px; " alt="">
+                        <img class="fac-img-curv img-fluid" src="./img/career-mag.jpg"
+                            style="object-fit: cover; height: 240px; " alt="">
                     </div>
                     <h4 class="mb-3">Placement Brochure 2021-2022</h4>
-                    <a target="_blank" class="btn-slide mt-2" href="uploads/Placement/Placement Brochure 2021-22.pdf"><i class="fa fa-arrow-right"></i><span>Read
+                    <a target="_blank" class="btn-slide mt-2" href="uploads/Placement/Placement Brochure 2021-22.pdf"><i
+                            class="fa fa-arrow-right"></i><span>Read
                             More</span></a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="service-item p-4 fac-img-curv">
                     <div class="overflow-hidden mb-4">
-                        <img class="img-fluid fac-img-curv" src="img/career-mag.jpg" alt="" style="object-fit: cover; height: 240px; ">
+                        <img class="img-fluid fac-img-curv" src="img/career-mag.jpg" alt=""
+                            style="object-fit: cover; height: 240px; ">
                     </div>
                     <h4 class="mb-3">Placement Brochure 2022-2023</h4>
                     <a target="blank
-                                    " class="btn-slide mt-2" href="uploads/Placement/PLACEMENT BROCHURE 2022-23.pdf"><i class="fa fa-arrow-right"></i><span>Read
+                                    " class="btn-slide mt-2" href="uploads/Placement/PLACEMENT BROCHURE 2022-23.pdf"><i
+                            class="fa fa-arrow-right"></i><span>Read
                             More</span></a>
                 </div>
             </div>
