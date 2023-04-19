@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -9,6 +9,9 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 if (isset($_POST['submit'])) {
+    //     echo('hello jett');
+    //    print_r('Jerry Sabu');
+    //    exit();
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -41,7 +44,6 @@ if (isset($_POST['submit'])) {
             </tr>
         </tbody>
     </table>
-    
 </body>
 </html>";
     $body = $output;
@@ -57,22 +59,22 @@ if (isset($_POST['submit'])) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com'; //your host
     $mail->SMTPAuth = true;
-    $mail->Username = 'enquiry.ship@gmail.com'; //SENDER MAIL ID
-    $mail->Password = 'vkrujsnmndwhmvba'; //PASSWORD
+    $mail->Username = 'contactusinfinio@gmail.com'; //SENDER MAIL ID
+    $mail->Password = 'ackiipcergrwuina'; //PASSWORD
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     //Recipients
-    $mail->setFrom('enquiry.ship@gmail.com', 'Ship Tech Web Site'); //SENDER MAIL ID
-    $mail->addAddress('ship@cusat.ac.in'); //RECIVER MAIL ID
+    $mail->setFrom('contactusinfinio@gmail.com', 'Ship Tech Web Site'); //SENDER MAIL ID
+    $mail->addAddress('jerryaksa97@gmail.com'); //RECIVER MAIL ID
     //Content
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = $body;
     if ($mail->send()) {
-        echo '<script>alert("Form Submitted Successfully")</script>';
+        $_SESSION["mailstatus"] = "success";
         echo '<script>window.location = "../index.php";</script>';
     } else {
-        echo '<script>alert("Something went wrong")</script>';
+        $_SESSION["mailstatus"] = "not";
         echo '<script>window.location = "../index.php";</script>';
     }
 }

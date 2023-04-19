@@ -1,4 +1,6 @@
-<?php ini_set('display_errors', 1);
+<?php
+session_start();
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include('includes/config.php');
@@ -47,6 +49,7 @@ include('includes/config.php');
     <link href="css/event.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet">
     <link href="card-css.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
@@ -143,6 +146,29 @@ include('includes/config.php');
 </head>
 
 <body style="box-flex-group: #d6d6d6;">
+    <?php
+    if (isset($_SESSION["mailstatus"]) == "success") {
+    ?>
+    <script>
+    swal({
+        title: "Success!",
+        text: "Form Submitted Successfully",
+        icon: "success",
+        button: "OK",
+    });
+    </script>
+    <?php
+        unset($_SESSION["mailstatus"]);
+    } else if (isset($_SESSION["mailstatus"]) == "not") {
+    ?>
+    <script>
+    swal("Something went wrong !", "Please try after some time!", "error");
+    </script>
+    <?php
+        unset($_SESSION["mailstatus"]);
+    }
+    ?>
+
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
