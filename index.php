@@ -202,7 +202,8 @@ include('includes/config.php');
                             <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">SNAS</h3>
-                                    <button onclick="location.href='https://snas.in/'" class="flip-box-button">Learn
+                                    <button target="_blank" onclick="window.open('https://snas.in/','_blank')"
+                                        class="flip-box-button">Know
                                         More</button>
                                 </div>
                             </div>
@@ -218,16 +219,16 @@ include('includes/config.php');
                             <div class="flip-box-front text-center"
                                 style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
+                                    <h3 style="color: white;" class="flip-box-header">DESCON</h3>
                                     <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
                                         class="flip-box-img">
                                 </div>
                             </div>
                             <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
-                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
-                                    <button onclick="location.href='https://descon.cusat.ac.in/'"
-                                        class="flip-box-button">Learn
+                                    <h3 style="color: white;" class="flip-box-header">DESCON</h3>
+                                    <button target="_blank" onclick="window.open('https://descon.cusat.ac.in','_blank')"
+                                        class="flip-box-button">Know
                                         More</button>
                                 </div>
                             </div>
@@ -251,7 +252,7 @@ include('includes/config.php');
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
                                     <button onclick="location.href='Approvals-and-Affiliations.php'"
-                                        class="flip-box-button">Learn More</button>
+                                        class="flip-box-button">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +274,7 @@ include('includes/config.php');
                             <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">Placement</h3>
-                                    <button onclick="location.href='placement.php'" class="flip-box-button">Learn
+                                    <button onclick="location.href='placement.php'" class="flip-box-button">Know
                                         More</button>
                                 </div>
                             </div>
@@ -821,6 +822,7 @@ include('includes/config.php');
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/Scrolling.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
