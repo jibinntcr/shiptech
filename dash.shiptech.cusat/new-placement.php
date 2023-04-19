@@ -86,8 +86,20 @@ if (strlen($_SESSION['alogin']) == 0) {
                                     <div class="form-group">
                                         <label for="exampleSelectGender">Course</label>
                                         <select class="form-control" id="course" name="course" required>
-                                            <option>B.Tech</option>
-                                            <option>M.Tech</option>
+                                            <?php
+                                                $sql = "SELECT * from course";
+                                                $query = $dbh->prepare($sql);
+                                                $query->execute();
+                                                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                                                $cnt = 1;
+                                                if ($query->rowCount() > 0) {
+                                                    foreach ($results as $result) {
+                                                ?>
+
+
+                                            <option><?php echo $result->name ?></option>
+                                            <?php }
+                                                } ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
