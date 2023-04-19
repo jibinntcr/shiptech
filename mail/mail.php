@@ -59,13 +59,13 @@ if (isset($_POST['submit'])) {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com'; //your host
     $mail->SMTPAuth = true;
-    $mail->Username = 'contactusinfinio@gmail.com'; //SENDER MAIL ID
-    $mail->Password = 'ackiipcergrwuina'; //PASSWORD
+    $mail->Username = 'enquiry.ship@gmail.com'; //SENDER MAIL ID
+    $mail->Password = 'vkrujsnmndwhmvba'; //PASSWORD
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     //Recipients
-    $mail->setFrom('contactusinfinio@gmail.com', 'Ship Tech Web Site'); //SENDER MAIL ID
-    $mail->addAddress('jerryaksa97@gmail.com'); //RECIVER MAIL ID
+    $mail->setFrom('enquiry.ship@gmail.com', 'Ship Tech Web Site'); //SENDER MAIL ID
+    $mail->addAddress('ship@cusat.ac.in'); //RECIVER MAIL ID
     //Content
     $mail->isHTML(true);
     $mail->Subject = $subject;
