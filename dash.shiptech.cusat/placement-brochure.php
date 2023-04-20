@@ -113,7 +113,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                                 $idE = $result->id; ?>
                                                 <td>
                                                     <div class="template-demo mt-2">
-                                                        <a href="approvalsstatusactivate.php?idE=<?php echo   $idE ?>"
+                                                        <a href="placement-brochure-activate.php?idE=<?php echo   $idE ?>"
                                                             type="button" class="btn btn-success btn-sm"
                                                             name="statusBTN" id="statusBTN">Disable</a>
                                                     </div>
@@ -124,7 +124,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 <td>
                                                     <div class="template-demo mt-2">
 
-                                                        <a href="approvalsstatusactivate.php?idD=<?php echo   $idD ?>"
+                                                        <a href="placement-brochure-activate.php?idD=<?php echo   $idD ?>"
                                                             type="button" class="btn btn-danger btn-sm" name="statusBTN"
                                                             id="statusBTN">Enable</a>
                                                     </div>

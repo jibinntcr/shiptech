@@ -14,7 +14,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         move_uploaded_file($_FILES['file']['tmp_name'], $file);
         $photo = basename($_FILES["file"]["name"]);
         $status = '1';
-        $sql = "INSERT INTO placementbrochure(name,year,status,image) VALUES ('" . $name . "','" . $year . "','" . $status . "','" . $photo . "')";
+        $sql = "INSERT INTO placementBrochure(name,year,status,image) VALUES ('" . $name . "','" . $year . "','" . $status . "','" . $photo . "')";
         $query = $dbh->prepare($sql);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
