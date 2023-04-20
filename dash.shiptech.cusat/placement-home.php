@@ -60,6 +60,12 @@ if (strlen($_SESSION['alogin']) == 0) {
                                         <h4>Placement Coordinators</h4>
                                     </button>
                                 </div>
+                                <div class="col-md-6 mb-4">
+                                    <button onclick="location.href = 'placement-brochure.php';" type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        <h4>Placement Brochure</h4>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
