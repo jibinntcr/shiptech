@@ -1,3 +1,5 @@
+<?php include_once 'sendmail.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +33,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/gallery.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -117,7 +120,7 @@
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s"
                     style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <form action="mail/mail.php" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <!-- <form action="mail/mail.php" method="post" enctype="multipart/form-data" autocomplete="off">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -158,6 +161,57 @@
                                 <button class="btn btn-primary w-100 py-3" name="submit" type="submit">Send
                                     Message</button>
                             </div>
+                        </div>
+                    </form> -->
+
+
+
+                    <form action="" method="post" class="form">
+                        <h3>Contact Us</h3>
+                        <!-- Status message -->
+                        <?php if (!empty($statusMsg)) { ?>
+                        <div class="status__msg <?php echo $status; ?>"><?php echo $statusMsg; ?></div>
+                        <?php } ?>
+
+                        <!-- Form fields -->
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <!-- <label for="name">Name</label> -->
+                                    <input type="text" name="name" class="form-control" placeholder="Enter your name"
+                                        value="<?php echo !empty($postData['name']) ? $postData['name'] : ''; ?>"
+                                        required>
+                                    <label for="name">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <!-- <label for="email">Email</label> -->
+                                    <input type="email" name="email" class="form-control" placeholder="Enter your email"
+                                        value="<?php echo !empty($postData['email']) ? $postData['email'] : ''; ?>"
+                                        required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <!-- <label for="subject">Subject</label> -->
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                        value="<?php echo !empty($postData['subject']) ? $postData['subject'] : ''; ?>"
+                                        required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <!-- <label for="message">Message</label> -->
+                                <textarea name="message" class="form-control" placeholder="Type your message here"
+                                    required><?php echo !empty($postData['message']) ? $postData['message'] : ''; ?></textarea>
+                            </div>
+                            <div class="col-12">
+                                <!-- Google reCAPTCHA box -->
+                                <div class="g-recaptcha" data-sitekey="<?php echo $siteKey; ?>"></div>
+                            </div>
+                            <input type="submit" name="submit" class="btn btn-primary w-100 py-3" value="Submit">
                         </div>
                     </form>
                 </div>
