@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
             $mail->Port = 587;
             //Recipients
             $mail->setFrom('enquiry.ship@gmail.com', 'Ship Tech Web Site'); //SENDER MAIL ID
-            $mail->addAddress('jerryaksa97@gmail.com'); //RECIVER MAIL ID
+            $mail->addAddress('ship@cusat.ac.in'); //RECIVER MAIL ID
             //Content
             $mail->isHTML(true);
             $mail->Subject = $subject;
