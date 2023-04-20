@@ -322,6 +322,15 @@ include('includes/config.php');
         </div>
 
         <div class="row g-4 justify-content-center">
+            <?php
+            $sql = "SELECT * FROM placementBrochure";
+            $query = $dbh->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $cnt = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {
+            ?>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s"
                 style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                 <div class="service-item p-4 fac-img-curv">
@@ -329,14 +338,16 @@ include('includes/config.php');
                         <img class="fac-img-curv img-fluid" src="./img/career-mag.jpg"
                             style="object-fit: cover; height: 240px; " alt="">
                     </div>
-                    <h4 class="mb-3">Placement Brochure 2021-2022</h4>
-                    <a target="_blank" class="btn-slide mt-2" href="uploads/Placement/Placement Brochure 2021-22.pdf"><i
+                    <h4 class="mb-3"><?php echo  $result->name ?></h4>
+                    <a target="_blank" class="btn-slide mt-2" href="uploads/<?php echo  $result->image ?>"><i
                             class="fa fa-arrow-right"></i><span>Read
                             More</span></a>
                 </div>
             </div>
+            <?php }
+            } ?>
 
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s"
+            <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s"
                 style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="service-item p-4 fac-img-curv">
                     <div class="overflow-hidden mb-4">
@@ -349,7 +360,7 @@ include('includes/config.php');
                             class="fa fa-arrow-right"></i><span>Read
                             More</span></a>
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s"
                 style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
                 <div class="service-item p-4 fac-img-curv">
