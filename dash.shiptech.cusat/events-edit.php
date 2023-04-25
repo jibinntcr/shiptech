@@ -20,8 +20,9 @@ if (strlen($_SESSION['alogin']) == 0) {
             $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $title)));
 
             $photo = $_POST['imageName'];
-            $sql = "UPDATE  events SET title='$title',content='$content',date='$date',image='$photo',slug='$slug' where id='$id'";
+            $sql = "UPDATE  events SET title=:title,content='$content',date='$date',image='$photo',slug='$slug' where id='$id'";
             $query = $dbh->prepare($sql);
+            $query->bindParam(':title', $title, PDO::PARAM_STR);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
                 echo '<script>alert("Success")</script>';
@@ -46,9 +47,10 @@ if (strlen($_SESSION['alogin']) == 0) {
             $status = '1';
 
             $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $title)));
-            $sql = "UPDATE  events SET title='$title',content='$content',date='$date',image='$photo',slug='$slug' where id='$id'";
+            $sql = "UPDATE  events SET title=:title,content='$content',date='$date',image='$photo',slug='$slug' where id='$id'";
 
             $query = $dbh->prepare($sql);
+            $query->bindParam(':title', $title, PDO::PARAM_STR);
             $result = $query->execute();
             if ($query->rowCount() > 0) {
                 echo '<script>alert("Success")</script>';

@@ -18,8 +18,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $heading)));
 
-        $sql = "INSERT INTO events(title,content,date,status,image,slug) VALUES ('" . $heading . "','" . $content . "','" . $date . "','" . $status . "','" . $photo . "','" . $slug . "')";
+        $sql = "INSERT INTO events(title,content,date,status,image,slug) VALUES (:heading,'" . $content . "','" . $date . "','" . $status . "','" . $photo . "','" . $slug . "')";
         $query = $dbh->prepare($sql);
+        $query->bindParam(':heading', $heading, PDO::PARAM_STR);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
             echo '<script>alert("Success")</script>';

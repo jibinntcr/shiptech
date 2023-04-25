@@ -1,6 +1,8 @@
 <?php
 session_start();
-error_reporting(0);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include('../includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
     header('location:index.php');
@@ -18,8 +20,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 
         $slug = strtolower(preg_replace('/[^a-zA-Z0-9\-]/', '', preg_replace('/\s+/', '-', $heading)));
 
-        $sql = "INSERT INTO news(title,content,date,status,image,slug) VALUES ('" . $heading . "','" . $content . "','" . $date . "','" . $status . "','" . $photo . "','" . $slug . "')";
+        $sql = "INSERT INTO news(title,content,date,status,image,slug) VALUES (:heading,'" . $content . "','" . $date . "','" . $status . "','" . $photo . "','" . $slug . "')";
         $query = $dbh->prepare($sql);
+        $query->bindParam(':heading', $heading, PDO::PARAM_STR);
         $result = $query->execute();
         if ($query->rowCount() > 0) {
             echo '<script>alert("Success")</script>';
