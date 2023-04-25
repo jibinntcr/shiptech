@@ -1,3 +1,4 @@
+<?php include_once('includes/config.php'); ?>
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
     <div class="container py-5">
@@ -15,17 +16,11 @@
                     <!-- <a target="_blank" class="btn btn-outline-light btn-social"
                         href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
                             class="fab fa-linkedin-in"></i></a> -->
-                    <a target="_blank" class="btn btn-outline-light btn-social"
-                        href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
-                    <a target="_blank" class="btn btn-outline-light btn-social"
-                        href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i
-                            class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
 
-                    <a target="_blank" class="btn btn-outline-light btn-social"
-                        href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
-                    <a target="_blank" class="btn btn-outline-light btn-social"
-                        href="https://www.youtube.com/@societyofnavalarchitecture1487"><i
-                            class="fab fa-youtube"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -40,16 +35,22 @@
             </div>
             <div class="col-lg-6 ">
                 <div class="row pt-2">
-                    <iframe class="row"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin"
-                        frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
+                    <iframe class="row" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="container">
+    <?php
+    $sql = "SELECT blog from blog ";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+        echo ($userArr[0]->blog);
+    }
+    ?>
+    <!-- <div class="container">
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -62,6 +63,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 <!-- Footer End -->
