@@ -221,7 +221,7 @@ include('includes/config.php');
                                 style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">SNAS</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                    <img src="img/cropped-snaslogo-removebg-preview-300x300-1-1-150x150.png" alt=""
                                         class="flip-box-img">
                                 </div>
                             </div>
@@ -246,8 +246,7 @@ include('includes/config.php');
                                 style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">DESCON</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
+                                    <img src="img/Logo - descon_white1.png" alt="" class="flip-box-img">
                                 </div>
                             </div>
                             <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
@@ -270,8 +269,7 @@ include('includes/config.php');
                                 style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
+                                    <img src="img/affiliations.png" alt="" class="flip-box-img">
                                 </div>
                             </div>
                             <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
@@ -293,8 +291,7 @@ include('includes/config.php');
                                 style="background-image: url('img/deskon-new.png');">
                                 <div class="inner color-white">
                                     <h3 style="color: white;" class="flip-box-header">Placement</h3>
-                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
-                                        class="flip-box-img">
+                                    <img src="img/placement_.png" alt="" class="flip-box-img">
                                 </div>
                             </div>
                             <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
