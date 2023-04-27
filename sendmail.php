@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Google reCAPTCHA API key configuration
-$siteKey     = '6LeBvKElAAAAAKRliKzByXqfflfgRRWqIfOEOdX6';
-$secretKey     = '6LeBvKElAAAAALUSJAUXYYdPLptOdiV2eiwHjEkp';
+$siteKey     = '6LfxwbolAAAAAGL2aUjfgTnSK8-7rAPWc7EXSg_a';
+$secretKey     = '6LfxwbolAAAAAOI1X3ti58JtatsDkFOwBQXk2aDV';
 
 // Email configuration
 $toEmail = 'admin@example.com';

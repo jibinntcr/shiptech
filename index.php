@@ -669,7 +669,7 @@ include('includes/config.php');
 
                             <div style="float: left; ">
                                 <img class="speaker-image-border hod-img"
-                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
+                                    src="uploads/<?php echo$userArr[0]->photo ?>" style=" margin-right: 15px; margin-bottom: 15px; border: #000000 solid 2px;
   
     padding: 20px;" />
                             </div>
