@@ -2,23 +2,24 @@
 session_start();
 error_reporting(0);
 include('../includes/config.php');
-if (isset($_POST['login'])) {
-    $username = ($_POST['username']);
-    $password = md5($_POST['password']);
-    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    // print_r($sql);
-    // exit();
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $results = $query->fetchAll(PDO::FETCH_OBJ);
-    if ($query->rowCount() > 0) {
-        $_SESSION['alogin'] = $_POST['username'];
-        echo "<script> location.href='announcements.php'; </script>";
-        // echo "<script type='text/javascript'> document.location ='announcements.php; </script>";
-    } else {
-        echo "<script>alert('Invalid Password or Email!!');</script>";
-    }
-}
+include_once 'ad-login.php';
+// if (isset($_POST['login'])) {
+//     $username = ($_POST['username']);
+//     $password = md5($_POST['password']);
+//     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+//     // print_r($sql);
+//     // exit();
+//     $query = $dbh->prepare($sql);
+//     $query->execute();
+//     $results = $query->fetchAll(PDO::FETCH_OBJ);
+//     if ($query->rowCount() > 0) {
+//         $_SESSION['alogin'] = $_POST['username'];
+//         echo "<script> location.href='announcements.php'; </script>";
+//         // echo "<script type='text/javascript'> document.location ='announcements.php; </script>";
+//     } else {
+//         echo "<script>alert('Invalid Password or Email!!');</script>";
+//     }
+// }
 ?>
 
 
@@ -42,6 +43,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -56,16 +58,21 @@ if (isset($_POST['login'])) {
                             </div>
                             <!-- <h4>Hello! let's get started</h4> -->
                             <h6 class="font-weight-light">Login in to continue.</h6>
-                            <form class="pt-3" role="form" method="post">
+                            <form action="" method="post" class="pt-3" role="form">
+                                <!-- <form class="pt-3" role="form" method="post"> -->
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" id="username" name="username" placeholder="Username">
+                                    <input type="text" class="form-control form-control-lg" id="username"
+                                        name="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Password">
+                                    <input type="password" class="form-control form-control-lg" id="password"
+                                        name="password" placeholder="Password">
                                 </div>
-                                <div class="mt-3">
-                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" name="login">SIGN IN</button>
+                                <div class="form-group">
+                                    <!-- Google reCAPTCHA box -->
+                                    <div class="g-recaptcha " data-sitekey="<?php echo $siteKey; ?>"></div>
                                 </div>
+                                <input type="submit" name="submit" class="btn btn-primary w-100 py-3" value="Submit">
                             </form>
                         </div>
                     </div>
@@ -76,7 +83,8 @@ if (isset($_POST['login'])) {
     </div>
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. Premium <a href="https://infiniio.co.in/" target="_blank">Infinio Technology Solutions</a> All rights
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. Premium <a
+                    href="https://infiniio.co.in/" target="_blank">Infinio Technology Solutions</a> All rights
                 reserved.</span>
             <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span> -->
         </div>
