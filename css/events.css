@@ -1,0 +1,70 @@
+/** @format */
+/* 
+@media (min-width: 770px) {
+  .datep {
+    width: 200px;
+  }
+}
+
+@media (max-width: 770px) {
+  .datep {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+} */
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 110px;
+  width: 110px;
+  min-height: 110px;
+  height: 110px;
+  border-radius: 50%;
+  //background-color: #007bff;
+
+  //font-size: 15px;
+  // font-weight: 900;
+  text-align: center;
+}
+
+.circle .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+}
+.cell {
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 {
+  // margin: 20px auto;
+  height: 500px;
+
+  overflow: hidden;
+}
+
+.container3 {
+  // margin: 20px auto;
+  height: 500px;
+
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+  position: relative;
+}
+
+li {
+  margin-bottom: 24px;
+}

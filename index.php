@@ -1,3 +1,8 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include('includes/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +14,12 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="testimonial/css/bootstrap.min.css">
+    <link rel="stylesheet" href="testimonial/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="testimonial/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="testimonial/css/style.css">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +34,109 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/icons/css/all.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/date.css" rel="stylesheet">
+
+    <link href="css/event.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet">
+    <link href="card-css.css" rel="stylesheet">
+
+
+
+
+
+    <style type="text/css">
+    .hod-img {
+        width: 450px;
+    }
+
+    .rowCustome {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    @media (max-width: 1152px) {
+        .rowCustome {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: 50% 50%;
+        }
+    }
+
+
+
+    .card1 {
+
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: #f2f8f9;
+        border-radius: 4px;
+        padding: 32px 32px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        background: #bed;
+        justify-content: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -16px;
+            right: -16px;
+            background: #00838d;
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            transform: scale(1);
+            transform-origin: 50% 50%;
+            transition: transform 0.25s ease-out;
+        }
+
+        &:hover:before {
+            transform: scale(50);
+        }
+
+        &:hover {
+            .h3small {
+                transition: all 0.3s ease-out;
+                color: #fff;
+            }
+
+            .psmall {
+                transition: all 0.3s ease-out;
+
+                color: #fff;
+            }
+        }
+    }
+
+    .card1:hover {
+        .h3small {
+            transition: all 0.3s ease-out;
+            color: #fff;
+        }
+
+        .psmall {
+            transition: all 0.3s ease-out;
+
+            color: #fff;
+        }
+    }
+    </style>
 </head>
 
-<body>
+<body style="box-flex-group: #d6d6d6;">
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -46,78 +150,351 @@
     <!-- HEADER END  -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-">
-        <div class="owl-carousel header-carousel position-relative mb-5">
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Department of </h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Ship Technolgy </h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Kochin University of Science &amp;
-                                    Technology</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img class="img-fluid" src="img/banner-1_.jpg" alt="">
             </div>
+            <?php
+            $sql = "SELECT * from banner WHERE status = '1'";
+            $query = $dbh->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $cnt = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {
+            ?>
+
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics
-                                    Solution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span
-                                        class="text-primary">Transport</span> Solution</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor
-                                    at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea
-                                    elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
-                                    More</a>
-                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free
-                                    Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img class="img-fluid" src="uploads/<?php echo   $result->image ?>" alt="">
+
             </div>
+            <?php }
+            } ?>
         </div>
     </div>
     <!-- Carousel End -->
 
 
+
+    <div class="container py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">SNAS</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">SNAS</h3>
+                                    <button onclick="location.href='https://snas.in/'" class="flip-box-button">Learn
+                                        More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">DESKON</h3>
+                                    <button onclick="location.href='https://descon.cusat.ac.in/'"
+                                        class="flip-box-button">Learn
+                                        More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Affiliations</h3>
+                                    <button onclick="location.href='Approvals-and-Affiliations.php'"
+                                        class="flip-box-button">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+
+                    <div class="box-item">
+                        <div class="flip-box">
+                            <div class="flip-box-front text-center"
+                                style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Placement</h3>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt=""
+                                        class="flip-box-img">
+                                </div>
+                            </div>
+                            <div class="flip-box-back text-center" style="background-image: url('img/deskon-new.png');">
+                                <div class="inner color-white">
+                                    <h3 style="color: white;" class="flip-box-header">Placement</h3>
+                                    <button onclick="location.href='placement.php'" class="flip-box-button">Learn
+                                        More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <?php
+    $sql = "SELECT * from announcement where status='1'";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_OBJ);
+    $cnt = 1;
+    if ($query->rowCount() > 0) { ?>
+
     <!-- SCROLL NEWS START  -->
-    <div class="container-xxl  wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
                         <div
                             class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
-                            <span class="d-flex align-items-center">&nbsp;Announcements </span>
+                            <a class="text-white" href="announcement.php"
+                                class="d-flex align-items-center annouHover">&nbsp;Announcements
+                            </a>
                         </div>
                         <marquee class="news-scroll " behavior="scroll" direction="left" onmouseover="this.stop();"
                             onmouseout="this.start();">&nbsp;&nbsp;<b class="text-white"></b>
                             &nbsp;&nbsp;
-                            <a class="news-scroll text-white" href="#" target="_blank">Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. In, labore. Distinctio sunt provident aliquid debitis
-                                voluptatibus minima velit eaque iusto quia facilis! Obcaecati rerum tempora soluta hic
-                                perferendis voluptate libero.</a>
+                            <?php
+                                foreach ($results as $result) {
+                                ?>
+                            <a class="news-scroll text-white" href="<?php echo  $result->link ?>"
+                                target="_blank"><?php echo   $result->announcements ?></a>
+
                             &nbsp;&nbsp;
                             <b class="text-white">|</b>
+                            &nbsp;&nbsp;
+                            <?php }
+                                ?>
                         </marquee>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- SCROLL NEWS END  -->
+    <?php } ?>
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s" style="padding:0px">
+        <div class="container " style="padding:0px">
+            <div class="rowCustome" style="margin-bottom:5%;">
+                <!-- event start -->
+                <div class="container my-5 row col-xl-6" style="width:97%;padding:0px;margin-left:1.5%">
+                    <div class="text-center mb-3">
+                        <!-- <h6 class="text-secondary text-uppercase">Upcoming</h6> -->
+                        <a href="events-home.php">
+
+                            <h1 class="eventHover" class="mb-0">Events</h1>
+                        </a>
+                    </div>
+
+                    <div  style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px; padding-bottom:5%;">
+                    <div class="container2" style=" padding:0pc;margin:0px">
+                    <ul style="padding-left:1rem;padding-right:1rem;">
+                            <?php
+                            $sql = "SELECT * from events  WHERE status='1' ORDER BY `date` DESC LIMIT 3";
+                            $query = $dbh->prepare($sql);
+                            $query->execute();
+                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                            $cnt = 1;
+                            if ($query->rowCount() > 0) {
+                                foreach ($results as $result) {
+                            ?>
+
+                            <li>
+                                <div class="d-flex  border p-1 my-4 align-items-center"
+                                    style="border-radius: 20px;border-width: thin; max-width: 655px; height:120px;  margin: 0 auto;">
+                                    <div class="circle  d-flex justify-content-center container">
+                                        <div class="cell">
+
+                                            <?php $date = $result->date;
+                                                    $date = date_create($date);
+                                                    ?>
+                                            <h3 class="text-white"><?php echo date_format($date, "d"); ?></h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h3 class="text-white" style="text-align:center;">
+                                                <?php echo date_format($date, "F"); ?></h3>
+                                        </div>
+                                        <div class="cell">
+                                            <h5 class="text-white"><?php echo date_format($date, "Y"); ?></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4">
+
+                                            <a
+                                                href="events-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
+                                                <h6 class="my-1 my-lg-2 eventHover">
+                                                    <?php $title =  substr($result->title, 0, 48);
+                                                            echo $title ?>
+                                                </h6>
+                                            </a>
+
+                                            <p>
+                                                <span style="color: #ff3e41; font-weight: bold">
+                                                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                                </span>
+                                                <span class="font-bold">
+                                                    <?php $subHeading = substr($result->content, 0, 18);
+                                                            echo $subHeading ?>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <?php }
+                            } ?>
+
+                        </ul>
+                        </div>
+                        <div style="margin-top:.5%;margin-bottom:.5%;">
+                            <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
+                                href="events-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
+                                    style="color:#fff;"> Read
+                                    More</span></a>
+                        </div>
+                  
+                        
+                    </div>
+                </div>
+
+                <!-- event end -->
+
+                <!-- news start -->
+                <div class="container my-5 row col-xl-6" style="width:97%;padding:0px;margin-left:1.5%">
+                    <div class="text-center mb-3">
+                        <a href="news-home.php">
+                            <h1 class="eventHover" class="mb-0">News</h1>
+                        </a>
+                    </div>
+
+                    <div  style="box-shadow: 10px 10px 50px  #000839;border-radius: 20px; padding-bottom:5%;">
+                    <div class="container3" style=" padding:0pc;margin:0px">    
+                    <ul style="padding-left:1rem;padding-right:1rem;">
+
+
+                            <?php
+                            $sql = "SELECT * from news WHERE status='1' ORDER BY `news`.`date` DESC LIMIT 3; ";
+                            $query = $dbh->prepare($sql);
+                            $query->execute();
+                            $results = $query->fetchAll(PDO::FETCH_OBJ);
+                            $cnt = 1;
+                            if ($query->rowCount() > 0) {
+                                foreach ($results as $result) {
+                            ?>
+                            <li>
+                                <div class="d-flex news border p-1 my-4 align-items-center"
+                                    style="border-radius: 20px; max-width: 655px; height:100%;  margin: 0 auto">
+                                    <img class="d-block" style="
+                      width: 110px;
+                      height: 110px;
+                      object-fit: contain;
+                      border-radius: 20px;" src="uploads/<?php echo $result->image ?>" alt="" />
+
+                                    <div class="d-flex col-md-8 mb-0 mx-md-3">
+                                        <div class="ms-4 overflow-hidden">
+                                            <a
+                                                href="news-view.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>">
+                                                <h6 class="eventHover">
+                                                    <?php
+                                                            $title =  substr($result->title, 0, 27);
+                                                            $subHeading = substr($result->content, 0, 29);
+                                                            echo  $title
+                                                            ?> </h6>
+                                            </a>
+
+                                            <p class="mb-0">
+                                                <?php echo  $subHeading ?>...
+                                            </p>
+
+                                            <p class="mb-0">
+                                                <span style="
+                            color: #ff3e41;
+                            font-weight: bold;
+                            font-size: smaller;
+                          ">
+                                                    <i class="fa-regular fa-calendar"></i></span>
+                                                <span class="font-bold" style="font-size: smaller">
+                                                    <?php $date = $result->date;
+                                                            $date = date_create($date);
+                                                            echo date_format($date, "d/m/Y"); ?></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <?php }
+                            } ?>
+
+                        </div>
+                        </ul>
+                        <div  style="margin-top:.5%;margin-bottom:.5%;">
+                        <a class="btn-slide mt-2" style="background-color:#007a96;padding:10px;border-radius:5px;"
+                            href="news-home.php"><i class="fa fa-arrow-right" style="color:#fff;"></i><span
+                                style="color:#fff;"> Read
+                                More</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- news end -->
+        </div>
+    </div>
+    </div>
+
+
+    <!-- NEWS AND EVENTS END -->
 
 
 
@@ -128,18 +505,19 @@
             <div class="row g-5">
                 <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
-                            style="object-fit: cover;" alt="">
+                        <img style=" border: 5px solid #555;"
+                            class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/cusat.jpg"
+                            style="object-fit: cover; box-shadow: -5px 5px 5px  #000;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.3s">
-                    <h6 class="text-secondary text-uppercase mb-3">Shiptech CUSAT</h6>
+                    <h6 class="text-secondary text-uppercase mb-3">Ship Technology CUSAT</h6>
                     <h1 class="mb-5">Vision</h1>
                     <p class="mb-5">To evolve into a globally recognized department in the frontier areas of Naval
                         Architecture and Ship Building.</p>
                     <h1 class="mb-5">Mission</h1>
                     <p class="mb-5">
-                    <ul class="mission-dot">
+                    <ul class="mission-dot justify-para">
                         <li><i class="fa fa-ship me-3" aria-hidden="true"></i>
                             <span>We are committed to achieve academic
                                 excellence in the field of Naval Architecture and ShipBuilding through innovative
@@ -185,7 +563,7 @@
 
 
     <!-- ABOUT 2 -->
-    <div class="container-xxl py-5">
+    <div class="container py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
@@ -213,8 +591,8 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100 fac-img-curv" src="img/shiptech.jpg"
+                            style="object-fit: cover; box-shadow: -5px 5px 5px  #000;" alt="">
                     </div>
                 </div>
             </div>
@@ -222,109 +600,101 @@
     </div>
     <!-- ABOUT End -->
 
-    <!-- HOS MESSAGE  Start -->
+    <!-- HOD MESSAGE 2 Start -->
+    <?php
+    $sql = "SELECT * from hod where status='1' ";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $userArr = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+    ?>
+    <div class="container py-5">
+        <div class="container">
+
+            <section class="container speaker-section spad">
+                <div class="sec-title text-left">
+                    <div class="row-cols-1 speaker-disply justify-para">
+                        <span class="left m-5">
+
+
+                            <div style="float: left;">
+                                <img class="speaker-image-border hod-img"
+                                    src="https://infinio.co.in/test/uploads/hodmessage_img.jpg" style="  width:100%; margin-bottom: 15px; border: #000000 solid 2px;
+    padding: 20px;" />
+                            </div>
+                        </span>
+
+                        <h6 class="text-secondary text-uppercase mb-3">HOD's&nbsp;Message&nbsp;&nbsp;&nbsp; </h6>
+                        <h1 class="mb-5">Ship Technology CUSAT</h1>
+                        <p class="justify-para">
+                            <?php echo ($userArr[0]->message); ?>
+                        </p>
+                        <span><b><?php echo ($userArr[0]->name); ?></b>
+                            <br>
+                            <?php echo ($userArr[0]->designation); ?>
+                        </span>
+                    </div>
+
+
+
+
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <?php }
+    ?>
+
+    <!--end HOD MESSAGE 2 -->
+
+
+
+
+    <!-- Course  Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg"
-                            style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="text-secondary text-uppercase mb-3">HOD's Message </h6>
-                    <h1 class="mb-5">Shiptech CUSAT</h1>
-                    <p class="mb-5 justify-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
-                        numquam atque,
-                        sit voluptatum labore dolor, qui voluptatem debitis maxime praesentium officiis totam maiores
-                        sunt ea quidem facilis officia, a vel. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Ipsa, perspiciatis. Repellat iste nam quos ab illum adipisci cumque. Quo dolorum quod odit qui
-                        quos non quasi nisi consectetur consequatur beatae dolores atque rerum incidunt commodi, maxime
-                        iusto optio mollitia. Quisquam magnam, a, vitae rem inventore similique molestias repellat
-                        cumque quasi libero saepe enim non repellendus impedit labore nostrum, aperiam quibusdam
-                        dolorum. Rerum suscipit culpa nam sint beatae deserunt cum maiores architecto nulla similique
-                        modi necessitatibus a fugiat sequi vel unde delectus, quasi tempore amet ullam labore eveniet!
-                        Natus exercitationem suscipit eligendi qui quod itaque quam assumenda et esse. Libero, ad?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- HOD MESSAGE  End -->
-
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Courses</h6>
+            <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Department of Shiptechnology</h6>
                 <h1 class="mb-5">Courses Offered</h1>
             </div>
             <div class="row g-4">
+
+                <?php
+                $sql = "SELECT * from course WHERE status='1'";
+                $query = $dbh->prepare($sql);
+                $query->execute();
+                $results = $query->fetchAll(PDO::FETCH_OBJ);
+                $cnt = 1;
+                if ($query->rowCount() > 0) {
+                    foreach ($results as $result) {
+                ?>
+
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4">
+                    <div class="service-item p-4 fac-img-curv" style="height:100%">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                            <img class="fac-img-curv img-fluid" src="uploads/<?php echo $result->thumb ?>" alt="">
                         </div>
-                        <h4 class="mb-3">Course 1</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                        <h4 class="mb-3"><?php echo $result->name ?></h4>
+                        <p><?php echo $result->specialization ?></p>
+                        <a class="btn-slide mt-2"
+                            href="course-details.php?id=<?php echo   $result->id ?>&slug=<?php echo $result->slug ?>"><i
+                                class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 2</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 3</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
+
+                <?php }
+                } ?>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4">
+                    <div class="service-item p-4 fac-img-curv" style="height:100%">
                         <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                            <img class="fac-img-curv img-fluid" src="img/phd_image-thumb.jpg" alt="">
                         </div>
-                        <h4 class="mb-3">Course 4</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-5.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 5</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
-                                More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-6.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Course 6</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read
+                        <h4 class="mb-3">Ph.D.</h4>
+                        <p>Research is central to the progress of any academic department</p>
+                        <a class="btn-slide mt-2" href="phd.php"><i class="fa fa-arrow-right"></i><span>Read
                                 More</span></a>
                     </div>
                 </div>
@@ -334,341 +704,81 @@
     <!-- Service End -->
 
 
+    <!-- NEW TESTIMONIAL START  -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class=" text-center wow fadeInUp" data-wow-delay="0.1s">
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Testimonial</h6>
-                <h1 class="mb-0">Our Clients Say!</h1>
+                <h1 class="mb-5">Testimonials</h1>
+                <h6 class="" style="font-size: mediam;color:#888">Experiences and feedback provided by our esteemed
+                    alumni and
+                    students
+                    who have been
+                    a vital part of our department.</h6>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
+            <br>
+            <div class="testimonial--wrap ">
+                <div class="owl-single owl-carousel no-dots no-nav">
+
+
+
+                    <?php
+                    $sql = "SELECT * from testimonials  WHERE status='1'";
+                    $query = $dbh->prepare($sql);
+                    $query->execute();
+                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                    $cnt = 1;
+                    if ($query->rowCount() > 0) {
+                        foreach ($results as $result) {
+                    ?>
+
+                    <div class="testimonial-item">
+                        <div class="align-items-center">
+                            <div class="photo">
+                                <img src="uploads/<?php echo $result->image ?>" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="author" style="text-align: center;">
+                                <cite class="d-block mb-0" style="color: #150754!important; text-align: center;">
+                                    <h3><?php echo $result->name ?></h3>
+                                </cite>
+                                <span style="text-align: center;"><?php echo $result->designation ?>.</span><br>
+                                <span
+                                    style="text-align: center;"><?php echo $result->course ?>,<br><?php echo $result->batch ?></span>
+                            </div>
+
                         </div>
+
+
+
+                        <blockquote class="justify-para">
+                            <?php
+                                    $message = $result->message; // get the message
+                                    $first_paragraph = substr($message, 0, 150); // extract first 100 characters
+                                    $remaining_text = substr($message, 150); // get the remaining text
+                                    ?>
+                            <p><span id="smallText"><?php echo $message ?></span>
+                            </p>
+                            <!-- display first 100 characters in first paragraph -->
+                            <!-- initially hide remaining text in second paragraph -->
+
+                        </blockquote>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
+                    <?php }
+                    } ?>
+
+
                 </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
-                </div>
-                <div class="testimonial-item p-4 my-5">
-                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
-                    <div class="d-flex align-items-end mb-4">
-                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg"
-                            style="width: 80px; height: 80px;">
-                        <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <p class="m-0">Profession</p>
-                        </div>
-                    </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                        eos.
-                        Clita erat ipsum et lorem et sit.</p>
+                <div class="custom-nav-wrap">
+                    <a href="#" class="custom-owl-prev"><span class="icon-keyboard_backspace"></span></a>
+                    <a href="#" class="custom-owl-next"><span class="icon-keyboard_backspace"></span></a>
                 </div>
             </div>
+
         </div>
     </div>
-    <!-- Testimonial End -->
 
 
-
-    <!-- Feature Start -->
-    <!-- <div class="container-fluid overflow-hidden py-5 px-lg-0">
-        <div class="container feature py-5 px-lg-0">
-            <div class="row g-5 mx-lg-0">
-                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Our Features</h6>
-                    <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
-                    <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                        <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>Worldwide Service</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
-                                duo
-                                justo magna erat amet</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>On Time Delivery</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
-                                duo
-                                justo magna erat amet</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
-                        <div class="ms-4">
-                            <h5>24/7 Telephone Support</h5>
-                            <p class="mb-0">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita
-                                duo
-                                justo magna erat amet</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
-                            style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Feature End -->
-
-
-    <!-- Pricing Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Pricing Plan</h6>
-                <h1 class="mb-5">Perfect Pricing Plan</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Basic Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order
-                                    Now</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Standard Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>99.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order
-                                    Now</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="price-item">
-                        <div class="border-bottom p-4 mb-4">
-                            <h5 class="text-primary mb-1">Advanced Plan</h5>
-                            <h1 class="display-5 mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>149.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
-                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
-                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
-                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Order
-                                    Now</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Pricing End -->
-
-
-    <!-- Quote Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
-                    <h1 class="mb-5">Request A Free Qoute!</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                        diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                        <div class="ps-4">
-                            <h6>Call for any query!</h6>
-                            <h3 class="text-primary m-0">+012 345 6789</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Freight</option>
-                                        <option value="1">Freight 1</option>
-                                        <option value="2">Freight 2</option>
-                                        <option value="3">Freight 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Quote End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Our Team</h6>
-                <h1 class="mb-5">Expert Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Full Name</h5>
-                        <p>Designation</p>
-                        <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
-
+    <!-- end below md testimonial -->
 
 
     <!-- Footer Start -->
@@ -680,7 +790,13 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
+
+
     <!-- JavaScript Libraries -->
+    <script src="testimonial/js/jquery-3.5.1.min.js"></script>
+    <script src="testimonial/js/owl.carousel.min.js"></script>
+    <script src="testimonial/js/aos.js"></script>
+    <script src="testimonial/js/custom.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -688,9 +804,25 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/Scrolling.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+    const readMoreBtn = document.getElementById("read-more-btn");
+    const remainingText = document.getElementById("remaining-text");
+
+    readMoreBtn.addEventListener("click", () => {
+        console.log("Read More button clicked")
+        readMoreBtn.classList.add("d-none"); // hide "Read More" button
+        remainingText.classList.remove("d-none"); // show remaining text
+        remainingText.classList.add("d-block"); // add "d-block" class to remaining text
+    });
+
+
+    
+    </script>
 </body>
 
 </html>

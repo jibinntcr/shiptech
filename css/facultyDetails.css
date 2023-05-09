@@ -1,0 +1,112 @@
+/** @format */
+
+p.thick {
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  h4 {
+    font-size: 1.2em;
+  }
+}
+
+hr {
+  border: 0.2px solid gray;
+  width: 100%;
+}
+
+.small-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+overflow-hidden-x {
+  overflow-x: hidden;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .element {
+    margin-left: 20px;
+    /* // margin: 0 auto; */
+  }
+}
+
+
+/* .card1 a {
+  color: gold;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+.card1 h1,
+.card1 {
+  color: black;
+  background: red; /* default color */
+
+  /* "to left" / "to right" - affects initial color */
+  /* background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+} */ */
+
+/* .card1:hover,
+.card1:hover a,
+.card1:hover p,
+.card1:hover h1,
+.card1:hover h4,
+.card1:hover h6 {
+  background-position: left;
+  color: white;
+}
+
+.card1:hover a:hover {
+  color: red;
+}
+
+.title-color {
+  background: linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246));
+  background-image: linear-gradient(
+    to right,
+    rgb(56, 189, 248),
+    rgb(59, 130, 246)
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.border-red {
+  border: 1px solid red;
+  board-radius: 23px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.points h5 {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .points h5 {
+    font-size: 16px;
+  }
+}
+
+.points {
+  border: 2px solid red;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.er {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}

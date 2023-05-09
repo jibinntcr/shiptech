@@ -1,0 +1,5 @@
+/** @format */
+
+.ship-contact-data ul li:first-child {
+  min-height: 0px;
+}

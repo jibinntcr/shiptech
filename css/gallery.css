@@ -1,0 +1,29 @@
+/** @format */
+
+.img-container {
+  position: relative;
+}
+.img-container .text-overlay {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.textHover {
+  color: white;
+  font-size: 1.15rem;
+}
+
+.textHover:hover {
+  color: #51cfed;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 767px) {
+  .textHover {
+    font-size: 1.1rem;
+  }
+}
